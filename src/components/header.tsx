@@ -39,7 +39,7 @@ export default function Header() {
           </Button>
         </nav>
         <Button asChild>
-          <Link href="#proposal">Get a Proposal</Link>
+          <Link href="#proposal">Contact Us</Link>
         </Button>
       </div>
     </header>

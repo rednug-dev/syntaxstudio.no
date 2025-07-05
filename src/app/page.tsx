@@ -41,7 +41,7 @@ function HeroSection() {
           </Button>
           <Button size="lg" variant="outline" asChild>
              <a href="#proposal">
-              Get a Proposal <MoveRight className="ml-2" />
+              Contact Us <MoveRight className="ml-2" />
              </a>
           </Button>
         </div>

@@ -1,20 +1,23 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
-import { useFormState, useFormStatus } from 'react-dom';
+import { useActionState, useEffect, useRef } from 'react';
+import { useFormStatus } from 'react-dom';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { Wand2, Loader2, FileText, Clock, DollarSign, Lightbulb } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { MessageSquare, Loader2, CheckCircle } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { useToast } from '@/hooks/use-toast';
-import { handleGenerateProposal, type FormState } from '@/app/actions';
+import { handleContactInquiry, type FormState } from '@/app/actions';
+import { Input } from '@/components/ui/input';
 
-const ProposalRequestSchema = z.object({
-  businessNeedsSummary: z.string().min(50, "Please provide a detailed summary of at least 50 characters."),
+const ContactSchema = z.object({
+  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
+  email: z.string().email({ message: "Please enter a valid email." }),
+  message: z.string().min(10, { message: "Message must be at least 10 characters." }),
 });
 
 function SubmitButton() {
@@ -24,12 +27,12 @@ function SubmitButton() {
       {pending ? (
         <>
           <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-          Generating...
+          Sending...
         </>
       ) : (
         <>
-          <Wand2 className="mr-2 h-5 w-5" />
-          Generate Instant Proposal
+          <MessageSquare className="mr-2 h-5 w-5" />
+          Send Message
         </>
       )}
     </Button>
@@ -38,113 +41,113 @@ function SubmitButton() {
 
 export default function ProposalSection() {
   const { toast } = useToast();
-  const resultRef = useRef<HTMLDivElement>(null);
+  const formRef = useRef<HTMLFormElement>(null);
 
-  const initialState: FormState = { data: null, error: null, message: '' };
-  const [state, formAction] = useFormState(handleGenerateProposal, initialState);
+  const initialState: FormState = { message: '', errors: null, success: false };
+  const [state, formAction] = useActionState(handleContactInquiry, initialState);
 
-  const form = useForm<z.infer<typeof ProposalRequestSchema>>({
-    resolver: zodResolver(ProposalRequestSchema),
-    defaultValues: { businessNeedsSummary: '' },
+  const form = useForm<z.infer<typeof ContactSchema>>({
+    resolver: zodResolver(ContactSchema),
+    defaultValues: { name: '', email: '', message: '' },
   });
 
   useEffect(() => {
-    if (state.error) {
+    if (state.message && !state.success) {
+      let description = state.message;
+      if (state.errors) {
+        const errorMessages = Object.values(state.errors).flat().join(' ');
+        if (errorMessages) {
+          description = errorMessages;
+        }
+      }
       toast({
         variant: "destructive",
         title: "Error",
-        description: state.error,
+        description: description,
       });
     }
-    if (state.data) {
-        resultRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (state.success) {
+      form.reset();
     }
-  }, [state, toast]);
+  }, [state, toast, form]);
 
-  const onFormSubmit = (data: z.infer<typeof ProposalRequestSchema>) => {
-    const formData = new FormData();
-    formData.append('businessNeedsSummary', data.businessNeedsSummary);
-    formAction(formData);
-  };
-  
   return (
     <section id="proposal" className="container mx-auto px-4 py-20 sm:py-28">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl sm:text-5xl font-bold font-headline">AI-Powered Project Proposal</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold font-headline">Let's Build Together</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Describe your business needs, and our AI will generate a tailored project proposal with time and cost estimates in seconds.
+            Have a project in mind? Fill out the form below and we'll get back to you to discuss how we can turn your ideas into reality.
           </p>
         </div>
 
-        <Card className="p-6 md:p-8 animate-fade-in-up">
-          <Form {...form}>
-            <form onSubmit={form.handleSubmit(onFormSubmit)} className="space-y-6">
-              <FormField
-                control={form.control}
-                name="businessNeedsSummary"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="text-lg font-semibold">Your Business Needs</FormLabel>
-                    <FormControl>
-                      <Textarea
-                        placeholder="e.g., 'We are a startup in the sustainable fashion space. We need a modern e-commerce website with a strong brand identity to showcase our products, manage inventory, and process payments. We'd also like a blog to share our story...'"
-                        className="min-h-[150px] text-base"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <div className="flex justify-center">
-                <SubmitButton />
-              </div>
-            </form>
-          </Form>
-        </Card>
-
-        <div ref={resultRef} className="mt-12">
-          {state.data && (
-            <div className="space-y-8 animate-fade-in-up">
-              <h3 className="text-3xl font-bold text-center font-headline">Your Custom Proposal</h3>
-              <div className="grid md:grid-cols-2 gap-6">
-                <Card>
-                  <CardHeader className="flex flex-row items-center gap-3">
-                    <Clock className="w-6 h-6 text-primary" />
-                    <CardTitle className="font-headline">Estimated Time</CardTitle>
-                  </CardHeader>
-                  <CardContent><p className="text-2xl font-semibold">{state.data.estimatedTime}</p></CardContent>
-                </Card>
-                <Card>
-                  <CardHeader className="flex flex-row items-center gap-3">
-                    <DollarSign className="w-6 h-6 text-primary" />
-                    <CardTitle className="font-headline">Estimated Cost</CardTitle>
-                  </CardHeader>
-                  <CardContent><p className="text-2xl font-semibold">{state.data.estimatedCost}</p></CardContent>
-                </Card>
-              </div>
-              <Card>
-                <CardHeader className="flex flex-row items-center gap-3">
-                  <FileText className="w-6 h-6 text-primary" />
-                  <CardTitle className="font-headline">Project Proposal</CardTitle>
-                </CardHeader>
-                <CardContent className="prose prose-lg max-w-none text-foreground/90">
-                    <p>{state.data.proposal}</p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader className="flex flex-row items-center gap-3">
-                  <Lightbulb className="w-6 h-6 text-primary" />
-                  <CardTitle className="font-headline">Suggested Features</CardTitle>
-                </CardHeader>
-                <CardContent className="prose prose-lg max-w-none text-foreground/90">
-                    <p>{state.data.suggestedFeatures}</p>
-                </CardContent>
-              </Card>
-            </div>
-          )}
-        </div>
+        {state.success ? (
+          <Card className="p-6 md:p-8 text-center animate-fade-in-up">
+            <CheckCircle className="w-16 h-16 mx-auto text-green-500" />
+            <h3 className="text-2xl font-bold font-headline mt-4">Message Sent!</h3>
+            <p className="mt-2 text-muted-foreground">{state.message}</p>
+          </Card>
+        ) : (
+          <Card className="p-6 md:p-8 animate-fade-in-up">
+            <Form {...form}>
+              <form
+                ref={formRef}
+                action={formAction}
+                onSubmit={form.handleSubmit(() => {
+                  formRef.current?.requestSubmit();
+                })}
+                className="space-y-6"
+              >
+                <FormField
+                  control={form.control}
+                  name="name"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Name</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Your Name" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Email</FormLabel>
+                      <FormControl>
+                        <Input type="email" placeholder="your.email@example.com" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="message"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Your Message</FormLabel>
+                      <FormControl>
+                        <Textarea
+                          placeholder="Tell us about your project..."
+                          className="min-h-[150px] text-base"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <div className="flex justify-center">
+                  <SubmitButton />
+                </div>
+              </form>
+            </Form>
+          </Card>
+        )}
       </div>
     </section>
   );

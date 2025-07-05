@@ -1,57 +1,48 @@
 'use server';
 
-import {
-  generateProjectProposal,
-  type GenerateProjectProposalInput,
-  type GenerateProjectProposalOutput,
-} from '@/ai/flows/generate-project-proposal';
 import { z } from 'zod';
 
-const ProposalRequestSchema = z.object({
-  businessNeedsSummary: z.string().min(50, {
-    message: "Please provide a summary of at least 50 characters.",
-  }),
+const ContactInquirySchema = z.object({
+  name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
+  email: z.string().email({ message: 'Please enter a valid email.' }),
+  message: z.string().min(10, { message: 'Message must be at least 10 characters.' }),
 });
 
 export type FormState = {
-  data: GenerateProjectProposalOutput | null;
-  error: string | null;
   message: string;
+  errors?: {
+    name?: string[];
+    email?: string[];
+    message?: string[];
+  } | null;
+  success: boolean;
 };
 
-export async function handleGenerateProposal(
+export async function handleContactInquiry(
   prevState: FormState,
-  formData: FormData,
+  formData: FormData
 ): Promise<FormState> {
-  const validatedFields = ProposalRequestSchema.safeParse({
-    businessNeedsSummary: formData.get('businessNeedsSummary'),
+  const validatedFields = ContactInquirySchema.safeParse({
+    name: formData.get('name'),
+    email: formData.get('email'),
+    message: formData.get('message'),
   });
 
   if (!validatedFields.success) {
     return {
-      data: null,
-      error: validatedFields.error.flatten().fieldErrors.businessNeedsSummary?.[0] ?? "Validation error",
-      message: "Validation failed.",
+      errors: validatedFields.error.flatten().fieldErrors,
+      message: 'Validation failed. Please check your input.',
+      success: false,
     };
   }
 
-  try {
-    const input: GenerateProjectProposalInput = {
-      businessNeedsSummary: validatedFields.data.businessNeedsSummary,
-    };
-    const result = await generateProjectProposal(input);
-    return {
-      data: result,
-      error: null,
-      message: "Proposal generated successfully."
-    };
-  } catch (error) {
-    console.error("Error generating proposal:", error);
-    const errorMessage = error instanceof Error ? error.message : "An unknown error occurred";
-    return {
-      data: null,
-      error: `Failed to generate proposal. ${errorMessage}`,
-      message: "Proposal generation failed.",
-    };
-  }
+  // Here you would typically send an email, save to a database, etc.
+  // For this prototype, we'll just simulate a success response.
+  console.log('New inquiry:', validatedFields.data);
+
+  return {
+    message: "Thank you for your inquiry! We'll get back to you soon.",
+    errors: null,
+    success: true,
+  };
 }
