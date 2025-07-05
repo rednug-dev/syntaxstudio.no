@@ -33,7 +33,7 @@ function HeroSection() {
           Innovativt webdesign, merkevarebygging og automatisering
         </h1>
         <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-          Syntax Studio Digital skaper skreddersydde digitale opplevelser som løfter merkevaren din og automatiserer din suksess. La oss bygge fremtiden, sammen.
+          Syntax Studio skaper skreddersydde digitale opplevelser som løfter merkevaren din og automatiserer din suksess. La oss bygge fremtiden, sammen.
         </p>
         <div className="mt-8 flex justify-center gap-4">
           <Button size="lg" asChild>
@@ -161,12 +161,12 @@ function AboutSection() {
         <section id="about" className="container mx-auto px-4 py-20 sm:py-28">
             <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="animate-fade-in-up">
-                    <Image src="https://placehold.co/600x600.png" alt="Syntax Studio Digital-teamet" width={600} height={600} className="rounded-lg shadow-lg" data-ai-hint="digital agency" />
+                    <Image src="https://placehold.co/600x600.png" alt="Syntax Studio-teamet" width={600} height={600} className="rounded-lg shadow-lg" data-ai-hint="digital agency" />
                 </div>
                 <div className="animate-fade-in-up" style={{ animationDelay: '150ms' }}>
                     <h2 className="text-4xl sm:text-5xl font-bold font-headline">Om Syntax Studio</h2>
                     <p className="mt-6 text-lg text-muted-foreground">
-                        Syntax Studio Digital er grunnlagt på prinsippet om å forene kreativitet med teknologi, og er et kollektiv av lidenskapelige designere, utviklere og strateger. Vi tror på kraften i en sterk digital tilstedeværelse og jobber utrettelig for å skape løsninger som ikke bare er vakre, men også kraftfullt effektive.
+                        Syntax Studio er grunnlagt på prinsippet om å forene kreativitet med teknologi, og er et kollektiv av lidenskapelige designere, utviklere og strateger. Vi tror på kraften i en sterk digital tilstedeværelse og jobber utrettelig for å skape løsninger som ikke bare er vakre, men også kraftfullt effektive.
                     </p>
                     <p className="mt-4 text-lg text-muted-foreground">
                         Vår ekspertise spenner over webdesign, bedriftsidentitet og automatisering av forretningsprosesser. Ved å forstå dine unike behov, utformer vi skreddersydde strategier som driver vekst, engasjement og suksess.

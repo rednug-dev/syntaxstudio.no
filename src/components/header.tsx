@@ -25,7 +25,7 @@ export default function Header() {
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 font-bold text-lg font-headline">
           <CodeXml className="w-8 h-8 text-primary" />
-          Syntax Studio Digital
+          Syntax Studio
         </Link>
         <nav className="hidden md:flex items-center gap-2">
           <Button variant="ghost" asChild>

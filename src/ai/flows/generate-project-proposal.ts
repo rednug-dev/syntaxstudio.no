@@ -44,7 +44,7 @@ const prompt = ai.definePrompt({
   name: 'generateProjectProposalPrompt',
   input: {schema: GenerateProjectProposalInputSchema},
   output: {schema: GenerateProjectProposalOutputSchema},
-  prompt: `You are an AI assistant designed to generate project proposals for Syntax Studio Digital, a web design, branding, and automation company.
+  prompt: `You are an AI assistant designed to generate project proposals for Syntax Studio, a web design, branding, and automation company.
 
   Based on the summary of business needs provided by the prospective client, you will generate a unique project proposal with realistic time and cost estimates, as well as specific feature suggestions to meet the client's goals.
 

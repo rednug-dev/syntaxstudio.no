@@ -10,7 +10,7 @@ export default function Footer() {
                     <div className="md:col-span-1">
                         <Link href="/" className="flex items-center gap-2 font-bold text-lg font-headline mb-4">
                             <CodeXml className="w-8 h-8 text-primary" />
-                            Syntax Studio Digital
+                            Syntax Studio
                         </Link>
                         <p className="text-muted-foreground text-sm">Skaper skreddersydde digitale opplevelser som løfter merkevaren din og automatiserer din suksess.</p>
                     </div>
@@ -41,7 +41,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
-                    <p>&copy; {new Date().getFullYear()} Syntax Studio Digital. Alle rettigheter forbeholdt.</p>
+                    <p>&copy; {new Date().getFullYear()} Syntax Studio. Alle rettigheter forbeholdt.</p>
                 </div>
             </div>
         </footer>
