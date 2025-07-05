@@ -12,13 +12,8 @@ import { Textarea } from '@/components/ui/textarea';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { useToast } from '@/hooks/use-toast';
 import { handleContactInquiry, type FormState } from '@/app/actions';
+import { ContactInquirySchema } from '@/lib/schemas';
 import { Input } from '@/components/ui/input';
-
-const ContactSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
-  email: z.string().email({ message: "Please enter a valid email." }),
-  message: z.string().min(10, { message: "Message must be at least 10 characters." }),
-});
 
 function SubmitButton() {
   const { pending } = useFormStatus();
@@ -27,12 +22,12 @@ function SubmitButton() {
       {pending ? (
         <>
           <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-          Sending...
+          Sender...
         </>
       ) : (
         <>
           <MessageSquare className="mr-2 h-5 w-5" />
-          Send Message
+          Send melding
         </>
       )}
     </Button>
@@ -46,8 +41,8 @@ export default function ProposalSection() {
   const initialState: FormState = { message: '', errors: null, success: false };
   const [state, formAction] = useActionState(handleContactInquiry, initialState);
 
-  const form = useForm<z.infer<typeof ContactSchema>>({
-    resolver: zodResolver(ContactSchema),
+  const form = useForm<z.infer<typeof ContactInquirySchema>>({
+    resolver: zodResolver(ContactInquirySchema),
     defaultValues: { name: '', email: '', message: '' },
   });
 
@@ -62,7 +57,7 @@ export default function ProposalSection() {
       }
       toast({
         variant: "destructive",
-        title: "Error",
+        title: "Feil",
         description: description,
       });
     }
@@ -75,16 +70,16 @@ export default function ProposalSection() {
     <section id="proposal" className="container mx-auto px-4 py-20 sm:py-28">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl sm:text-5xl font-bold font-headline">Let's Build Together</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold font-headline">La oss bygge sammen</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Have a project in mind? Fill out the form below and we'll get back to you to discuss how we can turn your ideas into reality.
+            Har du et prosjekt i tankene? Fyll ut skjemaet nedenfor, så tar vi kontakt for å diskutere hvordan vi kan gjøre ideene dine til virkelighet.
           </p>
         </div>
 
         {state.success ? (
           <Card className="p-6 md:p-8 text-center animate-fade-in-up">
             <CheckCircle className="w-16 h-16 mx-auto text-green-500" />
-            <h3 className="text-2xl font-bold font-headline mt-4">Message Sent!</h3>
+            <h3 className="text-2xl font-bold font-headline mt-4">Melding sendt!</h3>
             <p className="mt-2 text-muted-foreground">{state.message}</p>
           </Card>
         ) : (
@@ -103,9 +98,9 @@ export default function ProposalSection() {
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Name</FormLabel>
+                      <FormLabel>Navn</FormLabel>
                       <FormControl>
-                        <Input placeholder="Your Name" {...field} />
+                        <Input placeholder="Ditt navn" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -116,9 +111,9 @@ export default function ProposalSection() {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Email</FormLabel>
+                      <FormLabel>E-post</FormLabel>
                       <FormControl>
-                        <Input type="email" placeholder="your.email@example.com" {...field} />
+                        <Input type="email" placeholder="din.epost@eksempel.com" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -129,10 +124,10 @@ export default function ProposalSection() {
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Your Message</FormLabel>
+                      <FormLabel>Din melding</FormLabel>
                       <FormControl>
                         <Textarea
-                          placeholder="Tell us about your project..."
+                          placeholder="Fortell oss om prosjektet ditt..."
                           className="min-h-[150px] text-base"
                           {...field}
                         />

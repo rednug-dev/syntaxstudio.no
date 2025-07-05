@@ -1,12 +1,6 @@
 'use server';
 
-import { z } from 'zod';
-
-const ContactInquirySchema = z.object({
-  name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
-  email: z.string().email({ message: 'Please enter a valid email.' }),
-  message: z.string().min(10, { message: 'Message must be at least 10 characters.' }),
-});
+import { ContactInquirySchema } from '@/lib/schemas';
 
 export type FormState = {
   message: string;
@@ -31,17 +25,17 @@ export async function handleContactInquiry(
   if (!validatedFields.success) {
     return {
       errors: validatedFields.error.flatten().fieldErrors,
-      message: 'Validation failed. Please check your input.',
+      message: 'Validering feilet. Vennligst sjekk det du har skrevet inn.',
       success: false,
     };
   }
 
   // Here you would typically send an email, save to a database, etc.
   // For this prototype, we'll just simulate a success response.
-  console.log('New inquiry:', validatedFields.data);
+  console.log('Ny henvendelse:', validatedFields.data);
 
   return {
-    message: "Thank you for your inquiry! We'll get back to you soon.",
+    message: "Takk for din henvendelse! Vi kommer tilbake til deg snart.",
     errors: null,
     success: true,
   };

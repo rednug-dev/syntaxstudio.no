@@ -12,19 +12,19 @@ export default function Footer() {
                             <CodeXml className="w-8 h-8 text-primary" />
                             Syntax Studio Digital
                         </Link>
-                        <p className="text-muted-foreground text-sm">Crafting bespoke digital experiences that elevate your brand and automate your success.</p>
+                        <p className="text-muted-foreground text-sm">Skaper skreddersydde digitale opplevelser som løfter merkevaren din og automatiserer din suksess.</p>
                     </div>
                     <div className="grid grid-cols-2 md:col-span-2 gap-8">
                         <div>
-                            <h4 className="font-semibold mb-3 font-headline">Quick Links</h4>
+                            <h4 className="font-semibold mb-3 font-headline">Hurtiglenker</h4>
                             <ul className="space-y-2 text-sm">
-                                <li><Link href="#portfolio" className="text-muted-foreground hover:text-primary">Portfolio</Link></li>
-                                <li><Link href="#about" className="text-muted-foreground hover:text-primary">About Us</Link></li>
-                                <li><Link href="#proposal" className="text-muted-foreground hover:text-primary">Contact Us</Link></li>
+                                <li><Link href="#portfolio" className="text-muted-foreground hover:text-primary">Portefølje</Link></li>
+                                <li><Link href="#about" className="text-muted-foreground hover:text-primary">Om oss</Link></li>
+                                <li><Link href="#proposal" className="text-muted-foreground hover:text-primary">Kontakt oss</Link></li>
                             </ul>
                         </div>
                         <div>
-                            <h4 className="font-semibold mb-3 font-headline">Contact</h4>
+                            <h4 className="font-semibold mb-3 font-headline">Kontakt</h4>
                             <p className="text-sm text-muted-foreground">inquiries@syntaxstudio.dev</p>
                              <div className="flex gap-2 mt-4">
                                 <Button variant="ghost" size="icon" asChild>
@@ -41,7 +41,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
-                    <p>&copy; {new Date().getFullYear()} Syntax Studio Digital. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} Syntax Studio Digital. Alle rettigheter forbeholdt.</p>
                 </div>
             </div>
         </footer>

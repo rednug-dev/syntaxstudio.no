@@ -29,17 +29,17 @@ export default function Header() {
         </Link>
         <nav className="hidden md:flex items-center gap-2">
           <Button variant="ghost" asChild>
-            <Link href="#portfolio">Portfolio</Link>
+            <Link href="#portfolio">Portefølje</Link>
           </Button>
           <Button variant="ghost" asChild>
-            <Link href="#about">About</Link>
+            <Link href="#about">Om oss</Link>
           </Button>
           <Button variant="ghost" asChild>
-            <Link href="#contact">Contact</Link>
+            <Link href="#contact">Kontakt</Link>
           </Button>
         </nav>
         <Button asChild>
-          <Link href="#proposal">Contact Us</Link>
+          <Link href="#proposal">Kontakt oss</Link>
         </Button>
       </div>
     </header>

@@ -30,18 +30,18 @@ function HeroSection() {
     <section id="home" className="container mx-auto px-4 py-24 sm:py-32 text-center animate-fade-in-up">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold font-headline tracking-tighter">
-          Innovative Web Design, Branding, and Automation
+          Innovativt webdesign, merkevarebygging og automatisering
         </h1>
         <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-          Syntax Studio Digital crafts bespoke digital experiences that elevate your brand and automate your success. Let's build the future, together.
+          Syntax Studio Digital skaper skreddersydde digitale opplevelser som løfter merkevaren din og automatiserer din suksess. La oss bygge fremtiden, sammen.
         </p>
         <div className="mt-8 flex justify-center gap-4">
           <Button size="lg" asChild>
-            <a href="#portfolio">Our Work</a>
+            <a href="#portfolio">Vårt arbeid</a>
           </Button>
           <Button size="lg" variant="outline" asChild>
              <a href="#proposal">
-              Contact Us <MoveRight className="ml-2" />
+              Kontakt oss <MoveRight className="ml-2" />
              </a>
           </Button>
         </div>
@@ -52,10 +52,10 @@ function HeroSection() {
 
 function AchievementsSection() {
   const achievements = [
-    { icon: <Award className="w-8 h-8" />, value: "12+", label: "Design Awards" },
-    { icon: <GitCommit className="w-8 h-8" />, value: "100+", label: "Projects Completed" },
-    { icon: <Users className="w-8 h-8" />, value: "80+", label: "Happy Clients" },
-    { icon: <Star className="w-8 h-8" />, value: "5-Star", label: "Average Rating" },
+    { icon: <Award className="w-8 h-8" />, value: "12+", label: "Designpriser" },
+    { icon: <GitCommit className="w-8 h-8" />, value: "100+", label: "Fullførte prosjekter" },
+    { icon: <Users className="w-8 h-8" />, value: "80+", label: "Fornøyde kunder" },
+    { icon: <Star className="w-8 h-8" />, value: "5-stjerners", label: "Gjennomsnittlig vurdering" },
   ];
 
   return (
@@ -77,18 +77,18 @@ function AchievementsSection() {
 
 function PortfolioSection() {
   const projects = [
-    { title: "QuantumLeap CRM", description: "A futuristic CRM platform with AI-driven insights and automation.", image: "https://placehold.co/600x400.png", tags: ["Web Design", "Automation"], hint: "abstract technology" },
-    { title: "NovaBank", description: "Rebranding and web overhaul for a next-generation digital bank.", image: "https://placehold.co/600x400.png", tags: ["Branding", "Web Design"], hint: "modern finance" },
-    { title: "Aetherius Logistics", description: "Streamlined logistics management through a custom-built automation suite.", image: "https://placehold.co/600x400.png", tags: ["Automation"], hint: "global shipping" },
-    { title: "Zenith Health", description: "A calming and intuitive user experience for a digital wellness brand.", image: "https://placehold.co/600x400.png", tags: ["Branding", "Web Design"], hint: "minimalist wellness" },
+    { title: "QuantumLeap CRM", description: "En futuristisk CRM-plattform med AI-drevet innsikt og automatisering.", image: "https://placehold.co/600x400.png", tags: ["Webdesign", "Automatisering"], hint: "abstract technology" },
+    { title: "NovaBank", description: "Rebranding og totaloverhaling av nettsiden for en neste generasjons digital bank.", image: "https://placehold.co/600x400.png", tags: ["Merkevarebygging", "Webdesign"], hint: "modern finance" },
+    { title: "Aetherius Logistics", description: "Strømlinjeformet logistikkstyring gjennom en skreddersydd automatiseringspakke.", image: "https://placehold.co/600x400.png", tags: ["Automatisering"], hint: "global shipping" },
+    { title: "Zenith Health", description: "En beroligende og intuitiv brukeropplevelse for en digital velværemerkevare.", image: "https://placehold.co/600x400.png", tags: ["Merkevarebygging", "Webdesign"], hint: "minimalist wellness" },
   ];
 
   return (
     <section id="portfolio" className="container mx-auto px-4 py-20 sm:py-28">
       <div className="text-center mb-12">
-        <h2 className="text-4xl sm:text-5xl font-bold font-headline">Our Portfolio</h2>
+        <h2 className="text-4xl sm:text-5xl font-bold font-headline">Vår portefølje</h2>
         <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-          We take pride in our work. Explore some of our recent projects that showcase our expertise and creativity.
+          Vi er stolte av arbeidet vårt. Utforsk noen av våre nylige prosjekter som viser vår ekspertise og kreativitet.
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -113,18 +113,18 @@ function PortfolioSection() {
 
 function TestimonialsSection() {
     const testimonials = [
-        { name: "Eva Chen", company: "CEO, QuantumLeap", text: "Syntax Studio transformed our vision into a stunning reality. Their attention to detail and commitment to excellence are second to none.", avatar: "https://placehold.co/100x100.png", hint: "woman portrait" },
-        { name: "Johnathan Lee", company: "Founder, NovaBank", text: "The rebranding they delivered was a game-changer for our business. We've seen a massive increase in user engagement.", avatar: "https://placehold.co/100x100.png", hint: "man portrait" },
-        { name: "Maria Rodriguez", company: "COO, Aetherius Logistics", text: "Their automation solution saved us thousands of hours. Incredibly efficient and professional team.", avatar: "https://placehold.co/100x100.png", hint: "professional woman" },
+        { name: "Eva Chen", company: "CEO, QuantumLeap", text: "Syntax Studio forvandlet vår visjon til en fantastisk virkelighet. Deres øye for detaljer og forpliktelse til kvalitet er enestående.", avatar: "https://placehold.co/100x100.png", hint: "woman portrait" },
+        { name: "Johnathan Lee", company: "Grunnlegger, NovaBank", text: "Rebrandingen de leverte var en 'game-changer' for virksomheten vår. Vi har sett en massiv økning i brukerengasjement.", avatar: "https://placehold.co/100x100.png", hint: "man portrait" },
+        { name: "Maria Rodriguez", company: "COO, Aetherius Logistics", text: "Automatiseringsløsningen deres sparte oss for tusenvis av timer. Utrolig effektivt og profesjonelt team.", avatar: "https://placehold.co/100x100.png", hint: "professional woman" },
     ];
 
   return (
     <section className="bg-muted/50 py-20 sm:py-28">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl sm:text-5xl font-bold font-headline">What Our Clients Say</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold font-headline">Hva våre kunder sier</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            We're building partnerships, not just projects. Here's what our clients think of our work.
+            Vi bygger partnerskap, ikke bare prosjekter. Her er hva våre kunder mener om arbeidet vårt.
           </p>
         </div>
         <Carousel opts={{ align: "start", loop: true }} className="w-full max-w-4xl mx-auto">
@@ -161,15 +161,15 @@ function AboutSection() {
         <section id="about" className="container mx-auto px-4 py-20 sm:py-28">
             <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="animate-fade-in-up">
-                    <Image src="https://placehold.co/600x600.png" alt="Syntax Studio Digital Team" width={600} height={600} className="rounded-lg shadow-lg" data-ai-hint="digital agency" />
+                    <Image src="https://placehold.co/600x600.png" alt="Syntax Studio Digital-teamet" width={600} height={600} className="rounded-lg shadow-lg" data-ai-hint="digital agency" />
                 </div>
                 <div className="animate-fade-in-up" style={{ animationDelay: '150ms' }}>
-                    <h2 className="text-4xl sm:text-5xl font-bold font-headline">About Syntax Studio</h2>
+                    <h2 className="text-4xl sm:text-5xl font-bold font-headline">Om Syntax Studio</h2>
                     <p className="mt-6 text-lg text-muted-foreground">
-                        Founded on the principle of merging creativity with technology, Syntax Studio Digital is a collective of passionate designers, developers, and strategists. We believe in the power of a strong digital presence and work tirelessly to create solutions that are not only beautiful but also powerfully effective.
+                        Syntax Studio Digital er grunnlagt på prinsippet om å forene kreativitet med teknologi, og er et kollektiv av lidenskapelige designere, utviklere og strateger. Vi tror på kraften i en sterk digital tilstedeværelse og jobber utrettelig for å skape løsninger som ikke bare er vakre, men også kraftfullt effektive.
                     </p>
                     <p className="mt-4 text-lg text-muted-foreground">
-                        Our expertise spans across web design, corporate branding, and business process automation. By understanding your unique needs, we craft bespoke strategies that drive growth, engagement, and success.
+                        Vår ekspertise spenner over webdesign, bedriftsidentitet og automatisering av forretningsprosesser. Ved å forstå dine unike behov, utformer vi skreddersydde strategier som driver vekst, engasjement og suksess.
                     </p>
                 </div>
             </div>
