@@ -15,7 +15,7 @@ export default function HeroSection() {
         </p>
         <div className="mt-8 flex justify-center gap-4">
           <Button size="lg" asChild>
-            <a href="#services">Vårt arbeid</a>
+            <a href="/tjenester#case-studies">Vårt arbeid</a>
           </Button>
           <Button size="lg" variant="outline" asChild>
              <a href="#proposal">

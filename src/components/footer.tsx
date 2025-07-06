@@ -18,7 +18,7 @@ export default function Footer() {
                         <div>
                             <h4 className="font-semibold mb-3 font-headline">Hurtiglenker</h4>
                             <ul className="space-y-2 text-sm">
-                                <li><Link href="#portfolio" className="text-muted-foreground hover:text-primary">Portefølje</Link></li>
+                                <li><Link href="/tjenester#case-studies" className="text-muted-foreground hover:text-primary">Vårt arbeid</Link></li>
                                 <li><Link href="#about" className="text-muted-foreground hover:text-primary">Om oss</Link></li>
                                 <li><Link href="#proposal" className="text-muted-foreground hover:text-primary">Kontakt oss</Link></li>
                             </ul>
