@@ -82,7 +82,7 @@ export default function Header() {
           <div className="flex-1 flex justify-end items-center">
             <div className="hidden sm:block">
                 <Button asChild>
-                    <Link href="#proposal">Kontakt oss</Link>
+                    <Link href="/#proposal">Kontakt oss</Link>
                 </Button>
             </div>
             <div className="lg:hidden ml-2">
@@ -116,7 +116,7 @@ export default function Header() {
           {/* CTA Button for mobile */}
           <div className="sm:hidden mt-4">
             <Button asChild className="w-full">
-              <Link href="#proposal">Kontakt oss</Link>
+              <Link href="/#proposal">Kontakt oss</Link>
             </Button>
           </div>
         </div>

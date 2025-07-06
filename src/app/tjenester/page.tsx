@@ -111,7 +111,7 @@ export default function TjenesterPage() {
                     </div>
 
                     {/* Case Studies Section */}
-                    <div className="mb-28">
+                    <div id="case-studies" className="mb-28">
                         <div className="text-center mb-12">
                             <h2 className="text-3xl sm:text-4xl font-bold font-headline">Utvalgte Caser</h2>
                             <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
