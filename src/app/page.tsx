@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import ProposalSection from "@/components/proposal-section";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import { InteractiveBackground } from "@/components/interactive-background";
 
 export default function Home() {
   return (
@@ -27,8 +28,9 @@ export default function Home() {
 
 function HeroSection() {
   return (
-    <section id="home" className="container mx-auto px-4 py-24 sm:py-32 text-center animate-fade-in-up">
-      <div className="max-w-4xl mx-auto">
+    <section id="home" className="relative container mx-auto px-4 py-24 sm:py-32 text-center animate-fade-in-up">
+      <InteractiveBackground />
+      <div className="relative z-10 max-w-4xl mx-auto">
         <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold font-headline tracking-tighter">
           Innovativt webdesign, merkevarebygging og automatisering
         </h1>

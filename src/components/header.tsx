@@ -1,10 +1,10 @@
 'use client';
 
-import { CodeXml } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
+import Image from 'next/image';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -24,18 +24,14 @@ export default function Header() {
     )}>
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 font-bold text-lg font-headline">
-          <CodeXml className="w-8 h-8 text-primary" />
-          Syntax Studio
+          <Image src="/logosyntax-nbnm.png" alt="Syntax Studio logo" width={150} height={40} />
         </Link>
         <nav className="hidden md:flex items-center gap-2">
           <Button variant="ghost" asChild>
-            <Link href="#portfolio">Portefølje</Link>
+            <Link href="#services">Tjenester</Link>
           </Button>
           <Button variant="ghost" asChild>
             <Link href="#about">Om oss</Link>
-          </Button>
-          <Button variant="ghost" asChild>
-            <Link href="#contact">Kontakt</Link>
           </Button>
         </nav>
         <Button asChild>

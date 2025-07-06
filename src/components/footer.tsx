@@ -1,6 +1,7 @@
-import { CodeXml, Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/button";
+import Image from "next/image";
 
 export default function Footer() {
     return (
@@ -9,8 +10,7 @@ export default function Footer() {
                 <div className="grid md:grid-cols-3 gap-8">
                     <div className="md:col-span-1">
                         <Link href="/" className="flex items-center gap-2 font-bold text-lg font-headline mb-4">
-                            <CodeXml className="w-8 h-8 text-primary" />
-                            Syntax Studio
+                            <Image src="/logosyntax-nbnm.png" alt="Syntax Studio logo" width={150} height={40} />
                         </Link>
                         <p className="text-muted-foreground text-sm">Skaper skreddersydde digitale opplevelser som løfter merkevaren din og automatiserer din suksess.</p>
                     </div>
