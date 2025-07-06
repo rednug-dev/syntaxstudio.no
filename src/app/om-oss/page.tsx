@@ -6,22 +6,16 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 export default function OmOssPage() {
     const teamMembers = [
         {
-            name: "Navn Navnesen",
+            name: "Gunder Rollufson",
             role: "Daglig Leder & Grunnlegger",
-            bio: "Med en brennende lidenskap for teknologi og innovasjon, startet Navn dette byrået for å hjelpe bedrifter med å realisere sitt digitale potensial. Han er ekspert på strategi og forretningsutvikling.",
-            avatar: "/avatars/03.png"
+            bio: "Med en brennende lidenskap for teknologi og innovasjon, startet Gunder dette byrået for å hjelpe bedrifter med å realisere sitt digitale potensial. Han er ekspert på strategi og forretningsutvikling.",
+            avatar: "/avatars/placeholder.svg"
         },
         {
-            name: "Et Annet Navn",
+            name: "Rasul Uzdijev",
             role: "Leder for Utvikling",
-            bio: "En mester i koding og systemarkitektur. Et Annet Navn leder vårt tekniske team og sørger for at vi alltid leverer robuste og skalerbare løsninger av høyeste kvalitet.",
-            avatar: "/avatars/04.png"
-        },
-        {
-            name: "Tredje Medlem",
-            role: "Kreativ Leder",
-            bio: "Hjernen bak våre prisvinnende design. Tredje Medlem kombinerer kunstnerisk teft med en dyp forståelse for brukeropplevelser for å skape visuelt slående og intuitive grensesnitt.",
-            avatar: "/avatars/05.png"
+            bio: "En mester i koding og systemarkitektur. Rasul leder vårt tekniske team og sørger for at vi alltid leverer robuste og skalerbare løsninger av høyeste kvalitet.",
+            avatar: "/avatars/placeholder.svg"
         }
     ];
 
@@ -46,7 +40,7 @@ export default function OmOssPage() {
 
                     <div>
                         <h2 className="text-3xl sm:text-4xl font-bold font-headline text-center mb-12">Møt Teamet</h2>
-                        <div className="grid md:grid-cols-3 gap-12">
+                        <div className="grid md:grid-cols-2 gap-12">
                             {teamMembers.map((member, index) => (
                                 <div key={index} className="text-center">
                                     <Avatar className="w-32 h-32 mx-auto mb-4">
@@ -56,7 +50,7 @@ export default function OmOssPage() {
                                     <h3 className="text-xl font-bold font-headline">{member.name}</h3>
                                     <p className="text-primary font-semibold mb-2">{member.role}</p>
                                     <p className="text-muted-foreground">{member.bio}</p>
-                                </div>
+                                 </div>
                             ))}
                         </div>
                     </div>
