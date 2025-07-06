@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        'cta-blue': '#4c8ac9',
+      },
       fontFamily: {
         sans: ["var(--font-space-grotesk)"],
       },
