@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Instagram, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import Image from "next/image";
@@ -28,13 +28,7 @@ export default function Footer() {
                             <p className="text-sm text-muted-foreground">info@syntaxstudio.no</p>
                              <div className="flex gap-2 mt-4">
                                 <Button variant="ghost" size="icon" asChild>
-                                    <a href="#" aria-label="GitHub"><Github className="w-5 h-5" /></a>
-                                </Button>
-                                <Button variant="ghost" size="icon" asChild>
-                                    <a href="#" aria-label="Twitter"><Twitter className="w-5 h-5" /></a>
-                                </Button>
-                                <Button variant="ghost" size="icon" asChild>
-                                    <a href="#" aria-label="LinkedIn"><Linkedin className="w-5 h-5" /></a>
+                                    <a href="https://www.instagram.com/syntaxstudio.no/" aria-label="Instagram"><Instagram className="w-5 h-5" /></a>
                                 </Button>
                             </div>
                         </div>

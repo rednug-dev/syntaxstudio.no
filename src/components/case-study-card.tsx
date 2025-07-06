@@ -43,7 +43,7 @@ export default function CaseStudyCard({ caseStudy }: CaseStudyCardProps) {
                     </Card>
                 </div>
             </DialogTrigger>
-            <DialogContent className="sm:max-w-[80vw] p-0">
+            <DialogContent className="sm:max-w-[80vw] p-0 max-h-[90vh] overflow-y-auto">
                 <div className="grid md:grid-cols-2">
                     <div className="p-8 flex flex-col justify-center order-2 md:order-1">
                         <DialogHeader>
