@@ -4,6 +4,7 @@ import Footer from "@/components/footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { CheckCircle } from 'lucide-react';
+import CaseStudyCard from "@/components/case-study-card";
 
 export default function TjenesterPage() {
     const services = [
@@ -22,6 +23,40 @@ export default function TjenesterPage() {
             description: "Vi bruker kunstig intelligens for å effektivisere dine arbeidsprosesser. Våre løsninger inkluderer alt fra AI-drevne chatbots og dataanalyse til automatisering av repetitive oppgaver, slik at du kan fokusere på det som virkelig betyr noe.",
             features: ["AI-chatbots", "Automatisering av arbeidsoppgaver", "Dataanalyse", "Maskinlæringsmodeller"]
         }
+    ];
+
+    const caseStudies = [
+        {
+            customer: "Fremtidsrettet Finans AS",
+            title: "Ny Digital Plattform",
+            intro: "En komplett overhaling av den digitale kundeopplevelsen for å øke engasjement og konvertering.",
+            imageUrl: "/public/case-studies/case1-main.png",
+            details: `For Fremtidsrettet Finans AS sto vi overfor utfordringen med en utdatert nettside som ikke lenger møtte kundenes forventninger. 
+            
+            Vår løsning var å designe og utvikle en helt ny, responsiv plattform med fokus på brukervennlighet og personalisering. Prosjektet inkluderte:
+            - Dybdeanalyse av brukerreiser
+            - Utvikling av et nytt, moderne designsystem
+            - Implementering av en skreddersydd CMS-løsning for enkelt innholdsoppdatering
+            - Integrasjon mot tredjeparts-APIer for sanntidsdata
+            
+            Resultatet var en 40% økning i konverteringer og en markant nedgang i kundehenvendelser til support.`,
+            gallery: ["/public/case-studies/case1-gallery1.png", "/public/case-studies/case1-gallery2.png"]
+        },
+        {
+            customer: "Grønn Vekst",
+            title: "Visuell Identitet & Merkevarebygging",
+            intro: "Hvordan vi bygget en helhetlig merkevare som posisjonerte Grønn Vekst som en leder innen bærekraft.",
+            imageUrl: "/public/case-studies/case2-main.png",
+            details: `Grønn Vekst trengte en visuell identitet som kunne kommunisere deres verdier og ambisjoner på en tydelig og appellerende måte. 
+            
+            Vi gjennomførte en strategisk prosess som resulterte i:
+            - En ny logo og fargepalett som reflekterer bærekraft og innovasjon
+            - Et komplett sett med designmaler for alt fra sosiale medier til trykksaker
+            - En detaljert merkevarehåndbok for å sikre konsistent bruk
+            
+            Den nye identiteten ble svært godt mottatt og førte til en 200% økning i merkevaregjenkjennelse i deres viktigste markeder.`,
+            gallery: ["/public/case-studies/case2-gallery1.png", "/public/case-studies/case2-gallery2.png"]
+        },
     ];
 
     const testimonials = [
@@ -44,14 +79,14 @@ export default function TjenesterPage() {
             <Header />
             <main>
                 <div className="container mx-auto px-4 py-20 sm:py-28">
+                    {/* Services Section */}
                     <div className="text-center mb-16">
                         <h1 className="text-4xl sm:text-5xl font-bold font-headline">Våre Tjenester</h1>
                         <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
                             Vi dykker dypt inn i dine behov for å levere skreddersydde løsninger som skaper reell verdi.
                         </p>
                     </div>
-
-                    <div className="space-y-16">
+                    <div className="space-y-16 mb-28">
                         {services.map((service, index) => (
                             <div key={index} className="grid md:grid-cols-2 gap-8 items-center">
                                 <div className={index % 2 === 0 ? 'md:order-1' : 'md:order-2'}>
@@ -75,7 +110,23 @@ export default function TjenesterPage() {
                         ))}
                     </div>
 
-                    <div className="mt-28">
+                    {/* Case Studies Section */}
+                    <div className="mb-28">
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl sm:text-4xl font-bold font-headline">Utvalgte Caser</h2>
+                            <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+                                Se hvordan vi har hjulpet andre bedrifter med å nå sine mål.
+                            </p>
+                        </div>
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {caseStudies.map((caseStudy, index) => (
+                                <CaseStudyCard key={index} caseStudy={caseStudy} />
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Testimonials Section */}
+                    <div>
                         <div className="text-center mb-12">
                             <h2 className="text-3xl sm:text-4xl font-bold font-headline">Hva våre kunder sier</h2>
                         </div>
