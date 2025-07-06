@@ -57,7 +57,8 @@ const Navbar = () => {
             <div className="hidden md:block">
               <Link
                 href="/contact"
-                className="flex items-center space-x-2 px-4 py-2 rounded-md text-sm font-bold bg-cta-blue hover:bg-cta-blue/80 transition-colors"
+                className="flex items-center space-x-2 px-4 py-2 rounded-md text-sm font-bold transition-opacity hover:opacity-80"
+                style={{ backgroundColor: '#4c8ac9' }}
               >
                 <Mail size={20} />
                 <span>Contact</span>

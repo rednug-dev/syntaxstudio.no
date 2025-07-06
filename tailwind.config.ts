@@ -8,9 +8,6 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        'cta-blue': 'oklch(var(--cta-blue) / <alpha-value>)',
-      },
       fontFamily: {
         sans: ["var(--font-space-grotesk)"],
       },
