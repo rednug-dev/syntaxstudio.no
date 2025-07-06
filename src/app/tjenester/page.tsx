@@ -30,7 +30,7 @@ export default function TjenesterPage() {
             customer: "Fremtidsrettet Finans AS",
             title: "Ny Digital Plattform",
             intro: "En komplett overhaling av den digitale kundeopplevelsen for å øke engasjement og konvertering.",
-            imageUrl: "/public/case-studies/case1-main.png",
+            thumbnail: "/case-studies/case1-main.png",
             details: `For Fremtidsrettet Finans AS sto vi overfor utfordringen med en utdatert nettside som ikke lenger møtte kundenes forventninger. 
             
             Vår løsning var å designe og utvikle en helt ny, responsiv plattform med fokus på brukervennlighet og personalisering. Prosjektet inkluderte:
@@ -40,13 +40,13 @@ export default function TjenesterPage() {
             - Integrasjon mot tredjeparts-APIer for sanntidsdata
             
             Resultatet var en 40% økning i konverteringer og en markant nedgang i kundehenvendelser til support.`,
-            gallery: ["/public/case-studies/case1-gallery1.png", "/public/case-studies/case1-gallery2.png"]
+            gallery: ["/case-studies/case1-gallery1.png", "/case-studies/case1-gallery2.png"]
         },
         {
             customer: "Grønn Vekst",
             title: "Visuell Identitet & Merkevarebygging",
             intro: "Hvordan vi bygget en helhetlig merkevare som posisjonerte Grønn Vekst som en leder innen bærekraft.",
-            imageUrl: "/public/case-studies/case2-main.png",
+            thumbnail: "/case-studies/case2-main.png",
             details: `Grønn Vekst trengte en visuell identitet som kunne kommunisere deres verdier og ambisjoner på en tydelig og appellerende måte. 
             
             Vi gjennomførte en strategisk prosess som resulterte i:
@@ -55,8 +55,23 @@ export default function TjenesterPage() {
             - En detaljert merkevarehåndbok for å sikre konsistent bruk
             
             Den nye identiteten ble svært godt mottatt og førte til en 200% økning i merkevaregjenkjennelse i deres viktigste markeder.`,
-            gallery: ["/public/case-studies/case2-gallery1.png", "/public/case-studies/case2-gallery2.png"]
+            gallery: ["/case-studies/case2-gallery1.png", "/case-studies/case2-gallery2.png"]
         },
+        {
+            customer: "Bites",
+            title: "Fra Pop-Up til Profesjonell Aktør",
+            intro: "Vi hjalp pop-up burgersjappen Bites med å etablere en profesjonell digital tilstedeværelse, noe som åpnet dører til større festivaler og arrangementer.",
+            thumbnail: "/bites/biteslogo.png",
+            details: `Bites startet som et spennende pop-up konsept, men manglet en profesjonell plattform for å håndtere bestillinger og presentere merkevaren sin. 
+            
+            Vi utviklet en stilren og mobilvennlig nettside med en strømlinjeformet bestillingsprosess. Løsningen inkluderte:
+            - En intuitiv bestillingsflyt for rask service.
+            - Sikker og enkel online betaling.
+            - Et profesjonelt design som bygget tillit og anerkjennelse.
+            
+            Med sin nye digitale plattform fremsto Bites som en seriøs aktør. Dette førte til vellykkede samarbeid med flere store festivaler og arrangementer, og la grunnlaget for videre vekst.`,
+            gallery: ["/bites/bites1.jpg", "/bites/bites2.png", "/bites/bites3.png"]
+        }
     ];
 
     const testimonials = [

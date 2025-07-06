@@ -1,17 +1,23 @@
 "use client";
 
+import * as React from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogDescription } from "@/components/ui/dialog";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from "@/components/ui/carousel";
 import Image from "next/image";
+import { ImageComparisonSlider } from "./ui/image-comparison-slider";
 
 interface CaseStudy {
     customer: string;
     title: string;
     intro: string;
-    imageUrl: string;
+    thumbnail: string;
     details: string;
-    gallery: string[];
+    gallery?: string[];
+    logoComparison?: {
+        before: string;
+        after: string;
+    }
 }
 
 interface CaseStudyCardProps {
@@ -19,19 +25,45 @@ interface CaseStudyCardProps {
 }
 
 export default function CaseStudyCard({ caseStudy }: CaseStudyCardProps) {
+    const [api, setApi] = React.useState<CarouselApi>()
+    const [canScrollPrev, setCanScrollPrev] = React.useState(false)
+    const [canScrollNext, setCanScrollNext] = React.useState(false)
+
+    React.useEffect(() => {
+        if (!api) {
+            return
+        }
+
+        const updateScrollability = () => {
+            setCanScrollPrev(api.canScrollPrev())
+            setCanScrollNext(api.canScrollNext())
+        }
+
+        updateScrollability()
+        api.on("select", updateScrollability)
+        api.on("reInit", updateScrollability)
+
+        return () => {
+            api.off("select", updateScrollability)
+            api.off("reInit", updateScrollability)
+        }
+    }, [api])
+
     return (
         <Dialog>
             <DialogTrigger asChild>
                 <div className="cursor-pointer group h-full">
                     <Card className="flex flex-col h-full overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-                        <div className="relative w-full h-48 overflow-hidden">
-                            <Image
-                                src={caseStudy.imageUrl}
-                                alt={caseStudy.title}
-                                layout="fill"
-                                objectFit="cover"
-                                className="transition-transform duration-300 group-hover:scale-105"
-                            />
+                        <div className="relative w-full h-48 flex items-center justify-center overflow-hidden bg-muted/20">
+                            <div className="relative w-3/4 h-full">
+                                <Image
+                                    src={caseStudy.thumbnail}
+                                    alt={caseStudy.title}
+                                    layout="fill"
+                                    objectFit="contain"
+                                    className="transition-transform duration-300 group-hover:scale-105"
+                                />
+                            </div>
                         </div>
                         <CardHeader>
                             <p className="text-sm font-semibold text-primary">{caseStudy.customer}</p>
@@ -55,19 +87,33 @@ export default function CaseStudyCard({ caseStudy }: CaseStudyCardProps) {
                         </div>
                     </div>
                     <div className="bg-muted flex items-center justify-center p-8 order-1 md:order-2">
-                        <Carousel className="w-full max-w-md">
-                            <CarouselContent>
-                                {caseStudy.gallery.map((image, i) => (
-                                    <CarouselItem key={i}>
-                                        <div className="relative w-full h-96">
-                                            <Image src={image} alt={`${caseStudy.title} gallery image ${i + 1}`} layout="fill" objectFit="contain" />
-                                        </div>
-                                    </CarouselItem>
-                                ))}
-                            </CarouselContent>
-                            <CarouselPrevious />
-                            <CarouselNext />
-                        </Carousel>
+                        {caseStudy.logoComparison ? (
+                            <ImageComparisonSlider
+                                before={caseStudy.logoComparison.before}
+                                after={caseStudy.logoComparison.after}
+                                alt="Logo comparison"
+                            />
+                        ) : caseStudy.gallery && (
+                            <Carousel setApi={setApi} className="w-full max-w-md">
+                                <CarouselContent>
+                                    {caseStudy.gallery.map((image, i) => (
+                                        <CarouselItem key={i}>
+                                            <div className="relative w-full aspect-video">
+                                                <Image
+                                                    src={image}
+                                                    alt={`${caseStudy.title} gallery image ${i + 1}`}
+                                                    layout="fill"
+                                                    objectFit="cover"
+                                                    objectPosition={image === "/bites/bites3.png" ? "center 20%" : "center"}
+                                                />
+                                            </div>
+                                        </CarouselItem>
+                                    ))}
+                                </CarouselContent>
+                                {canScrollPrev && <CarouselPrevious />}
+                                {canScrollNext && <CarouselNext />}
+                            </Carousel>
+                        )}
                     </div>
                 </div>
             </DialogContent>
