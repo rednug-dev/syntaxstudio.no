@@ -40,12 +40,12 @@ export default function Header() {
         </div>
         <nav className="hidden md:flex flex-1 justify-center items-center gap-2">
           <Button variant="ghost" asChild>
-            <Link href="#services" className="flex items-center gap-2">
+            <Link href="/tjenester" className="flex items-center gap-2">
               <Briefcase className="w-4 h-4" /> Tjenester
             </Link>
           </Button>
           <Button variant="ghost" asChild>
-            <Link href="#about" className="flex items-center gap-2">
+            <Link href="/om-oss" className="flex items-center gap-2">
               <Users className="w-4 h-4" /> Om oss
             </Link>
           </Button>
