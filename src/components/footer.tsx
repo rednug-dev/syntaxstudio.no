@@ -25,7 +25,7 @@ export default function Footer() {
                         </div>
                         <div>
                             <h4 className="font-semibold mb-3 font-headline">Kontakt</h4>
-                            <p className="text-sm text-muted-foreground">inquiries@syntaxstudio.dev</p>
+                            <p className="text-sm text-muted-foreground">info@syntaxstudio.no</p>
                              <div className="flex gap-2 mt-4">
                                 <Button variant="ghost" size="icon" asChild>
                                     <a href="#" aria-label="GitHub"><Github className="w-5 h-5" /></a>
