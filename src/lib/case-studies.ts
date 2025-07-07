@@ -16,7 +16,7 @@ export const caseStudies = [
             before: "/riseup/riseupoldlogo.webp",
             after: "/riseup/riseupnewlogo-2.webp"
         },
-        gallery: ["/riseup/riseup1.webp", "/riseup/riseup2.webp", "/riseup/riseup3.webp"]
+        gallery: ["/riseup/riseupw.png"]
     },
     {
         customer: "Bites",
@@ -31,7 +31,7 @@ export const caseStudies = [
         - Et proft design som bygger tillit og gjenkjennelse.
         
         Med sin nye digitale plattform ble Bites en seriøs aktør. Dette åpnet dører til store festivaler og events, og la grunnlaget for videre vekst.`,
-        gallery: ["/bites/bites1.jpg", "/bites/bites2.webp", "/bites/bites3.webp"]
+        gallery: ["/bites/bitesw.png"]
     },
     {
         customer: "DataSec",
@@ -41,7 +41,7 @@ export const caseStudies = [
         details: `DataSec utfordrer vekterbransjen med innovativ teknologi. Vi ga dem en ny visuell identitet og en proff nettside som matcher deres moderne tilnærming.
 
 En sentral del av samarbeidet er utviklingen av skreddersydd teknologi, som en sanntidsteller for utesteder. Systemet gir full oversikt over antall gjester via et dashbord, som lar kundene optimalisere bemanning og forbedre sikkerheten. Dette gir også verdifull data for smartere, datadrevne beslutninger.`,
-        gallery: ["/datasec/datasec1.png"]
+        gallery: ["/datasec/datasecw1.png", "/datasec/datasecw2.png", "/datasec/datasecw3.png"]
     }
 ];
 
