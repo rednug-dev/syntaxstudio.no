@@ -47,7 +47,7 @@ export default function Header() {
   const closeMenu = () => setIsMenuOpen(false);
 
   const navLinks = [
-    { href: '/tjenester#case-studies', label: 'Caser', icon: <Briefcase className="w-5 h-5" /> },
+    { href: '/tjenester', label: 'Tjenester', icon: <Briefcase className="w-5 h-5" /> },
     { href: '/om-oss', label: 'Om oss', icon: <Users className="w-5 h-5" /> }
   ];
 

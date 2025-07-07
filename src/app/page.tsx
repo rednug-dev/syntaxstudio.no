@@ -1,8 +1,17 @@
+import dynamic from 'next/dynamic';
 import Header from "@/components/header";
-import Footer from "@/components/footer";
 import HeroSection from "@/components/hero-section";
-import ServicesIntroSection from "@/components/services-intro-section";
-import ProposalSection from "@/components/proposal-section";
+import { Skeleton } from "@/components/ui/skeleton";
+
+const ServicesIntroSection = dynamic(() => import('@/components/services-intro-section'), {
+  loading: () => <Skeleton className="w-full h-[400px]" />,
+});
+const ProposalSection = dynamic(() => import('@/components/proposal-section'), {
+  loading: () => <Skeleton className="w-full h-[400px]" />,
+});
+const Footer = dynamic(() => import('@/components/footer'), {
+  loading: () => <Skeleton className="w-full h-[200px]" />,
+});
 
 export default function Home() {
   return (
