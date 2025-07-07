@@ -59,6 +59,8 @@ export default function CaseStudyCard({ caseStudy }: CaseStudyCardProps) {
                                     layout="fill"
                                     objectFit="contain"
                                     className="transition-transform duration-300 group-hover:scale-105"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    quality={75}
                                 />
                             </div>
                         </div>
@@ -97,6 +99,8 @@ export default function CaseStudyCard({ caseStudy }: CaseStudyCardProps) {
                                                         alt={`${caseStudy.title} gallery image ${i + 1}`}
                                                         layout="fill"
                                                         objectFit="cover"
+                                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                                        quality={75}
                                                     />
                                                 </div>
                                             </CarouselItem>
