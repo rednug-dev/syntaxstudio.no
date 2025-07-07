@@ -15,12 +15,12 @@ export default function ServicesIntroSection() {
         {
             icon: <Briefcase className="w-8 h-8 text-primary" />,
             title: "Merkevarebygging & Identitet",
-            description: "Fra logo til visuell profil. Vi skaper en unik merkevareidentitet som treffer målgruppa di."
+            description: "Fra logo til visuell profil. Vi skaper en unik merkevareidentitet som treffer målgruppen din."
         },
         {
             icon: <Bot className="w-8 h-8 text-primary" />,
             title: "AI & Automatisering",
-            description: "Vi booster produktiviteten din med custom automatiseringsløsninger og AI-integrasjoner."
+            description: "Vi booster produktiviteten din med egendefinerte automatiseringsløsninger og AI-integrasjoner."
         }
     ];
 
