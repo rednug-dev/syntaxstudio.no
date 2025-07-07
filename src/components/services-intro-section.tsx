@@ -10,7 +10,7 @@ export default function ServicesIntroSection() {
         {
             icon: <Code className="w-8 h-8 text-primary" />,
             title: "Webutvikling & Design",
-            description: "Vi bygger lynraske, responsive og fete nettsider som fanger oppmerksomhet og konverterer."
+            description: "Vi bygger lynraske, responsive og imponerende nettsider som fanger oppmerksomhet og skaper resultater."
         },
         {
             icon: <Briefcase className="w-8 h-8 text-primary" />,

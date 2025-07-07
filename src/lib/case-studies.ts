@@ -49,7 +49,7 @@ export const services = [
     },
     {
         title: "Merkevarebygging & Identitet",
-        description: "Vi bygger sterke, minneverdige merkevarer. Fra logo til strategi skaper vi en identitet som treffer målgruppa di og får deg til å skille deg ut.",
+        description: "Vi bygger sterke, minneverdige merkevarer. Fra logo til strategi skaper vi en identitet som treffer målgruppen din og får deg til å skille deg ut.",
         features: ["Logo design", "Visuell identitet", "Merkevarestrategi", "Navn og budskap"]
     },
     {

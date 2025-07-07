@@ -7,14 +7,14 @@ export default function OmOssPage() {
     const teamMembers = [
         {
             name: "Gunder Rollufson",
-            role: "Daglig Leder & Grunnlegger",
-            bio: "Gunder startet byrået med en passion for tech og innovasjon. Han hjelper bedrifter å nå sitt digitale potensial og er ekspert på strategi og forretningsutvikling.",
+            role: "Grunnlegger & Utvikler",
+            bio: "Gunder er grunnleggeren av byrået. Som elektroingeniørstudent har han en fot i både den tekniske og den strategiske verden. Han brenner for å finne smarte løsninger der teknologi og forretning møtes, og er involvert i alle ledd av prosjektene.",
             avatar: "/avatars/placeholder.svg"
         },
         {
             name: "Rasul Uzdijev",
-            role: "Leder for Utvikling",
-            bio: "Rasul er en mester i koding og systemarkitektur. Han leder teknisk team og sikrer robuste, skalerbare og top-notch løsninger.",
+            role: "Partner & Utvikler",
+            bio: "Rasul er dataingeniørstudent og en kjernekomponent i teamet. Sammen med Gunder jobber han for å omsette ideer til robust og effektiv kode, og er dypt involvert i både den tekniske arkitekturen og den strategiske retningen.",
             avatar: "/avatars/placeholder.svg"
         }
     ];
@@ -32,7 +32,7 @@ export default function OmOssPage() {
                     </div>
 
                     <div className="bg-muted rounded-lg p-12 mb-20">
-                        <h2 className="text-3xl font-bold font-headline mb-4 text-center">Vår Misjon</h2>
+                        <h2 className="text-3xl font-bold font-headline mb-4 text-center">Vårt Løfte</h2>
                         <p className="text-xl text-center max-w-4xl mx-auto text-muted-foreground">
                             Vi hjelper bedrifter å vinne digitalt. Med teknologi og design gjør vi ideer til virkelighet. Vi bygger partnerskap på tillit, åpenhet og felles suksess.
                         </p>
