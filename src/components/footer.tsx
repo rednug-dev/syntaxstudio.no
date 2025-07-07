@@ -12,30 +12,28 @@ export default function Footer() {
                         <Link href="/" className="flex items-center gap-2 font-bold text-lg font-headline mb-4">
                             <Image src="/logosyntax-nbnm.png" alt="Syntax Studio logo" width={150} height={40} />
                         </Link>
-                        <p className="text-muted-foreground text-sm">Vi bygger digitale opplevelser som løfter merkevaren din og booster veksten.</p>
+                        <p className="text-muted-foreground text-base">Vi bygger digitale opplevelser som løfter merkevaren din og booster veksten.</p>
                     </div>
-                    <div className="grid grid-cols-2 md:col-span-2 gap-8">
-                        <div>
+                    <div className="grid grid-cols-2 md:col-span-2 gap-16">
+                        <div className="mx-auto w-fit">
                             <h4 className="font-semibold mb-3 font-headline">Snarveier</h4>
-                            <ul className="space-y-2 text-sm">
+                            <ul className="space-y-2 text-base">
                                 <li><Link href="/tjenester#case-studies" className="text-muted-foreground hover:text-primary">Caser</Link></li>
                                 <li><Link href="/om-oss" className="text-muted-foreground hover:text-primary">Om oss</Link></li>
                                 <li><Link href="/#proposal" className="text-muted-foreground hover:text-primary">Kontakt</Link></li>
                             </ul>
                         </div>
                         <div>
-                            <h4 className="font-semibold mb-3 font-headline">Kontakt</h4>
-                            <p className="text-sm text-muted-foreground">info@syntaxstudio.no</p>
-                             <div className="flex gap-2 mt-4">
-                                <Button variant="ghost" size="icon" asChild>
-                                    <a href="https://www.instagram.com/syntaxstudio.no/" aria-label="Instagram"><Instagram className="w-5 h-5" /></a>
-                                </Button>
-                            </div>
+                            <h4 className="font-semibold mb-3 font-headline">Generelle henvendelser</h4>
+                            <p className="text-base text-muted-foreground">info@syntaxstudio.no</p>
+                            <h4 className="font-semibold mb-3 font-headline mt-4">Salg</h4>
+                            <p className="text-base text-muted-foreground">sales@syntaxstudio.no</p>
+                            <a href="https://www.instagram.com/syntaxstudio.no/" aria-label="Instagram" className="text-muted-foreground hover:text-primary inline-block mt-2"><Instagram className="w-5 h-5" /></a>
                         </div>
                     </div>
                 </div>
                 <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
-                    <p>&copy; {new Date().getFullYear()} Syntax Studio. Alle rettigheter forbeholdt.</p>
+                    <p>&copy; {new Date().getFullYear()} Syntax Studio.</p>
                 </div>
             </div>
         </footer>

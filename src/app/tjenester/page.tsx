@@ -3,6 +3,7 @@ import Footer from '@/components/footer';
 import Header from '@/components/header';
 import { caseStudies, services, testimonials } from '@/lib/case-studies';
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { CheckCircle } from 'lucide-react';
@@ -11,6 +12,12 @@ export const metadata: Metadata = {
   title: 'Tjenester | Syntax Studio',
   description: 'Utforsk tjenestene vi tilbyr hos Syntax Studio, fra webdesign og merkevarebygging til AI-løsninger og automatisering. Se våre caser og lær hvordan vi kan hjelpe din bedrift å vokse.',
 };
+
+const serviceIllustrations = [
+    "/services/design.png",
+    "/services/identity.png",
+    "/services/ai.png"
+];
 
 export default function TjenesterPage() {
     return (
@@ -41,8 +48,14 @@ export default function TjenesterPage() {
                                         </ul>
                                     </div>
                                     <div className={`relative ${index % 2 === 0 ? 'md:order-2' : 'md:order-1'}`}>
-                                        <div className="bg-muted rounded-lg p-8 h-64 flex items-center justify-center">
-                                            <p className="text-muted-foreground">Illustrasjon kommer her</p>
+                                        <div className="bg-muted rounded-lg h-64 flex items-center justify-center overflow-hidden">
+                                            <Image
+                                                src={serviceIllustrations[index]}
+                                                alt={`Illustrasjon for ${service.title}`}
+                                                width={910}
+                                                height={512}
+                                                className="w-full h-full object-cover"
+                                            />
                                         </div>
                                     </div>
                                 </div>
