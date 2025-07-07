@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from "@/components/ui/carousel";
 import Image from "next/image";
+import { ImageSlider } from "@/components/ui/image-slider";
 
 interface CaseStudy {
     customer: string;
@@ -13,7 +14,7 @@ interface CaseStudy {
     thumbnail: string;
     details: string;
     gallery?: string[];
-    logoComparison?: { // This can be removed later, but the component won't use it.
+    logoComparison?: {
         before: string;
         after: string;
     }
@@ -86,6 +87,15 @@ export default function CaseStudyCard({ caseStudy }: CaseStudyCardProps) {
                         </div>
                     </div>
                     <div className="bg-muted flex flex-col items-center justify-center p-8 order-1 md:order-2 relative gap-4">
+                        {caseStudy.logoComparison && (
+                            <div className="w-full">
+                                <h3 className="text-lg font-semibold mb-4 text-center">Logo Redesign</h3>
+                                <ImageSlider
+                                    beforeImage={caseStudy.logoComparison.before}
+                                    afterImage={caseStudy.logoComparison.after}
+                                />
+                            </div>
+                        )}
                         {caseStudy.gallery && (
                             <div className="w-full">
                                 <h3 className="text-lg font-semibold mb-4 text-center">Galleri</h3>

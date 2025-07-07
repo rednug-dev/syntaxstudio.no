@@ -12,6 +12,10 @@ export const caseStudies = [
         - Fremheving av arrangementer og suksesshistorier for å bygge tillit.
         
         Med en styrket digital plattform fremstår RiseUp nå som en mer seriøs aktør, noe som har økt deres troverdighet og sjanser i kampen om viktige midler.`,
+        logoComparison: {
+            before: "/riseup/riseupoldlogo.webp",
+            after: "/riseup/riseupnewlogo-2.webp"
+        },
         gallery: ["/riseup/riseup1.webp", "/riseup/riseup2.webp", "/riseup/riseup3.webp"]
     },
     {
