@@ -88,9 +88,6 @@ export default function ProposalSection() {
               <form
                 ref={formRef}
                 action={formAction}
-                onSubmit={form.handleSubmit(() => {
-                  formRef.current?.requestSubmit();
-                })}
                 className="space-y-6"
               >
                 <FormField
