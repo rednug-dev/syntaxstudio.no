@@ -5,7 +5,7 @@ import { tv } from 'tailwind-variants';
 
 const imageSliderStyles = tv({
     slots: {
-        wrapper: "relative overflow-hidden",
+        wrapper: "relative overflow-hidden select-none",
         image: "absolute inset-0 w-full h-full object-contain",
         scroller: "absolute inset-y-0 w-2 h-full bg-primary cursor-ew-resize",
         scrollerLine: "absolute inset-y-0 left-1/2 w-0.5 h-full bg-background",
@@ -27,23 +27,20 @@ const ImageSlider = React.forwardRef<HTMLDivElement, ImageSliderProps>(
         const containerRef = useRef<HTMLDivElement>(null);
 
         const { wrapper, image, scroller, scrollerLine, scrollerHandle } = imageSliderStyles();
-
-        const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+        
+        const handleMove = (clientX: number) => {
             if (!containerRef.current) return;
             const rect = containerRef.current.getBoundingClientRect();
-            const x = Math.max(0, Math.min(e.clientX - rect.left, rect.width));
+            const x = Math.max(0, Math.min(clientX - rect.left, rect.width));
             const percent = (x / rect.width) * 100;
             setSliderPosition(percent);
         };
 
         const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
             e.preventDefault();
-            const onMouseMove = (e: MouseEvent) => {
-                if (!containerRef.current) return;
-                const rect = containerRef.current.getBoundingClientRect();
-                const x = Math.max(0, Math.min(e.clientX - rect.left, rect.width));
-                const percent = (x / rect.width) * 100;
-                setSliderPosition(percent);
+            
+            const onMouseMove = (moveEvent: MouseEvent) => {
+                handleMove(moveEvent.clientX);
             }
 
             const onMouseUp = () => {
@@ -54,6 +51,22 @@ const ImageSlider = React.forwardRef<HTMLDivElement, ImageSliderProps>(
             window.addEventListener('mousemove', onMouseMove);
             window.addEventListener('mouseup', onMouseUp);
         };
+        
+        const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+            const onTouchMove = (moveEvent: TouchEvent) => {
+                if (moveEvent.touches.length > 0) {
+                    handleMove(moveEvent.touches[0].clientX);
+                }
+            };
+
+            const onTouchEnd = () => {
+                window.removeEventListener('touchmove', onTouchMove);
+                window.removeEventListener('touchend', onTouchEnd);
+            };
+
+            window.addEventListener('touchmove', onTouchMove);
+            window.addEventListener('touchend', onTouchEnd);
+        };
 
 
 
@@ -61,8 +74,8 @@ const ImageSlider = React.forwardRef<HTMLDivElement, ImageSliderProps>(
             <div
                 ref={containerRef}
                 className={cn(wrapper(), className)}
-                onMouseMove={handleMouseMove}
                 onMouseDown={handleMouseDown}
+                onTouchStart={handleTouchStart}
                 {...props}
             >
                 <div className="relative w-full h-64 max-w-md mx-auto">
