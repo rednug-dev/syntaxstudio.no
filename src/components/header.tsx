@@ -47,7 +47,7 @@ export default function Header() {
   const closeMenu = () => setIsMenuOpen(false);
 
   const navLinks = [
-    { href: '/tjenester', label: 'Tjenester', icon: <Briefcase className="w-5 h-5" /> },
+    { href: '/tjenester#case-studies', label: 'Caser', icon: <Briefcase className="w-5 h-5" /> },
     { href: '/om-oss', label: 'Om oss', icon: <Users className="w-5 h-5" /> }
   ];
 
@@ -82,7 +82,7 @@ export default function Header() {
           <div className="flex-1 flex justify-end items-center">
             <div className="hidden sm:block">
                 <Button asChild>
-                    <Link href="/#proposal">Kontakt oss</Link>
+                    <Link href="/#proposal">Kontakt</Link>
                 </Button>
             </div>
             <div className="lg:hidden ml-2">
@@ -116,7 +116,7 @@ export default function Header() {
           {/* CTA Button for mobile */}
           <div className="sm:hidden mt-4">
             <Button asChild className="w-full">
-              <Link href="/#proposal">Kontakt oss</Link>
+              <Link href="/#proposal">Kontakt</Link>
             </Button>
           </div>
         </div>

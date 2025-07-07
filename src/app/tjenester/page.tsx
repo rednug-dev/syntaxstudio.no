@@ -10,67 +10,61 @@ export default function TjenesterPage() {
     const services = [
         {
             title: "Webutvikling & Design",
-            description: "Vi skaper skreddersydde, responsive og visuelt tiltalende nettsider som gir resultater. Vår prosess involverer grundig planlegging, design og utvikling for å sikre at nettstedet ditt ikke bare ser bra ut, men også fungerer optimalt på alle enheter.",
-            features: ["Responsive design", "CMS-integrasjon", "SEO-optimalisering", "E-handelsløsninger"]
+            description: "Vi bygger skreddersydde, responsive nettsider som gir resultater. Fra A til Å sørger vi for at siden din ser bra ut og funker sømløst på alle enheter.",
+            features: ["Responsive design", "CMS-integrasjon", "SEO", "E-handel"]
         },
         {
             title: "Merkevarebygging & Identitet",
-            description: "Vi hjelper deg med å bygge en sterk og gjenkjennelig merkevare. Fra logo og visuell profil til merkevarestrategi, jobber vi for å skape en identitet som resonnerer med din målgruppe og skiller seg ut i markedet.",
-            features: ["Logo design", "Visuell identitet", "Merkevarestrategi", "Navngivning og budskap"]
+            description: "Vi bygger sterke, minneverdige merkevarer. Fra logo til strategi skaper vi en identitet som treffer målgruppa di og får deg til å skille deg ut.",
+            features: ["Logo design", "Visuell identitet", "Merkevarestrategi", "Navn og budskap"]
         },
         {
             title: "AI & Automatisering",
-            description: "Vi bruker kunstig intelligens for å effektivisere dine arbeidsprosesser. Våre løsninger inkluderer alt fra AI-drevne chatbots og dataanalyse til automatisering av repetitive oppgaver, slik at du kan fokusere på det som virkelig betyr noe.",
-            features: ["AI-chatbots", "Automatisering av arbeidsoppgaver", "Dataanalyse", "Maskinlæringsmodeller"]
+            description: "Vi bruker AI for å booste effektiviteten din. Fra smarte chatbots til automatisering av kjedelige oppgaver – vi lar deg fokusere på det som teller.",
+            features: ["AI-chatbots", "Automatisering", "Dataanalyse", "Maskinlæring"]
         }
     ];
 
     const caseStudies = [
         {
-            customer: "Fremtidsrettet Finans AS",
-            title: "Ny Digital Plattform",
-            intro: "En komplett overhaling av den digitale kundeopplevelsen for å øke engasjement og konvertering.",
-            thumbnail: "/case-studies/case1-main.png",
-            details: `For Fremtidsrettet Finans AS sto vi overfor utfordringen med en utdatert nettside som ikke lenger møtte kundenes forventninger. 
+            customer: "RiseUp",
+            title: "Styrket Digital Tilstedeværelse for Økt Impact",
+            intro: "Ny branding og nettside for å booste RiseUps digitale profil og styrke søknadene deres om midler.",
+            thumbnail: "/riseup/riseupnewlogo-2.png",
+            details: `RiseUp, en organisasjon for ungdom med minoritetsbakgrunn, trengte en digital oppgradering for å matche sitt viktige arbeid og styrke søknadsprosesser for finansiering.
             
-            Vår løsning var å designe og utvikle en helt ny, responsiv plattform med fokus på brukervennlighet og personalisering. Prosjektet inkluderte:
-            - Dybdeanalyse av brukerreiser
-            - Utvikling av et nytt, moderne designsystem
-            - Implementering av en skreddersydd CMS-løsning for enkelt innholdsoppdatering
-            - Integrasjon mot tredjeparts-APIer for sanntidsdata
+            Vår løsning var en total-makeover av merkevaren og en ny, proff nettside:
+            - Ny visuell identitet og logo som utstråler profesjonalitet og varme.
+            - Moderne, brukervennlig nettside som kommuniserer deres misjon og resultater.
+            - Fremheving av arrangementer og suksesshistorier for å bygge tillit.
             
-            Resultatet var en 40% økning i konverteringer og en markant nedgang i kundehenvendelser til support.`,
-            gallery: ["/case-studies/case1-gallery1.png", "/case-studies/case1-gallery2.png"]
-        },
-        {
-            customer: "Grønn Vekst",
-            title: "Visuell Identitet & Merkevarebygging",
-            intro: "Hvordan vi bygget en helhetlig merkevare som posisjonerte Grønn Vekst som en leder innen bærekraft.",
-            thumbnail: "/case-studies/case2-main.png",
-            details: `Grønn Vekst trengte en visuell identitet som kunne kommunisere deres verdier og ambisjoner på en tydelig og appellerende måte. 
-            
-            Vi gjennomførte en strategisk prosess som resulterte i:
-            - En ny logo og fargepalett som reflekterer bærekraft og innovasjon
-            - Et komplett sett med designmaler for alt fra sosiale medier til trykksaker
-            - En detaljert merkevarehåndbok for å sikre konsistent bruk
-            
-            Den nye identiteten ble svært godt mottatt og førte til en 200% økning i merkevaregjenkjennelse i deres viktigste markeder.`,
-            gallery: ["/case-studies/case2-gallery1.png", "/case-studies/case2-gallery2.png"]
+            Med en styrket digital plattform fremstår RiseUp nå som en mer seriøs aktør, noe som har økt deres troverdighet og sjanser i kampen om viktige midler.`,
+            gallery: ["/riseup/riseup1.PNG", "/riseup/riseup2.PNG", "/riseup/riseup3.PNG"]
         },
         {
             customer: "Bites",
-            title: "Fra Pop-Up til Profesjonell Aktør",
-            intro: "Vi hjalp pop-up burgersjappen Bites med å etablere en profesjonell digital tilstedeværelse, noe som åpnet dører til større festivaler og arrangementer.",
+            title: "Fra Pop-Up til Proff Aktør",
+            intro: "Fra pop-up til proft. Vi ga Bites den digitale plattformen de trengte for å lande større festivaler og events.",
             thumbnail: "/bites/biteslogo.png",
-            details: `Bites startet som et spennende pop-up konsept, men manglet en profesjonell plattform for å håndtere bestillinger og presentere merkevaren sin. 
+            details: `Bites startet som et kult pop-up konsept, men manglet en proff plattform for bestillinger og merkevarebygging. 
             
-            Vi utviklet en stilren og mobilvennlig nettside med en strømlinjeformet bestillingsprosess. Løsningen inkluderte:
-            - En intuitiv bestillingsflyt for rask service.
+            Vi utviklet en stilren og mobilvennlig nettside med en smooth bestillingsprosess:
+            - Intuitiv bestillingsflyt for rask service.
             - Sikker og enkel online betaling.
-            - Et profesjonelt design som bygget tillit og anerkjennelse.
+            - Et proft design som bygger tillit og gjenkjennelse.
             
-            Med sin nye digitale plattform fremsto Bites som en seriøs aktør. Dette førte til vellykkede samarbeid med flere store festivaler og arrangementer, og la grunnlaget for videre vekst.`,
+            Med sin nye digitale plattform ble Bites en seriøs aktør. Dette åpnet dører til store festivaler og events, og la grunnlaget for videre vekst.`,
             gallery: ["/bites/bites1.jpg", "/bites/bites2.png", "/bites/bites3.png"]
+        },
+        {
+            customer: "DataSec",
+            title: "Innovativ Sikkerhetstech for Vekterbransjen",
+            intro: "Ny identitet, ny nettside og custom tech for DataSec. Vi leverer sanntidsdata som forbedrer sikkerheten.",
+            thumbnail: "/datasec/DataSec-Logo.png",
+            details: `DataSec utfordrer vekterbransjen med innovativ teknologi. Vi ga dem en ny visuell identitet og en proff nettside som matcher deres moderne tilnærming.
+
+En sentral del av samarbeidet er utviklingen av skreddersydd teknologi, som en sanntidsteller for utesteder. Systemet gir full oversikt over antall gjester via et dashbord, som lar kundene optimalisere bemanning og forbedre sikkerheten. Dette gir også verdifull data for smartere, datadrevne beslutninger.`,
+            gallery: ["/datasec/datasec1.png"]
         }
     ];
 
@@ -79,13 +73,13 @@ export default function TjenesterPage() {
             name: "Ola Nordmann",
             title: "CEO, Start-up AS",
             avatar: "/avatars/01.png",
-            testimonial: "Samarbeidet med dette teamet har vært en game-changer for oss. Deres ekspertise innen webutvikling og AI har tatt virksomheten vår til et helt nytt nivå."
+            testimonial: "Samarbeidet var en game-changer. Deres skills i webutvikling og AI tok oss til neste nivå."
         },
         {
             name: "Kari Svendsen",
             title: "Markedssjef, Etablert Bedrift",
             avatar: "/avatars/02.png",
-            testimonial: "Fantastisk arbeid med vår nye merkevareidentitet. De forsto visjonen vår perfekt og leverte et resultat som overgikk alle forventninger."
+            testimonial: "Fantastisk jobb med vår nye merkevare. De nailet visjonen vår og leverte et resultat som overgikk alle forventninger."
         }
     ];
 
@@ -98,7 +92,7 @@ export default function TjenesterPage() {
                     <div className="text-center mb-16">
                         <h1 className="text-4xl sm:text-5xl font-bold font-headline">Våre Tjenester</h1>
                         <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-                            Vi dykker dypt inn i dine behov for å levere skreddersydde løsninger som skaper reell verdi.
+                            Vi leverer skreddersydde løsninger som skaper reell verdi.
                         </p>
                     </div>
                     <div className="space-y-16 mb-28">
@@ -130,7 +124,7 @@ export default function TjenesterPage() {
                         <div className="text-center mb-12">
                             <h2 className="text-3xl sm:text-4xl font-bold font-headline">Utvalgte Caser</h2>
                             <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-                                Se hvordan vi har hjulpet andre bedrifter med å nå sine mål.
+                                Se hvordan vi har hjulpet andre bedrifter å lykkes.
                             </p>
                         </div>
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

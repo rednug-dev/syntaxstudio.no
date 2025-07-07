@@ -12,15 +12,15 @@ export default function Footer() {
                         <Link href="/" className="flex items-center gap-2 font-bold text-lg font-headline mb-4">
                             <Image src="/logosyntax-nbnm.png" alt="Syntax Studio logo" width={150} height={40} />
                         </Link>
-                        <p className="text-muted-foreground text-sm">Skaper skreddersydde digitale opplevelser som løfter merkevaren din og automatiserer din suksess.</p>
+                        <p className="text-muted-foreground text-sm">Vi bygger digitale opplevelser som løfter merkevaren din og booster veksten.</p>
                     </div>
                     <div className="grid grid-cols-2 md:col-span-2 gap-8">
                         <div>
-                            <h4 className="font-semibold mb-3 font-headline">Hurtiglenker</h4>
+                            <h4 className="font-semibold mb-3 font-headline">Snarveier</h4>
                             <ul className="space-y-2 text-sm">
-                                <li><Link href="/tjenester#case-studies" className="text-muted-foreground hover:text-primary">Vårt arbeid</Link></li>
+                                <li><Link href="/tjenester#case-studies" className="text-muted-foreground hover:text-primary">Caser</Link></li>
                                 <li><Link href="/om-oss" className="text-muted-foreground hover:text-primary">Om oss</Link></li>
-                                <li><Link href="/#proposal" className="text-muted-foreground hover:text-primary">Kontakt oss</Link></li>
+                                <li><Link href="/#proposal" className="text-muted-foreground hover:text-primary">Kontakt</Link></li>
                             </ul>
                         </div>
                         <div>

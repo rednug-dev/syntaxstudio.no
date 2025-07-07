@@ -70,16 +70,16 @@ export default function ProposalSection() {
     <section id="proposal" className="container mx-auto px-4 py-20 sm:py-28">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl sm:text-5xl font-bold font-headline">La oss bygge sammen</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold font-headline">Klar for å bygge?</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Har du et prosjekt i tankene? Fyll ut skjemaet nedenfor, så tar vi kontakt for å diskutere hvordan vi kan gjøre ideene dine til virkelighet.
+            Har du en idé? Fyll ut skjemaet, så finner vi ut hvordan vi kan gjøre den til virkelighet.
           </p>
         </div>
 
         {state.success ? (
           <Card className="p-6 md:p-8 text-center animate-fade-in-up">
             <CheckCircle className="w-16 h-16 mx-auto text-green-500" />
-            <h3 className="text-2xl font-bold font-headline mt-4">Melding sendt!</h3>
+            <h3 className="text-2xl font-bold font-headline mt-4">Takk for meldingen!</h3>
             <p className="mt-2 text-muted-foreground">{state.message}</p>
           </Card>
         ) : (
@@ -124,7 +124,7 @@ export default function ProposalSection() {
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Din melding</FormLabel>
+                      <FormLabel>Melding</FormLabel>
                       <FormControl>
                         <Textarea
                           placeholder="Fortell oss om prosjektet ditt..."

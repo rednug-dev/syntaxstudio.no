@@ -10,17 +10,17 @@ export default function ServicesIntroSection() {
         {
             icon: <Code className="w-8 h-8 text-primary" />,
             title: "Webutvikling & Design",
-            description: "Vi bygger lynraske, responsive og visuelt slående nettsider som fanger oppmerksomheten og konverterer besøkende til kunder."
+            description: "Vi bygger lynraske, responsive og fete nettsider som fanger oppmerksomhet og konverterer."
         },
         {
             icon: <Briefcase className="w-8 h-8 text-primary" />,
             title: "Merkevarebygging & Identitet",
-            description: "Fra logo til komplett visuell profil, skaper vi en helhetlig og minneverdig merkevareidentitet som resonnerer med din målgruppe."
+            description: "Fra logo til visuell profil. Vi skaper en unik merkevareidentitet som treffer målgruppa di."
         },
         {
             icon: <Bot className="w-8 h-8 text-primary" />,
             title: "AI & Automatisering",
-            description: "Vi effektiviserer dine forretningsprosesser med skreddersydde automatiseringsløsninger og AI-integrasjoner for økt produktivitet."
+            description: "Vi booster produktiviteten din med custom automatiseringsløsninger og AI-integrasjoner."
         }
     ];
 
@@ -60,7 +60,7 @@ export default function ServicesIntroSection() {
                 >
                     <h2 className="text-4xl sm:text-5xl font-bold font-headline">Våre Tjenester</h2>
                     <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-                        Vi tilbyr en komplett pakke med digitale tjenester for å transformere din online tilstedeværelse, fra konsept til ferdig produkt.
+                        En komplett pakke med digitale tjenester som transformerer din online tilstedeværelse.
                     </p>
                 </motion.div>
                 <motion.div 
