@@ -14,9 +14,9 @@ export const metadata: Metadata = {
 };
 
 const serviceIllustrations = [
-    "/services/design.png",
-    "/services/identity.png",
-    "/services/ai.png"
+    "/services/design.webp",
+    "/services/identity.webp",
+    "/services/ai.webp"
 ];
 
 export default function TjenesterPage() {
