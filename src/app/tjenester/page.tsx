@@ -68,7 +68,7 @@ export default function TjenesterPage() {
                         <div className="text-center mb-12">
                             <h2 className="text-3xl sm:text-4xl font-bold font-headline">Utvalgte Caser</h2>
                             <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-                                Se hvordan vi har hjulpet andre bedrifter å lykkes.
+                                Trykk for å se hvordan vi har hjulpet andre bedrifter å lykkes.
                             </p>
                         </div>
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
