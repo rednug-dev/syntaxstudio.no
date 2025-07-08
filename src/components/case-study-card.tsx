@@ -98,7 +98,7 @@ export default function CaseStudyCard({ caseStudy }: CaseStudyCardProps) {
                         )}
                         {caseStudy.gallery && (
                             <div className="w-full">
-                                <h3 className="text-lg font-semibold mb-4 text-center">Galleri</h3>
+                                <h3 className="text-lg font-semibold mb-4 text-center">Nettside</h3>
                                 <Carousel setApi={setApi} className="w-full max-w-md mx-auto">
                                     <CarouselContent>
                                         {caseStudy.gallery.map((image, i) => (

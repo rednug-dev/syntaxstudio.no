@@ -54,7 +54,7 @@ export default function TjenesterPage() {
                                                 alt={`Illustrasjon for ${service.title}`}
                                                 width={910}
                                                 height={512}
-                                                className="w-full h-full object-contain"
+                                                className="w-full h-full object-cover"
                                             />
                                         </div>
                                     </div>
