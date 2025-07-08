@@ -1,4 +1,4 @@
-import { Instagram } from "lucide-react";
+import { Instagram, Linkedin } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -32,9 +32,12 @@ export default function Footer() {
                             <p className="text-base text-muted-foreground break-words">info@syntaxstudio.no</p>
                             <h4 className="font-semibold mb-3 font-headline mt-4">Salg</h4>
                             <p className="text-base text-muted-foreground break-words">sales@syntaxstudio.no</p>
-                            <div className="flex justify-center sm:justify-start mt-4">
+                            <div className="flex justify-center sm:justify-start mt-4 gap-4">
                                 <a href="https://www.instagram.com/syntaxstudio.no/" aria-label="Instagram" className="text-muted-foreground hover:text-primary">
                                     <Instagram className="w-5 h-5" />
+                                </a>
+                                <a href="https://www.linkedin.com/company/syntax-studio-no/" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary">
+                                    <Linkedin className="w-5 h-5" />
                                 </a>
                             </div>
                         </div>

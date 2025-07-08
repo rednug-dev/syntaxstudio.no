@@ -82,7 +82,7 @@ export default function Header() {
           <div className="flex-1 flex justify-end items-center">
             <div className="hidden sm:block">
                 <Button asChild>
-                    <Link href="/#proposal">Kontakt Oss</Link>
+                    <Link href="/#proposal">Kontakt oss</Link>
                 </Button>
             </div>
             <div className="lg:hidden ml-2">
