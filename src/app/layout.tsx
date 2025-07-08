@@ -20,9 +20,9 @@ export const metadata: Metadata = {
   title: 'Syntax Studio',
   description: 'Webdesign, merkevarebygging og automatisering',
   icons: {
-    icon: '/logos/syntax-i.png',
-    shortcut: '/logos/syntax-i.png',
-    apple: '/logos/syntax-i.png',
+    icon: '/logos/syntax-i.png?v=2',
+    shortcut: '/logos/syntax-i.png?v=2',
+    apple: '/logos/syntax-i.png?v=2',
   },
 };
 
