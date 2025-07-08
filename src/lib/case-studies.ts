@@ -1,7 +1,7 @@
 export const caseStudies = [
     {
         customer: "RiseUp",
-        title: "Styrket Digital Tilstedeværelse for Økt Impact",
+        title: "Digital Rebrand",
         intro: "Ny branding og nettside for å booste RiseUps digitale profil og styrke søknadene deres om midler.",
         thumbnail: "/riseup/riseupnewlogo-2.webp",
         details: `RiseUp, en organisasjon for ungdom med minoritetsbakgrunn, trengte en digital oppgradering for å matche sitt viktige arbeid og styrke søknadsprosesser for finansiering.
@@ -20,7 +20,7 @@ export const caseStudies = [
     },
     {
         customer: "Bites",
-        title: "Fra Pop-Up til Proff Aktør",
+        title: "Proff Plattform",
         intro: "Fra pop-up til proft. Vi ga Bites den digitale plattformen de trengte for å lande større festivaler og events.",
         thumbnail: "/bites/biteslogo.webp",
         details: `Bites startet som et kult pop-up konsept, men manglet en proff plattform for bestillinger og merkevarebygging. 
@@ -35,7 +35,7 @@ export const caseStudies = [
     },
     {
         customer: "DataSec",
-        title: "Innovativ Sikkerhetstech for Vekterbransjen",
+        title: "Smarte løsninger",
         intro: "Ny identitet, ny nettside og custom tech for DataSec. Vi leverer sanntidsdata som forbedrer sikkerheten.",
         thumbnail: "/datasec/DataSec-Logo.png",
         details: `DataSec utfordrer vekterbransjen med innovativ teknologi. Vi ga dem en ny visuell identitet og en proff nettside som matcher deres moderne tilnærming.
@@ -74,6 +74,6 @@ export const testimonials = [
         name: "Rahma Mohamed",
         title: "Styreleder, RiseUp AS",
         avatar: "/avatars/placeholder.svg",
-        testimonial: "Fantastisk jobb med vår nye brand. De nailet visjonen vår og leverte et resultat som overgikk alle forventninger."
+        testimonial: "Fantastisk jobb med vårt nye brand. De nailet visjonen vår og leverte et resultat som overgikk alle forventninger."
     }
 ];

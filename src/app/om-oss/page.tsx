@@ -99,7 +99,7 @@ export default function OmOssPage() {
                       <div className="bg-primary text-primary-foreground rounded-lg p-12 text-center">
                           <h2 className="text-3xl font-bold font-headline mb-4">Vårt Løfte til Deg</h2>
                           <p className="text-xl max-w-4xl mx-auto text-primary-foreground/80">
-                              Vi hjelper bedrifter å vinne digitalt. Med teknologi og design gjør vi ideer til virkelighet. Vi bygger partnerskap på tillit, åpenhet og felles suksess.
+                          Vi gjør din digitale reise trygg og vellykket. Sammen gjør vi ideer til virkelighet og skaper resultater du kan være stolt av, bygget på et fundament av tillit og kvalitet.
                           </p>
                       </div>
                     </div>
