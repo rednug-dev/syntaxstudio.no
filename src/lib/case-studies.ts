@@ -49,7 +49,7 @@ export const services = [
     {
         title: "Webutvikling & Design",
         description: "Vi bygger skreddersydde, responsive nettsider som gir resultater. Fra A til Å sørger vi for at siden din ser bra ut og funker sømløst på alle enheter.",
-        features: ["Responsive design", "CMS-integrasjon", "SEO", "E-handel"]
+        features: ["Responsive design", "Vedlikehold", "SEO", "E-handel"]
     },
     {
         title: "Merkevarebygging & Identitet",
