@@ -19,6 +19,11 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: 'Syntax Studio',
   description: 'Webdesign, merkevarebygging og automatisering',
+  icons: {
+    icon: '/logos/syntax-i.png',
+    shortcut: '/logos/syntax-i.png',
+    apple: '/logos/syntax-i.png',
+  },
 };
 
 export default function RootLayout({
