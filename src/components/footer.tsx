@@ -12,7 +12,7 @@ export default function Footer() {
                         <Link href="/" className="flex items-center gap-2 font-bold text-lg font-headline mb-4">
                             <Image src="/logosyntax-nbnm.png" alt="Syntax Studio logo" width={150} height={40} />
                         </Link>
-                        <p className="text-muted-foreground text-base">Vi bygger digitale opplevelser som løfter merkevaren din og booster veksten.</p>
+                        <p className="text-muted-foreground text-base">Fra visjon til virkelighet</p>
                     </div>
 
                     {/* Links and Contact Info */}

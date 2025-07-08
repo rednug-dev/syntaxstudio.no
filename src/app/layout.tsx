@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter, Space_Grotesk } from 'next/font/google';
 import { Toaster } from "@/components/ui/toaster"
 import './globals.css';
+import { Analytics } from "@vercel/analytics/next"
 import { cn } from '@/lib/utils';
 
 const inter = Inter({
@@ -20,9 +21,9 @@ export const metadata: Metadata = {
   title: 'Syntax Studio',
   description: 'Webdesign, merkevarebygging og automatisering',
   icons: {
-    icon: '/logos/syntax-i.png?v=2',
-    shortcut: '/logos/syntax-i.png?v=2',
-    apple: '/logos/syntax-i.png?v=2',
+    icon: '/logos/syntax-i.webp?v=2',
+    shortcut: '/logos/syntax-i.webp?v=2',
+    apple: '/logos/syntax-i.webp?v=2',
   },
 };
 
@@ -38,6 +39,7 @@ export default function RootLayout({
         inter.variable,
         spaceGrotesk.variable
       )}>
+        <Analytics />
         {children}
         <Toaster />
       </body>
