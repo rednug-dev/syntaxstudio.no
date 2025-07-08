@@ -41,7 +41,7 @@ export const caseStudies = [
         details: `DataSec utfordrer vekterbransjen med innovativ teknologi. Vi ga dem en ny visuell identitet og en proff nettside som matcher deres moderne tilnærming.
 
 En sentral del av samarbeidet er utviklingen av skreddersydd teknologi, som en sanntidsteller for utesteder. Systemet gir full oversikt over antall gjester via et dashbord, som lar kundene optimalisere bemanning og forbedre sikkerheten. Dette gir også verdifull data for smartere, datadrevne beslutninger.`,
-        gallery: ["/datasec/datasecw1.png", "/datasec/datasecw2.png", "/datasec/datasecw3.png"]
+        gallery: ["/datasec/datasecw3.png", "/datasec/datasecw1.png", "/datasec/datasecw2.png"]
     }
 ];
 
