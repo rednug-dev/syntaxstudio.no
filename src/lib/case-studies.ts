@@ -65,15 +65,15 @@ export const services = [
 
 export const testimonials = [
     {
-        name: "Ola Nordmann",
-        title: "CEO, Start-up AS",
+        name: "Abdulrahman Al Tamimi",
+        title: "Daglig Leder, Bites",
         avatar: "/avatars/placeholder.svg",
-        testimonial: "Samarbeidet var en game-changer. Deres skills i webutvikling og AI tok oss til neste nivå."
+        testimonial: "Samarbeidet var en game-changer. Deres skills i webutvikling tok oss til neste nivå."
     },
     {
-        name: "Kari Svendsen",
-        title: "Markedssjef, Etablert Bedrift",
+        name: "Rahma Mohamed",
+        title: "Styreleder, RiseUp AS",
         avatar: "/avatars/placeholder.svg",
-        testimonial: "Fantastisk jobb med vår nye merkevare. De nailet visjonen vår og leverte et resultat som overgikk alle forventninger."
+        testimonial: "Fantastisk jobb med vår nye brand. De nailet visjonen vår og leverte et resultat som overgikk alle forventninger."
     }
 ];
