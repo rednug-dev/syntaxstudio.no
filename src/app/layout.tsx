@@ -36,6 +36,7 @@ export default function RootLayout({
   return (
     <html lang="no" className="scroll-smooth dark">
       <head>
+        {/* Google Tag Manager */}
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=AW-17330083087"
@@ -49,6 +50,37 @@ export default function RootLayout({
             gtag('config', 'AW-17330083087');
           `}
         </Script>
+
+        {/* Iubenda Cookie Solution */}
+        <Script id="iubenda-cs-config" type="text/javascript">
+          {`
+            var _iub = _iub || [];
+            _iub.csConfiguration = {
+              "siteId": 4151649,
+              "cookiePolicyId": 19330649,
+              "lang": "no",
+              "storage": { "useSiteId": true },
+              "banner": {
+                "position": "bottom",
+                "acceptButtonDisplay": true,
+                "customizeButtonDisplay": true,
+                "explicitWithdrawal": true,
+                "listPurposes": true,
+                "backgroundColor": "#0A0A0A", // Dark background
+                "textColor": "#FAFAFA", // Light text
+                "acceptButtonColor": "#FFFFFF",
+                "acceptButtonCaptionColor": "#0A0A0A",
+                "customizeButtonColor": "transparent",
+                "customizeButtonCaptionColor": "#FFFFFF",
+                "rejectButtonColor": "transparent",
+                "rejectButtonCaptionColor": "#A1A1AA"
+              }
+            };
+          `}
+        </Script>
+        <Script type="text/javascript" src="https://cs.iubenda.com/autoblocking/4151649.js"></Script>
+        <Script type="text/javascript" src="//cdn.iubenda.com/cs/gpp/stub.js"></Script>
+        <Script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charSet="UTF-8" async></Script>
       </head>
       <body className={cn(
         "font-body antialiased",
