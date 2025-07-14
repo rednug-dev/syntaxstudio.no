@@ -10,7 +10,7 @@ export default function Footer() {
                     {/* Logo and Slogan */}
                     <div className="md:col-span-1">
                         <Link href="/" className="flex items-center gap-2 font-bold text-lg font-headline mb-4">
-                            <Image src="/logosyntax-nbnm.png" alt="Syntax Studio logo" width={150} height={40} />
+                            <Image src="/logosyntax-nbnm.png" alt="Syntax Studio logo" width={150} height={40} suppressHydrationWarning />
                         </Link>
                         <p className="text-muted-foreground text-base">Fra visjon til virkelighet</p>
                     </div>
@@ -33,10 +33,10 @@ export default function Footer() {
                             <h4 className="font-semibold mb-3 font-headline mt-4">Salg</h4>
                             <p className="text-base text-muted-foreground break-words">sales@syntaxstudio.no</p>
                             <div className="flex justify-center sm:justify-start mt-4 gap-4">
-                                <a href="https://www.instagram.com/syntaxstudio.no/" aria-label="Instagram" className="text-muted-foreground hover:text-primary">
+                                <a href="https://www.instagram.com/syntaxstudio.no/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-muted-foreground hover:text-primary">
                                     <Instagram className="w-5 h-5" />
                                 </a>
-                                <a href="https://www.linkedin.com/company/syntax-studio-no/" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary">
+                                <a href="https://www.linkedin.com/company/syntax-studio-no/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary">
                                     <Linkedin className="w-5 h-5" />
                                 </a>
                             </div>
@@ -44,7 +44,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
-                    <p>&copy; {new Date().getFullYear()} Syntax Studio.</p>
+                    <p suppressHydrationWarning>&copy; {new Date().getFullYear()} Syntax Studio.</p>
                 </div>
             </div>
         </footer>

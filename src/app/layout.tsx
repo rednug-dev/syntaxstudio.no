@@ -74,6 +74,9 @@ export default function RootLayout({
                 "customizeButtonCaptionColor": "#FFFFFF",
                 "rejectButtonColor": "transparent",
                 "rejectButtonCaptionColor": "#A1A1AA"
+              },
+              "brand": {
+                "logo": "https://syntax-interaktiv.no/logos/syntax-i.webp"
               }
             };
           `}
