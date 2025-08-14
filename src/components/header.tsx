@@ -47,9 +47,9 @@ export default function Header() {
   const closeMenu = () => setIsMenuOpen(false);
 
   const navLinks = [
-    { href: '/tjenester', label: 'Showcase', icon: <Briefcase className="w-5 h-5" /> },
-    { href: '/om-oss', label: 'About us', icon: <Users className="w-5 h-5" /> },
-    { href: '/pris', label: 'Pricing', icon: <Banknote className="w-5 h-5" /> }
+    { href: '/services', label: 'Showcase', icon: <Briefcase className="w-5 h-5" /> },
+    { href: '/about-us', label: 'About us', icon: <Users className="w-5 h-5" /> },
+    { href: '/pricing', label: 'Pricing', icon: <Banknote className="w-5 h-5" /> }
   ];
 
   return (

@@ -21,9 +21,9 @@ export default function Footer() {
                         <div className="mx-auto w-full sm:w-fit text-center sm:text-left">
                             <h4 className="font-semibold mb-3 font-headline">Links</h4>
                             <ul className="space-y-2 text-base">
-                                <li><Link href="/tjenester#case-studies" className="text-muted-foreground hover:text-primary">Examples</Link></li>
-                                <li><Link href="/om-oss" className="text-muted-foreground hover:text-primary">About us</Link></li>
-                                <li><Link href="/pris" className="text-muted-foreground hover:text-primary">Pricing</Link></li>
+                                <li><Link href="/services#case-studies" className="text-muted-foreground hover:text-primary">Examples</Link></li>
+                                <li><Link href="/about-us" className="text-muted-foreground hover:text-primary">About us</Link></li>
+                                <li><Link href="/pricing" className="text-muted-foreground hover:text-primary">Pricing</Link></li>
                                 <li><Link href="/#proposal" className="text-muted-foreground hover:text-primary">Contact us</Link></li>
                             </ul>
                         </div>

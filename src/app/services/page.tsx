@@ -6,7 +6,7 @@ import ProjectsShowcase from "@/components/project-showcase";
 import type { Metadata } from "next";
 
 
-export default function WorkPage() {
+export default function ServicesPage() {
   return (
     <>
       <Header />
