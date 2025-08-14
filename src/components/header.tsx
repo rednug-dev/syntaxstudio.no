@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import Image from 'next/image';
-import { Briefcase, Users, Menu, X, Tag } from 'lucide-react';
+import { Briefcase, Users, Menu, X, Banknote } from 'lucide-react';
 
 export default function Header() {
   const [isHidden, setIsHidden] = useState(false);
@@ -49,7 +49,7 @@ export default function Header() {
   const navLinks = [
     { href: '/tjenester', label: 'Showcase', icon: <Briefcase className="w-5 h-5" /> },
     { href: '/om-oss', label: 'About us', icon: <Users className="w-5 h-5" /> },
-    { href: '/pris', label: 'Pricing', icon: <Users className="w-5 h-5" /> }
+    { href: '/pris', label: 'Pricing', icon: <Banknote className="w-5 h-5" /> }
   ];
 
   return (

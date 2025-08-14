@@ -17,7 +17,7 @@ export default function AboutUsPage() {
     },
     {
       name: "Rasul Uzdijev",
-      role: "Partner & Cheif Architect",
+      role: "Partner & Chief Architect",
       bio: "Partner who turns ideas into robust, scalable systems.",
       avatarSrc: "/avatars/placeholder.svg",
       skills: ["Python", "AI", "Systems Architecture", "Database"],
