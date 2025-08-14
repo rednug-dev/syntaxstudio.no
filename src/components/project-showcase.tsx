@@ -195,11 +195,6 @@ function ProjectCard({ p }: { p: Project }) {
         </CardContent>
         {p.url && (
           <CardFooter>
-            <Button asChild variant="outline" className="gap-2">
-              <a href={p.url} target="_blank" rel="noreferrer noopener">
-                View project <ExternalLink className="h-4 w-4" />
-              </a>
-            </Button>
           </CardFooter>
         )}
       </Card>
