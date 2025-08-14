@@ -22,12 +22,12 @@ function SubmitButton() {
       {pending ? (
         <>
           <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-          Sender...
+          Sending...
         </>
       ) : (
         <>
           <MessageSquare className="mr-2 h-5 w-5" />
-          Send melding
+          Send Message
         </>
       )}
     </Button>
@@ -70,16 +70,16 @@ export default function ProposalSection() {
     <section id="proposal" className="container mx-auto px-4 py-20 sm:py-28">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl sm:text-5xl font-bold font-headline">Klar for å bygge?</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold font-headline">Have something on your mind?</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Har du en idé? Fyll ut skjemaet, så finner vi ut hvordan vi kan gjøre den til virkelighet.
+            Have a question, or want to start a project with us? Fill out the form below and we will get back to you as soon as possible.
           </p>
         </div>
 
         {state.success ? (
           <Card className="p-6 md:p-8 text-center animate-fade-in-up">
             <CheckCircle className="w-16 h-16 mx-auto text-green-500" />
-            <h3 className="text-2xl font-bold font-headline mt-4">Takk for meldingen!</h3>
+            <h3 className="text-2xl font-bold font-headline mt-4">Thanks for your message!</h3>
             <p className="mt-2 text-muted-foreground">{state.message}</p>
           </Card>
         ) : (
@@ -95,9 +95,9 @@ export default function ProposalSection() {
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Navn</FormLabel>
+                      <FormLabel>Name</FormLabel>
                       <FormControl>
-                        <Input placeholder="Ditt navn" {...field} />
+                        <Input placeholder="Your name" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -108,9 +108,9 @@ export default function ProposalSection() {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>E-post</FormLabel>
+                      <FormLabel>Email</FormLabel>
                       <FormControl>
-                        <Input type="email" placeholder="din.epost@eksempel.com" {...field} />
+                        <Input type="email" placeholder="email@example.com" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -121,10 +121,10 @@ export default function ProposalSection() {
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Melding</FormLabel>
+                      <FormLabel>Message</FormLabel>
                       <FormControl>
                         <Textarea
-                          placeholder="Fortell oss om prosjektet ditt..."
+                          placeholder="What do you have on your mind?"
                           className="min-h-[150px] text-base"
                           {...field}
                         />
