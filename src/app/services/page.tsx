@@ -4,7 +4,7 @@ import Footer from "@/components/footer";
 import Header from "@/components/header";
 import WorkIntroSection from "@/components/project-showcase-2";
 
-export default function WorkPage() {
+export default function ServicesPage() {
   return (
     <>
       <Header />
