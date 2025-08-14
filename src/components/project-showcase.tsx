@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 import { motion, Variants } from "framer-motion";
 import {
@@ -109,16 +111,6 @@ const SERVICE_FILTERS = [
   "SEO",
 ];
 
-// ---------- Animations ----------
-const container: Variants = {
-  hidden: { opacity: 0 },
-  show: { opacity: 1, transition: { staggerChildren: 0.06 } },
-};
-const item: Variants = {
-  hidden: { opacity: 0, y: 12 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.35, ease: "easeOut" } },
-};
-
 // ---------- UI Helpers ----------
 function Tag({ children }: { children: React.ReactNode }) {
   return (
@@ -139,7 +131,7 @@ function Bullet({ children }: { children: React.ReactNode }) {
 
 function ProjectCard({ p }: { p: Project }) {
   return (
-    <motion.div variants={item} whileHover={{ y: -4 }}>
+    <div>
       <Card className="relative h-full rounded-2xl border bg-card/80 shadow-sm transition-shadow hover:shadow-md">
         <CardHeader>
           <div className="flex items-start justify-between gap-6">
@@ -198,7 +190,7 @@ function ProjectCard({ p }: { p: Project }) {
           </CardFooter>
         )}
       </Card>
-    </motion.div>
+    </div>
   );
 }
 
@@ -253,17 +245,13 @@ export default function ProjectsShowcase({
         ))}
       </div>
 
-      <motion.div
-        variants={container}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
+      <div
         className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3"
       >
         {visible.map((p) => (
           <ProjectCard key={p.title} p={p} />
         ))}
-      </motion.div>
+      </div>
     </section>
   );
-}
+} 
