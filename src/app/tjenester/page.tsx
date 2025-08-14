@@ -2,16 +2,14 @@
 
 import Footer from "@/components/footer";
 import Header from "@/components/header";
-import ProjectsShowcase from "@/components/project-showcase";
-import type { Metadata } from "next";
-
+import WorkIntroSection from "@/components/project-showcase-2";
 
 export default function WorkPage() {
   return (
     <>
       <Header />
       <main>
-        <ProjectsShowcase />
+        <WorkIntroSection/>
       </main>
       <Footer />
     </>
