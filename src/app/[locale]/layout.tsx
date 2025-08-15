@@ -3,8 +3,9 @@ import {Inter, Space_Grotesk} from 'next/font/google';
 import Script from 'next/script';
 import {Toaster} from '@/components/ui/toaster';
 import {cn} from '@/lib/utils';
+import FloatingLocaleSwitch from '@/components/floating-locale-switch';
+import 'flag-icons/css/flag-icons.min.css';
 
-// (valgfritt) next-intl på server
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages, setRequestLocale} from 'next-intl/server';
 import type {Locale} from 'next-intl';
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
   children,
-  // ⬇️ Mottar params som Promise og await’er
+  // Mottar params som Promise og await
   params,
 }: {
   children: React.ReactNode;
@@ -41,7 +42,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} className="scroll-smooth dark">
       <head>
-        {/* GTM/Iubenda-scripts dine her som før */}
+        {/* GTM/Iubenda-scripts */}
         <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-17330083087" />
         <Script id="google-analytics">{`/* ... */`}</Script>
         <Script id="iubenda-cs-config" type="text/javascript">{`/* ... */`}</Script>
@@ -53,6 +54,7 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages} locale={locale}>
           {children}
           <Toaster />
+          <FloatingLocaleSwitch />
         </NextIntlClientProvider>
       </body>
     </html>
