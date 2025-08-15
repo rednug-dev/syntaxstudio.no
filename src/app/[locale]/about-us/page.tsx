@@ -6,16 +6,18 @@ import AboutSection from "@/components/about-section";
 export default function AboutUsPage() {
   const teamMembers: Member[] = [
     {
+      i18nKey: "gunder",
       name: "Gunder Rollufson",
-      role: "Founder & CEO",
-      bio: "Founder bridging strategy and engineering; hands-on across every build.",
+      role: "Founder & CEO", // fallback
+      bio: "Founder bridging strategy and engineering; hands-on across every build.", // fallback
       avatarSrc: "/avatars/placeholder.svg",
       skills: ["React", "Next.js", "Node.js", "Strategy"],
       email: "gunder@syntaxstudio.no",
       phone: "+47 9444 3355",
-      socials: {},
+      socials: {}
     },
     {
+      i18nKey: "rasul",
       name: "Rasul Uzdijev",
       role: "Partner & Chief Architect",
       bio: "Partner who turns ideas into robust, scalable systems.",
@@ -23,8 +25,8 @@ export default function AboutUsPage() {
       skills: ["Python", "AI", "Systems Architecture", "Database"],
       email: "rasul@syntaxstudio.no",
       phone: "+47 4639 6797",
-      socials: {},
-    },
+      socials: {}
+    }
   ];
 
   return (

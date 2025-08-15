@@ -1,44 +1,32 @@
 'use client';
 
-import Link from "next/link";
+import {Link} from '@/i18n/navigation';
 import { Button } from "./ui/button";
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import Image from 'next/image';
 import { Briefcase, Users, Menu, X, Banknote } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function Header() {
+  const t = useTranslations('Nav');
   const [isHidden, setIsHidden] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Effect to handle showing/hiding the header on scroll
   useEffect(() => {
     const handleScroll = () => {
-      if (isMenuOpen) {
-        setIsHidden(false);
-        return;
-      }
+      if (isMenuOpen) { setIsHidden(false); return; }
       const currentScrollY = window.scrollY;
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        setIsHidden(true);
-      } else {
-        setIsHidden(false);
-      }
+      setIsHidden(currentScrollY > lastScrollY && currentScrollY > 100);
       setLastScrollY(currentScrollY);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY, isMenuOpen]);
 
-  // Effect to close the mobile menu on window resize
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 1024) { // Tailwind's 'lg' breakpoint
-        setIsMenuOpen(false);
-      }
-    };
+    const handleResize = () => { if (window.innerWidth >= 1024) setIsMenuOpen(false); };
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -47,9 +35,9 @@ export default function Header() {
   const closeMenu = () => setIsMenuOpen(false);
 
   const navLinks = [
-    { href: '/services', label: 'Showcase', icon: <Briefcase className="w-5 h-5" /> },
-    { href: '/about-us', label: 'About us', icon: <Users className="w-5 h-5" /> },
-    { href: '/pricing', label: 'Pricing', icon: <Banknote className="w-5 h-5" /> }
+    { href: '/services',   label: t('showcase'), icon: <Briefcase className="w-5 h-5" /> },
+    { href: '/about-us',   label: t('about'),    icon: <Users className="w-5 h-5" /> },
+    { href: '/pricing',    label: t('pricing'),  icon: <Banknote className="w-5 h-5" /> }
   ];
 
   return (
@@ -60,14 +48,14 @@ export default function Header() {
         "bg-background/80 backdrop-blur-sm border-b"
       )}>
         <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-          {/* Left Section: Logo */}
+          {/* Left: Logo */}
           <div className="flex-1 flex justify-start">
             <Link href="/" className="flex items-center gap-2" onClick={closeMenu}>
               <Image src="/logosyntax-nbnm.png" alt="Syntax Studio logo" width={150} height={40} priority />
             </Link>
           </div>
 
-          {/* Center Section: Desktop Nav */}
+          {/* Center: Desktop Nav */}
           <nav className="hidden lg:flex flex-1 justify-center items-center gap-2">
             {navLinks.map(link => (
               <Button variant="ghost" asChild key={link.href}>
@@ -78,13 +66,13 @@ export default function Header() {
               </Button>
             ))}
           </nav>
-          
-          {/* Right Section: CTA & Mobile Menu Button */}
+
+          {/* Right: CTA & Mobile Toggle */}
           <div className="flex-1 flex justify-end items-center">
             <div className="hidden sm:block">
-                <Button asChild>
-                    <Link href="/#proposal">Contact us</Link>
-                </Button>
+              <Button asChild>
+                <Link href="/#proposal">{t('contact')}</Link>
+              </Button>
             </div>
             <div className="lg:hidden ml-2">
               <Button onClick={toggleMenu} variant="ghost" size="icon" aria-label="Open menu">
@@ -95,8 +83,8 @@ export default function Header() {
         </div>
       </header>
 
-      {/* Mobile Menu Overlay */}
-      <div 
+      {/* Mobile Menu */}
+      <div
         className={cn(
           "lg:hidden fixed inset-0 top-20 z-40 bg-background/95 backdrop-blur-sm transition-opacity duration-300",
           isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
@@ -105,19 +93,17 @@ export default function Header() {
       >
         <div className="container mx-auto px-8 pt-8 flex flex-col gap-4">
           {navLinks.map(link => (
-            <Link 
-              key={link.href} 
-              href={link.href} 
+            <Link
+              key={link.href}
+              href={link.href}
               className="text-lg font-semibold flex items-center gap-3 p-3 hover:bg-muted rounded-lg"
             >
-              {link.icon} 
-              {link.label}
+              {link.icon}{link.label}
             </Link>
           ))}
-          {/* CTA Button for mobile */}
           <div className="sm:hidden mt-4">
             <Button asChild className="w-full">
-              <Link href="/#proposal">Kontakt</Link>
+              <Link href="/#proposal">{t('contact')}</Link>
             </Button>
           </div>
         </div>

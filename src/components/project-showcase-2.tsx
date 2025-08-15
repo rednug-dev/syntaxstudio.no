@@ -1,7 +1,17 @@
+// src/components/project-showcase-2.tsx
 import * as React from "react";
 import { CheckCircle2, ExternalLink, Code2 } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 
 /* ===================== Types ===================== */
+export type ProjectCase = {
+  heading: string;
+  url?: string;
+  heroImage: string;
+  heroAlt?: string;
+  paragraphs: ReadonlyArray<string>;
+  stack?: ReadonlyArray<string>;
+};
 
 export type WorkIntroProps = {
   title?: string;
@@ -9,33 +19,11 @@ export type WorkIntroProps = {
   heroAlt?: string;
   overview?: string;
   background?: string;
-  checklist?: string[]; // 6–8 items recommended
-  projects?: ProjectCase[];   // sections rendered below the intro
+  checklist?: string[];
+  projects?: ProjectCase[];
 };
 
-export type ProjectCase = {
-  heading: string;            // e.g. "Creating Giroo’s dashboard"
-  url?: string;               // "See the live website"
-  heroImage: string;          // big 16:9 image
-  heroAlt?: string;
-  paragraphs: string[];       // 1–3 short paragraphs
-  stack?: string[];           // e.g. ["React","Next.js","Tailwind","PostgreSQL"]
-};
-
-/* ===================== Defaults ===================== */
-
-const DEFAULT_ITEMS = [
-  "Brand identity & design system",
-  "UX/UI design",
-  "Front-end development",
-  "Full-stack (Next.js, Node, Prisma)",
-  "Content & copywriting",
-  "SEO & performance",
-  "Analytics & tracking",
-  "Integrations & automations",
-];
-
-// map stack label -> logo path (fallback handled below)
+/* ===================== Logos ===================== */
 const STACK_LOGO: Record<string, string> = {
   React: "/logos/reactlogo.webp",
   "Next.js": "/logos/nextjs.webp",
@@ -49,55 +37,32 @@ const STACK_LOGO: Record<string, string> = {
   "NextAuth.js": "/logos/nextauthjslogo.webp",
 };
 
-const DEFAULT_PROJECTS: ProjectCase[] = [
-  {
-    heading: "Creating Giroo’s subscription dashboard",
-    url: "https://giroo-no.vercel.app",
+/* Prosjekt-meta: bilder/urls/stack (språk-uavhengig) */
+const CASE_META = {
+  giroo: {
     heroImage: "/showcase/giroodesktop.webp",
-    heroAlt: "Giroo dashboard",
-    paragraphs: [
-      "From name to MVP: we built the brand, marketing site and a full web app that helps people track and reduce recurring subscriptions.",
-      "We started with discovery and flows, then shipped a clean Next.js app with auth, database and an email-parsing foundation for extracting subscription data.",
-    ],
+    url: "https://giroo-no.vercel.app",
     stack: ["React", "Next.js", "Tailwind", "Node", "Prisma", "PostgreSQL", "Vercel"],
   },
-  {
-    heading: "Rebuilding RiseUp’s brand and website",
-    url: "https://riseup-seven.vercel.app",
+  riseup: {
     heroImage: "/showcase/riseupdesktop.webp",
-    heroAlt: "RiseUp website",
-    paragraphs: [
-      "A full brand overhaul and a trustworthy website that positioned RiseUp to win new partnerships.",
-      "We rebuilt the message architecture and shipped a fast, accessible site with a simple CMS for content updates and better credibility.",
-    ],
+    url: "https://riseup-seven.vercel.app",
     stack: ["React", "Next.js", "Tailwind", "Vercel"],
   },
-  {
-    heading: "Launching Bites’ festival-ready presence",
-    url: "https://bites-lac.vercel.app",
+  bites: {
     heroImage: "/showcase/bitesdesktop.webp",
-    heroAlt: "Bites website",
-    paragraphs: [
-      "Early-stage support for a pop-up burger concept: brand identity and a site that helped them stand out when applying to festivals.",
-      "We created a clear visual identity and a mobile-first site with an event schedule so organizers and customers could easily see where they’d pop up next.",
-    ],
+    url: "https://bites-lac.vercel.app",
     stack: ["React", "Next.js", "Tailwind", "Vercel"],
   },
-  {
-    heading: "DataSec integrations & live dashboards",
+  datasec: {
     heroImage: "/showcase/datasecw2.webp",
-    heroAlt: "DataSec dashboards",
-    paragraphs: [
-      "Custom tech products integrated into their site—giving clients deeper insight into their assets and stronger security.",
-      "We built internal tools and dashboards and integrated vendor APIs, surfacing clear, real-time insights directly in the website.",
-    ],
+    url: undefined, // ingen lenke
     stack: ["React", "Next.js", "Tailwind", "Node", "PostgreSQL"],
   },
-];
+} as const;
 
-/* ===================== Case block (project section) ===================== */
-
-function CaseBlock({ c }: { c: ProjectCase }) {
+/* ===================== Case block ===================== */
+function CaseBlock({ c, seeLiveLabel }: { c: ProjectCase; seeLiveLabel: string }) {
   return (
     <article className="mx-auto max-w-6xl py-12">
       {/* Hero image */}
@@ -120,7 +85,7 @@ function CaseBlock({ c }: { c: ProjectCase }) {
               rel="noreferrer noopener"
               className="text-primary inline-flex items-center gap-1 font-medium hover:underline"
             >
-              See the live website <ExternalLink className="h-3.5 w-3.5" />
+              {seeLiveLabel} <ExternalLink className="h-3.5 w-3.5" />
             </a>
           </div>
         )}
@@ -145,16 +110,16 @@ function CaseBlock({ c }: { c: ProjectCase }) {
                   className="grid h-14 w-14 place-items-center rounded-md bg-transparent ring-1 ring-black/5 dark:bg-transparent"
                   title={label}
                 >
-                  <img
-                    src={src}
-                    alt={label}
-                    className="h-12 w-auto object-contain"
-                  />
+                  <img src={src} alt={label} className="h-12 w-auto object-contain" />
                 </div>
               ) : (
-                // Fallback (e.g. Node) — small neutral chip
+                <div
+                  key={label}
+                  className="grid h-9 w-9 place-items-center rounded-md border bg-background/80"
+                  title={label}
+                >
                   <Code2 className="h-4 w-4" />
-
+                </div>
               );
             })}
           </div>
@@ -166,23 +131,43 @@ function CaseBlock({ c }: { c: ProjectCase }) {
   );
 }
 
-/* ===================== Intro + projects ===================== */
+/* ===================== Intro + projects (intl) ===================== */
+export default async function WorkIntroSection(props: WorkIntroProps) {
+  // Leser alle tekster fra About.WorkIntro
+  const t = await getTranslations("About.WorkIntro");
 
-export default function WorkIntroSection({
-  title = "How we work",
-  heroImage = "/showcase/fiverr2-big.webp",
-  heroAlt = "Syntax Studio workflow",
-  overview =
-    "We partner with founders and teams to hand-code fast, accessible websites and apps. We own the stack from brand to launch with short feedback loops and measurable outcomes.",
-  background =
-    "Many clients arrive with scattered branding, template sites or manual workflows. We align on goals, refine the brand, and ship a clean architecture with a maintainable CMS and practical automations.",
-  checklist = DEFAULT_ITEMS,
-  projects = DEFAULT_PROJECTS, // <— use your cases by default
-}: WorkIntroProps) {
-  // split checklist into two columns of ~equal length
-  const mid = Math.ceil(checklist.length / 2);
-  const colA = checklist.slice(0, mid);
-  const colB = checklist.slice(mid);
+  // Sjekkliste fra messages (array)
+  const checklistFromIntl = (t.raw("checklist") as unknown) as string[] | undefined;
+  const checklist = props.checklist ?? checklistFromIntl ?? [];
+
+  // Overskrifter / beskrivelser
+  const title = props.title ?? t("title");
+  const heroImage = props.heroImage ?? "/showcase/fiverr2-big.webp";
+  const heroAlt = props.heroAlt ?? t("heroAlt");
+  const overview = props.overview ?? t("defaultOverview");
+  const background = props.background ?? t("defaultBackground");
+
+  const overviewTitle = t("overviewTitle");
+  const workflowTitle = t("workflowTitle");
+  const seeLive = t("seeLive");
+
+  // Prosjektene hentes fra messages + CASE_META (bilder/stack/urls)
+  const projOrder = ["giroo", "riseup", "bites", "datasec"] as const;
+  const projectsIntl = projOrder.map<ProjectCase>((key) => {
+    const heading = t(`projects.${key}.heading`);
+    const paragraphs = (t.raw(`projects.${key}.paragraphs`) as unknown) as string[];
+    const meta = CASE_META[key];
+    return {
+      heading,
+      heroImage: meta.heroImage,
+      heroAlt: heading,
+      url: meta.url,
+      paragraphs,
+      stack: meta.stack,
+    };
+  });
+
+  const projects = props.projects ?? projectsIntl;
 
   return (
     <section className="container mx-auto max-w-6xl px-4 py-16">
@@ -199,36 +184,42 @@ export default function WorkIntroSection({
       {/* Overview / Background */}
       <div className="mx-auto mt-10 grid max-w-5xl gap-10 md:grid-cols-2">
         <div>
-          <h3 className="text-xl font-semibold">Overview</h3>
+          <h3 className="text-xl font-semibold">{overviewTitle}</h3>
           <p className="mt-3 text-muted-foreground leading-7">{overview}</p>
         </div>
         <div>
-          <h3 className="text-xl font-semibold">Our Workflow</h3>
+          <h3 className="text-xl font-semibold">{workflowTitle}</h3>
           <p className="mt-3 text-muted-foreground leading-7">{background}</p>
         </div>
       </div>
 
       {/* Checklist */}
-      <div className="mx-auto mt-8 grid max-w-5xl gap-8 sm:grid-cols-2">
-        {[colA, colB].map((col, i) => (
-          <ul key={i} className="space-y-4">
-            {col.map((item) => (
-              <li key={item} className="flex items-start gap-3 text-muted-foreground">
-                <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-emerald-600/90">
-                  <CheckCircle2 className="h-4 w-4 text-white" />
-                </span>
-                <span className="text-lg">{item}</span>
-              </li>
-            ))}
-          </ul>
-        ))}
-      </div>
+      {checklist.length > 0 && (
+        <div className="mx-auto mt-8 grid max-w-5xl gap-8 sm:grid-cols-2">
+          {[0, 1].map((colIdx) => {
+            const mid = Math.ceil(checklist.length / 2);
+            const col = colIdx === 0 ? checklist.slice(0, mid) : checklist.slice(mid);
+            return (
+              <ul key={colIdx} className="space-y-4">
+                {col.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-muted-foreground">
+                    <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-emerald-600/90">
+                      <CheckCircle2 className="h-4 w-4 text-white" />
+                    </span>
+                    <span className="text-lg">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            );
+          })}
+        </div>
+      )}
 
-      {/* ===== Projects rendered below ===== */}
+      {/* Projects */}
       {projects.length > 0 && (
         <div className="mt-6">
           {projects.map((c) => (
-            <CaseBlock key={c.heading} c={c} />
+            <CaseBlock key={c.heading} c={c} seeLiveLabel={seeLive} />
           ))}
         </div>
       )}

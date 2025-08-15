@@ -1,3 +1,5 @@
+'use client';
+
 import * as React from "react";
 import {
   Card,
@@ -10,6 +12,18 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Check } from "lucide-react";
+import { useTranslations, useLocale } from "next-intl";
+
+type Currency = "USD" | "NOK";
+
+type PricingProps = {
+  /** NOK per 1 USD. */
+  conversionRate?: number; // default 11.0
+  /** Start-valuta. */
+  initialCurrency?: Currency; // default 'USD'
+  /** Callback ved bytte av valuta. */
+  onCurrencyChange?: (c: Currency) => void;
+};
 
 function Feature({ children }: { children: React.ReactNode }) {
   return (
@@ -22,13 +36,79 @@ function Feature({ children }: { children: React.ReactNode }) {
   );
 }
 
-export default function Pricing() {
+export default function Pricing({
+  conversionRate = 11.0,
+  initialCurrency = "USD",
+  onCurrencyChange,
+}: PricingProps) {
+  const t = useTranslations("Pricing");
+  const locale = useLocale();
+
+  const [currency, setCurrency] = React.useState<Currency>(initialCurrency);
+
+  // Husk brukerens valg av valuta i localStorage
+  React.useEffect(() => {
+    const saved =
+      typeof window !== "undefined" ? (window.localStorage.getItem("currency") as Currency | null) : null;
+    if (saved === "USD" || saved === "NOK") setCurrency(saved);
+  }, []);
+  React.useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.localStorage.setItem("currency", currency);
+    }
+    onCurrencyChange?.(currency);
+  }, [currency, onCurrencyChange]);
+
+  // Formatter basert på aktiv locale + valgt valuta
+  const nf = new Intl.NumberFormat(locale, {
+    style: "currency",
+    currency,
+    maximumFractionDigits: 0,
+  });
+
+  // USD basepriser → konverter hvis NOK
+  const price = (usd: number) => (currency === "USD" ? usd : Math.round(usd * conversionRate));
+
+  // Hent features-lister som arrays fra messages
+  const basicFeatures = t.raw("plans.basic.features") as string[];
+  const standardFeatures = t.raw("plans.standard.features") as string[];
+  const premiumFeatures = t.raw("plans.premium.features") as string[];
+
   return (
     <section className="container mx-auto max-w-6xl px-4 py-16">
       <div className="mx-auto max-w-3xl text-center">
-        <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">Simple, transparent pricing</h2>
-        <p className="mt-3 text-base text-muted-foreground">
-          Choose the plan that works best for you and your team.
+        <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">{t("title")}</h2>
+        <p className="mt-3 text-base text-muted-foreground">{t("subtitle")}</p>
+
+        {/* Currency toggle */}
+        <div className="mt-5 flex justify-center">
+          <div className="inline-flex items-center gap-1 rounded-full border bg-muted/50 p-1">
+            <Button
+              size="sm"
+              variant={currency === "USD" ? "default" : "ghost"}
+              className="rounded-full"
+              onClick={() => setCurrency("USD")}
+              aria-pressed={currency === "USD"}
+            >
+              {t("toggle.usd")}
+            </Button>
+            <Button
+              size="sm"
+              variant={currency === "NOK" ? "default" : "ghost"}
+              className="rounded-full"
+              onClick={() => setCurrency("NOK")}
+              aria-pressed={currency === "NOK"}
+            >
+              {t("toggle.nok")}
+            </Button>
+          </div>
+        </div>
+
+        {/* Kurs-note */}
+        <p className="mt-2 text-xs text-muted-foreground">
+          {currency === "NOK"
+            ? t("note.nok", { rate: conversionRate.toFixed(2) })
+            : t("note.usd")}
         </p>
       </div>
 
@@ -36,80 +116,71 @@ export default function Pricing() {
         {/* Basic */}
         <Card className="group flex flex-col transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
           <CardHeader>
-            <CardTitle>Basic</CardTitle>
-            <CardDescription>Custom‑coded starter site for portfolios or landing pages</CardDescription>
+            <CardTitle>{t("plans.basic.name")}</CardTitle>
+            <CardDescription>{t("plans.basic.desc")}</CardDescription>
           </CardHeader>
           <CardContent className="pt-0">
             <div className="mb-6 flex items-baseline gap-2">
-              <span className="text-4xl font-bold sm:text-5xl">$300</span>
+              <span className="text-4xl font-bold sm:text-5xl">{nf.format(price(300))}</span>
             </div>
             <ul className="space-y-3">
-              <Feature>Up to 3 pages</Feature>
-              <Feature>100% custom‑coded (Next.js + Tailwind)</Feature>
-              <Feature>Responsive & fast</Feature>
-              <Feature>Contact form + basic SEO</Feature>
-              <Feature>1 integration (e.g., analytics)</Feature>
-              <Feature>1 revision round</Feature>
+              {basicFeatures.map((f) => (
+                <Feature key={f}>{f}</Feature>
+              ))}
             </ul>
           </CardContent>
           <CardFooter className="mt-auto">
-            <Button className="w-full" size="lg">Get Started</Button>
+            <Button className="w-full" size="lg">
+              {t("cta.getStarted")}
+            </Button>
           </CardFooter>
         </Card>
 
-        {/* Pro (Most Popular) */}
+        {/* Standard (Most Popular) */}
         <Card className="relative group flex flex-col border-primary/50 shadow-lg transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
           <Badge className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full px-3 py-1 text-[11px] uppercase tracking-wide">
-            Most Popular
+            {t("badgeMostPopular")}
           </Badge>
           <CardHeader>
-            <CardTitle>Standard</CardTitle>
-            <CardDescription>Business website with booking or a simple store</CardDescription>
+            <CardTitle>{t("plans.standard.name")}</CardTitle>
+            <CardDescription>{t("plans.standard.desc")}</CardDescription>
           </CardHeader>
           <CardContent className="pt-0">
             <div className="mb-6 flex items-baseline gap-2">
-              <span className="text-4xl font-bold sm:text-5xl">$500</span>
+              <span className="text-4xl font-bold sm:text-5xl">{nf.format(price(500))}</span>
             </div>
             <ul className="space-y-3">
-              <Feature>Up to 6 pages</Feature>
-              <Feature>Custom‑coded (no templates)</Feature>
-              <Feature>Booking <span className="hidden sm:inline">or</span> basic e‑commerce (≤10 products)</Feature>
-              <Feature>Secure payments integration</Feature>
-              <Feature>Performance & on‑page SEO</Feature>
-              <Feature>2 integrations (forms, analytics, etc.)</Feature>
-              <Feature>2 revision rounds</Feature>
-              <Feature>Priority support</Feature>
+              {standardFeatures.map((f) => (
+                <Feature key={f}>{f}</Feature>
+              ))}
             </ul>
           </CardContent>
           <CardFooter className="mt-auto">
-            <Button className="w-full" size="lg">Get Started</Button>
+            <Button className="w-full" size="lg">
+              {t("cta.getStarted")}
+            </Button>
           </CardFooter>
         </Card>
 
-        {/* Team */}
+        {/* Premium */}
         <Card className="group flex flex-col transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
           <CardHeader>
-            <CardTitle>Premium</CardTitle>
-            <CardDescription>Advanced e‑commerce & pro‑grade booking</CardDescription>
+            <CardTitle>{t("plans.premium.name")}</CardTitle>
+            <CardDescription>{t("plans.premium.desc")}</CardDescription>
           </CardHeader>
           <CardContent className="pt-0">
             <div className="mb-6 flex items-baseline gap-2">
-              <span className="text-4xl font-bold sm:text-5xl">$800</span>
+              <span className="text-4xl font-bold sm:text-5xl">{nf.format(price(800))}</span>
             </div>
             <ul className="space-y-3">
-              <Feature>Up to 10 pages</Feature>
-              <Feature>Full e‑commerce + real‑time booking</Feature>
-              <Feature>Secure checkout + taxes/shipping setup</Feature>
-              <Feature>CMS for content & products</Feature>
-              <Feature>Custom integrations & automations</Feature>
-              <Feature>Launch support & training</Feature>
-              <Feature>5 revision rounds</Feature>
-              <Feature>Priority support</Feature>
+              {premiumFeatures.map((f) => (
+                <Feature key={f}>{f}</Feature>
+              ))}
             </ul>
           </CardContent>
           <CardFooter className="mt-auto">
             <Button variant="outline" className="w-full" size="lg">
-              Contact Sales
+              {t("cta.contactSales")}
             </Button>
           </CardFooter>
         </Card>

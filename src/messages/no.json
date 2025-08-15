@@ -1,0 +1,231 @@
+{
+    "Nav": {
+      "showcase": "Showcase",
+      "about": "Om oss",
+      "pricing": "Priser",
+      "contact": "Kontakt oss"
+    },
+    "Hero": {
+      "title": "Webdesign, Merkevare og AI.",
+      "subtitle": "Vi bygger digitale opplevelser som løfter merkevaren din og skaper vekst. La oss bygge fremtiden sammen.",
+      "getInTouch": "Ta kontakt"
+    },
+    "Services": {
+      "title": "Funksjoner som skiller oss ut",
+      "subtitle": "Alt du trenger for moderne, skreddersydde nettsider—bygget av utviklere, designet for vekst.",
+      "cta": "Kom i gang nå",
+      "badges": {
+        "new": "Ny"
+      },
+      "features": {
+        "ai": {
+          "title": "AI-drevet automatisering",
+          "desc": "Automatiser innhold, drift og support med praktisk ML som passer din stack."
+        },
+        "fast": {
+          "title": "Lynraskt",
+          "desc": "Håndkodede fronter optimalisert for sub-sekunds interaksjoner og Web Vitals."
+        },
+        "security": {
+          "title": "Sikkerhet i toppklasse",
+          "desc": "Bank-nivå praksis: kryptering, minste rettighet og sikre arbeidsflyter."
+        },
+        "scale": {
+          "title": "Skalerbar infrastruktur",
+          "desc": "Bygget for vekst—edge-rendering, køer, bakgrunnsjobber og observability."
+        },
+        "cloud": {
+          "title": "Cloud-native",
+          "desc": "Deploy hvor som helst: Vercel, Fly, AWS eller din egen plattform."
+        },
+        "dev": {
+          "title": "Utvikler-først",
+          "desc": "Ren arkitektur, god dokumentasjon og DX for raskere iterasjon."
+        }
+      }
+    },
+    "Proposal": {
+      "title": "La oss jobbe sammen!",
+      "subtitle": "Fortell hva du vil bygge, så tar vi kontakt.",
+      "name": "Navn",
+      "namePh": "Ditt navn",
+      "email": "E-post",
+      "emailPh": "epost@eksempel.no",
+      "message": "Melding",
+      "messagePh": "Hva ser du for deg?",
+      "send": "Send melding",
+      "sending": "Sender...",
+      "thanksTitle": "Takk for meldingen!",
+      "errorTitle": "Feil"
+    },
+    "Footer": {
+      "tagline": "Fra visjon til virkelighet",
+      "links": "Lenker",
+      "examples": "Eksempler",
+      "about": "Om oss",
+      "pricing": "Priser",
+      "contact": "Kontakt oss",
+      "question": "Har du et brennende spørsmål?"
+    },
+    "About": {
+      "missionTitle": "Vårt oppdrag",
+      "missionP1": "Syntax Studio håndkoder raske, tilgjengelige nettsider og apper—uten maler og uten bloat. Vi går inn i teamet ditt for å designe, bygge og lansere produkter som føles enkle og yter strålende.",
+      "missionP2": "Vi kombinerer ingeniørfaglig presisjon med ryddig design. Forvent tydelig kommunikasjon, korte tilbakemeldingssløyfer og lanseringer som faktisk flytter nåla.",
+      "metrics": {
+        "lighthouseValue": "90+",
+        "lighthouseSubtitle": "Snittscore i Lighthouse (Ytelse/SEO/Best Practices)",
+        "responseValue": "Under 24 t",
+        "responseSubtitle": "Typisk svartid på hverdager",
+        "timeToLiveValue": "2–4 uker",
+        "timeToLiveSubtitle": "Fra oppstart til første live-versjon (standard side)"
+      },
+      "valuesTitle": "Våre verdier",
+      "valuesSubtitle": "Slik jobber vi i Syntax Studio—prinsippene som former hvert prosjekt.",
+      "principles": {
+        "craft": {
+          "title": "Bygg med håndverk",
+          "desc": "Vi håndkoder for fart, tilgjengelighet og vedlikeholdbarhet. Ren kode, ren UI."
+        },
+        "share": {
+          "title": "Del åpent",
+          "desc": "Åpne veikart, jevnlige demoer og asynkrone oppdateringer holder alle på linje."
+        },
+        "learn": {
+          "title": "Lær raskt",
+          "desc": "Korte feedback-sløyfer og raske iterasjoner—ship, mål, forbedre."
+        },
+        "partner": {
+          "title": "Partner-tankesett",
+          "desc": "Vi opptrer som et in-house team, der design og utvikling støtter dine mål."
+        },
+        "ownership": {
+          "title": "Ansvarlighet",
+          "desc": "Vi står for det vi leverer—stabile releaser og tydelig ansvar."
+        },
+        "simple": {
+          "title": "Hold det enkelt",
+          "desc": "Klarhet foran kompleksitet. Den enkleste løsningen som løser det egentlige problemet vinner."
+        }
+      },
+      "WorkIntro": {
+        "title": "Slik jobber vi",
+        "heroAlt": "Syntax Studio arbeidsflyt",
+        "overviewTitle": "Oversikt",
+        "workflowTitle": "Arbeidsflyt",
+        "seeLive": "Se nettsiden",
+        "defaultOverview": "Vi samarbeider med gründere og team for å håndkode raske, tilgjengelige nettsider og apper. Vi eier hele stacken fra merkevare til lansering, med korte feedback-sløyfer og målbare resultater.",
+        "defaultBackground": "Mange kommer til oss med spredt branding, mal-sider eller manuelle prosesser. Vi samkjører mål, skjerper merkevaren og leverer en ren arkitektur med et vedlikeholdbart CMS og praktiske automasjoner.",
+        "checklist": [
+          "Merkevareidentitet & designsystem",
+          "UX/UI-design",
+          "Front-end-utvikling",
+          "Full-stack (Next.js, Node, Prisma)",
+          "Innhold & tekstforfatting",
+          "SEO & ytelse",
+          "Analyse & sporing",
+          "Integrasjoner & automasjoner"
+        ],
+        "projects": {
+          "giroo": {
+            "heading": "Bygge Giroos abonnementspanel",
+            "paragraphs": [
+              "Fra navn til MVP: Vi bygde merkevaren, markedsføringssiden og en full webapp som hjelper folk å finne og redusere løpende abonnementer.",
+              "Vi startet med innsikt og brukerflyt, og leverte deretter en ryddig Next.js-app med innlogging, database og et fundament for e-post-tolking som henter ut abonnementsdata."
+            ]
+          },
+          "riseup": {
+            "heading": "Totalrenovering av RiseUp sin merkevare og nettside",
+            "paragraphs": [
+              "En full merkevareoppgradering og en troverdig nettside som posisjonerte RiseUp for å vinne nye partnerskap.",
+              "Vi bygde om budskapsarkitekturen og leverte en rask, tilgjengelig side med et enkelt CMS for innholdsoppdateringer og økt troverdighet."
+            ]
+          },
+          "bites": {
+            "heading": "Lansering av Bites sin festival-klare tilstedeværelse",
+            "paragraphs": [
+              "Tidligfasehjelp for et pop-up burger-konsept: merkevare og en nettside som hjalp dem å skille seg ut i søknader til festivaler.",
+              "Vi laget en tydelig visuell identitet og en mobil-først side med arrangementsoversikt, slik at arrangører og kunder lett kunne se hvor de dukket opp neste gang."
+            ]
+          },
+          "datasec": {
+            "heading": "DataSec-integrasjoner og sanntidsdashboards",
+            "paragraphs": [
+              "Skreddersydde tekniske produkter integrert i nettsiden—som ga kundene dypere innsikt i egne objekter og bedre sikkerhet.",
+              "Vi bygde interne verktøy og dashboards og integrerte leverandør-APIer, slik at klare, sanntidsinnsikter ble tilgjengelige direkte på nettsiden."
+            ]
+          }
+        }
+      }
+    },
+    "Team": {
+        "title": "Møt teamet vårt",
+        "subtitle": "Fagfolkene som står bak resultatene våre",
+        "members": {
+        "gunder": {
+            "role": "Grunnlegger og daglig leder",
+            "bio": "Grunnlegger som kobler strategi og utvikling—hands-on i alle leveranser."
+        },
+        "rasul": {
+            "role": "Partner og sjefsarkitekt",
+            "bio": "Partner som gjør ideer om til robuste, skalerbare systemer."
+        }
+        }
+    },
+    "Pricing": {
+      "title": "Enkel og transparent prising",
+      "subtitle": "Velg pakken som passer best for deg og teamet ditt.",
+      "toggle": { "usd": "USD", "nok": "NOK" },
+      "note": {
+        "usd": "Grunnpriser i USD.",
+        "nok": "Konvertert fra USD til ca. {rate} NOK/USD."
+      },
+      "badgeMostPopular": "Mest populær",
+      "cta": {
+        "getStarted": "Kom i gang",
+        "contactSales": "Kontakt salg"
+      },
+      "plans": {
+        "basic": {
+          "name": "Basic",
+          "desc": "Håndkodet startsidenett for porteføljer eller landingssider",
+          "features": [
+            "Opptil 3 sider",
+            "100% håndkodet (Next.js + Tailwind)",
+            "Responsiv og rask",
+            "Kontaktskjema + grunnleggende SEO",
+            "1 integrasjon (f.eks. analyse)",
+            "1 revisjonsrunde"
+          ]
+        },
+        "standard": {
+          "name": "Standard",
+          "desc": "Bedriftsnettside med booking eller enkel nettbutikk",
+          "features": [
+            "Opptil 6 sider",
+            "Håndkodet (uten maler)",
+            "Booking eller enkel nettbutikk (≤10 produkter)",
+            "Sikker betalingsintegrasjon",
+            "Ytelse og on-page SEO",
+            "2 integrasjoner (skjema, analyse, osv.)",
+            "2 revisjonsrunder",
+            "Prioritert support"
+          ]
+        },
+        "premium": {
+          "name": "Premium",
+          "desc": "Avansert nettbutikk og booking i proffklassen",
+          "features": [
+            "Opptil 10 sider",
+            "Full nettbutikk + sanntidsbooking",
+            "Sikker checkout + oppsett av avgifter/frakt",
+            "CMS for innhold og produkter",
+            "Skreddersydde integrasjoner og automasjoner",
+            "Lanseringsstøtte og opplæring",
+            "5 revisjonsrunder",
+            "Prioritert support"
+          ]
+        }
+      }
+    }
+  }
+  
