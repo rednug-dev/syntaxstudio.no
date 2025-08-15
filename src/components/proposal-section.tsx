@@ -70,9 +70,9 @@ export default function ProposalSection() {
     <section id="proposal" className="container mx-auto px-4 py-20 sm:py-28">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl sm:text-5xl font-bold font-headline">Have something on your mind?</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold font-headline">Lets work together!</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Have a question, or want to start a project with us? Fill out the form below and we will get back to you as soon as possible.
+            Let us know what you want to build, and we will be in touch!
           </p>
         </div>
 
@@ -124,7 +124,7 @@ export default function ProposalSection() {
                       <FormLabel>Message</FormLabel>
                       <FormControl>
                         <Textarea
-                          placeholder="What do you have on your mind?"
+                          placeholder="What do you have in mind?"
                           className="min-h-[150px] text-base"
                           {...field}
                         />

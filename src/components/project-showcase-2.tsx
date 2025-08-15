@@ -1,16 +1,5 @@
 import * as React from "react";
-import {
-  CheckCircle2,
-  ExternalLink,
-  Atom,
-  Code2,
-  Wind,
-  Server,
-  Database,
-  Cloud,
-  CreditCard,
-  Fingerprint,
-} from "lucide-react";
+import { CheckCircle2, ExternalLink, Code2 } from "lucide-react";
 
 /* ===================== Types ===================== */
 
@@ -46,26 +35,25 @@ const DEFAULT_ITEMS = [
   "Integrations & automations",
 ];
 
-// map stack label -> icon (fallback to Code2)
-const STACK_ICON: Record<string, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {
-  React: Atom,
-  "Next.js": Code2,
-  Tailwind: Wind,
-  Node: Server,
-  Prisma: Code2,
-  PostgreSQL: Database,
-  Vercel: Cloud,
-  Stripe: CreditCard,
-  Auth: Fingerprint,
+// map stack label -> logo path (fallback handled below)
+const STACK_LOGO: Record<string, string> = {
+  React: "/logos/reactlogo.webp",
+  "Next.js": "/logos/nextjs.webp",
+  Node: "/logos/nodejslogo.webp",
+  Tailwind: "/logos/tailwindlogo.webp",
+  Prisma: "/logos/prismalogo.webp",
+  PostgreSQL: "/logos/postgresql.webp",
+  Vercel: "/logos/vercellogo.png",
+  Stripe: "/logos/stripelogo.webp",
+  Auth: "/logos/nextauthjslogo.webp",
+  "NextAuth.js": "/logos/nextauthjslogo.webp",
 };
-
-/* ===================== Project data (your cases) ===================== */
 
 const DEFAULT_PROJECTS: ProjectCase[] = [
   {
     heading: "Creating Giroo’s subscription dashboard",
-    url: "https://giroo.no",
-    heroImage: "/images/cases/giroo-hero.jpg", // bytt til deres faktiske bilde
+    url: "https://giroo-no.vercel.app",
+    heroImage: "/showcase/giroodesktop.webp",
     heroAlt: "Giroo dashboard",
     paragraphs: [
       "From name to MVP: we built the brand, marketing site and a full web app that helps people track and reduce recurring subscriptions.",
@@ -75,8 +63,8 @@ const DEFAULT_PROJECTS: ProjectCase[] = [
   },
   {
     heading: "Rebuilding RiseUp’s brand and website",
-    url: "https://riseup.no",
-    heroImage: "/images/cases/riseup-hero.jpg",
+    url: "https://riseup-seven.vercel.app",
+    heroImage: "/showcase/riseupdesktop.webp",
     heroAlt: "RiseUp website",
     paragraphs: [
       "A full brand overhaul and a trustworthy website that positioned RiseUp to win new partnerships.",
@@ -86,8 +74,8 @@ const DEFAULT_PROJECTS: ProjectCase[] = [
   },
   {
     heading: "Launching Bites’ festival-ready presence",
-    url: "https://bites.no",
-    heroImage: "/images/cases/bites-hero.jpg",
+    url: "https://bites-lac.vercel.app",
+    heroImage: "/showcase/bitesdesktop.webp",
     heroAlt: "Bites website",
     paragraphs: [
       "Early-stage support for a pop-up burger concept: brand identity and a site that helped them stand out when applying to festivals.",
@@ -97,8 +85,7 @@ const DEFAULT_PROJECTS: ProjectCase[] = [
   },
   {
     heading: "DataSec integrations & live dashboards",
-    url: "https://datasec.no",
-    heroImage: "/images/cases/datasec-hero.jpg",
+    heroImage: "/showcase/datasecw2.webp",
     heroAlt: "DataSec dashboards",
     paragraphs: [
       "Custom tech products integrated into their site—giving clients deeper insight into their assets and stronger security.",
@@ -147,19 +134,27 @@ function CaseBlock({ c }: { c: ProjectCase }) {
           ))}
         </div>
 
-        {/* Tech stack icons */}
+        {/* Tech stack logos */}
         {c.stack && c.stack.length > 0 && (
           <div className="mt-6 flex flex-wrap items-center gap-3">
             {c.stack.map((label) => {
-              const Icon = STACK_ICON[label] ?? Code2;
-              return (
+              const src = STACK_LOGO[label];
+              return src ? (
                 <div
                   key={label}
-                  className="grid h-9 w-9 place-items-center rounded-md border bg-background/80"
+                  className="grid h-14 w-14 place-items-center rounded-md bg-transparent ring-1 ring-black/5 dark:bg-transparent"
                   title={label}
                 >
-                  <Icon className="h-4 w-4" />
+                  <img
+                    src={src}
+                    alt={label}
+                    className="h-12 w-auto object-contain"
+                  />
                 </div>
+              ) : (
+                // Fallback (e.g. Node) — small neutral chip
+                  <Code2 className="h-4 w-4" />
+
               );
             })}
           </div>
