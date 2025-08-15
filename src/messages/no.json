@@ -184,12 +184,66 @@
         "getStarted": "Kom i gang",
         "contactSales": "Kontakt salg"
       },
+  
+      "estimatedTotal": "Estimert total: {amount}",
+  
+      "dialogs": {
+        "basic": {
+          "title": "Kom i gang – Basic",
+          "desc": "Velg tillegg og beskriv prosjektet."
+        },
+        "standard": {
+          "title": "Kom i gang – Standard",
+          "desc": "Velg inkludert funksjon, tillegg og beskriv prosjektet."
+        },
+        "premium": {
+          "title": "Kontakt salg – Premium",
+          "desc": "Beskriv behovet ditt. Vi kommer tilbake med et tilbud."
+        }
+      },
+  
+      "forms": {
+        "labels": {
+          "addons": "Tilleggstjenester",
+          "project": "Forklaring av prosjektet",
+          "email": "E-post for kontakt"
+        },
+        "placeholders": {
+          "project": "Fortell kort om mål, stil, omfang, integrasjoner…"
+        },
+        "actions": {
+          "submit": "Send forespørsel",
+          "sending": "Sender…"
+        },
+        "summary": {
+          "title": "Oppsummering",
+          "base": "Grunnpris",
+          "addons": "Tillegg",
+          "total": "Total"
+        },
+        "standard": {
+          "included": {
+            "title": "Inkludert funksjon (gratis)",
+            "booking": "Booking",
+            "ecommerce": "E-commerce (≤10 produkter)"
+          }
+        },
+        "toastThanks": "Takk! Vi tar kontakt på e-post."
+      },
+  
+      "addons": {
+        "extraPage": "Ekstra side (+1)",
+        "hosting": "Hosting (oppsett + 12 mnd)",
+        "contentAssist": "Bistand med bilder og tekst",
+        "seoBoost": "SEO-boost (grunnpakke)"
+      },
+  
       "plans": {
         "basic": {
           "name": "Basic",
-          "desc": "Håndkodet startsidenett for porteføljer eller landingssider",
+          "desc": "One-page løsning for landingsside eller enkel portefølje",
           "features": [
-            "Opptil 3 sider",
+            "1 side (one-page)",
             "100% håndkodet (Next.js + Tailwind)",
             "Responsiv og rask",
             "Kontaktskjema + grunnleggende SEO",
@@ -199,11 +253,11 @@
         },
         "standard": {
           "name": "Standard",
-          "desc": "Bedriftsnettside med booking eller enkel nettbutikk",
+          "desc": "Håndkodet nettside med 3 sider – med booking eller enkel nettbutikk",
           "features": [
-            "Opptil 6 sider",
+            "3 sider (f.eks. forside, tjenester, kontakt)",
             "Håndkodet (uten maler)",
-            "Booking eller enkel nettbutikk (≤10 produkter)",
+            "Valgfri booking eller enkel nettbutikk (≤10 produkter)",
             "Sikker betalingsintegrasjon",
             "Ytelse og on-page SEO",
             "2 integrasjoner (skjema, analyse, osv.)",
@@ -213,16 +267,17 @@
         },
         "premium": {
           "name": "Premium",
-          "desc": "Avansert nettbutikk og booking i proffklassen",
+          "desc": "Helt skreddersydd løsning – kontakt salg for tilbud",
           "features": [
-            "Opptil 10 sider",
-            "Full nettbutikk + sanntidsbooking",
+            "Fullt tilpasset arkitektur og design",
+            "Ubegrenset antall sider",
+            "Avansert nettbutikk og/eller sanntidsbooking",
             "Sikker checkout + oppsett av avgifter/frakt",
-            "CMS for innhold og produkter",
+            "Headless CMS for innhold og produkter",
             "Skreddersydde integrasjoner og automasjoner",
             "Lanseringsstøtte og opplæring",
-            "5 revisjonsrunder",
-            "Prioritert support"
+            "Serviceavtale og vedlikehold",
+            "Kontakt salg for pris/tilbud"
           ]
         }
       }

@@ -171,60 +171,115 @@
         }
       }
     },
-  "Pricing": {
-    "title": "Simple, transparent pricing",
-    "subtitle": "Choose the plan that works best for you and your team.",
-    "toggle": { "usd": "USD", "nok": "NOK" },
-    "note": {
-      "usd": "Base prices in USD.",
-      "nok": "Converted from USD at ~{rate} NOK/USD."
-    },
-    "badgeMostPopular": "Most Popular",
-    "cta": {
-      "getStarted": "Get Started",
-      "contactSales": "Contact Sales"
-    },
-    "plans": {
-      "basic": {
-        "name": "Basic",
-        "desc": "Custom-coded starter site for portfolios or landing pages",
-        "features": [
-          "Up to 3 pages",
-          "100% custom-coded (Next.js + Tailwind)",
-          "Responsive & fast",
-          "Contact form + basic SEO",
-          "1 integration (e.g., analytics)",
-          "1 revision round"
-        ]
-      },
-      "standard": {
-        "name": "Standard",
-        "desc": "Business website with booking or a simple store",
-        "features": [
-          "Up to 6 pages",
-          "Custom-coded (no templates)",
-          "Booking or basic e-commerce (≤10 products)",
-          "Secure payments integration",
-          "Performance & on-page SEO",
-          "2 integrations (forms, analytics, etc.)",
-          "2 revision rounds",
-          "Priority support"
-        ]
-      },
-      "premium": {
-        "name": "Premium",
-        "desc": "Advanced e-commerce & pro-grade booking",
-        "features": [
-          "Up to 10 pages",
-          "Full e-commerce + real-time booking",
-          "Secure checkout + taxes/shipping setup",
-          "CMS for content & products",
-          "Custom integrations & automations",
-          "Launch support & training",
-          "5 revision rounds",
-          "Priority support"
-        ]
-      }
-    }
-  }
+      "Pricing": {
+        "title": "Simple, transparent pricing",
+        "subtitle": "Choose the plan that fits your team.",
+        "toggle": { "usd": "USD", "nok": "NOK" },
+        "note": {
+          "usd": "Base prices in USD.",
+          "nok": "Converted from USD at approx. {rate} NOK/USD."
+        },
+        "badgeMostPopular": "Most popular",
+        "cta": {
+          "getStarted": "Get started",
+          "contactSales": "Contact sales"
+        },
+    
+        "estimatedTotal": "Estimated total: {amount}",
+    
+        "dialogs": {
+          "basic": {
+            "title": "Get started — Basic",
+            "desc": "Choose add-ons and describe your project."
+          },
+          "standard": {
+            "title": "Get started — Standard",
+            "desc": "Pick the included feature, add-ons, and describe your project."
+          },
+          "premium": {
+            "title": "Contact sales — Premium",
+            "desc": "Describe your needs. We’ll get back with a quote."
+          }
+        },
+    
+        "forms": {
+          "labels": {
+            "addons": "Add-ons",
+            "project": "Project description",
+            "email": "Contact email"
+          },
+          "placeholders": {
+            "project": "Tell us about goals, style, scope, integrations…"
+          },
+          "actions": {
+            "submit": "Send request",
+            "sending": "Sending…"
+          },
+          "summary": {
+            "title": "Summary",
+            "base": "Base price",
+            "addons": "Add-ons",
+            "total": "Total"
+          },
+          "standard": {
+            "included": {
+              "title": "Included feature (free)",
+              "booking": "Booking",
+              "ecommerce": "E-commerce (≤10 products)"
+              }
+          },
+          "toastThanks": "Thanks! We’ll reach out by email."
+        },
+    
+        "addons": {
+          "extraPage": "Extra page (+1)",
+          "hosting": "Hosting (setup + 12 months)",
+          "contentAssist": "Assistance with images & copy",
+          "seoBoost": "SEO boost (starter)"
+        },
+    
+        "plans": {
+          "basic": {
+            "name": "Basic",
+            "desc": "One-page site for a landing or simple portfolio",
+            "features": [
+              "1 page (single-page)",
+              "100% hand-coded (Next.js + Tailwind)",
+              "Responsive and fast",
+              "Contact form + basic SEO",
+              "1 integration (e.g., analytics)",
+              "1 revision round"
+            ]
+          },
+          "standard": {
+            "name": "Standard",
+            "desc": "Hand-coded website with 3 pages — with booking or a simple store",
+            "features": [
+              "3 pages (e.g., Home, Services, Contact)",
+              "Hand-coded (no templates)",
+              "Optional booking or simple store (≤10 products)",
+              "Secure payment integration",
+              "Performance and on-page SEO",
+              "2 integrations (forms, analytics, etc.)",
+              "2 revision rounds",
+              "Priority support"
+            ]
+          },
+          "premium": {
+            "name": "Premium",
+            "desc": "Fully custom solution — contact sales for a quote",
+            "features": [
+              "Fully tailored architecture and design",
+              "Unlimited pages",
+              "Advanced e-commerce and/or real-time booking",
+              "Secure checkout + tax/shipping setup",
+              "Headless CMS for content and products",
+              "Custom integrations and automations",
+              "Launch support and training",
+              "Service agreement and maintenance",
+              "Contact sales for pricing/quote"
+            ]
+          }
+        }
+      }   
 }
