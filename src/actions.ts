@@ -3,14 +3,14 @@
 import nodemailer from 'nodemailer';
 import { ContactInquirySchema, PricingOrderSchema } from '@/lib/schemas';
 
-/** Felles form-state for server actions */
+/** Shared form-state type for server actions */
 export type FormState = {
   message: string;
   errors: Record<string, string[]> | null;
   success: boolean;
 };
 
-/* ---------- Formattere ---------- */
+/* ---------- Formatters ---------- */
 const fmtUSD = (v: number) =>
   new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -21,9 +21,8 @@ const fmtUSD = (v: number) =>
 const fmtNOK = (v: number) =>
   new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 0 }).format(v) + ' kr';
 
-/* ---------- SMTP transport ---------- */
+/* ---------- SMTP transport (Zoho) ---------- */
 function createTransport() {
-  // Matcher oppsettet du brukte i handleContactInquiry
   return nodemailer.createTransport({
     host: 'smtp.zoho.eu',
     port: 465,
@@ -36,7 +35,7 @@ function createTransport() {
 }
 
 /* =========================================================
-   1) Kontakt-skjema (som før)
+   1) Contact form (unchanged, with generic FormState)
    ========================================================= */
 export async function handleContactInquiry(
   prevState: FormState,
@@ -49,14 +48,13 @@ export async function handleContactInquiry(
   });
 
   if (!validated.success) {
-    // Map til generisk errors-format
     const errs = validated.error.flatten().fieldErrors as Record<string, string[]>;
     return {
       errors: errs,
       message: 'Validering feilet. Vennligst sjekk det du har skrevet inn.',
       success: false,
     };
-    }
+  }
 
   const { name, email, message } = validated.data;
   const transporter = createTransport();
@@ -91,20 +89,18 @@ export async function handleContactInquiry(
 }
 
 /* =========================================================
-   2) Pricing / Bestilling (NY)
-   For Basic/Standard/Premium – brukt sammen med useActionState
+   2) Pricing / Order (NEW) — used with useActionState
    ========================================================= */
 export async function handlePricingOrder(
   _prev: FormState,
   formData: FormData
 ): Promise<FormState> {
-  // Hent råverdier fra form (inkludert arrays)
   const raw = {
     plan: String(formData.get('plan') || ''),
     email: String(formData.get('email') || ''),
     project: String(formData.get('project') || ''),
     included: (formData.get('included') as string | null) ?? null, // standard only
-    addons: formData.getAll('addons').map(String),                 // verdier: ['extra_page', ...]
+    addons: formData.getAll('addons').map(String),
     currency: String(formData.get('currency') || 'USD'),
     conversionRate: formData.get('conversionRate'),
     baseUSD: formData.get('baseUSD'),
@@ -113,12 +109,10 @@ export async function handlePricingOrder(
     honey: String(formData.get('website') || ''), // honeypot
   };
 
-  // Honeypot → ignorer bots
   if (raw.honey) {
     return { success: true, message: 'OK', errors: null };
   }
 
-  // Valider mot schema (z.coerce i schema håndterer tallfelt)
   const parsed = PricingOrderSchema.safeParse(raw);
   if (!parsed.success) {
     const errs: Record<string, string[]> = {};
@@ -134,12 +128,12 @@ export async function handlePricingOrder(
   }
 
   const data = parsed.data;
+  const locale = data.locale ?? 'en'; // <<< ensure defined
 
-  // Legg ved add-on etiketter og priser (sendt fra klient for i18n)
-  const addonsLabels = formData.getAll('addonsLabel').map(String); // f.eks. "Ekstra side (+1)"
+  // Add-on labels & prices from client (for i18n in emails)
+  const addonsLabels = formData.getAll('addonsLabel').map(String);
   const addonsUSD = formData.getAll('addonsUSD').map((x) => Number(x));
 
-  // Bygg oppsummering
   const usd = data.totalUSD ?? data.baseUSD ?? 0;
   const nok = Math.round(usd * (data.conversionRate || 10));
   const display = (xUSD: number) =>
@@ -164,7 +158,7 @@ export async function handlePricingOrder(
       : null;
 
   const subjectSales = `[Lead] ${data.plan.toUpperCase()} – ${data.email}`;
-  const subjectCustomer = data.locale.startsWith('no')
+  const subjectCustomer = locale.startsWith('no')
     ? `Vi har mottatt forespørselen din (${data.plan})`
     : `We received your request (${data.plan})`;
 
@@ -193,7 +187,7 @@ ${addonsList ? `Add-ons:\n${addonsList}\n` : ''}${
   }
   `.trim();
 
-  const htmlCustomer = data.locale.startsWith('no')
+  const htmlCustomer = locale.startsWith('no')
     ? `
     <p>Takk for forespørselen! Vi kommer tilbake til deg så raskt vi kan.</p>
     <p><b>Plan:</b> ${data.plan}</p>
@@ -212,7 +206,6 @@ ${addonsList ? `Add-ons:\n${addonsList}\n` : ''}${
   const toSales = process.env.SALES_INBOX || 'sales@syntaxstudio.no';
 
   try {
-    // Til dere (salgsinnboks)
     await transporter.sendMail({
       from,
       to: toSales,
@@ -222,21 +215,19 @@ ${addonsList ? `Add-ons:\n${addonsList}\n` : ''}${
       html: htmlSales,
     });
 
-    // Bekreftelse til kunden
     await transporter.sendMail({
       from,
       to: data.email,
       subject: subjectCustomer,
-      text:
-        data.locale.startsWith('no')
-          ? `Takk! Vi har mottatt forespørselen din (${data.plan}).`
-          : `Thanks! We received your request (${data.plan}).`,
+      text: locale.startsWith('no')
+        ? `Takk! Vi har mottatt forespørselen din (${data.plan}).`
+        : `Thanks! We received your request (${data.plan}).`,
       html: htmlCustomer,
     });
 
     return {
       success: true,
-      message: data.locale.startsWith('no')
+      message: locale.startsWith('no')
         ? 'Takk! Vi tar kontakt på e-post.'
         : 'Thanks! We’ll reach out by email.',
       errors: null,
@@ -245,7 +236,7 @@ ${addonsList ? `Add-ons:\n${addonsList}\n` : ''}${
     console.error('Email sending error (pricing):', err);
     return {
       success: false,
-      message: data.locale.startsWith('no')
+      message: locale.startsWith('no')
         ? 'En feil oppstod under sending av e-post. Vennligst prøv igjen.'
         : 'Something went wrong while sending the email. Please try again.',
       errors: { form: [err?.message || 'Unknown error'] },
