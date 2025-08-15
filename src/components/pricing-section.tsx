@@ -18,7 +18,7 @@ type Currency = "USD" | "NOK";
 
 type PricingProps = {
   /** NOK per 1 USD. */
-  conversionRate?: number; // default 11.0
+  conversionRate?: 10.0; // default 11.0
   /** Start-valuta. */
   initialCurrency?: Currency; // default 'USD'
   /** Callback ved bytte av valuta. */
@@ -37,7 +37,7 @@ function Feature({ children }: { children: React.ReactNode }) {
 }
 
 export default function Pricing({
-  conversionRate = 11.0,
+  conversionRate = 10,
   initialCurrency = "USD",
   onCurrencyChange,
 }: PricingProps) {
