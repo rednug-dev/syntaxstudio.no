@@ -169,7 +169,15 @@
             "role": "Partner og sjefsarkitekt",
             "bio": "Partner som gjør ideer om til robuste, skalerbare systemer."
         }
+        },
+        "status": {
+          "online": "Jeg er online og vil svare i løpet av kort tid.",
+          "idle": "Jeg er litt opptatt, men svarer snart.",
+          "dnd": "Jeg sitter i et møte, men vil svare senere.",
+          "offline": "Jeg er offline, men vil svare deg så fort jeg er tilbake.",
+          "unknown": "Jeg er offline, men vil svare deg så fort jeg er tilbake."
         }
+
     },
     "Pricing": {
       "title": "Enkel og transparent prising",

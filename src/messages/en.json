@@ -169,6 +169,13 @@
           "role": "Partner & Chief Architect",
           "bio": "Partner who turns ideas into robust, scalable systems."
         }
+      },
+      "status": {
+        "online": "I’m online and will get back to you shortly.",
+        "idle": "I’m a bit busy right now, but I’ll reply soon.",
+        "dnd": "I’m in a meeting, but I’ll get back to you later.",
+        "offline": "I’m offline, but I’ll reply as soon as I’m back.",
+        "unknown": "I’m offline, but I’ll reply as soon as I’m back."
       }
     },
       "Pricing": {

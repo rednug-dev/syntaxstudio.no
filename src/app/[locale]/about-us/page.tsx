@@ -1,7 +1,8 @@
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import TeamSection, { Member } from "@/components/team-section";
+import TeamSection from "@/components/team-section";
 import AboutSection from "@/components/about-section";
+import { Member } from "@/components/team/types";
 
 export default function AboutUsPage() {
   const teamMembers: Member[] = [
@@ -14,7 +15,8 @@ export default function AboutUsPage() {
       skills: ["React", "Next.js", "Node.js", "Strategy"],
       email: "gunder@syntaxstudio.no",
       phone: "+47 9444 3355",
-      socials: {}
+      socials: {},
+      discordId: "795681296658989056"
     },
     {
       i18nKey: "rasul",
@@ -25,7 +27,8 @@ export default function AboutUsPage() {
       skills: ["Python", "AI", "Systems Architecture", "Database"],
       email: "rasul@syntaxstudio.no",
       phone: "+47 4639 6797",
-      socials: {}
+      socials: {},
+      discordId: "414385859845160970"
     }
   ];
 
