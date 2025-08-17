@@ -2,6 +2,8 @@
 
 import nodemailer from 'nodemailer';
 import { ContactInquirySchema, PricingOrderSchema } from '@/lib/schemas';
+import OrderConfirmationEmail from '@/emails/order-confirmation';
+import { render } from '@react-email/render';
 
 /** Shared form-state type for server actions */
 export type FormState = {
@@ -187,19 +189,20 @@ ${addonsList ? `Add-ons:\n${addonsList}\n` : ''}${
   }
   `.trim();
 
-  const htmlCustomer = locale.startsWith('no')
-    ? `
-    <p>Takk for forespørselen! Vi kommer tilbake til deg så raskt vi kan.</p>
-    <p><b>Plan:</b> ${data.plan}</p>
-    ${includedLine ? `<p><b>${includedLine}</b></p>` : ''}
-    ${data.plan !== 'premium' ? `<p><b>Estimert total:</b> ${totalStr}</p>` : ''}
-  `
-    : `
-    <p>Thanks for your request! We’ll get back to you shortly.</p>
-    <p><b>Plan:</b> ${data.plan}</p>
-    ${includedLine ? `<p><b>${includedLine}</b></p>` : ''}
-    ${data.plan !== 'premium' ? `<p><b>Estimated total:</b> ${totalStr}</p>` : ''}
-  `;
+  const addonsForEmail = addonsLabels.map((label, idx) => ({
+    label,
+    price: display(Number(addonsUSD[idx] || 0)),
+  }));
+
+  const htmlCustomer = await render(
+    <OrderConfirmationEmail
+      plan={data.plan}
+      included={includedLine}
+      addons={addonsForEmail}
+      total={totalStr}
+      locale={locale}
+    />
+  );
 
   const transporter = createTransport();
   const from = process.env.MAIL_FROM || `Syntax Studio <${process.env.ZOHO_EMAIL}>`;
