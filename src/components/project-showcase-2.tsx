@@ -142,7 +142,7 @@ export default async function WorkIntroSection(props: WorkIntroProps) {
 
   // Overskrifter / beskrivelser
   const title = props.title ?? t("title");
-  const heroImage = props.heroImage ?? "/showcase/fiverr2-big.webp";
+  const heroImage = props.heroImage ?? "/showcase/bigpic.webp";
   const heroAlt = props.heroAlt ?? t("heroAlt");
   const overview = props.overview ?? t("defaultOverview");
   const background = props.background ?? t("defaultBackground");
