@@ -129,35 +129,29 @@ const OrderConfirmationEmail: React.FC<OrderConfirmationEmailProps> = ({
   return (
     <div style={bodyStyle}>
       <div style={containerStyle}>
-        <header style={headerStyle}>
-          <table
-            role="presentation"
-            cellPadding="0"
-            cellSpacing="0"
-            style={{ border: '0', display: 'inline-block' }}
-          >
-            <tbody>
-              <tr>
-                <td style={{ verticalAlign: 'middle', paddingRight: '15px' }}>
-                  <img
-                    src="https://www.syntaxstudio.no/logos/syntax-i.webp"
-                    alt="Syntax Studio Icon"
-                    width="60"
-                    style={{ display: 'block' }}
-                  />
-                </td>
-                <td style={{ verticalAlign: 'middle', textAlign: 'left' }}>
-                  <p style={{ color: '#ffffff', fontSize: '28px', fontWeight: 'bold', margin: 0, lineHeight: 1 }}>
-                    syntax
-                  </p>
-                  <p style={{ color: '#ffffff', fontSize: '28px', fontWeight: '300', margin: 0, lineHeight: 1 }}>
-                    studio
-                  </p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </header>
+        {/* Outlook-friendly header: use table with bgcolor and an inner table for content */}
+        <table role="presentation" cellPadding="0" cellSpacing="0" width="100%" style={{ borderCollapse: 'collapse' }}>
+          <tbody>
+            <tr>
+              <td align="center" {...({ bgcolor: '#000000' } as any)} style={{ backgroundColor: '#000000', padding: '30px 0', borderRadius: '12px' }}>
+                <table role="presentation" cellPadding="0" cellSpacing="0" style={{ border: 0 }}>
+                  <tbody>
+                    <tr>
+                      <td align="center" style={{ verticalAlign: 'middle', padding: '6px 0' }}>
+                        <img
+                          src="https://www.syntaxstudio.no/logosyntax-nbnm.png"
+                          alt="Syntax Studio"
+                          width="140"
+                          style={{ display: 'block', maxWidth: '90%', height: 'auto' }}
+                        />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
 
         <main style={mainStyle}>
           <h1 style={h1Style}>{translations.thanks}</h1>
