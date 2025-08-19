@@ -24,7 +24,7 @@ const OrderConfirmationEmail: React.FC<OrderConfirmationEmailProps> = ({
     includedLabel: isNorwegian ? 'Inkludert' : 'Included',
     addonsLabel: isNorwegian ? 'TILLEGGSTJENESTER' : 'ADD-ONS',
     totalLabel: isNorwegian ? 'Estimert total' : 'Estimated Total',
-    companyInfo: isNorwegian ? 'Syntax Studio | Org.nr: 932 933 352 | E-post: info@syntaxstudio.no' : 'Syntax Studio | Org.no: 932 933 352 | Email: info@syntaxstudio.no',
+    companyInfo: isNorwegian ? 'Syntax Studio | E-post: info@syntaxstudio.no' : 'Syntax Studio | Email: info@syntaxstudio.no',
   };
 
   // --- STYLES ---
@@ -128,9 +128,14 @@ const OrderConfirmationEmail: React.FC<OrderConfirmationEmailProps> = ({
 
   return (
     <div style={bodyStyle}>
-      <div style={containerStyle}>
-        {/* Outlook-friendly header: use table with bgcolor and an inner table for content */}
-        <table role="presentation" cellPadding="0" cellSpacing="0" width="100%" style={{ borderCollapse: 'collapse' }}>
+      {/* wrapper table with explicit white bgcolor helps Gmail on iOS keep light backgrounds in dark mode */}
+      <table role="presentation" width="100%" cellPadding={0} cellSpacing={0} style={{ borderCollapse: 'collapse' }} {...({ bgcolor: '#ffffff' } as any)}>
+        <tbody>
+          <tr>
+            <td align="center">
+              <div style={containerStyle}>
+                {/* Outlook-friendly header: use table with bgcolor and an inner table for content */}
+                <table role="presentation" cellPadding="0" cellSpacing="0" width="100%" style={{ borderCollapse: 'collapse' }}>
           <tbody>
             <tr>
               <td align="center" {...({ bgcolor: '#000000' } as any)} style={{ backgroundColor: '#000000', padding: '30px 0', borderRadius: '12px' }}>
@@ -142,7 +147,7 @@ const OrderConfirmationEmail: React.FC<OrderConfirmationEmailProps> = ({
                           src="https://www.syntaxstudio.no/logosyntax-nbnm.png"
                           alt="Syntax Studio"
                           width="140"
-                          style={{ display: 'block', maxWidth: '90%', height: 'auto' }}
+                          style={{ display: 'block', maxWidth: '90%', height: 'auto', filter: 'none', WebkitFilter: 'none' }}
                         />
                       </td>
                     </tr>
@@ -207,7 +212,11 @@ const OrderConfirmationEmail: React.FC<OrderConfirmationEmailProps> = ({
         <footer style={footerStyle}>
           <p style={{ margin: 0 }}>{translations.companyInfo}</p>
         </footer>
-      </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 };
