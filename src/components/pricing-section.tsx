@@ -237,7 +237,7 @@ export default function Pricing({
               <DialogTrigger asChild>
                 <Button className="w-full" size="lg">{t("cta.getStarted")}</Button>
               </DialogTrigger>
-              <DialogContent className="sm:max-w-3xl">
+              <DialogContent className="w-[95vw] sm:max-w-3xl">
                 <DialogHeader>
                   <DialogTitle>{t("dialogs.basic.title")}</DialogTitle>
                   <DialogDescription>{t("dialogs.basic.desc")}</DialogDescription>
@@ -320,7 +320,7 @@ export default function Pricing({
               <DialogTrigger asChild>
                 <Button className="w-full" size="lg">{t("cta.getStarted")}</Button>
               </DialogTrigger>
-              <DialogContent className="sm:max-w-3xl">
+              <DialogContent className="w-[95vw] sm:max-w-3xl">
                 <DialogHeader>
                   <DialogTitle>{t("dialogs.standard.title")}</DialogTitle>
                   <DialogDescription>{t("dialogs.standard.desc")}</DialogDescription>
@@ -410,7 +410,7 @@ export default function Pricing({
               <DialogTrigger asChild>
                 <Button variant="outline" className="w-full" size="lg">{t("cta.contactSales")}</Button>
               </DialogTrigger>
-              <DialogContent className="sm:max-w-lg">
+              <DialogContent className="w-[95vw] sm:max-w-lg">
                 <DialogHeader>
                   <DialogTitle>{t("dialogs.premium.title")}</DialogTitle>
                   <DialogDescription>{t("dialogs.premium.desc")}</DialogDescription>
