@@ -1,9 +1,8 @@
 'use server';
 
 import nodemailer from 'nodemailer';
-import { ContactInquirySchema, PricingOrderSchema } from '@/lib/schemas';
-import OrderConfirmationEmail from '@/emails/order-confirmation';
-import { render } from '@react-email/render';
+import { ContactInquirySchema } from '@/lib/schemas';
+import { headers } from 'next/headers';
 
 /** Shared form-state type for server actions */
 export type FormState = {
@@ -12,17 +11,6 @@ export type FormState = {
   success: boolean;
 };
 
-/* ---------- Formatters ---------- */
-const fmtUSD = (v: number) =>
-  new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-    maximumFractionDigits: 0,
-  }).format(v);
-
-const fmtNOK = (v: number) =>
-  new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 0 }).format(v) + ' kr';
-
 /* ---------- SMTP transport (Zoho) ---------- */
 function createTransport() {
   return nodemailer.createTransport({
@@ -30,14 +18,26 @@ function createTransport() {
     port: 465,
     secure: true,
     auth: {
-      user: process.env.ZOHO_EMAIL,
-      pass: process.env.ZOHO_APP_PASSWORD,
+      user: process.env.ZOHO_EMAIL,        // e.g. noreply@syntaxstudio.no
+      pass: process.env.ZOHO_APP_PASSWORD, // App password
     },
   });
 }
 
+/* ---------- Locale helper (async: headers() must be awaited) ---------- */
+async function detectLocale(): Promise<'no' | 'en'> {
+  try {
+    const h = await headers();
+    const al = h.get('accept-language') || '';
+    if (/^(no|nb|nn)/i.test(al)) return 'no';
+    return 'en';
+  } catch {
+    return 'no';
+  }
+}
+
 /* =========================================================
-   1) Contact form (unchanged, with generic FormState)
+   1) Contact form (unchanged validation)
    ========================================================= */
 export async function handleContactInquiry(
   prevState: FormState,
@@ -63,7 +63,8 @@ export async function handleContactInquiry(
 
   try {
     await transporter.sendMail({
-      from: `"${name}" <${process.env.ZOHO_EMAIL}>`,
+      // Viktig: FROM må være den autentiserte Zoho-kontoen
+      from: `"${process.env.MAIL_FROM_NAME || 'Syntax Studio'}" <${process.env.ZOHO_EMAIL}>`,
       replyTo: email,
       to: process.env.SALES_INBOX || 'sales@syntaxstudio.no',
       subject: `Ny henvendelse fra ${name} via nettsiden`,
@@ -91,157 +92,154 @@ export async function handleContactInquiry(
 }
 
 /* =========================================================
-   2) Pricing / Order (NEW) — used with useActionState
+   2) Pricing / Order — minimal felt: plan, email, project
    ========================================================= */
+type SimplePricingPayload = {
+  plan: 'kickstart' | 'growth' | 'scale' | '';
+  email: string;
+  project: string;
+  honey: string; // honeypot
+};
+
+function validatePricingPayload(raw: SimplePricingPayload): Record<string, string[]> | null {
+  const errors: Record<string, string[]> = {};
+
+  if (!raw.plan || !['kickstart', 'growth', 'scale'].includes(raw.plan)) {
+    (errors.plan ||= []).push('Ugyldig plan.');
+  }
+  if (!raw.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(raw.email)) {
+    (errors.email ||= []).push('Oppgi en gyldig e-postadresse.');
+  }
+  if (!raw.project || raw.project.trim().length < 10) {
+    (errors.project ||= []).push('Beskriv prosjektet (minst 10 tegn).');
+  }
+
+  return Object.keys(errors).length ? errors : null;
+}
+
 export async function handlePricingOrder(
   _prev: FormState,
   formData: FormData
 ): Promise<FormState> {
-  const raw = {
-    plan: String(formData.get('plan') || ''),
+  const raw: SimplePricingPayload = {
+    plan: String(formData.get('plan') || '') as SimplePricingPayload['plan'],
     email: String(formData.get('email') || ''),
     project: String(formData.get('project') || ''),
-    included: (formData.get('included') as string | null) ?? null, // standard only
-    addons: formData.getAll('addons').map(String),
-    currency: String(formData.get('currency') || 'USD'),
-    conversionRate: formData.get('conversionRate'),
-    baseUSD: formData.get('baseUSD'),
-    totalUSD: formData.get('totalUSD'),
-    locale: String(formData.get('locale') || 'en'),
-    honey: String(formData.get('website') || ''), // honeypot
+    honey: String(formData.get('website') || ''),
   };
 
+  // Honeypot → pretend OK, do nothing
   if (raw.honey) {
     return { success: true, message: 'OK', errors: null };
   }
 
-  const parsed = PricingOrderSchema.safeParse(raw);
-  if (!parsed.success) {
-    const errs: Record<string, string[]> = {};
-    parsed.error.issues.forEach((i) => {
-      const k = (i.path[0] as string) || 'form';
-      (errs[k] ||= []).push(i.message);
-    });
-    return {
-      success: false,
-      message: 'Validation error',
-      errors: errs,
-    };
+  const errors = validatePricingPayload(raw);
+  if (errors) {
+    return { success: false, message: 'Validation error', errors };
   }
 
-  const data = parsed.data;
-  const locale = data.locale ?? 'en'; // <<< ensure defined
+  const locale = await detectLocale();
+  const transporter = createTransport();
 
-  // Add-on labels & prices from client (for i18n in emails)
-  const addonsLabels = formData.getAll('addonsLabel').map(String);
-  const addonsUSD = formData.getAll('addonsUSD').map((x) => Number(x));
+  // FROM må **alltid** være den autentiserte kontoen for å unngå "Relaying disallowed"
+  const fromAddress = `${process.env.MAIL_FROM_NAME || 'Syntax Studio'} <${process.env.ZOHO_EMAIL}>`;
+  const toSales = process.env.SALES_INBOX || 'sales@syntaxstudio.no';
 
-  const usd = data.totalUSD ?? data.baseUSD ?? 0;
-  const nok = Math.round(usd * (data.conversionRate || 10));
-  const display = (xUSD: number) =>
-    data.currency === 'USD'
-      ? fmtUSD(xUSD)
-      : fmtNOK(Math.round(xUSD * (data.conversionRate || 10)));
+  const planLabel =
+    raw.plan === 'kickstart' ? 'Kickstart'
+    : raw.plan === 'growth' ? 'Vekstpakka'
+    : 'Skaler';
 
-  const addonsList =
-    addonsLabels.length > 0
-      ? addonsLabels
-          .map((label, idx) => `• ${label}: ${display(Number(addonsUSD[idx] || 0))}`)
-          .join('\n')
-      : '';
-
-  const totalStr = data.currency === 'USD' ? fmtUSD(usd) : fmtNOK(nok);
-
-  const includedLine =
-    data.plan === 'standard' && data.included
-      ? data.included === 'booking'
-        ? 'Included: Booking'
-        : 'Included: E-commerce (≤10 products)'
-      : null;
-
-  const subjectSales = `[Lead] ${data.plan.toUpperCase()} – ${data.email}`;
-  const subjectCustomer = locale.startsWith('no')
-    ? `Vi har mottatt forespørselen din (${data.plan})`
-    : `We received your request (${data.plan})`;
+  const subjectSales = `[Lead] ${planLabel} – ${raw.email}`;
+  const subjectCustomer =
+    locale === 'no'
+      ? `Vi har mottatt forespørselen din (${planLabel})`
+      : `We received your request (${planLabel})`;
 
   const htmlSales = `
-    <h2>New ${data.plan} lead</h2>
-    <p><b>Email:</b> ${data.email}</p>
-    <p><b>Currency:</b> ${data.currency} &middot; <b>Rate:</b> ${data.conversionRate}</p>
-    ${includedLine ? `<p><b>${includedLine}</b></p>` : ''}
-    <h3>Project</h3>
-    <pre style="white-space:pre-wrap">${data.project}</pre>
-    ${addonsList ? `<h3>Add-ons</h3><pre style="white-space:pre-wrap">${addonsList}</pre>` : ''}
-    ${data.plan !== 'premium' ? `<h3>Total</h3><p><b>${totalStr}</b></p>` : ''}
+    <h2>Ny pricing-forespørsel — ${planLabel}</h2>
+    <p><b>E-post:</b> ${raw.email}</p>
+    <h3>Prosjekt</h3>
+    <pre style="white-space:pre-wrap">${raw.project}</pre>
   `;
 
   const textSales = `
-New ${data.plan} lead
-Email: ${data.email}
-Currency: ${data.currency}  Rate: ${data.conversionRate}
-${includedLine ? `${includedLine}\n` : ''}
+Ny pricing-forespørsel — ${planLabel}
+E-post: ${raw.email}
 
-Project:
-${data.project}
-
-${addonsList ? `Add-ons:\n${addonsList}\n` : ''}${
-    data.plan !== 'premium' ? `Total: ${totalStr}\n` : ''
-  }
+Prosjekt:
+${raw.project}
   `.trim();
 
-  const addonsForEmail = addonsLabels.map((label, idx) => ({
-    label,
-    price: display(Number(addonsUSD[idx] || 0)),
-  }));
-
-  const htmlCustomer = await render(
-    <OrderConfirmationEmail
-      plan={data.plan}
-      included={includedLine}
-      addons={addonsForEmail}
-      total={totalStr}
-      locale={locale}
-    />
-  );
-
-  const transporter = createTransport();
-  const from = process.env.MAIL_FROM || `Syntax Studio <${process.env.ZOHO_EMAIL}>`;
-  const toSales = process.env.SALES_INBOX || 'sales@syntaxstudio.no';
+  const htmlCustomer =
+    locale === 'no'
+      ? `
+  <div style="font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;font-size:14px;line-height:1.6;color:#111">
+    <p>Hei!</p>
+    <p>Takk for forespørselen din om <b>${planLabel}</b>. Vi ser over informasjonen og kommer tilbake til deg på e-post.</p>
+    <p><b>Oppsummert:</b></p>
+    <ul>
+      <li><b>E-post:</b> ${raw.email}</li>
+      <li><b>Plan:</b> ${planLabel}</li>
+    </ul>
+    <p><b>Prosjektbeskrivelse:</b></p>
+    <pre style="white-space:pre-wrap;background:#f6f6f6;padding:12px;border-radius:8px">${raw.project}</pre>
+    <p>Vi tar bare betalt når du får betalt. Ingen resultater = ingen kostnad.</p>
+    <p>– Syntax Studio</p>
+  </div>
+  `
+      : `
+  <div style="font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;font-size:14px;line-height:1.6;color:#111">
+    <p>Hello!</p>
+    <p>Thanks for your request for <b>${planLabel}</b>. We’ll review and get back to you by email.</p>
+    <p><b>Summary:</b></p>
+    <ul>
+      <li><b>Email:</b> ${raw.email}</li>
+      <li><b>Plan:</b> ${planLabel}</li>
+    </ul>
+    <p><b>Project description:</b></p>
+    <pre style="white-space:pre-wrap;background:#f6f6f6;padding:12px;border-radius:8px">${raw.project}</pre>
+    <p>We only get paid when you get paid. No results = no cost.</p>
+    <p>– Syntax Studio</p>
+  </div>
+  `;
 
   try {
+    // Send til sales
     await transporter.sendMail({
-      from,
+      from: fromAddress,
       to: toSales,
-      replyTo: data.email,
+      replyTo: raw.email,
       subject: subjectSales,
       text: textSales,
       html: htmlSales,
     });
 
+    // Bekreftelse til kunde
     await transporter.sendMail({
-      from,
-      to: data.email,
+      from: fromAddress,          // Må være samme verifiserte adresse
+      to: raw.email,
       subject: subjectCustomer,
-      text: locale.startsWith('no')
-        ? `Takk! Vi har mottatt forespørselen din (${data.plan}).`
-        : `Thanks! We received your request (${data.plan}).`,
+      text:
+        locale === 'no'
+          ? `Takk! Vi har mottatt forespørselen din (${planLabel}). Vi svarer så snart vi kan.`
+          : `Thanks! We received your request (${planLabel}). We'll get back to you shortly.`,
       html: htmlCustomer,
     });
 
     return {
       success: true,
-      message: locale.startsWith('no')
-        ? 'Takk! Vi tar kontakt på e-post.'
-        : 'Thanks! We’ll reach out by email.',
+      message: locale === 'no' ? 'Takk! Vi tar kontakt på e-post.' : 'Thanks! We’ll reach out by email.',
       errors: null,
     };
   } catch (err: any) {
     console.error('Email sending error (pricing):', err);
     return {
       success: false,
-      message: locale.startsWith('no')
-        ? 'En feil oppstod under sending av e-post. Vennligst prøv igjen.'
-        : 'Something went wrong while sending the email. Please try again.',
+      message:
+        locale === 'no'
+          ? 'En feil oppstod under sending av e-post. Vennligst prøv igjen.'
+          : 'Something went wrong while sending the email. Please try again.',
       errors: { form: [err?.message || 'Unknown error'] },
     };
   }

@@ -1,294 +1,180 @@
 {
-    "Nav": {
-      "showcase": "Showcase",
-      "about": "Om oss",
-      "pricing": "Priser",
-      "contact": "Kontakt oss"
-    },
-    "Hero": {
-      "title": "Webdesign, Merkevare og AI.",
-      "subtitle": "Vi bygger digitale opplevelser som løfter merkevaren din og skaper vekst. La oss bygge fremtiden sammen.",
-      "getInTouch": "Ta kontakt"
-    },
-    "Services": {
-      "title": "Funksjoner som skiller oss ut",
-      "subtitle": "Alt du trenger for moderne, skreddersydde nettsider—bygget av utviklere, designet for vekst.",
-      "cta": "Kom i gang nå",
-      "badges": {
-        "new": "Ny"
+  "Nav": {
+    "showcase": "Arbeid",
+    "about": "Om oss",
+    "pricing": "Priser",
+    "contact": "Kontakt"
+  },
+  "Hero": {
+    "title": "Vi lager nettsider og reklame som gir deg flere kunder",
+    "subtitle": "Enkel, målbar og risikofri hjelp til å vokse. Du betaler først når du får resultater.",
+    "getInTouch": "Ta kontakt"
+  },
+  "Services": {
+    "title": "Hva vi hjelper deg med",
+    "subtitle": "Vi lager nettsider og reklame som gir deg flere kunder.",
+    "cta": "Kom i gang",
+    "badges": { "new": "Ny" },
+    "features": {
+      "ai": {
+        "title": "Markedsføring som virker",
+        "desc": "Målrettede kampanjer på Google og sosiale medier – satt opp, optimalisert og rapportert for deg."
       },
-      "features": {
-        "ai": {
-          "title": "AI-drevet automatisering",
-          "desc": "Automatiser innhold, drift og support med praktisk ML som passer din stack."
-        },
-        "fast": {
-          "title": "Lynraskt",
-          "desc": "Håndkodede fronter optimalisert for sub-sekunds interaksjoner og Web Vitals."
-        },
-        "security": {
-          "title": "Sikkerhet i toppklasse",
-          "desc": "Bank-nivå praksis: kryptering, minste rettighet og sikre arbeidsflyter."
-        },
-        "scale": {
-          "title": "Skalerbar infrastruktur",
-          "desc": "Bygget for vekst—edge-rendering, køer, bakgrunnsjobber og observability."
-        },
-        "cloud": {
-          "title": "Cloud-native",
-          "desc": "Deploy hvor som helst: Vercel, Fly, AWS eller din egen plattform."
-        },
-        "dev": {
-          "title": "Utvikler-først",
-          "desc": "Ren arkitektur, god dokumentasjon og DX for raskere iterasjon."
-        }
-      }
-    },
-    "Proposal": {
-      "title": "La oss jobbe sammen!",
-      "subtitle": "Fortell hva du vil bygge, så tar vi kontakt.",
-      "name": "Navn",
-      "namePh": "Ditt navn",
-      "email": "E-post",
-      "emailPh": "epost@eksempel.no",
-      "message": "Melding",
-      "messagePh": "Hva ser du for deg?",
-      "send": "Send melding",
-      "sending": "Sender...",
-      "thanksTitle": "Takk for meldingen!",
-      "errorTitle": "Feil"
-    },
-    "Footer": {
-      "tagline": "Fra visjon til virkelighet",
-      "links": "Lenker",
-      "examples": "Eksempler",
-      "about": "Om oss",
-      "pricing": "Priser",
-      "contact": "Kontakt oss",
-      "question": "Har du et brennende spørsmål?"
-    },
-    "About": {
-      "missionTitle": "Vårt oppdrag",
-      "missionP1": "Syntax Studio håndkoder raske, tilgjengelige nettsider og apper—uten maler og uten bloat. Vi går inn i teamet ditt for å designe, bygge og lansere produkter som føles enkle og yter strålende.",
-      "missionP2": "Vi kombinerer ingeniørfaglig presisjon med ryddig design. Forvent tydelig kommunikasjon, korte tilbakemeldingssløyfer og lanseringer som faktisk flytter nåla.",
-      "metrics": {
-        "lighthouseValue": "90+",
-        "lighthouseSubtitle": "Snittscore i Lighthouse (Ytelse/SEO/Best Practices)",
-        "responseValue": "Under 24 t",
-        "responseSubtitle": "Typisk svartid på hverdager",
-        "timeToLiveValue": "2–4 uker",
-        "timeToLiveSubtitle": "Fra oppstart til første live-versjon (standard side)"
+      "fast": {
+        "title": "Nettsider som konverterer",
+        "desc": "Skreddersydde sider som er raske, tydelige og bygget for salg, henvendelser og booking."
       },
-      "valuesTitle": "Våre verdier",
-      "valuesSubtitle": "Slik jobber vi i Syntax Studio—prinsippene som former hvert prosjekt.",
-      "principles": {
-        "craft": {
-          "title": "Bygg med håndverk",
-          "desc": "Vi håndkoder for fart, tilgjengelighet og vedlikeholdbarhet. Ren kode, ren UI."
-        },
-        "share": {
-          "title": "Del åpent",
-          "desc": "Åpne veikart, jevnlige demoer og asynkrone oppdateringer holder alle på linje."
-        },
-        "learn": {
-          "title": "Lær raskt",
-          "desc": "Korte feedback-sløyfer og raske iterasjoner—ship, mål, forbedre."
-        },
-        "partner": {
-          "title": "Partner-tankesett",
-          "desc": "Vi opptrer som et in-house team, der design og utvikling støtter dine mål."
-        },
-        "ownership": {
-          "title": "Ansvarlighet",
-          "desc": "Vi står for det vi leverer—stabile releaser og tydelig ansvar."
-        },
-        "simple": {
-          "title": "Hold det enkelt",
-          "desc": "Klarhet foran kompleksitet. Den enkleste løsningen som løser det egentlige problemet vinner."
-        }
+      "security": {
+        "title": "Måling og rapportering",
+        "desc": "Vi setter opp sporing og viser deg svart på hvitt hva som fungerer – og hva vi gjør videre."
       },
-      "WorkIntro": {
-        "title": "Slik jobber vi",
-        "heroAlt": "Syntax Studio arbeidsflyt",
-        "overviewTitle": "Oversikt",
-        "workflowTitle": "Arbeidsflyt",
-        "seeLive": "Se nettsiden",
-        "defaultOverview": "Vi samarbeider med gründere og team for å håndkode raske, tilgjengelige nettsider og apper. Vi eier hele stacken fra merkevare til lansering, med korte feedback-sløyfer og målbare resultater.",
-        "defaultBackground": "Mange kommer til oss med spredt branding, mal-sider eller manuelle prosesser. Vi samkjører mål, skjerper merkevaren og leverer en ren arkitektur med et vedlikeholdbart CMS og praktiske automasjoner.",
-        "checklist": [
-          "Merkevareidentitet & designsystem",
-          "UX/UI-design",
-          "Front-end-utvikling",
-          "Full-stack (Next.js, Node, Prisma)",
-          "Innhold & tekstforfatting",
-          "SEO & ytelse",
-          "Analyse & sporing",
-          "Integrasjoner & automasjoner"
-        ],
-        "projects": {
-          "giroo": {
-            "heading": "Bygge Giroos abonnementspanel",
-            "paragraphs": [
-              "Fra navn til MVP: Vi bygde merkevaren, markedsføringssiden og en full webapp som hjelper folk å finne og redusere løpende abonnementer.",
-              "Vi startet med innsikt og brukerflyt, og leverte deretter en ryddig Next.js-app med innlogging, database og et fundament for e-post-tolking som henter ut abonnementsdata."
-            ]
-          },
-          "riseup": {
-            "heading": "Totalrenovering av RiseUp sin merkevare og nettside",
-            "paragraphs": [
-              "En full merkevareoppgradering og en troverdig nettside som posisjonerte RiseUp for å vinne nye partnerskap.",
-              "Vi bygde om budskapsarkitekturen og leverte en rask, tilgjengelig side med et enkelt CMS for innholdsoppdateringer og økt troverdighet."
-            ]
-          },
-          "bites": {
-            "heading": "Lansering av Bites sin festival-klare tilstedeværelse",
-            "paragraphs": [
-              "Tidligfasehjelp for et pop-up burger-konsept: merkevare og en nettside som hjalp dem å skille seg ut i søknader til festivaler.",
-              "Vi laget en tydelig visuell identitet og en mobil-først side med arrangementsoversikt, slik at arrangører og kunder lett kunne se hvor de dukket opp neste gang."
-            ]
-          },
-          "datasec": {
-            "heading": "DataSec-integrasjoner og sanntidsdashboards",
-            "paragraphs": [
-              "Skreddersydde tekniske produkter integrert i nettsiden—som ga kundene dypere innsikt i egne objekter og bedre sikkerhet.",
-              "Vi bygde interne verktøy og dashboards og integrerte leverandør-APIer, slik at klare, sanntidsinnsikter ble tilgjengelige direkte på nettsiden."
-            ]
-          }
-        }
-      }
-    },
-    "Team": {
-        "title": "Møt teamet vårt",
-        "subtitle": "Fagfolkene som står bak resultatene våre",
-        "members": {
-        "gunder": {
-            "role": "Grunnlegger og daglig leder",
-            "bio": "Grunnlegger som kobler strategi og utvikling—hands-on i alle leveranser."
-        },
-        "rasul": {
-            "role": "Partner og sjefsarkitekt",
-            "bio": "Partner som gjør ideer om til robuste, skalerbare systemer."
-        }
-        },
-        "status": {
-          "online": "Jeg er online og vil svare i løpet av kort tid.",
-          "idle": "Jeg er litt opptatt, men svarer snart.",
-          "dnd": "Jeg sitter i et møte, men vil svare senere.",
-          "offline": "Jeg er offline, men vil svare deg så fort jeg er tilbake.",
-          "unknown": "Jeg er offline, men vil svare deg så fort jeg er tilbake."
-        }
-
-    },
-    "Pricing": {
-      "title": "Enkel og transparent prising",
-      "subtitle": "Velg pakken som passer best for deg og teamet ditt.",
-      "toggle": { "usd": "USD", "nok": "NOK" },
-      "note": {
-        "usd": "Grunnpriser i USD.",
-        "nok": "Konvertert fra USD til ca. {rate} NOK/USD."
+      "scale": {
+        "title": "Vekst og rådgivning",
+        "desc": "Praktiske råd om tilbud, prising, posisjonering og innhold – alt som hjelper deg å få flere kunder."
       },
-      "badgeMostPopular": "Mest populær",
-      "cta": {
-        "getStarted": "Kom i gang",
-        "contactSales": "Kontakt salg"
+      "cloud": {
+        "title": "Profesjonell e-post",
+        "desc": "Oppsett av Google Workspace eller Microsoft 365 med ditt domenenavn (f.eks. hei@bedrift.no), signaturer og sikkerhet."
       },
-  
-      "estimatedTotal": "Estimert total: {amount}",
-  
-      "dialogs": {
-        "basic": {
-          "title": "Kom i gang – Basic",
-          "desc": "Velg tillegg og beskriv prosjektet."
-        },
-        "standard": {
-          "title": "Kom i gang – Standard",
-          "desc": "Velg inkludert funksjon, tillegg og beskriv prosjektet."
-        },
-        "premium": {
-          "title": "Kontakt salg – Premium",
-          "desc": "Beskriv behovet ditt. Vi kommer tilbake med et tilbud."
-        }
-      },
-  
-      "forms": {
-        "labels": {
-          "addons": "Tilleggstjenester",
-          "project": "Forklaring av prosjektet",
-          "email": "E-post for kontakt"
-        },
-        "placeholders": {
-          "project": "Fortell kort om mål, stil, omfang, integrasjoner…"
-        },
-        "actions": {
-          "submit": "Send forespørsel",
-          "sending": "Sender…"
-        },
-        "summary": {
-          "title": "Oppsummering",
-          "base": "Grunnpris",
-          "addons": "Tillegg",
-          "total": "Total"
-        },
-        "standard": {
-          "included": {
-            "title": "Inkludert funksjon (gratis)",
-            "booking": "Booking",
-            "ecommerce": "E-commerce (≤10 produkter)"
-          }
-        },
-        "toastThanks": "Takk! Vi tar kontakt på e-post."
-      },
-  
-      "addons": {
-        "extraPage": "Ekstra side (+1)",
-        "hosting": "Hosting (oppsett + 12 mnd)",
-        "contentAssist": "Bistand med bilder og tekst",
-        "seoBoost": "SEO-boost (grunnpakke)"
-      },
-  
-      "plans": {
-        "basic": {
-          "name": "Basic",
-          "desc": "One-page løsning for landingsside eller enkel portefølje",
-          "features": [
-            "1 side (one-page)",
-            "100% håndkodet (Next.js + Tailwind)",
-            "Responsiv og rask",
-            "Kontaktskjema + grunnleggende SEO",
-            "1 integrasjon (f.eks. analyse)",
-            "1 revisjonsrunde"
-          ]
-        },
-        "standard": {
-          "name": "Standard",
-          "desc": "Håndkodet nettside med 3 sider – med booking eller enkel nettbutikk",
-          "features": [
-            "3 sider (f.eks. forside, tjenester, kontakt)",
-            "Håndkodet (uten maler)",
-            "Valgfri booking eller enkel nettbutikk (≤10 produkter)",
-            "Sikker betalingsintegrasjon",
-            "Ytelse og on-page SEO",
-            "2 integrasjoner (skjema, analyse, osv.)",
-            "2 revisjonsrunder",
-            "Prioritert support"
-          ]
-        },
-        "premium": {
-          "name": "Premium",
-          "desc": "Helt skreddersydd løsning – kontakt salg for tilbud",
-          "features": [
-            "Fullt tilpasset arkitektur og design",
-            "Ubegrenset antall sider",
-            "Avansert nettbutikk og/eller sanntidsbooking",
-            "Sikker checkout + oppsett av avgifter/frakt",
-            "Headless CMS for innhold og produkter",
-            "Skreddersydde integrasjoner og automasjoner",
-            "Lanseringsstøtte og opplæring",
-            "Serviceavtale og vedlikehold",
-            "Kontakt salg for pris/tilbud"
-          ]
-        }
+      "dev": {
+        "title": "Alt skreddersydd",
+        "desc": "Ingen maler. Design og tekst som passer din bedrift – og som faktisk selger."
       }
     }
+  },
+  "Proposal": {
+    "title": "La oss jobbe sammen!",
+    "subtitle": "Fortell kort om prosjektet ditt, så kommer vi tilbake med et forslag.",
+    "name": "Navn",
+    "namePh": "Ditt navn",
+    "email": "E-post",
+    "emailPh": "epost@eksempel.no",
+    "message": "Melding",
+    "messagePh": "Hva ønsker du å oppnå? Hvem er kundene dine?",
+    "send": "Send melding",
+    "sending": "Sender...",
+    "thanksTitle": "Takk for meldingen!",
+    "errorTitle": "Feil"
+  },
+  "Footer": {
+    "tagline": "Vi lager nettsider og reklame som gir deg flere kunder",
+    "links": "Lenker",
+    "examples": "Eksempler",
+    "about": "Om oss",
+    "pricing": "Priser",
+    "contact": "Kontakt",
+    "question": "Har du et spørsmål?"
+  },
+  "About": {
+    "missionTitle": "Vårt oppdrag",
+    "missionP1": "Syntax Studio hjelper små bedrifter og gründere å få flere kunder på nett. Vi bygger nettsider og kjører kampanjer som gir ekte resultater.",
+    "missionP2": "Hos oss slipper du teknisk prat og unødvendige kostnader. Du får en partner som er like opptatt av resultatet som du er.",
+    "valuesTitle": "Slik jobber vi",
+    "valuesSubtitle": "Noen prinsipper vi alltid følger:",
+    "principles": {
+      "results": {
+        "title": "Resultater først",
+        "desc": "Alt vi gjør handler om én ting: å skaffe deg flere kunder."
+      },
+      "clarity": {
+        "title": "Tydelighet",
+        "desc": "Enkelt språk, klare avtaler og full innsikt underveis."
+      },
+      "partnership": {
+        "title": "Partner, ikke leverandør",
+        "desc": "Vi opptrer som en del av teamet ditt og jobber for dine mål."
+      },
+      "responsibility": {
+        "title": "Ansvarlighet",
+        "desc": "Vi tar ansvar for resultatene vi leverer og står for det vi lover."
+      }
+    }
+  },
+  "Team": {
+    "title": "Møt teamet vårt",
+    "subtitle": "Fagfolkene som står bak resultatene våre",
+    "members": {
+      "gunder": {
+        "role": "Grunnlegger og daglig leder",
+        "bio": "Grunnlegger som kobler strategi og utvikling—hands-on i alle leveranser."
+      },
+      "rasul": {
+        "role": "Partner og sjefsarkitekt",
+        "bio": "Partner som gjør ideer om til robuste, skalerbare systemer."
+      }
+    },
+    "status": {
+      "online": "Jeg er online og vil svare i løpet av kort tid.",
+      "idle": "Jeg er litt opptatt, men svarer snart.",
+      "dnd": "Jeg sitter i et møte, men vil svare senere.",
+      "offline": "Jeg er offline, men vil svare deg så fort jeg er tilbake.",
+      "unknown": "Jeg er offline, men vil svare deg så fort jeg er tilbake."
+    }
+  },
+  "Pricing": {
+    "title": "Pris uten risiko",
+    "subtitle": "Vi tar bare betalt når du får betalt. Ingen resultater = ingen kostnad.",
+    "badgeMostPopular": "Mest valgt",
+    "cta": { "getStarted": "Få et risikofritt tilbud", "contactSales": "Snakk med oss" },
+    "shared": { "payWhenPaid": "Vi tar bare betalt når du får betalt. Ingen resultater = ingen kostnad." },
+    "faq": { "cost": { "question": "Hva koster det?" } },
+    "plans": {
+      "kickstart": {
+        "name": "Kickstart",
+        "desc": "Én målrettet kampanje for å teste markedet – raskt og målbart.",
+        "features": [
+          "Kampanje på én kanal (Google eller SoMe)",
+          "Rask landingsside/tilpasning ved behov",
+          "Sporing via QR/kupong, online-bestilling eller booking",
+          "Ukentlig enkel rapport (effekt og anbefalinger)"
+        ],
+        "costHint": "<p>Veiledende: rundt <strong>15 % av dokumentert økning</strong> i omsetning fra kampanjen.</p><p>Endelig avtale settes etter vurdering av bransje, marginer og risiko.</p>"
+      },
+      "growth": {
+        "name": "Vekstpakka",
+        "desc": "Flerkanals kampanjer + konverteringsløft på eksisterende side.",
+        "features": [
+          "Kampanjer på 2–3 kanaler (Google + Facebook/Instagram)",
+          "Forbedret landingsside/konvertering",
+          "Lead-flows (skjema, booking, messenger)",
+          "Månedlig optimalisering og rapportering"
+        ],
+        "costHint": "<p>Veiledende: <strong>10–12 % av dokumentert økning</strong> i omsetning/ordre/booking.</p><p>Justering etter volum, sesong og kanalvalg.</p>"
+      },
+      "scale": {
+        "name": "Skaler",
+        "desc": "Full digital pakke: ny side, flerkanal, rådgivning og analyse.",
+        "features": [
+          "Ny profesjonell nettside (design/utvikling)",
+          "Flerkanals markedsføring og A/B-testing",
+          "Rådgivning/posisjonering, enkel CRM/automation",
+          "Kontinuerlig analyse og skaleringsplan"
+        ],
+        "costHint": "<p>Veiledende: <strong>5–8 % av dokumentert økning</strong> i omsetning.</p><p>Avtales etter ambisjonsnivå, kompleksitet og skala.</p>"
+      }
+    },
+    "dialogs": {
+      "kickstart": {
+        "title": "Kickstart — risikofritt tilbud",
+        "desc": "Fortell kort om bedriften og målet, så kommer vi tilbake med forslag og målemetode."
+      },
+      "growth": {
+        "title": "Vekstpakka — risikofritt tilbud",
+        "desc": "Del noen ord om målgruppen og kanalene dere bruker i dag."
+      },
+      "scale": {
+        "title": "Skaler — la oss snakke",
+        "desc": "Fortell om ambisjonsnivå og tidslinje, så skreddersyr vi en plan."
+      }
+    },
+    "forms": {
+      "labels": { "project": "Prosjekt / mål", "email": "E-post" },
+      "placeholders": { "project": "Hva selger dere? Hvem er målgruppen? Hva er målet (f.eks. flere bookinger/salg)?" },
+      "summary": {
+        "title": "Slik måler vi",
+        "howWeMeasure": "Vi blir enige om en enkel måte å måle på (f.eks. kassesystem, QR-kode eller booking). Vi setter en baseline sammen, og rapporterer bare økningen vi har skapt."
+      },
+      "actions": { "submit": "Send forespørsel", "sending": "Sender…" }
+    }
   }
-  
+}

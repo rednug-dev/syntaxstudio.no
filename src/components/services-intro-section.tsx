@@ -5,35 +5,48 @@ import { motion, Variants } from "framer-motion";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Bot, Zap, Shield, Rocket, Cloud, Code2 } from "lucide-react";
-import {Link} from '@/i18n/navigation';
+import { Megaphone, Globe, BarChart3, TrendingUp, Mail, PenTool } from "lucide-react";
+import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 
 // id -> icon map
 const ICONS: Record<string, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {
-  ai: Bot,
-  fast: Zap,
-  security: Shield,
-  scale: Rocket,
-  cloud: Cloud,
-  dev: Code2
+  ai: Megaphone,     // Markedsføring som virker
+  fast: Globe,       // Nettsider som konverterer
+  security: BarChart3, // Måling og rapportering
+  scale: TrendingUp, // Vekst og rådgivning
+  cloud: Mail,       // Profesjonell e-post
+  dev: PenTool       // Alt skreddersydd
 };
 
 type Feature = { id: keyof typeof ICONS; badgeKey?: string; href?: string };
 
 const FEATURES: Feature[] = [
-  { id: 'ai',       badgeKey: 'new', href: '#automation' },
-  { id: 'fast',                       href: '#performance' },
-  { id: 'security',                   href: '#security' },
-  { id: 'scale',                      href: '#scale' },
-  { id: 'cloud',                      href: '#cloud' },
-  { id: 'dev',                        href: '#developer-first' },
+  { id: 'ai',       badgeKey: 'new', href: '#marketing' },
+  { id: 'fast',                      href: '#websites' },
+  { id: 'security',                  href: '#tracking' },
+  { id: 'scale',                     href: '#growth' },
+  { id: 'cloud',                     href: '#email' },
+  { id: 'dev',                       href: '#custom' }
 ];
 
-const container: Variants = { hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.06, delayChildren: 0.1 } } };
-const item: Variants = { hidden: { opacity: 0, y: 12 }, show: { opacity: 1, y: 0, transition: { duration: 0.35, ease: "easeOut" } } };
+const container: Variants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.06, delayChildren: 0.1 }
+  }
+};
+const item: Variants = {
+  hidden: { opacity: 0, y: 12 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.35, ease: "easeOut" }
+  }
+};
 
-function FeatureCard({ id, badgeKey, href }: Feature) {
+function FeatureCard({ id, badgeKey }: Feature) {
   const t = useTranslations('Services');
   const Icon = ICONS[id];
   return (
@@ -43,12 +56,19 @@ function FeatureCard({ id, badgeKey, href }: Feature) {
           <div className="grid h-10 w-10 place-items-center rounded-lg bg-muted">
             <Icon className="h-5 w-5" />
           </div>
-          {badgeKey && <Badge className="rounded-full px-2.5 py-0.5 text-[11px]">{t(`badges.${badgeKey}`)}</Badge>}
+          {badgeKey && (
+            <Badge className="rounded-full px-2.5 py-0.5 text-[11px]">
+              {t(`badges.${badgeKey}`)}
+            </Badge>
+          )}
         </CardHeader>
         <CardContent className="pt-0">
-          <CardTitle className="text-xl">{t(`features.${id}.title`)}</CardTitle>
-          <CardDescription className="mt-2 text-base">{t(`features.${id}.desc`)}</CardDescription>
-          <div className="mt-6 flex items-center justify-end" />
+          <CardTitle className="text-xl">
+            {t(`features.${id}.title`)}
+          </CardTitle>
+          <CardDescription className="mt-2 text-base">
+            {t(`features.${id}.desc`)}
+          </CardDescription>
         </CardContent>
       </Card>
     </motion.div>
