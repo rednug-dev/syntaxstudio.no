@@ -67,26 +67,91 @@
   },
   "About": {
     "missionTitle": "Our mission",
-    "missionP1": "Syntax Studio helps small businesses and entrepreneurs get more customers online. We build websites and run campaigns that deliver real results.",
-    "missionP2": "With us, you avoid technical jargon and unnecessary costs. You get a partner who cares about results as much as you do.",
-    "valuesTitle": "How we work",
-    "valuesSubtitle": "Some principles we always follow:",
+    "missionP1": "Syntax Studio hand-codes fast, accessible websites and apps—no templates, no bloat. We join your team to design, build and ship products that feel simple and perform brilliantly.",
+    "missionP2": "We combine engineering rigor with clean design. Expect clear communication, short feedback loops and launches that move the needle for your business.",
+    "metrics": {
+      "lighthouseValue": "90+",
+      "lighthouseSubtitle": "Average Lighthouse scores (Performance/SEO/Best Practices)",
+      "responseValue": "Under 24h",
+      "responseSubtitle": "Typical response time on weekdays",
+      "timeToLiveValue": "2–4 weeks",
+      "timeToLiveSubtitle": "From kickoff to first live version for a standard site"
+    },
+    "valuesTitle": "Our values",
+    "valuesSubtitle": "How we work at Syntax Studio—principles that shape every project.",
     "principles": {
-      "results": {
-        "title": "Results first",
-        "desc": "Everything we do has one goal: getting you more customers."
+      "craft": {
+        "title": "Build with craft",
+        "desc": "We hand-code every project for speed, accessibility and maintainability. Clean code, clean UI."
       },
-      "clarity": {
-        "title": "Clarity",
-        "desc": "Simple language, clear agreements, and full insight along the way."
+      "share": {
+        "title": "Share openly",
+        "desc": "Transparent roadmaps, regular demos and async updates keep everyone aligned."
       },
-      "partnership": {
+      "learn": {
+        "title": "Learn fast",
+        "desc": "Short feedback loops and quick iterations—ship, measure, improve."
+      },
+      "partner": {
         "title": "Partner mindset",
-        "desc": "We act as part of your team and work towards your goals."
+        "desc": "We act like an in-house team, aligning design and engineering with your goals."
       },
-      "responsibility": {
-        "title": "Responsibility",
-        "desc": "We take responsibility for the results we deliver and stand by what we promise."
+      "ownership": {
+        "title": "Ownership",
+        "desc": "We stand by what we ship—reliable releases and clear accountability."
+      },
+      "simple": {
+        "title": "Keep it simple",
+        "desc": "Clarity over complexity. The simplest solution that solves the real problem wins."
+      }
+    },
+    "WorkIntro": {
+      "title": "How we work",
+      "heroAlt": "Syntax Studio workflow",
+      "overviewTitle": "Overview",
+      "workflowTitle": "Our Workflow",
+      "seeLive": "See the live website",
+      "defaultOverview": "We partner with founders and teams to hand-code fast, accessible websites and apps. We own the stack from brand to launch with short feedback loops and measurable outcomes.",
+      "defaultBackground": "Many clients arrive with scattered branding, template sites or manual workflows. We align on goals, refine the brand, and ship a clean architecture with a maintainable CMS and practical automations.",
+      "checklist": [
+        "Brand identity & design system",
+        "UX/UI design",
+        "Front-end development",
+        "Full-stack (Next.js, Node, Prisma)",
+        "Content & copywriting",
+        "SEO & performance",
+        "Analytics & tracking",
+        "Integrations & automations"
+      ],
+      "projects": {
+        "giroo": {
+          "heading": "Creating Giroo’s subscription dashboard",
+          "paragraphs": [
+            "From name to MVP: we built the brand, marketing site and a full web app that helps people track and reduce recurring subscriptions.",
+            "We started with discovery and flows, then shipped a clean Next.js app with auth, database and an email-parsing foundation for extracting subscription data."
+          ]
+        },
+        "riseup": {
+          "heading": "Rebuilding RiseUp’s brand and website",
+          "paragraphs": [
+            "A full brand overhaul and a trustworthy website that positioned RiseUp to win new partnerships.",
+            "We rebuilt the message architecture and shipped a fast, accessible site with a simple CMS for content updates and better credibility."
+          ]
+        },
+        "bites": {
+          "heading": "Launching Bites’ festival-ready presence",
+          "paragraphs": [
+            "Early-stage support for a pop-up burger concept: brand identity and a site that helped them stand out when applying to festivals.",
+            "We created a clear visual identity and a mobile-first site with an event schedule so organizers and customers could easily see where they’d pop up next."
+          ]
+        },
+        "datasec": {
+          "heading": "DataSec integrations & live dashboards",
+          "paragraphs": [
+            "Custom tech products integrated into their site—giving clients deeper insight into their assets and stronger security.",
+            "We built internal tools and dashboards and integrated vendor APIs, surfacing clear, real-time insights directly in the website."
+          ]
+        }
       }
     }
   },

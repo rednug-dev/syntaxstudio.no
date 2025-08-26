@@ -133,12 +133,35 @@ function CaseBlock({ c, seeLiveLabel }: { c: ProjectCase; seeLiveLabel: string }
 
 /* ===================== Intro + projects (intl) ===================== */
 export default async function WorkIntroSection(props: WorkIntroProps) {
-  // Leser alle tekster fra About.WorkIntro
-  const t = await getTranslations("About.WorkIntro");
+  // Prøv å hente oversettelser
+  let t: any;
+  try {
+    t = await getTranslations("About.WorkIntro");
+  } catch {
+    // Fallback hvis WorkIntro mangler
+    t = (key: string) => {
+      const FALLBACKS: Record<string, any> = {
+        title: props.title ?? "How we work",
+        heroAlt: props.heroAlt ?? "Syntax Studio workflow",
+        overviewTitle: "Overview",
+        workflowTitle: "Our Workflow",
+        defaultOverview: props.overview ?? "",
+        defaultBackground: props.background ?? "",
+        seeLive: "See the live website",
+      };
+      return FALLBACKS[key] ?? "";
+    };
+    t.raw = (key: string) => {
+      if (key === "checklist") return Array.isArray(props.checklist) ? props.checklist : [];
+      if (key.startsWith("projects.")) return [];
+      return [];
+    };
+  }
 
-  // Sjekkliste fra messages (array)
-  const checklistFromIntl = (t.raw("checklist") as unknown) as string[] | undefined;
-  const checklist = props.checklist ?? checklistFromIntl ?? [];
+  // Checklist – alltid array
+  const rawChecklist = t.raw("checklist");
+  const checklistFromIntl = Array.isArray(rawChecklist) ? rawChecklist : [];
+  const checklist = Array.isArray(props.checklist) ? props.checklist : checklistFromIntl;
 
   // Overskrifter / beskrivelser
   const title = props.title ?? t("title");
@@ -146,16 +169,16 @@ export default async function WorkIntroSection(props: WorkIntroProps) {
   const heroAlt = props.heroAlt ?? t("heroAlt");
   const overview = props.overview ?? t("defaultOverview");
   const background = props.background ?? t("defaultBackground");
-
   const overviewTitle = t("overviewTitle");
   const workflowTitle = t("workflowTitle");
   const seeLive = t("seeLive");
 
-  // Prosjektene hentes fra messages + CASE_META (bilder/stack/urls)
+  // Prosjektene
   const projOrder = ["giroo", "riseup", "bites", "datasec"] as const;
   const projectsIntl = projOrder.map<ProjectCase>((key) => {
-    const heading = t(`projects.${key}.heading`);
-    const paragraphs = (t.raw(`projects.${key}.paragraphs`) as unknown) as string[];
+    const heading = t(`projects.${key}.heading`) || "";
+    const raw = t.raw(`projects.${key}.paragraphs`);
+    const paragraphs = Array.isArray(raw) ? raw : [];
     const meta = CASE_META[key];
     return {
       heading,
@@ -167,7 +190,7 @@ export default async function WorkIntroSection(props: WorkIntroProps) {
     };
   });
 
-  const projects = props.projects ?? projectsIntl;
+  const projects = Array.isArray(props.projects) ? props.projects : projectsIntl;
 
   return (
     <section className="container mx-auto max-w-6xl px-4 py-16">

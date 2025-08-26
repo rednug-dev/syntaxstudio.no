@@ -14,7 +14,9 @@
     "title": "Hva vi hjelper deg med",
     "subtitle": "Vi lager nettsider og reklame som gir deg flere kunder.",
     "cta": "Kom i gang",
-    "badges": { "new": "Ny" },
+    "badges": {
+      "new": "Ny"
+    },
     "features": {
       "ai": {
         "title": "Markedsføring som virker",
@@ -67,26 +69,91 @@
   },
   "About": {
     "missionTitle": "Vårt oppdrag",
-    "missionP1": "Syntax Studio hjelper små bedrifter og gründere å få flere kunder på nett. Vi bygger nettsider og kjører kampanjer som gir ekte resultater.",
-    "missionP2": "Hos oss slipper du teknisk prat og unødvendige kostnader. Du får en partner som er like opptatt av resultatet som du er.",
-    "valuesTitle": "Slik jobber vi",
-    "valuesSubtitle": "Noen prinsipper vi alltid følger:",
+    "missionP1": "Syntax Studio håndkoder raske, tilgjengelige nettsider og apper—uten maler og uten bloat. Vi går inn i teamet ditt for å designe, bygge og lansere produkter som føles enkle og yter strålende.",
+    "missionP2": "Vi kombinerer ingeniørfaglig presisjon med ryddig design. Forvent tydelig kommunikasjon, korte tilbakemeldingssløyfer og lanseringer som faktisk flytter nåla.",
+    "metrics": {
+      "lighthouseValue": "90+",
+      "lighthouseSubtitle": "Snittscore i Lighthouse (Ytelse/SEO/Best Practices)",
+      "responseValue": "Under 24 t",
+      "responseSubtitle": "Typisk svartid på hverdager",
+      "timeToLiveValue": "2–4 uker",
+      "timeToLiveSubtitle": "Fra oppstart til første live-versjon (standard side)"
+    },
+    "valuesTitle": "Våre verdier",
+    "valuesSubtitle": "Slik jobber vi i Syntax Studio—prinsippene som former hvert prosjekt.",
     "principles": {
-      "results": {
-        "title": "Resultater først",
-        "desc": "Alt vi gjør handler om én ting: å skaffe deg flere kunder."
+      "craft": {
+        "title": "Bygg med håndverk",
+        "desc": "Vi håndkoder for fart, tilgjengelighet og vedlikeholdbarhet. Ren kode, ren UI."
       },
-      "clarity": {
-        "title": "Tydelighet",
-        "desc": "Enkelt språk, klare avtaler og full innsikt underveis."
+      "share": {
+        "title": "Del åpent",
+        "desc": "Åpne veikart, jevnlige demoer og asynkrone oppdateringer holder alle på linje."
       },
-      "partnership": {
-        "title": "Partner, ikke leverandør",
-        "desc": "Vi opptrer som en del av teamet ditt og jobber for dine mål."
+      "learn": {
+        "title": "Lær raskt",
+        "desc": "Korte feedback-sløyfer og raske iterasjoner—ship, mål, forbedre."
       },
-      "responsibility": {
+      "partner": {
+        "title": "Partner-tankesett",
+        "desc": "Vi opptrer som et in-house team, der design og utvikling støtter dine mål."
+      },
+      "ownership": {
         "title": "Ansvarlighet",
-        "desc": "Vi tar ansvar for resultatene vi leverer og står for det vi lover."
+        "desc": "Vi står for det vi leverer—stabile releaser og tydelig ansvar."
+      },
+      "simple": {
+        "title": "Hold det enkelt",
+        "desc": "Klarhet foran kompleksitet. Den enkleste løsningen som løser det egentlige problemet vinner."
+      }
+    },
+    "WorkIntro": {
+      "title": "Slik jobber vi",
+      "heroAlt": "Syntax Studio arbeidsflyt",
+      "overviewTitle": "Oversikt",
+      "workflowTitle": "Arbeidsflyt",
+      "seeLive": "Se nettsiden",
+      "defaultOverview": "Vi samarbeider med gründere og team for å håndkode raske, tilgjengelige nettsider og apper. Vi eier hele stacken fra merkevare til lansering, med korte feedback-sløyfer og målbare resultater.",
+      "defaultBackground": "Mange kommer til oss med spredt branding, mal-sider eller manuelle prosesser. Vi samkjører mål, skjerper merkevaren og leverer en ren arkitektur med et vedlikeholdbart CMS og praktiske automasjoner.",
+      "checklist": [
+        "Merkevareidentitet & designsystem",
+        "UX/UI-design",
+        "Front-end-utvikling",
+        "Full-stack (Next.js, Node, Prisma)",
+        "Innhold & tekstforfatting",
+        "SEO & ytelse",
+        "Analyse & sporing",
+        "Integrasjoner & automasjoner"
+      ],
+      "projects": {
+        "giroo": {
+          "heading": "Bygge Giroos abonnementspanel",
+          "paragraphs": [
+            "Fra navn til MVP: Vi bygde merkevaren, markedsføringssiden og en full webapp som hjelper folk å finne og redusere løpende abonnementer.",
+            "Vi startet med innsikt og brukerflyt, og leverte deretter en ryddig Next.js-app med innlogging, database og et fundament for e-post-tolking som henter ut abonnementsdata."
+          ]
+        },
+        "riseup": {
+          "heading": "Totalrenovering av RiseUp sin merkevare og nettside",
+          "paragraphs": [
+            "En full merkevareoppgradering og en troverdig nettside som posisjonerte RiseUp for å vinne nye partnerskap.",
+            "Vi bygde om budskapsarkitekturen og leverte en rask, tilgjengelig side med et enkelt CMS for innholdsoppdateringer og økt troverdighet."
+          ]
+        },
+        "bites": {
+          "heading": "Lansering av Bites sin festival-klare tilstedeværelse",
+          "paragraphs": [
+            "Tidligfasehjelp for et pop-up burger-konsept: merkevare og en nettside som hjalp dem å skille seg ut i søknader til festivaler.",
+            "Vi laget en tydelig visuell identitet og en mobil-først side med arrangementsoversikt, slik at arrangører og kunder lett kunne se hvor de dukket opp neste gang."
+          ]
+        },
+        "datasec": {
+          "heading": "DataSec-integrasjoner og sanntidsdashboards",
+          "paragraphs": [
+            "Skreddersydde tekniske produkter integrert i nettsiden—som ga kundene dypere innsikt i egne objekter og bedre sikkerhet.",
+            "Vi bygde interne verktøy og dashboards og integrerte leverandør-APIer, slik at klare, sanntidsinnsikter ble tilgjengelige direkte på nettsiden."
+          ]
+        }
       }
     }
   },
@@ -115,9 +182,18 @@
     "title": "Pris uten risiko",
     "subtitle": "Vi tar bare betalt når du får betalt. Ingen resultater = ingen kostnad.",
     "badgeMostPopular": "Mest valgt",
-    "cta": { "getStarted": "Få et risikofritt tilbud", "contactSales": "Snakk med oss" },
-    "shared": { "payWhenPaid": "Vi tar bare betalt når du får betalt. Ingen resultater = ingen kostnad." },
-    "faq": { "cost": { "question": "Hva koster det?" } },
+    "cta": {
+      "getStarted": "Få et risikofritt tilbud",
+      "contactSales": "Snakk med oss"
+    },
+    "shared": {
+      "payWhenPaid": "Vi tar bare betalt når du får betalt. Ingen resultater = ingen kostnad."
+    },
+    "faq": {
+      "cost": {
+        "question": "Hva koster det?"
+      }
+    },
     "plans": {
       "kickstart": {
         "name": "Kickstart",
@@ -168,13 +244,21 @@
       }
     },
     "forms": {
-      "labels": { "project": "Prosjekt / mål", "email": "E-post" },
-      "placeholders": { "project": "Hva selger dere? Hvem er målgruppen? Hva er målet (f.eks. flere bookinger/salg)?" },
+      "labels": {
+        "project": "Prosjekt / mål",
+        "email": "E-post"
+      },
+      "placeholders": {
+        "project": "Hva selger dere? Hvem er målgruppen? Hva er målet (f.eks. flere bookinger/salg)?"
+      },
       "summary": {
         "title": "Slik måler vi",
         "howWeMeasure": "Vi blir enige om en enkel måte å måle på (f.eks. kassesystem, QR-kode eller booking). Vi setter en baseline sammen, og rapporterer bare økningen vi har skapt."
       },
-      "actions": { "submit": "Send forespørsel", "sending": "Sender…" }
+      "actions": {
+        "submit": "Send forespørsel",
+        "sending": "Sender…"
+      }
     }
   }
 }
