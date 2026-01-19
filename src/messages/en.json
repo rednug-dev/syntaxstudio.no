@@ -1,0 +1,245 @@
+{
+  "Nav": {
+    "showcase": "Work",
+    "about": "About",
+    "pricing": "Pricing",
+    "contact": "Contact"
+  },
+  "Hero": {
+    "title": "Websites and ads that win you more customers",
+    "subtitle": "Simple, measurable, and risk-free growth. You only pay when you get results.",
+    "getInTouch": "Get in touch"
+  },
+  "Services": {
+    "title": "What we help you with",
+    "subtitle": "We build websites and ads that bring you more customers.",
+    "cta": "Get started",
+    "badges": { "new": "New" },
+    "features": {
+      "ai": {
+        "title": "Marketing that works",
+        "desc": "Targeted campaigns on Google and social media – set up, optimized, and reported for you."
+      },
+      "fast": {
+        "title": "Websites that convert",
+        "desc": "Custom-built sites that are fast, clear, and designed to drive sales, inquiries, and bookings."
+      },
+      "security": {
+        "title": "Tracking & reporting",
+        "desc": "We set up tracking and show you exactly what’s working – and what we’ll improve next."
+      },
+      "scale": {
+        "title": "Growth & advisory",
+        "desc": "Practical advice on offers, pricing, positioning, and content – everything that helps you get more customers."
+      },
+      "cloud": {
+        "title": "Professional email",
+        "desc": "Setup of Google Workspace or Microsoft 365 with your domain (e.g. hello@business.com), signatures, and security."
+      },
+      "dev": {
+        "title": "Fully custom",
+        "desc": "No templates. Design and copy tailored to your business – that actually sells."
+      }
+    }
+  },
+  "Proposal": {
+    "title": "Let’s work together!",
+    "subtitle": "Tell us briefly about your project and we’ll get back with a proposal.",
+    "name": "Name",
+    "namePh": "Your name",
+    "email": "Email",
+    "emailPh": "you@example.com",
+    "message": "Message",
+    "messagePh": "What do you want to achieve? Who are your customers?",
+    "send": "Send message",
+    "sending": "Sending...",
+    "thanksTitle": "Thanks for your message!",
+    "errorTitle": "Error"
+  },
+  "Footer": {
+    "tagline": "Websites and ads that win you more customers",
+    "links": "Links",
+    "examples": "Examples",
+    "about": "About",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "question": "Got a question?"
+  },
+  "About": {
+    "missionTitle": "Our mission",
+    "missionP1": "Syntax Studio hand-codes fast, accessible websites and apps—no templates, no bloat. We join your team to design, build and ship products that feel simple and perform brilliantly.",
+    "missionP2": "We combine engineering rigor with clean design. Expect clear communication, short feedback loops and launches that move the needle for your business.",
+    "metrics": {
+      "lighthouseValue": "90+",
+      "lighthouseSubtitle": "Average Lighthouse scores (Performance/SEO/Best Practices)",
+      "responseValue": "Under 24h",
+      "responseSubtitle": "Typical response time on weekdays",
+      "timeToLiveValue": "2–4 weeks",
+      "timeToLiveSubtitle": "From kickoff to first live version for a standard site"
+    },
+    "valuesTitle": "Our values",
+    "valuesSubtitle": "How we work at Syntax Studio—principles that shape every project.",
+    "principles": {
+      "craft": {
+        "title": "Build with craft",
+        "desc": "We hand-code every project for speed, accessibility and maintainability. Clean code, clean UI."
+      },
+      "share": {
+        "title": "Share openly",
+        "desc": "Transparent roadmaps, regular demos and async updates keep everyone aligned."
+      },
+      "learn": {
+        "title": "Learn fast",
+        "desc": "Short feedback loops and quick iterations—ship, measure, improve."
+      },
+      "partner": {
+        "title": "Partner mindset",
+        "desc": "We act like an in-house team, aligning design and engineering with your goals."
+      },
+      "ownership": {
+        "title": "Ownership",
+        "desc": "We stand by what we ship—reliable releases and clear accountability."
+      },
+      "simple": {
+        "title": "Keep it simple",
+        "desc": "Clarity over complexity. The simplest solution that solves the real problem wins."
+      }
+    },
+    "WorkIntro": {
+      "title": "How we work",
+      "heroAlt": "Syntax Studio workflow",
+      "overviewTitle": "Overview",
+      "workflowTitle": "Our Workflow",
+      "seeLive": "See the live website",
+      "defaultOverview": "We partner with founders and teams to hand-code fast, accessible websites and apps. We own the stack from brand to launch with short feedback loops and measurable outcomes.",
+      "defaultBackground": "Many clients arrive with scattered branding, template sites or manual workflows. We align on goals, refine the brand, and ship a clean architecture with a maintainable CMS and practical automations.",
+      "checklist": [
+        "Brand identity & design system",
+        "UX/UI design",
+        "Front-end development",
+        "Full-stack (Next.js, Node, Prisma)",
+        "Content & copywriting",
+        "SEO & performance",
+        "Analytics & tracking",
+        "Integrations & automations"
+      ],
+      "projects": {
+        "giroo": {
+          "heading": "Creating Giroo’s subscription dashboard",
+          "paragraphs": [
+            "From name to MVP: we built the brand, marketing site and a full web app that helps people track and reduce recurring subscriptions.",
+            "We started with discovery and flows, then shipped a clean Next.js app with auth, database and an email-parsing foundation for extracting subscription data."
+          ]
+        },
+        "riseup": {
+          "heading": "Rebuilding RiseUp’s brand and website",
+          "paragraphs": [
+            "A full brand overhaul and a trustworthy website that positioned RiseUp to win new partnerships.",
+            "We rebuilt the message architecture and shipped a fast, accessible site with a simple CMS for content updates and better credibility."
+          ]
+        },
+        "bites": {
+          "heading": "Launching Bites’ festival-ready presence",
+          "paragraphs": [
+            "Early-stage support for a pop-up burger concept: brand identity and a site that helped them stand out when applying to festivals.",
+            "We created a clear visual identity and a mobile-first site with an event schedule so organizers and customers could easily see where they’d pop up next."
+          ]
+        },
+        "datasec": {
+          "heading": "DataSec integrations & live dashboards",
+          "paragraphs": [
+            "Custom tech products integrated into their site—giving clients deeper insight into their assets and stronger security.",
+            "We built internal tools and dashboards and integrated vendor APIs, surfacing clear, real-time insights directly in the website."
+          ]
+        }
+      }
+    }
+  },
+  "Team": {
+    "title": "Meet our team",
+    "subtitle": "The people behind the results",
+    "members": {
+      "gunder": {
+        "role": "Founder & CEO",
+        "bio": "Founder who connects strategy and development—hands-on in every delivery."
+      },
+      "rasul": {
+        "role": "Partner & Chief Architect",
+        "bio": "Partner who turns ideas into robust, scalable systems."
+      }
+    },
+    "status": {
+      "online": "I’m online and will reply shortly.",
+      "idle": "I’m a bit busy but will respond soon.",
+      "dnd": "I’m in a meeting but will reply later.",
+      "offline": "I’m offline but will reply as soon as I’m back.",
+      "unknown": "I’m offline but will reply as soon as I’m back."
+    }
+  },
+  "Pricing": {
+    "title": "Risk-free pricing",
+    "subtitle": "We only get paid when you get paid. No results = no cost.",
+    "badgeMostPopular": "Most popular",
+    "cta": { "getStarted": "Get a risk-free offer", "contactSales": "Talk to us" },
+    "shared": { "payWhenPaid": "We only get paid when you get paid. No results = no cost." },
+    "faq": { "cost": { "question": "What does it cost?" } },
+    "plans": {
+      "kickstart": {
+        "name": "Kickstart",
+        "desc": "One focused campaign to test the market – fast and measurable.",
+        "features": [
+          "Campaign on one channel (Google or social media)",
+          "Quick landing page/adjustment if needed",
+          "Tracking via QR/coupon, online order, or booking",
+          "Weekly simple report (impact and recommendations)"
+        ],
+        "costHint": "<p>Indicative: around <strong>15% of documented growth</strong> in revenue from the campaign.</p><p>Final agreement depends on industry, margins, and risk.</p>"
+      },
+      "growth": {
+        "name": "Growth package",
+        "desc": "Multi-channel campaigns + conversion improvements on your site.",
+        "features": [
+          "Campaigns on 2–3 channels (Google + Facebook/Instagram)",
+          "Improved landing page/conversion",
+          "Lead flows (forms, booking, messenger)",
+          "Monthly optimization and reporting"
+        ],
+        "costHint": "<p>Indicative: <strong>10–12% of documented growth</strong> in revenue/orders/bookings.</p><p>Adjusted by volume, season, and channel mix.</p>"
+      },
+      "scale": {
+        "name": "Scale",
+        "desc": "Full digital package: new site, multi-channel marketing, advisory, and analytics.",
+        "features": [
+          "New professional website (design/development)",
+          "Multi-channel marketing and A/B testing",
+          "Advisory/positioning, simple CRM/automation",
+          "Continuous analysis and scaling plan"
+        ],
+        "costHint": "<p>Indicative: <strong>5–8% of documented growth</strong> in revenue.</p><p>Agreement based on ambition, complexity, and scale.</p>"
+      }
+    },
+    "dialogs": {
+      "kickstart": {
+        "title": "Kickstart — risk-free offer",
+        "desc": "Tell us briefly about your business and goal, and we’ll suggest a method of measurement."
+      },
+      "growth": {
+        "title": "Growth package — risk-free offer",
+        "desc": "Share a few words about your target audience and the channels you use today."
+      },
+      "scale": {
+        "title": "Scale — let’s talk",
+        "desc": "Tell us about your ambitions and timeline, and we’ll tailor a plan."
+      }
+    },
+    "forms": {
+      "labels": { "project": "Project / goal", "email": "Email" },
+      "placeholders": { "project": "What do you sell? Who is your audience? What’s the goal (e.g. more bookings/sales)?" },
+      "summary": {
+        "title": "How we measure",
+        "howWeMeasure": "We agree on a simple way to measure (e.g. POS system, QR code, or bookings). We set a baseline together and only report the growth we’ve created."
+      },
+      "actions": { "submit": "Send request", "sending": "Sending…" }
+    }
+  }
+}

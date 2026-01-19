@@ -1,20 +1,37 @@
+'use client';
+
 import * as React from "react";
+import { useActionState, useEffect } from "react";
+import { useFormStatus } from "react-dom";
+import { useTranslations } from "next-intl";
+
 import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardContent,
-  CardFooter,
+  Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+  import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Check } from "lucide-react";
+import { Check, Loader2 } from "lucide-react";
+
+import {
+  Dialog, DialogTrigger, DialogContent, DialogHeader,
+  DialogTitle, DialogDescription, DialogFooter,
+} from "@/components/ui/dialog";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger
+} from "@/components/ui/accordion";
+
+import { handlePricingOrder, type FormState } from "@/actions";
 
 function Feature({ children }: { children: React.ReactNode }) {
   return (
     <li className="flex items-start gap-3">
-      <span className="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full ring-1 ring-foreground/20 transition-colors group-hover:ring-primary/40">
+      <span className="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full ring-1 ring-foreground/20">
         <Check className="h-3.5 w-3.5" aria-hidden />
       </span>
       <span className="text-sm">{children}</span>
@@ -22,95 +39,305 @@ function Feature({ children }: { children: React.ReactNode }) {
   );
 }
 
+function SubmitButton({
+  labelSend,
+  labelSending,
+}: {
+  labelSend: string;
+  labelSending: string;
+}) {
+  const { pending } = useFormStatus();
+  return (
+    <Button type="submit" disabled={pending} className="w-full">
+      {pending ? (
+        <>
+          <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+          {labelSending}
+        </>
+      ) : (
+        labelSend
+      )}
+    </Button>
+  );
+}
+
 export default function Pricing() {
+  const t = useTranslations("Pricing");
+
+  // Dialog open
+  const [openKickstart, setOpenKickstart] = React.useState(false);
+  const [openGrowth, setOpenGrowth] = React.useState(false);
+  const [openScale, setOpenScale] = React.useState(false);
+
+  // Server action state (en per dialog)
+  const initialState: FormState = { message: "", errors: null, success: false };
+  const [kickstartState, kickstartAction] = useActionState(handlePricingOrder, initialState);
+  const [growthState, growthAction] = useActionState(handlePricingOrder, initialState);
+  const [scaleState, scaleAction] = useActionState(handlePricingOrder, initialState);
+
+  // Close dialog on success
+  useEffect(() => { if (kickstartState.success) setOpenKickstart(false); }, [kickstartState.success]);
+  useEffect(() => { if (growthState.success) setOpenGrowth(false); }, [growthState.success]);
+  useEffect(() => { if (scaleState.success) setOpenScale(false); }, [scaleState.success]);
+
+  // Helper for rich paragraphs + strong
+  const richCost = (key: string) =>
+    t.rich(key, {
+      p: (chunks) => <p className="mt-2 first:mt-0">{chunks}</p>,
+      strong: (chunks) => <span className="font-medium text-foreground">{chunks}</span>
+    });
+
   return (
     <section className="container mx-auto max-w-6xl px-4 py-16">
       <div className="mx-auto max-w-3xl text-center">
-        <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">Simple, transparent pricing</h2>
+        <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
+          {t("title")}
+        </h2>
         <p className="mt-3 text-base text-muted-foreground">
-          Choose the plan that works best for you and your team.
+          {t("subtitle")}
         </p>
       </div>
 
       <div className="mt-12 grid gap-6 md:grid-cols-3">
-        {/* Basic */}
-        <Card className="group flex flex-col transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
+        {/* Tier 1 – Kickstart */}
+        <Card className="group flex flex-col transition-all hover:-translate-y-1 hover:shadow-lg">
           <CardHeader>
-            <CardTitle>Basic</CardTitle>
-            <CardDescription>Custom‑coded starter site for portfolios or landing pages</CardDescription>
+            <CardTitle>{t("plans.kickstart.name")}</CardTitle>
+            <CardDescription>{t("plans.kickstart.desc")}</CardDescription>
           </CardHeader>
           <CardContent className="pt-0">
-            <div className="mb-6 flex items-baseline gap-2">
-              <span className="text-4xl font-bold sm:text-5xl">$300</span>
-            </div>
             <ul className="space-y-3">
-              <Feature>Up to 3 pages</Feature>
-              <Feature>100% custom‑coded (Next.js + Tailwind)</Feature>
-              <Feature>Responsive & fast</Feature>
-              <Feature>Contact form + basic SEO</Feature>
-              <Feature>1 integration (e.g., analytics)</Feature>
-              <Feature>1 revision round</Feature>
+              {(t.raw("plans.kickstart.features") as string[]).map((f) => (
+                <Feature key={f}>{f}</Feature>
+              ))}
             </ul>
+
+            <Accordion type="single" collapsible className="mt-6">
+              <AccordionItem value="cost">
+                <AccordionTrigger>{t("faq.cost.question")}</AccordionTrigger>
+                <AccordionContent className="text-sm text-muted-foreground">
+                  {richCost("plans.kickstart.costHint")}
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+
+            <p className="mt-3 text-xs text-muted-foreground">
+              {t("shared.payWhenPaid")}
+            </p>
           </CardContent>
           <CardFooter className="mt-auto">
-            <Button className="w-full" size="lg">Get Started</Button>
+            <Dialog open={openKickstart} onOpenChange={setOpenKickstart}>
+              <DialogTrigger asChild>
+                <Button className="w-full" size="lg">{t("cta.getStarted")}</Button>
+              </DialogTrigger>
+              <DialogContent className="w-[95vw] sm:max-w-3xl">
+                <DialogHeader>
+                  <DialogTitle>{t("dialogs.kickstart.title")}</DialogTitle>
+                  <DialogDescription>{t("dialogs.kickstart.desc")}</DialogDescription>
+                </DialogHeader>
+
+                <form action={kickstartAction} className="grid gap-5 sm:grid-cols-2">
+                  <input type="hidden" name="plan" value="kickstart" />
+                  <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" />
+
+                  {/* Left */}
+                  <div className="grid gap-4">
+                    <div className="grid gap-2">
+                      <Label htmlFor="kick-project" className="text-sm font-medium">
+                        {t("forms.labels.project")}
+                      </Label>
+                      <Textarea id="kick-project" name="project" placeholder={t("forms.placeholders.project")} required rows={6} />
+                    </div>
+                    <div className="grid gap-2">
+                      <Label htmlFor="kick-email" className="text-sm font-medium">
+                        {t("forms.labels.email")}
+                      </Label>
+                      <Input id="kick-email" name="email" type="email" placeholder="you@company.com" required />
+                    </div>
+                  </div>
+
+                  {/* Right */}
+                  <div className="sm:pl-4">
+                    <div className="mb-2 text-sm font-medium">{t("forms.summary.title")}</div>
+                    <div className="rounded-lg border p-4 text-sm">
+                      <p className="text-muted-foreground">{t("forms.summary.howWeMeasure")}</p>
+                    </div>
+                  </div>
+
+                  <DialogFooter className="sm:col-span-2">
+                    <SubmitButton labelSend={t("forms.actions.submit")} labelSending={t("forms.actions.sending")} />
+                  </DialogFooter>
+
+                  {kickstartState.errors && (
+                    <p className="sm:col-span-2 text-sm text-red-600">
+                      {Object.values(kickstartState.errors).flat().join(" ")}
+                    </p>
+                  )}
+                  {kickstartState.success && (
+                    <p className="sm:col-span-2 text-sm">{kickstartState.message}</p>
+                  )}
+                </form>
+              </DialogContent>
+            </Dialog>
           </CardFooter>
         </Card>
 
-        {/* Pro (Most Popular) */}
-        <Card className="relative group flex flex-col border-primary/50 shadow-lg transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+        {/* Tier 2 – Growth */}
+        <Card className="relative group flex flex-col border-primary/50 shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl">
           <Badge className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full px-3 py-1 text-[11px] uppercase tracking-wide">
-            Most Popular
+            {t("badgeMostPopular")}
           </Badge>
           <CardHeader>
-            <CardTitle>Standard</CardTitle>
-            <CardDescription>Business website with booking or a simple store</CardDescription>
+            <CardTitle>{t("plans.growth.name")}</CardTitle>
+            <CardDescription>{t("plans.growth.desc")}</CardDescription>
           </CardHeader>
           <CardContent className="pt-0">
-            <div className="mb-6 flex items-baseline gap-2">
-              <span className="text-4xl font-bold sm:text-5xl">$500</span>
-            </div>
             <ul className="space-y-3">
-              <Feature>Up to 6 pages</Feature>
-              <Feature>Custom‑coded (no templates)</Feature>
-              <Feature>Booking <span className="hidden sm:inline">or</span> basic e‑commerce (≤10 products)</Feature>
-              <Feature>Secure payments integration</Feature>
-              <Feature>Performance & on‑page SEO</Feature>
-              <Feature>2 integrations (forms, analytics, etc.)</Feature>
-              <Feature>2 revision rounds</Feature>
-              <Feature>Priority support</Feature>
+              {(t.raw("plans.growth.features") as string[]).map((f) => (
+                <Feature key={f}>{f}</Feature>
+              ))}
             </ul>
+
+            <Accordion type="single" collapsible className="mt-6">
+              <AccordionItem value="cost">
+                <AccordionTrigger>{t("faq.cost.question")}</AccordionTrigger>
+                <AccordionContent className="text-sm text-muted-foreground">
+                  {richCost("plans.growth.costHint")}
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+
+            <p className="mt-3 text-xs text-muted-foreground">
+              {t("shared.payWhenPaid")}
+            </p>
           </CardContent>
           <CardFooter className="mt-auto">
-            <Button className="w-full" size="lg">Get Started</Button>
+            <Dialog open={openGrowth} onOpenChange={setOpenGrowth}>
+              <DialogTrigger asChild>
+                <Button className="w-full" size="lg">{t("cta.getStarted")}</Button>
+              </DialogTrigger>
+              <DialogContent className="w-[95vw] sm:max-w-3xl">
+                <DialogHeader>
+                  <DialogTitle>{t("dialogs.growth.title")}</DialogTitle>
+                  <DialogDescription>{t("dialogs.growth.desc")}</DialogDescription>
+                </DialogHeader>
+
+                <form action={growthAction} className="grid gap-5 sm:grid-cols-2">
+                  <input type="hidden" name="plan" value="growth" />
+                  <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" />
+
+                  <div className="grid gap-4">
+                    <div className="grid gap-2">
+                      <Label htmlFor="growth-project" className="text-sm font-medium">
+                        {t("forms.labels.project")}
+                      </Label>
+                      <Textarea id="growth-project" name="project" placeholder={t("forms.placeholders.project")} required rows={6} />
+                    </div>
+                    <div className="grid gap-2">
+                      <Label htmlFor="growth-email" className="text-sm font-medium">
+                        {t("forms.labels.email")}
+                      </Label>
+                      <Input id="growth-email" name="email" type="email" placeholder="you@company.com" required />
+                    </div>
+                  </div>
+
+                  <div className="sm:pl-4">
+                    <div className="mb-2 text-sm font-medium">{t("forms.summary.title")}</div>
+                    <div className="rounded-lg border p-4 text-sm">
+                      <p className="text-muted-foreground">{t("forms.summary.howWeMeasure")}</p>
+                    </div>
+                  </div>
+
+                  <DialogFooter className="sm:col-span-2">
+                    <SubmitButton labelSend={t("forms.actions.submit")} labelSending={t("forms.actions.sending")} />
+                  </DialogFooter>
+
+                  {growthState.errors && (
+                    <p className="sm:col-span-2 text-sm text-red-600">
+                      {Object.values(growthState.errors).flat().join(" ")}
+                    </p>
+                  )}
+                  {growthState.success && (
+                    <p className="sm:col-span-2 text-sm">{growthState.message}</p>
+                  )}
+                </form>
+              </DialogContent>
+            </Dialog>
           </CardFooter>
         </Card>
 
-        {/* Team */}
-        <Card className="group flex flex-col transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
+        {/* Tier 3 – Scale */}
+        <Card className="group flex flex-col transition-all hover:-translate-y-1 hover:shadow-lg">
           <CardHeader>
-            <CardTitle>Premium</CardTitle>
-            <CardDescription>Advanced e‑commerce & pro‑grade booking</CardDescription>
+            <CardTitle>{t("plans.scale.name")}</CardTitle>
+            <CardDescription>{t("plans.scale.desc")}</CardDescription>
           </CardHeader>
           <CardContent className="pt-0">
-            <div className="mb-6 flex items-baseline gap-2">
-              <span className="text-4xl font-bold sm:text-5xl">$800</span>
-            </div>
             <ul className="space-y-3">
-              <Feature>Up to 10 pages</Feature>
-              <Feature>Full e‑commerce + real‑time booking</Feature>
-              <Feature>Secure checkout + taxes/shipping setup</Feature>
-              <Feature>CMS for content & products</Feature>
-              <Feature>Custom integrations & automations</Feature>
-              <Feature>Launch support & training</Feature>
-              <Feature>5 revision rounds</Feature>
-              <Feature>Priority support</Feature>
+              {(t.raw("plans.scale.features") as string[]).map((f) => (
+                <Feature key={f}>{f}</Feature>
+              ))}
             </ul>
+
+            <Accordion type="single" collapsible className="mt-6">
+              <AccordionItem value="cost">
+                <AccordionTrigger>{t("faq.cost.question")}</AccordionTrigger>
+                <AccordionContent className="text-sm text-muted-foreground">
+                  {richCost("plans.scale.costHint")}
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+
+            <p className="mt-3 text-xs text-muted-foreground">
+              {t("shared.payWhenPaid")}
+            </p>
           </CardContent>
           <CardFooter className="mt-auto">
-            <Button variant="outline" className="w-full" size="lg">
-              Contact Sales
-            </Button>
+            <Dialog open={openScale} onOpenChange={setOpenScale}>
+              <DialogTrigger asChild>
+                <Button variant="outline" className="w-full" size="lg">
+                  {t("cta.contactSales")}
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="w-[95vw] sm:max-w-lg">
+                <DialogHeader>
+                  <DialogTitle>{t("dialogs.scale.title")}</DialogTitle>
+                  <DialogDescription>{t("dialogs.scale.desc")}</DialogDescription>
+                </DialogHeader>
+
+                <form action={scaleAction} className="grid gap-5">
+                  <input type="hidden" name="plan" value="scale" />
+                  <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" />
+
+                  <div className="grid gap-2">
+                    <Label htmlFor="scale-project" className="text-sm font-medium">
+                      {t("forms.labels.project")}
+                    </Label>
+                    <Textarea id="scale-project" name="project" placeholder={t("forms.placeholders.project")} required rows={6} />
+                  </div>
+
+                  <div className="grid gap-2">
+                    <Label htmlFor="scale-email" className="text-sm font-medium">
+                      {t("forms.labels.email")}
+                    </Label>
+                    <Input id="scale-email" name="email" type="email" placeholder="you@company.com" required />
+                  </div>
+
+                  <DialogFooter>
+                    <SubmitButton labelSend={t("forms.actions.submit")} labelSending={t("forms.actions.sending")} />
+                  </DialogFooter>
+
+                  {scaleState.errors && (
+                    <p className="text-sm text-red-600">
+                      {Object.values(scaleState.errors).flat().join(" ")}
+                    </p>
+                  )}
+                  {scaleState.success && (
+                    <p className="text-sm">{scaleState.message}</p>
+                  )}
+                </form>
+              </DialogContent>
+            </Dialog>
           </CardFooter>
         </Card>
       </div>
