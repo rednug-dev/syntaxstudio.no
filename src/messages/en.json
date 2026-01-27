@@ -177,67 +177,79 @@
     }
   },
   "Pricing": {
-    "title": "Risk-free pricing",
-    "subtitle": "We only get paid when you get paid. No results = no cost.",
+    "title": "Simple, transparent pricing",
+    "subtitle": "Choose the plan that fits your needs. Fixed prices, no surprises.",
     "badgeMostPopular": "Most popular",
-    "cta": { "getStarted": "Get a risk-free offer", "contactSales": "Talk to us" },
-    "shared": { "payWhenPaid": "We only get paid when you get paid. No results = no cost." },
+    "badgeCampaign": "Campaign",
+    "cta": { "getStarted": "Get started", "contactSales": "Get a quote" },
+    "shared": { "payWhenPaid": "" },
     "faq": { "cost": { "question": "What does it cost?" } },
     "plans": {
       "kickstart": {
-        "name": "Kickstart",
-        "desc": "One focused campaign to test the market – fast and measurable.",
+        "name": "Custom",
+        "price": "Tailored pricing",
+        "desc": "Pick what you need – we tailor the solution to you.",
         "features": [
-          "Campaign on one channel (Google or social media)",
-          "Quick landing page/adjustment if needed",
-          "Tracking via QR/coupon, online order, or booking",
-          "Weekly simple report (impact and recommendations)"
+          "Choose between website, ads, or both",
+          "Flexible pricing based on scope",
+          "Custom design and content",
+          "Personal guidance from start to finish"
         ],
-        "costHint": "<p>Indicative: around <strong>15% of documented growth</strong> in revenue from the campaign.</p><p>Final agreement depends on industry, margins, and risk.</p>"
+        "costHint": "<p><strong>Price based on your needs</strong> – you decide the scope.</p><p>Contact us for a no-obligation chat and quote.</p>"
       },
       "growth": {
-        "name": "Growth package",
-        "desc": "Multi-channel campaigns + conversion improvements on your site.",
+        "name": "Kickstart",
+        "price": "From $100",
+        "desc": "A simple, fast static website for your business or project.",
         "features": [
-          "Campaigns on 2–3 channels (Google + Facebook/Instagram)",
-          "Improved landing page/conversion",
-          "Lead flows (forms, booking, messenger)",
-          "Monthly optimization and reporting"
+          "Website with responsive design",
+          "Fast loading and SEO-optimized",
+          "Contact form or basic integrations",
+          "Hosting setup assistance"
         ],
-        "costHint": "<p>Indicative: <strong>10–12% of documented growth</strong> in revenue/orders/bookings.</p><p>Adjusted by volume, season, and channel mix.</p>"
+        "costHint": "<p>Starting at <strong>$100</strong> for a simple static page.</p><p>Final price depends on scope and customization needs.</p>"
       },
       "scale": {
-        "name": "Scale",
-        "desc": "Full digital package: new site, multi-channel marketing, advisory, and analytics.",
+        "name": "Business Package",
+        "price": "From $1,500",
+        "desc": "Everything you need to succeed online – website, ads, and video production.",
         "features": [
-          "New professional website (design/development)",
-          "Multi-channel marketing and A/B testing",
-          "Advisory/positioning, simple CRM/automation",
-          "Continuous analysis and scaling plan"
+          "Professional website with custom design",
+          "Commercial video filming and production",
+          "Marketing strategy and advertising",
+          "Ongoing support, analytics, and optimization"
         ],
-        "costHint": "<p>Indicative: <strong>5–8% of documented growth</strong> in revenue.</p><p>Agreement based on ambition, complexity, and scale.</p>"
+        "costHint": "<p>From <strong>$1,500</strong> for the complete business package.</p><p>Includes website, filming, and advertising – all under one roof.</p>"
       }
     },
     "dialogs": {
       "kickstart": {
-        "title": "Kickstart — risk-free offer",
-        "desc": "Tell us briefly about your business and goal, and we’ll suggest a method of measurement."
+        "title": "Custom — Tell us what you need",
+        "desc": "Describe what you're looking for and we'll create a tailored proposal."
       },
       "growth": {
-        "title": "Growth package — risk-free offer",
-        "desc": "Share a few words about your target audience and the channels you use today."
+        "title": "Kickstart — Get started",
+        "desc": "Tell us about your project and we'll get back with a proposal."
       },
       "scale": {
-        "title": "Scale — let’s talk",
-        "desc": "Tell us about your ambitions and timeline, and we’ll tailor a plan."
+        "title": "Business Package — Let's talk",
+        "desc": "Tell us about your business and goals, and we'll create a complete solution."
       }
     },
     "forms": {
       "labels": { "project": "Project / goal", "email": "Email" },
-      "placeholders": { "project": "What do you sell? Who is your audience? What’s the goal (e.g. more bookings/sales)?" },
+      "placeholders": {
+        "project": "Describe your project and what you need.",
+        "custom": "What do you need? Website, ads, filming – or a combination?",
+        "kickstart": "Tell us briefly about your business and what the website should include.",
+        "business": "Tell us about your business, target audience, and what you want to achieve."
+      },
       "summary": {
-        "title": "How we measure",
-        "howWeMeasure": "We agree on a simple way to measure (e.g. POS system, QR code, or bookings). We set a baseline together and only report the growth we’ve created."
+        "title": "What's included",
+        "howWeMeasure": "We'll provide a detailed proposal with timeline and deliverables based on your requirements.",
+        "custom": "You choose what you need. We'll create a tailored proposal based on your wishes.",
+        "kickstart": "Simple website with responsive design, contact form, and SEO optimization. Fast delivery.",
+        "business": "Complete package with website, commercial video, and marketing. Everything you need to succeed online."
       },
       "actions": { "submit": "Send request", "sending": "Sending…" }
     }

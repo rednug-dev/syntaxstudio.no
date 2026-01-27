@@ -179,15 +179,16 @@
     }
   },
   "Pricing": {
-    "title": "Pris uten risiko",
-    "subtitle": "Vi tar bare betalt når du får betalt. Ingen resultater = ingen kostnad.",
+    "title": "Enkle, transparente priser",
+    "subtitle": "Velg pakken som passer deg. Faste priser, ingen overraskelser.",
     "badgeMostPopular": "Mest valgt",
+    "badgeCampaign": "Kampanje",
     "cta": {
-      "getStarted": "Få et risikofritt tilbud",
-      "contactSales": "Snakk med oss"
+      "getStarted": "Kom i gang",
+      "contactSales": "Få et tilbud"
     },
     "shared": {
-      "payWhenPaid": "Vi tar bare betalt når du får betalt. Ingen resultater = ingen kostnad."
+      "payWhenPaid": ""
     },
     "faq": {
       "cost": {
@@ -196,51 +197,54 @@
     },
     "plans": {
       "kickstart": {
-        "name": "Kickstart",
-        "desc": "Én målrettet kampanje for å teste markedet – raskt og målbart.",
+        "name": "Skreddersydd",
+        "price": "Etter behov",
+        "desc": "Velg selv hva du trenger – vi tilpasser løsningen til deg.",
         "features": [
-          "Kampanje på én kanal (Google eller SoMe)",
-          "Rask landingsside/tilpasning ved behov",
-          "Sporing via QR/kupong, online-bestilling eller booking",
-          "Ukentlig enkel rapport (effekt og anbefalinger)"
+          "Velg mellom nettside, reklame, eller begge deler",
+          "Fleksibel pris basert på omfang",
+          "Skreddersydd design og innhold",
+          "Personlig oppfølging fra start til mål"
         ],
-        "costHint": "<p>Veiledende: rundt <strong>15 % av dokumentert økning</strong> i omsetning fra kampanjen.</p><p>Endelig avtale settes etter vurdering av bransje, marginer og risiko.</p>"
+        "costHint": "<p><strong>Pris basert på dine behov</strong> – du bestemmer omfanget.</p><p>Ta kontakt for en uforpliktende prat og tilbud.</p>"
       },
       "growth": {
-        "name": "Vekstpakka",
-        "desc": "Flerkanals kampanjer + konverteringsløft på eksisterende side.",
+        "name": "Kickstart",
+        "price": "Fra 999 kr",
+        "desc": "En enkel, rask statisk nettside for din bedrift eller prosjekt.",
         "features": [
-          "Kampanjer på 2–3 kanaler (Google + Facebook/Instagram)",
-          "Forbedret landingsside/konvertering",
-          "Lead-flows (skjema, booking, messenger)",
-          "Månedlig optimalisering og rapportering"
+          "Nettside med responsivt design",
+          "Rask lasting og SEO-optimalisert",
+          "Kontaktskjema eller enkel integrasjon",
+          "Hjelp med hosting-oppsett"
         ],
-        "costHint": "<p>Veiledende: <strong>10–12 % av dokumentert økning</strong> i omsetning/ordre/booking.</p><p>Justering etter volum, sesong og kanalvalg.</p>"
+        "costHint": "<p>Fra <strong>999 kr</strong> for en enkel statisk side.</p><p>Endelig pris avhenger av omfang og tilpasningsbehov.</p>"
       },
       "scale": {
-        "name": "Skaler",
-        "desc": "Full digital pakke: ny side, flerkanal, rådgivning og analyse.",
+        "name": "Bedriftspakka",
+        "price": "Fra 14 999 kr",
+        "desc": "Alt du trenger for å lykkes digitalt – nettside, reklame og videoproduksjon.",
         "features": [
-          "Ny profesjonell nettside (design/utvikling)",
-          "Flerkanals markedsføring og A/B-testing",
-          "Rådgivning/posisjonering, enkel CRM/automation",
-          "Kontinuerlig analyse og skaleringsplan"
+          "Profesjonell nettside med skreddersydd design",
+          "Filming og produksjon av reklamefilm",
+          "Markedsføringsstrategi og annonsering",
+          "Løpende støtte, analyse og optimalisering"
         ],
-        "costHint": "<p>Veiledende: <strong>5–8 % av dokumentert økning</strong> i omsetning.</p><p>Avtales etter ambisjonsnivå, kompleksitet og skala.</p>"
+        "costHint": "<p>Fra <strong>14 999 kr</strong> for komplett bedriftspakke.</p><p>Inkluderer nettside, filming og reklame – alt under ett tak.</p>"
       }
     },
     "dialogs": {
       "kickstart": {
-        "title": "Kickstart — risikofritt tilbud",
-        "desc": "Fortell kort om bedriften og målet, så kommer vi tilbake med forslag og målemetode."
+        "title": "Skreddersydd — Fortell oss hva du trenger",
+        "desc": "Beskriv hva du er ute etter, så lager vi et tilbud tilpasset deg."
       },
       "growth": {
-        "title": "Vekstpakka — risikofritt tilbud",
-        "desc": "Del noen ord om målgruppen og kanalene dere bruker i dag."
+        "title": "Kickstart — Kom i gang",
+        "desc": "Fortell oss om prosjektet ditt, så kommer vi tilbake med et forslag."
       },
       "scale": {
-        "title": "Skaler — la oss snakke",
-        "desc": "Fortell om ambisjonsnivå og tidslinje, så skreddersyr vi en plan."
+        "title": "Bedriftspakka — La oss ta en prat",
+        "desc": "Fortell oss om bedriften og målene deres, så skreddersyr vi en komplett løsning."
       }
     },
     "forms": {
@@ -249,11 +253,17 @@
         "email": "E-post"
       },
       "placeholders": {
-        "project": "Hva selger dere? Hvem er målgruppen? Hva er målet (f.eks. flere bookinger/salg)?"
+        "project": "Beskriv prosjektet ditt og hva du trenger.",
+        "custom": "Hva trenger du? Nettside, reklame, filming – eller en kombinasjon?",
+        "kickstart": "Fortell kort om bedriften din og hva nettsiden skal inneholde.",
+        "business": "Fortell om bedriften, målgruppen og hva dere ønsker å oppnå."
       },
       "summary": {
-        "title": "Slik måler vi",
-        "howWeMeasure": "Vi blir enige om en enkel måte å måle på (f.eks. kassesystem, QR-kode eller booking). Vi setter en baseline sammen, og rapporterer bare økningen vi har skapt."
+        "title": "Hva som er inkludert",
+        "howWeMeasure": "Vi gir deg et detaljert forslag med tidslinje og leveranser basert på dine krav.",
+        "custom": "Du velger selv hva du trenger. Vi gir deg et skreddersydd tilbud basert på ønskene dine.",
+        "kickstart": "Enkel nettside med responsivt design, kontaktskjema og SEO-optimalisering. Rask levering.",
+        "business": "Komplett pakke med nettside, reklamefilm og markedsføring. Alt du trenger for å lykkes digitalt."
       },
       "actions": {
         "submit": "Send forespørsel",

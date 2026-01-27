@@ -3,7 +3,8 @@
 import * as React from "react";
 import { useActionState, useEffect } from "react";
 import { useFormStatus } from "react-dom";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import Image from "next/image";
 
 import {
   Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter,
@@ -63,6 +64,7 @@ function SubmitButton({
 
 export default function Pricing() {
   const t = useTranslations("Pricing");
+  const locale = useLocale();
 
   // Dialog open
   const [openKickstart, setOpenKickstart] = React.useState(false);
@@ -99,10 +101,11 @@ export default function Pricing() {
       </div>
 
       <div className="mt-12 grid gap-6 md:grid-cols-3">
-        {/* Tier 1 – Kickstart */}
+        {/* Tier 1 – Custom */}
         <Card className="group flex flex-col transition-all hover:-translate-y-1 hover:shadow-lg">
           <CardHeader>
             <CardTitle>{t("plans.kickstart.name")}</CardTitle>
+            <div className="text-2xl font-bold text-foreground mt-1">{t("plans.kickstart.price")}</div>
             <CardDescription>{t("plans.kickstart.desc")}</CardDescription>
           </CardHeader>
           <CardContent className="pt-0">
@@ -120,15 +123,11 @@ export default function Pricing() {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
-
-            <p className="mt-3 text-xs text-muted-foreground">
-              {t("shared.payWhenPaid")}
-            </p>
           </CardContent>
           <CardFooter className="mt-auto">
             <Dialog open={openKickstart} onOpenChange={setOpenKickstart}>
               <DialogTrigger asChild>
-                <Button className="w-full" size="lg">{t("cta.getStarted")}</Button>
+                <Button variant="outline" className="w-full" size="lg">{t("cta.contactSales")}</Button>
               </DialogTrigger>
               <DialogContent className="w-[95vw] sm:max-w-3xl">
                 <DialogHeader>
@@ -137,7 +136,7 @@ export default function Pricing() {
                 </DialogHeader>
 
                 <form action={kickstartAction} className="grid gap-5 sm:grid-cols-2">
-                  <input type="hidden" name="plan" value="kickstart" />
+                  <input type="hidden" name="plan" value="custom" />
                   <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" />
 
                   {/* Left */}
@@ -146,7 +145,7 @@ export default function Pricing() {
                       <Label htmlFor="kick-project" className="text-sm font-medium">
                         {t("forms.labels.project")}
                       </Label>
-                      <Textarea id="kick-project" name="project" placeholder={t("forms.placeholders.project")} required rows={6} />
+                      <Textarea id="kick-project" name="project" placeholder={t("forms.placeholders.custom")} required rows={6} />
                     </div>
                     <div className="grid gap-2">
                       <Label htmlFor="kick-email" className="text-sm font-medium">
@@ -160,7 +159,7 @@ export default function Pricing() {
                   <div className="sm:pl-4">
                     <div className="mb-2 text-sm font-medium">{t("forms.summary.title")}</div>
                     <div className="rounded-lg border p-4 text-sm">
-                      <p className="text-muted-foreground">{t("forms.summary.howWeMeasure")}</p>
+                      <p className="text-muted-foreground">{t("forms.summary.custom")}</p>
                     </div>
                   </div>
 
@@ -182,13 +181,21 @@ export default function Pricing() {
           </CardFooter>
         </Card>
 
-        {/* Tier 2 – Growth */}
-        <Card className="relative group flex flex-col border-primary/50 shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl">
+        {/* Tier 2 – Kickstart (Most Popular) */}
+        <Card className="relative group flex flex-col border-primary/50 shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl md:scale-105 md:-my-4 z-10">
           <Badge className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full px-3 py-1 text-[11px] uppercase tracking-wide">
             {t("badgeMostPopular")}
           </Badge>
+          <Image
+            src={locale === "no" ? "/campaign-sticker-no.png" : "/campaign-sticker-en.png"}
+            alt={t("badgeCampaign")}
+            width={80}
+            height={80}
+            className="absolute -top-6 -right-6 rotate-12 drop-shadow-lg z-20"
+          />
           <CardHeader>
             <CardTitle>{t("plans.growth.name")}</CardTitle>
+            <div className="text-2xl font-bold text-foreground mt-1">{t("plans.growth.price")}</div>
             <CardDescription>{t("plans.growth.desc")}</CardDescription>
           </CardHeader>
           <CardContent className="pt-0">
@@ -206,10 +213,6 @@ export default function Pricing() {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
-
-            <p className="mt-3 text-xs text-muted-foreground">
-              {t("shared.payWhenPaid")}
-            </p>
           </CardContent>
           <CardFooter className="mt-auto">
             <Dialog open={openGrowth} onOpenChange={setOpenGrowth}>
@@ -223,7 +226,7 @@ export default function Pricing() {
                 </DialogHeader>
 
                 <form action={growthAction} className="grid gap-5 sm:grid-cols-2">
-                  <input type="hidden" name="plan" value="growth" />
+                  <input type="hidden" name="plan" value="kickstart" />
                   <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" />
 
                   <div className="grid gap-4">
@@ -231,7 +234,7 @@ export default function Pricing() {
                       <Label htmlFor="growth-project" className="text-sm font-medium">
                         {t("forms.labels.project")}
                       </Label>
-                      <Textarea id="growth-project" name="project" placeholder={t("forms.placeholders.project")} required rows={6} />
+                      <Textarea id="growth-project" name="project" placeholder={t("forms.placeholders.kickstart")} required rows={6} />
                     </div>
                     <div className="grid gap-2">
                       <Label htmlFor="growth-email" className="text-sm font-medium">
@@ -244,7 +247,7 @@ export default function Pricing() {
                   <div className="sm:pl-4">
                     <div className="mb-2 text-sm font-medium">{t("forms.summary.title")}</div>
                     <div className="rounded-lg border p-4 text-sm">
-                      <p className="text-muted-foreground">{t("forms.summary.howWeMeasure")}</p>
+                      <p className="text-muted-foreground">{t("forms.summary.kickstart")}</p>
                     </div>
                   </div>
 
@@ -266,10 +269,11 @@ export default function Pricing() {
           </CardFooter>
         </Card>
 
-        {/* Tier 3 – Scale */}
+        {/* Tier 3 – Business Package */}
         <Card className="group flex flex-col transition-all hover:-translate-y-1 hover:shadow-lg">
           <CardHeader>
             <CardTitle>{t("plans.scale.name")}</CardTitle>
+            <div className="text-2xl font-bold text-foreground mt-1">{t("plans.scale.price")}</div>
             <CardDescription>{t("plans.scale.desc")}</CardDescription>
           </CardHeader>
           <CardContent className="pt-0">
@@ -287,53 +291,57 @@ export default function Pricing() {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
-
-            <p className="mt-3 text-xs text-muted-foreground">
-              {t("shared.payWhenPaid")}
-            </p>
           </CardContent>
           <CardFooter className="mt-auto">
             <Dialog open={openScale} onOpenChange={setOpenScale}>
               <DialogTrigger asChild>
-                <Button variant="outline" className="w-full" size="lg">
+                <Button className="w-full" size="lg">
                   {t("cta.contactSales")}
                 </Button>
               </DialogTrigger>
-              <DialogContent className="w-[95vw] sm:max-w-lg">
+              <DialogContent className="w-[95vw] sm:max-w-3xl">
                 <DialogHeader>
                   <DialogTitle>{t("dialogs.scale.title")}</DialogTitle>
                   <DialogDescription>{t("dialogs.scale.desc")}</DialogDescription>
                 </DialogHeader>
 
-                <form action={scaleAction} className="grid gap-5">
-                  <input type="hidden" name="plan" value="scale" />
+                <form action={scaleAction} className="grid gap-5 sm:grid-cols-2">
+                  <input type="hidden" name="plan" value="business" />
                   <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" />
 
-                  <div className="grid gap-2">
-                    <Label htmlFor="scale-project" className="text-sm font-medium">
-                      {t("forms.labels.project")}
-                    </Label>
-                    <Textarea id="scale-project" name="project" placeholder={t("forms.placeholders.project")} required rows={6} />
+                  <div className="grid gap-4">
+                    <div className="grid gap-2">
+                      <Label htmlFor="scale-project" className="text-sm font-medium">
+                        {t("forms.labels.project")}
+                      </Label>
+                      <Textarea id="scale-project" name="project" placeholder={t("forms.placeholders.business")} required rows={6} />
+                    </div>
+                    <div className="grid gap-2">
+                      <Label htmlFor="scale-email" className="text-sm font-medium">
+                        {t("forms.labels.email")}
+                      </Label>
+                      <Input id="scale-email" name="email" type="email" placeholder="you@company.com" required />
+                    </div>
                   </div>
 
-                  <div className="grid gap-2">
-                    <Label htmlFor="scale-email" className="text-sm font-medium">
-                      {t("forms.labels.email")}
-                    </Label>
-                    <Input id="scale-email" name="email" type="email" placeholder="you@company.com" required />
+                  <div className="sm:pl-4">
+                    <div className="mb-2 text-sm font-medium">{t("forms.summary.title")}</div>
+                    <div className="rounded-lg border p-4 text-sm">
+                      <p className="text-muted-foreground">{t("forms.summary.business")}</p>
+                    </div>
                   </div>
 
-                  <DialogFooter>
+                  <DialogFooter className="sm:col-span-2">
                     <SubmitButton labelSend={t("forms.actions.submit")} labelSending={t("forms.actions.sending")} />
                   </DialogFooter>
 
                   {scaleState.errors && (
-                    <p className="text-sm text-red-600">
+                    <p className="sm:col-span-2 text-sm text-red-600">
                       {Object.values(scaleState.errors).flat().join(" ")}
                     </p>
                   )}
                   {scaleState.success && (
-                    <p className="text-sm">{scaleState.message}</p>
+                    <p className="sm:col-span-2 text-sm">{scaleState.message}</p>
                   )}
                 </form>
               </DialogContent>
