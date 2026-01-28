@@ -202,11 +202,6 @@ export default async function WorkIntroSection(props: WorkIntroProps) {
         <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">{title}</h2>
       </div>
 
-      {/* Hero image */}
-      <div className="mt-8 mx-auto max-w-5xl overflow-hidden rounded-2xl border shadow-lg">
-        <img src={heroImage} alt={heroAlt} className="aspect-[16/9] w-full object-cover" />
-      </div>
-
       {/* Process Timeline */}
       <div className="mx-auto mt-12 max-w-5xl">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">

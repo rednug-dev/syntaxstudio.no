@@ -16,7 +16,7 @@ export default function ServicesFaq() {
   const t = useTranslations("ServicesPage.faq");
 
   return (
-    <section className="container mx-auto max-w-4xl px-4 py-16">
+    <section className="container mx-auto max-w-4xl px-4 py-6">
       <div className="mx-auto max-w-3xl text-center">
         <motion.h2
           initial={{ opacity: 0, y: 8 }}

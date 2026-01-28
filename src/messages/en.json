@@ -75,7 +75,7 @@
       "lighthouseSubtitle": "Average Lighthouse scores (Performance/SEO/Best Practices)",
       "responseValue": "Under 24h",
       "responseSubtitle": "Typical response time on weekdays",
-      "timeToLiveValue": "2–4 weeks",
+      "timeToLiveValue": "1–2 weeks",
       "timeToLiveSubtitle": "From kickoff to first live version for a standard site"
     },
     "valuesTitle": "Our values",
