@@ -90,7 +90,7 @@ export default function Pricing() {
     });
 
   return (
-    <section className="container mx-auto max-w-6xl px-4 py-16">
+    <section className="container mx-auto max-w-6xl px-8 py-16 overflow-x-hidden">
       <div className="mx-auto max-w-3xl text-center">
         <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
           {t("title")}
