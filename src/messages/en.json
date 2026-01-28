@@ -7,8 +7,9 @@
   },
   "Hero": {
     "title": "Websites and ads that win you more customers",
-    "subtitle": "Simple, measurable, and risk-free growth. You only pay when you get results.",
-    "getInTouch": "Get in touch"
+    "subtitle": "Take the step from hobby to business. We provide premium websites and marketing at a price you can actually afford.",
+    "primaryCta": "Get started",
+    "secondaryCta": "See our services"
   },
   "Services": {
     "title": "What we help you with",
@@ -17,8 +18,8 @@
     "badges": { "new": "New" },
     "features": {
       "ai": {
-        "title": "Marketing that works",
-        "desc": "Targeted campaigns on Google and social media – set up, optimized, and reported for you."
+        "title": "Marketing & filming",
+        "desc": "Targeted campaigns on Google and social media, plus professional video production that builds trust and showcases your business."
       },
       "fast": {
         "title": "Websites that convert",
@@ -118,7 +119,7 @@
         "UX/UI design",
         "Front-end development",
         "Full-stack (Next.js, Node, Prisma)",
-        "Content & copywriting",
+        "Filming & video production",
         "SEO & performance",
         "Analytics & tracking",
         "Integrations & automations"
@@ -166,6 +167,10 @@
       "rasul": {
         "role": "Partner & Chief Architect",
         "bio": "Partner who turns ideas into robust, scalable systems."
+      },
+      "khamzat": {
+        "role": "Partner & CMO",
+        "bio": "Partner who captures moments and creates content that engages."
       }
     },
     "status": {
@@ -252,6 +257,56 @@
         "business": "Complete package with website, commercial video, and marketing. Everything you need to succeed online."
       },
       "actions": { "submit": "Send request", "sending": "Sending…" }
+    }
+  },
+  "ServicesPage": {
+    "process": {
+      "title": "How we work",
+      "subtitle": "A simple and clear process from start to finished product.",
+      "steps": {
+        "chat": {
+          "title": "Conversation",
+          "desc": "We start with an informal chat to understand your needs and goals."
+        },
+        "proposal": {
+          "title": "Proposal",
+          "desc": "You get a detailed proposal with price, timeline, and deliverables."
+        },
+        "build": {
+          "title": "Development",
+          "desc": "We build the solution with close dialogue and regular updates."
+        },
+        "launch": {
+          "title": "Launch",
+          "desc": "We launch together and follow up to ensure everything works."
+        }
+      }
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "subtitle": "Answers to what you're wondering about.",
+      "items": {
+        "timeline": {
+          "q": "How long does it take?",
+          "a": "A simple website can be ready in 1–2 weeks. Larger projects with filming and ads typically take 3–6 weeks."
+        },
+        "cost": {
+          "q": "What does it cost?",
+          "a": "The price depends on scope. A simple static page starts from $100, while a complete business package with filming starts from $1,500."
+        },
+        "changes": {
+          "q": "Can I make changes along the way?",
+          "a": "Yes! We work with close dialogue and include revision rounds in all projects. You see the work as it progresses."
+        },
+        "support": {
+          "q": "Do I get help after launch?",
+          "a": "Absolutely. We offer maintenance agreements and are always available for updates and support."
+        },
+        "tech": {
+          "q": "What technology do you use?",
+          "a": "We use modern tools like React, Next.js, and Tailwind. Everything is hand-coded for optimal performance."
+        }
+      }
     }
   }
 }

@@ -35,16 +35,17 @@ export default function TeamPresenceGrid({ members }: { members: Member[] }) {
   }, [data]);
 
   return (
-    <div className="mt-12 grid gap-6 md:grid-cols-2 justify-items-center">
+    <div className="mt-12 flex flex-wrap justify-center gap-6">
       {members.map((m) => {
         const p = m.discordId ? presenceById.get(m.discordId) : undefined;
         return (
-          <MemberCard
-            key={m.name}
-            m={m}
-            status={p?.status}
-            activity={p?.activities?.[0]?.name}
-          />
+          <div key={m.name} className="w-full md:w-[calc(50%-0.75rem)] md:max-w-md">
+            <MemberCard
+              m={m}
+              status={p?.status}
+              activity={p?.activities?.[0]?.name}
+            />
+          </div>
         );
       })}
     </div>

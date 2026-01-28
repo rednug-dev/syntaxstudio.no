@@ -7,8 +7,9 @@
   },
   "Hero": {
     "title": "Vi lager nettsider og reklame som gir deg flere kunder",
-    "subtitle": "Enkel, målbar og risikofri hjelp til å vokse. Du betaler først når du får resultater.",
-    "getInTouch": "Ta kontakt"
+    "subtitle": "Ta steget fra hobby til bedrift. Vi gir deg premium nettsider og markedsføring til en pris du faktisk har råd til.",
+    "primaryCta": "Kom i gang",
+    "secondaryCta": "Se våre tjenester"
   },
   "Services": {
     "title": "Hva vi hjelper deg med",
@@ -19,8 +20,8 @@
     },
     "features": {
       "ai": {
-        "title": "Markedsføring som virker",
-        "desc": "Målrettede kampanjer på Google og sosiale medier – satt opp, optimalisert og rapportert for deg."
+        "title": "Markedsføring & filming",
+        "desc": "Målrettede kampanjer på Google og sosiale medier, pluss profesjonell videoproduksjon som bygger tillit og viser frem din bedrift."
       },
       "fast": {
         "title": "Nettsider som konverterer",
@@ -120,7 +121,7 @@
         "UX/UI-design",
         "Front-end-utvikling",
         "Full-stack (Next.js, Node, Prisma)",
-        "Innhold & tekstforfatting",
+        "Filming & videoproduksjon",
         "SEO & ytelse",
         "Analyse & sporing",
         "Integrasjoner & automasjoner"
@@ -168,6 +169,10 @@
       "rasul": {
         "role": "Partner og sjefsarkitekt",
         "bio": "Partner som gjør ideer om til robuste, skalerbare systemer."
+      },
+      "khamzat": {
+        "role": "Partner og markedssjef",
+        "bio": "Partner som fanger øyeblikkene og skaper innhold som engasjerer."
       }
     },
     "status": {
@@ -268,6 +273,56 @@
       "actions": {
         "submit": "Send forespørsel",
         "sending": "Sender…"
+      }
+    }
+  },
+  "ServicesPage": {
+    "process": {
+      "title": "Slik jobber vi",
+      "subtitle": "En enkel og tydelig prosess fra start til ferdig produkt.",
+      "steps": {
+        "chat": {
+          "title": "Samtale",
+          "desc": "Vi starter med en uformell prat for å forstå dine behov og mål."
+        },
+        "proposal": {
+          "title": "Forslag",
+          "desc": "Du får et detaljert forslag med pris, tidslinje og leveranser."
+        },
+        "build": {
+          "title": "Utvikling",
+          "desc": "Vi bygger løsningen med tett dialog og jevnlige oppdateringer."
+        },
+        "launch": {
+          "title": "Lansering",
+          "desc": "Vi lanserer sammen og følger opp for å sikre at alt fungerer."
+        }
+      }
+    },
+    "faq": {
+      "title": "Ofte stilte spørsmål",
+      "subtitle": "Svar på det du lurer på.",
+      "items": {
+        "timeline": {
+          "q": "Hvor lang tid tar det?",
+          "a": "En enkel nettside kan være klar på 1–2 uker. Større prosjekter med filming og reklame tar typisk 3–6 uker."
+        },
+        "cost": {
+          "q": "Hva koster det?",
+          "a": "Prisen avhenger av omfanget. En enkel statisk side starter fra 999 kr, mens en komplett bedriftspakke med filming starter fra 14 999 kr."
+        },
+        "changes": {
+          "q": "Kan jeg gjøre endringer underveis?",
+          "a": "Ja! Vi jobber med tett dialog og inkluderer revisjonsrunder i alle prosjekter. Du ser arbeidet underveis."
+        },
+        "support": {
+          "q": "Får jeg hjelp etter lansering?",
+          "a": "Absolutt. Vi tilbyr vedlikeholdsavtaler og er alltid tilgjengelige for oppdateringer og support."
+        },
+        "tech": {
+          "q": "Hvilken teknologi bruker dere?",
+          "a": "Vi bruker moderne verktøy som React, Next.js og Tailwind. Alt er håndkodet for best mulig ytelse."
+        }
       }
     }
   }

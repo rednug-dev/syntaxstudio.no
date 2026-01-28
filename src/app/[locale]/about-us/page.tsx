@@ -29,6 +29,17 @@ export default function AboutUsPage() {
       phone: "+47 4639 6797",
       socials: {},
       discordId: "414385859845160970"
+    },
+    {
+      i18nKey: "khamzat",
+      name: "Khamzat Dudaev",
+      role: "Partner & CMO",
+      bio: "Partner who captures moments and creates content that engages.",
+      avatarSrc: "/avatars/placeholder.svg",
+      skills: ["Filming", "Editing", "Marketing", "Content Creation"],
+      email: "khamzat@syntaxstudio.no",
+      phone: "+47 4626 4815",
+      socials: {}
     }
   ];
 

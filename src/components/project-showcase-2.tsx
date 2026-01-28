@@ -1,6 +1,6 @@
 // src/components/project-showcase-2.tsx
 import * as React from "react";
-import { CheckCircle2, ExternalLink, Code2 } from "lucide-react";
+import { CheckCircle2, ExternalLink, Code2, MessageSquare, FileText, Rocket } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
 /* ===================== Types ===================== */
@@ -135,8 +135,10 @@ function CaseBlock({ c, seeLiveLabel }: { c: ProjectCase; seeLiveLabel: string }
 export default async function WorkIntroSection(props: WorkIntroProps) {
   // Prøv å hente oversettelser
   let t: any;
+  let processT: any;
   try {
     t = await getTranslations("About.WorkIntro");
+    processT = await getTranslations("ServicesPage.process");
   } catch {
     // Fallback hvis WorkIntro mangler
     t = (key: string) => {
@@ -156,6 +158,7 @@ export default async function WorkIntroSection(props: WorkIntroProps) {
       if (key.startsWith("projects.")) return [];
       return [];
     };
+    processT = (key: string) => key;
   }
 
   // Checklist – alltid array
@@ -202,6 +205,33 @@ export default async function WorkIntroSection(props: WorkIntroProps) {
       {/* Hero image */}
       <div className="mt-8 mx-auto max-w-5xl overflow-hidden rounded-2xl border shadow-lg">
         <img src={heroImage} alt={heroAlt} className="aspect-[16/9] w-full object-cover" />
+      </div>
+
+      {/* Process Timeline */}
+      <div className="mx-auto mt-12 max-w-5xl">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            { num: 1, icon: MessageSquare, titleKey: "chat" },
+            { num: 2, icon: FileText, titleKey: "proposal" },
+            { num: 3, icon: Code2, titleKey: "build" },
+            { num: 4, icon: Rocket, titleKey: "launch" },
+          ].map(({ num, icon: Icon, titleKey }) => (
+            <div key={titleKey} className="relative text-center">
+              {/* Connector line - desktop only */}
+              {num < 4 && (
+                <div className="absolute top-8 left-1/2 hidden h-0.5 w-full bg-border lg:block" />
+              )}
+              <div className="relative mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg">
+                <span className="absolute -top-2 -right-2 flex h-6 w-6 items-center justify-center rounded-full bg-background text-xs font-bold text-foreground ring-2 ring-primary">
+                  {num}
+                </span>
+                <Icon className="h-7 w-7" />
+              </div>
+              <h4 className="text-base font-semibold">{processT(`steps.${titleKey}.title`)}</h4>
+              <p className="mt-2 text-sm text-muted-foreground">{processT(`steps.${titleKey}.desc`)}</p>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Overview / Background */}

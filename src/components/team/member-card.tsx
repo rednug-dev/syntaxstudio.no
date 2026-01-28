@@ -126,7 +126,7 @@ export default function MemberCard({
             onClick={handleActivate}
             onMouseEnter={() => !isMobile && setIsHovered(true)}
             onMouseLeave={() => !isMobile && setIsHovered(false)}
-            className="group mx-auto w-full max-w-md flex flex-col items-center transition-all duration-200 hover:-translate-y-1 hover:shadow-lg cursor-pointer"
+            className="group w-full h-full flex flex-col items-center transition-all duration-200 hover:-translate-y-1 hover:shadow-lg cursor-pointer"
           >
             <CardHeader className="items-center">
               <div className="relative">

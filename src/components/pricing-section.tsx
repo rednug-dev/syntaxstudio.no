@@ -100,16 +100,15 @@ export default function Pricing() {
         </p>
       </div>
 
-      <div className="mt-12 grid gap-6 md:grid-cols-3">
-        {/* Tier 1 – Custom */}
-        <Card className="group flex flex-col transition-all hover:-translate-y-1 hover:shadow-lg">
+      <div className="mt-12 grid gap-6 md:grid-cols-3 items-start">
+        <Card className="group flex flex-col transition-all hover:-translate-y-1 hover:shadow-lg md:min-h-[580px]">
           <CardHeader>
             <CardTitle>{t("plans.kickstart.name")}</CardTitle>
             <div className="text-2xl font-bold text-foreground mt-1">{t("plans.kickstart.price")}</div>
             <CardDescription>{t("plans.kickstart.desc")}</CardDescription>
           </CardHeader>
-          <CardContent className="pt-0">
-            <ul className="space-y-3">
+          <CardContent className="pt-0 flex-1 flex flex-col">
+            <ul className="space-y-3 flex-1">
               {(t.raw("plans.kickstart.features") as string[]).map((f) => (
                 <Feature key={f}>{f}</Feature>
               ))}
@@ -123,16 +122,16 @@ export default function Pricing() {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
-          </CardContent>
-          <CardFooter className="mt-auto">
-            <Dialog open={openKickstart} onOpenChange={setOpenKickstart}>
-              <DialogTrigger asChild>
-                <Button variant="outline" className="w-full" size="lg">{t("cta.contactSales")}</Button>
-              </DialogTrigger>
-              <DialogContent className="w-[95vw] sm:max-w-3xl">
-                <DialogHeader>
-                  <DialogTitle>{t("dialogs.kickstart.title")}</DialogTitle>
-                  <DialogDescription>{t("dialogs.kickstart.desc")}</DialogDescription>
+
+            <div className="mt-4">
+              <Dialog open={openKickstart} onOpenChange={setOpenKickstart}>
+                <DialogTrigger asChild>
+                  <Button variant="outline" className="w-full" size="lg">{t("cta.contactSales")}</Button>
+                </DialogTrigger>
+                <DialogContent className="w-[95vw] sm:max-w-3xl">
+                  <DialogHeader>
+                    <DialogTitle>{t("dialogs.kickstart.title")}</DialogTitle>
+                    <DialogDescription>{t("dialogs.kickstart.desc")}</DialogDescription>
                 </DialogHeader>
 
                 <form action={kickstartAction} className="grid gap-5 sm:grid-cols-2">
@@ -178,11 +177,11 @@ export default function Pricing() {
                 </form>
               </DialogContent>
             </Dialog>
-          </CardFooter>
-        </Card>
+            </div>
+          </CardContent>        </Card>
 
         {/* Tier 2 – Kickstart (Most Popular) */}
-        <Card className="relative group flex flex-col border-primary/50 shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl md:scale-105 md:-my-4 z-10">
+        <Card className="relative group flex flex-col border-primary/50 shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl md:scale-105 md:-my-4 z-10 md:min-h-[550px]">
           <Badge className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full px-3 py-1 text-[11px] uppercase tracking-wide">
             {t("badgeMostPopular")}
           </Badge>
@@ -198,8 +197,8 @@ export default function Pricing() {
             <div className="text-2xl font-bold text-foreground mt-1">{t("plans.growth.price")}</div>
             <CardDescription>{t("plans.growth.desc")}</CardDescription>
           </CardHeader>
-          <CardContent className="pt-0">
-            <ul className="space-y-3">
+          <CardContent className="pt-0 flex-1 flex flex-col">
+            <ul className="space-y-3 flex-1">
               {(t.raw("plans.growth.features") as string[]).map((f) => (
                 <Feature key={f}>{f}</Feature>
               ))}
@@ -213,71 +212,72 @@ export default function Pricing() {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
+
+            <div className="mt-4">
+              <Dialog open={openGrowth} onOpenChange={setOpenGrowth}>
+                <DialogTrigger asChild>
+                  <Button className="w-full" size="lg">{t("cta.getStarted")}</Button>
+                </DialogTrigger>
+                <DialogContent className="w-[95vw] sm:max-w-3xl">
+                  <DialogHeader>
+                    <DialogTitle>{t("dialogs.growth.title")}</DialogTitle>
+                    <DialogDescription>{t("dialogs.growth.desc")}</DialogDescription>
+                  </DialogHeader>
+
+                  <form action={growthAction} className="grid gap-5 sm:grid-cols-2">
+                    <input type="hidden" name="plan" value="kickstart" />
+                    <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" />
+
+                    <div className="grid gap-4">
+                      <div className="grid gap-2">
+                        <Label htmlFor="growth-project" className="text-sm font-medium">
+                          {t("forms.labels.project")}
+                        </Label>
+                        <Textarea id="growth-project" name="project" placeholder={t("forms.placeholders.kickstart")} required rows={6} />
+                      </div>
+                      <div className="grid gap-2">
+                        <Label htmlFor="growth-email" className="text-sm font-medium">
+                          {t("forms.labels.email")}
+                        </Label>
+                        <Input id="growth-email" name="email" type="email" placeholder="you@company.com" required />
+                      </div>
+                    </div>
+
+                    <div className="sm:pl-4">
+                      <div className="mb-2 text-sm font-medium">{t("forms.summary.title")}</div>
+                      <div className="rounded-lg border p-4 text-sm">
+                        <p className="text-muted-foreground">{t("forms.summary.kickstart")}</p>
+                      </div>
+                    </div>
+
+                    <DialogFooter className="sm:col-span-2">
+                      <SubmitButton labelSend={t("forms.actions.submit")} labelSending={t("forms.actions.sending")} />
+                    </DialogFooter>
+
+                    {growthState.errors && (
+                      <p className="sm:col-span-2 text-sm text-red-600">
+                        {Object.values(growthState.errors).flat().join(" ")}
+                      </p>
+                    )}
+                    {growthState.success && (
+                      <p className="sm:col-span-2 text-sm">{growthState.message}</p>
+                    )}
+                  </form>
+                </DialogContent>
+              </Dialog>
+            </div>
           </CardContent>
-          <CardFooter className="mt-auto">
-            <Dialog open={openGrowth} onOpenChange={setOpenGrowth}>
-              <DialogTrigger asChild>
-                <Button className="w-full" size="lg">{t("cta.getStarted")}</Button>
-              </DialogTrigger>
-              <DialogContent className="w-[95vw] sm:max-w-3xl">
-                <DialogHeader>
-                  <DialogTitle>{t("dialogs.growth.title")}</DialogTitle>
-                  <DialogDescription>{t("dialogs.growth.desc")}</DialogDescription>
-                </DialogHeader>
-
-                <form action={growthAction} className="grid gap-5 sm:grid-cols-2">
-                  <input type="hidden" name="plan" value="kickstart" />
-                  <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" />
-
-                  <div className="grid gap-4">
-                    <div className="grid gap-2">
-                      <Label htmlFor="growth-project" className="text-sm font-medium">
-                        {t("forms.labels.project")}
-                      </Label>
-                      <Textarea id="growth-project" name="project" placeholder={t("forms.placeholders.kickstart")} required rows={6} />
-                    </div>
-                    <div className="grid gap-2">
-                      <Label htmlFor="growth-email" className="text-sm font-medium">
-                        {t("forms.labels.email")}
-                      </Label>
-                      <Input id="growth-email" name="email" type="email" placeholder="you@company.com" required />
-                    </div>
-                  </div>
-
-                  <div className="sm:pl-4">
-                    <div className="mb-2 text-sm font-medium">{t("forms.summary.title")}</div>
-                    <div className="rounded-lg border p-4 text-sm">
-                      <p className="text-muted-foreground">{t("forms.summary.kickstart")}</p>
-                    </div>
-                  </div>
-
-                  <DialogFooter className="sm:col-span-2">
-                    <SubmitButton labelSend={t("forms.actions.submit")} labelSending={t("forms.actions.sending")} />
-                  </DialogFooter>
-
-                  {growthState.errors && (
-                    <p className="sm:col-span-2 text-sm text-red-600">
-                      {Object.values(growthState.errors).flat().join(" ")}
-                    </p>
-                  )}
-                  {growthState.success && (
-                    <p className="sm:col-span-2 text-sm">{growthState.message}</p>
-                  )}
-                </form>
-              </DialogContent>
-            </Dialog>
-          </CardFooter>
         </Card>
 
         {/* Tier 3 – Business Package */}
-        <Card className="group flex flex-col transition-all hover:-translate-y-1 hover:shadow-lg">
+        <Card className="group flex flex-col transition-all hover:-translate-y-1 hover:shadow-lg md:min-h-[580px]">
           <CardHeader>
             <CardTitle>{t("plans.scale.name")}</CardTitle>
             <div className="text-2xl font-bold text-foreground mt-1">{t("plans.scale.price")}</div>
             <CardDescription>{t("plans.scale.desc")}</CardDescription>
           </CardHeader>
-          <CardContent className="pt-0">
-            <ul className="space-y-3">
+          <CardContent className="pt-0 flex-1 flex flex-col">
+            <ul className="space-y-3 flex-1">
               {(t.raw("plans.scale.features") as string[]).map((f) => (
                 <Feature key={f}>{f}</Feature>
               ))}
@@ -291,62 +291,63 @@ export default function Pricing() {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
+
+            <div className="mt-4">
+              <Dialog open={openScale} onOpenChange={setOpenScale}>
+                <DialogTrigger asChild>
+                  <Button className="w-full" size="lg">
+                    {t("cta.contactSales")}
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="w-[95vw] sm:max-w-3xl">
+                  <DialogHeader>
+                    <DialogTitle>{t("dialogs.scale.title")}</DialogTitle>
+                    <DialogDescription>{t("dialogs.scale.desc")}</DialogDescription>
+                  </DialogHeader>
+
+                  <form action={scaleAction} className="grid gap-5 sm:grid-cols-2">
+                    <input type="hidden" name="plan" value="business" />
+                    <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" />
+
+                    <div className="grid gap-4">
+                      <div className="grid gap-2">
+                        <Label htmlFor="scale-project" className="text-sm font-medium">
+                          {t("forms.labels.project")}
+                        </Label>
+                        <Textarea id="scale-project" name="project" placeholder={t("forms.placeholders.business")} required rows={6} />
+                      </div>
+                      <div className="grid gap-2">
+                        <Label htmlFor="scale-email" className="text-sm font-medium">
+                          {t("forms.labels.email")}
+                        </Label>
+                        <Input id="scale-email" name="email" type="email" placeholder="you@company.com" required />
+                      </div>
+                    </div>
+
+                    <div className="sm:pl-4">
+                      <div className="mb-2 text-sm font-medium">{t("forms.summary.title")}</div>
+                      <div className="rounded-lg border p-4 text-sm">
+                        <p className="text-muted-foreground">{t("forms.summary.business")}</p>
+                      </div>
+                    </div>
+
+                    <DialogFooter className="sm:col-span-2">
+                      <SubmitButton labelSend={t("forms.actions.submit")} labelSending={t("forms.actions.sending")} />
+                    </DialogFooter>
+
+                    {scaleState.errors && (
+                      <p className="sm:col-span-2 text-sm text-red-600">
+                        {Object.values(scaleState.errors).flat().join(" ")}
+                      </p>
+                    )}
+                    {scaleState.success && (
+                      <p className="sm:col-span-2 text-sm">{scaleState.message}</p>
+                    )}
+                  </form>
+                </DialogContent>
+              </Dialog>
+            </div>
           </CardContent>
-          <CardFooter className="mt-auto">
-            <Dialog open={openScale} onOpenChange={setOpenScale}>
-              <DialogTrigger asChild>
-                <Button className="w-full" size="lg">
-                  {t("cta.contactSales")}
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="w-[95vw] sm:max-w-3xl">
-                <DialogHeader>
-                  <DialogTitle>{t("dialogs.scale.title")}</DialogTitle>
-                  <DialogDescription>{t("dialogs.scale.desc")}</DialogDescription>
-                </DialogHeader>
-
-                <form action={scaleAction} className="grid gap-5 sm:grid-cols-2">
-                  <input type="hidden" name="plan" value="business" />
-                  <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" />
-
-                  <div className="grid gap-4">
-                    <div className="grid gap-2">
-                      <Label htmlFor="scale-project" className="text-sm font-medium">
-                        {t("forms.labels.project")}
-                      </Label>
-                      <Textarea id="scale-project" name="project" placeholder={t("forms.placeholders.business")} required rows={6} />
-                    </div>
-                    <div className="grid gap-2">
-                      <Label htmlFor="scale-email" className="text-sm font-medium">
-                        {t("forms.labels.email")}
-                      </Label>
-                      <Input id="scale-email" name="email" type="email" placeholder="you@company.com" required />
-                    </div>
-                  </div>
-
-                  <div className="sm:pl-4">
-                    <div className="mb-2 text-sm font-medium">{t("forms.summary.title")}</div>
-                    <div className="rounded-lg border p-4 text-sm">
-                      <p className="text-muted-foreground">{t("forms.summary.business")}</p>
-                    </div>
-                  </div>
-
-                  <DialogFooter className="sm:col-span-2">
-                    <SubmitButton labelSend={t("forms.actions.submit")} labelSending={t("forms.actions.sending")} />
-                  </DialogFooter>
-
-                  {scaleState.errors && (
-                    <p className="sm:col-span-2 text-sm text-red-600">
-                      {Object.values(scaleState.errors).flat().join(" ")}
-                    </p>
-                  )}
-                  {scaleState.success && (
-                    <p className="sm:col-span-2 text-sm">{scaleState.message}</p>
-                  )}
-                </form>
-              </DialogContent>
-            </Dialog>
-          </CardFooter>
         </Card>
       </div>
     </section>
