@@ -1,4 +1,11 @@
 {
+  "PromoBanner": {
+    "headline": "Website for your business?",
+    "originalPrice": "$1000",
+    "salePrice": "from $100",
+    "cta": "See the offer",
+    "dismiss": "Close"
+  },
   "Nav": {
     "showcase": "Work",
     "about": "About",

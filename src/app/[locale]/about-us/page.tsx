@@ -1,5 +1,6 @@
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import PromoBanner from "@/components/promo-banner";
 import TeamSection from "@/components/team-section";
 import AboutSection from "@/components/about-section";
 import { Member } from "@/components/team/types";
@@ -45,6 +46,7 @@ export default function AboutUsPage() {
 
   return (
     <>
+      <PromoBanner />
       <Header />
       <main className="flex flex-col">
         <AboutSection />

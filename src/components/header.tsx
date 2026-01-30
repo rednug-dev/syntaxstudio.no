@@ -86,7 +86,7 @@ export default function Header() {
       {/* Mobile Menu */}
       <div
         className={cn(
-          "lg:hidden fixed inset-0 top-20 z-40 bg-background/95 backdrop-blur-sm transition-opacity duration-300",
+          "lg:hidden fixed inset-x-0 bottom-0 top-20 z-40 bg-background/95 backdrop-blur-sm transition-opacity duration-300",
           isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         )}
         onClick={closeMenu}

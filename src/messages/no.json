@@ -1,4 +1,11 @@
 {
+  "PromoBanner": {
+    "headline": "Nettside til bedriften din?",
+    "originalPrice": "9 999 kr",
+    "salePrice": "fra 999 kr",
+    "cta": "Se tilbudet",
+    "dismiss": "Lukk"
+  },
   "Nav": {
     "showcase": "Arbeid",
     "about": "Om oss",
