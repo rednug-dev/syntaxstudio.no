@@ -12,9 +12,8 @@ const ServicesIntroSection = dynamic(() => import('@/components/services-intro-s
 const ProposalSection = dynamic(() => import('@/components/proposal-section'), {
   loading: () => <Skeleton className="w-full h-[400px]" />,
 });
-const Footer = dynamic(() => import('@/components/footer'), {
-  loading: () => <Skeleton className="w-full h-[200px]" />,
-});
+
+import Footer from '@/components/footer';
 
 export default function Home() {
   return (

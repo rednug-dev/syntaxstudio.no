@@ -40,7 +40,8 @@ export default function AboutUsPage() {
       skills: ["Filming", "Editing", "Marketing", "Content Creation"],
       email: "khamzat@syntaxstudio.no",
       phone: "+47 4626 4815",
-      socials: {}
+      socials: {},
+      discordId: "925851067235848192"
     }
   ];
 
