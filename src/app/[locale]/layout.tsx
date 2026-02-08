@@ -57,6 +57,7 @@ export default async function RootLayout({
           <Toaster />
           <FloatingLocaleSwitch />
         </NextIntlClientProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
