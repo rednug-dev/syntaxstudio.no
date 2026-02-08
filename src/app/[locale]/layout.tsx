@@ -4,6 +4,7 @@ import Script from 'next/script';
 import {Toaster} from '@/components/ui/toaster';
 import {cn} from '@/lib/utils';
 import FloatingLocaleSwitch from '@/components/floating-locale-switch';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import 'flag-icons/css/flag-icons.min.css';
 
 import {NextIntlClientProvider} from 'next-intl';
