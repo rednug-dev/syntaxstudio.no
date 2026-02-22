@@ -13,10 +13,10 @@
     "contact": "Contact"
   },
   "Hero": {
-    "title": "Websites and ads that win you more customers",
-    "subtitle": "Take the step from hobby to business. We provide premium websites and marketing at a price you can actually afford.",
+    "title": "We take full responsibility for your digital growth",
+    "subtitle": "From strategy, Google Ads, and professional video production to hand-coded websites – we deliver everything you need to win more customers.",
     "primaryCta": "Get started",
-    "secondaryCta": "See our services"
+    "secondaryCta": "See what we do"
   },
   "Services": {
     "title": "What we help you with",
@@ -25,28 +25,28 @@
     "badges": { "new": "New" },
     "features": {
       "ai": {
-        "title": "Marketing & filming",
-        "desc": "Targeted campaigns on Google and social media, plus professional video production that builds trust and showcases your business."
+        "title": "Marketing & Ad Campaigns",
+        "desc": "Targeted campaigns on Google, Meta, and LinkedIn. We take full responsibility for your digital growth and leads."
       },
       "fast": {
-        "title": "Websites that convert",
-        "desc": "Custom-built sites that are fast, clear, and designed to drive sales, inquiries, and bookings."
+        "title": "Video & Production",
+        "desc": "Professional video production, 2D animation, and social reels that capture attention and build trust."
       },
       "security": {
-        "title": "Tracking & reporting",
-        "desc": "We set up tracking and show you exactly what’s working – and what we’ll improve next."
+        "title": "High-End Photography",
+        "desc": "Professional product and corporate photography that elevates your brand to a new level."
       },
       "scale": {
-        "title": "Growth & advisory",
-        "desc": "Practical advice on offers, pricing, positioning, and content – everything that helps you get more customers."
+        "title": "Websites & Funnels",
+        "desc": "Hand-coded websites and converting sales funnels built for maximum ROI and performance."
       },
       "cloud": {
-        "title": "Professional email",
-        "desc": "Setup of Google Workspace or Microsoft 365 with your domain (e.g. hello@business.com), signatures, and security."
+        "title": "Graphic Design & Assets",
+        "desc": "Design of everything from motion graphics in AE and Photoshop to print materials in InDesign."
       },
       "dev": {
-        "title": "Fully custom",
-        "desc": "No templates. Design and copy tailored to your business – that actually sells."
+        "title": "Full-Service Partner",
+        "desc": "We act as your outsourced marketing department, tailoring every delivery to your specific goals."
       }
     }
   },
@@ -74,9 +74,9 @@
     "question": "Got a question?"
   },
   "About": {
-    "missionTitle": "Our mission",
-    "missionP1": "Syntax Studio hand-codes fast, accessible websites and apps—no templates, no bloat. We join your team to design, build and ship products that feel simple and perform brilliantly.",
-    "missionP2": "We combine engineering rigor with clean design. Expect clear communication, short feedback loops and launches that move the needle for your business.",
+    "missionTitle": "Your Outsourced Marketing Department",
+    "missionP1": "Syntax Studio takes full responsibility for your digital growth. We go beyond websites – delivering everything from Google Ads and targeted campaigns to professional video production, 2D animation, and high-end photography.",
+    "missionP2": "We combine technical precision with creative content. Whether it's After Effects animations, Photoshop design, or hand-coded web apps, we ensure your brand stands out and converts.",
     "metrics": {
       "lighthouseValue": "90+",
       "lighthouseSubtitle": "Average Lighthouse scores (Performance/SEO/Best Practices)",
@@ -118,47 +118,110 @@
       "heroAlt": "Syntax Studio workflow",
       "overviewTitle": "Overview",
       "workflowTitle": "Our Workflow",
-      "seeLive": "See the live website",
-      "defaultOverview": "We partner with founders and teams to hand-code fast, accessible websites and apps. We own the stack from brand to launch with short feedback loops and measurable outcomes.",
-      "defaultBackground": "Many clients arrive with scattered branding, template sites or manual workflows. We align on goals, refine the brand, and ship a clean architecture with a maintainable CMS and practical automations.",
+      "seeLive": "Show me",
+      "defaultOverview": "We act as your outsourced marketing department. From strategy and Google Ads to professional video production and web development – we take full responsibility for your digital growth.",
+      "defaultBackground": "We often see businesses with great products but no cohesive strategy. We bring everything together – design, content, advertising, and technology – into one integrated machine that actually converts.",
       "checklist": [
-        "Brand identity & design system",
-        "UX/UI design",
-        "Front-end development",
-        "Full-stack (Next.js, Node, Prisma)",
-        "Filming & video production",
-        "SEO & performance",
-        "Analytics & tracking",
-        "Integrations & automations"
+        "Full marketing responsibility & strategy",
+        "Targeted ad campaigns (Google, Meta, LinkedIn)",
+        "Professional video production & 2D animation",
+        "High-end product & corporate photography",
+        "Sales funnels & conversion landing pages",
+        "Hand-coded websites & web apps",
+        "Graphic design (AE, PS, ID)",
+        "SEO, analytics & continuous optimization"
       ],
       "projects": {
         "giroo": {
-          "heading": "Creating Giroo’s subscription dashboard",
+          "heading": "Full Responsibility for Giroo's Marketing & Growth",
+          "stack": ["React", "Next.js", "Marketing", "Ad Campaigns", "Video Production"],
+          "flairs": ["Growth Package", "Google Ads", "Custom App"],
           "paragraphs": [
-            "From name to MVP: we built the brand, marketing site and a full web app that helps people track and reduce recurring subscriptions.",
-            "We started with discovery and flows, then shipped a clean Next.js app with auth, database and an email-parsing foundation for extracting subscription data."
+            "We took over full responsibility for Giroo's digital presence. This included everything from branding and a full Next.js app to targeted Google Ads and professional video production for social media.",
+            "Through a combination of high-performance code, animated explainer videos, and data-driven advertising, we helped Giroo go from idea to a robust platform with a growing user base."
           ]
         },
         "riseup": {
-          "heading": "Rebuilding RiseUp’s brand and website",
+          "heading": "Logo Redesign for RiseUp",
+          "stack": ["Graphic Design", "Brand Strategy", "Vector Art"],
+          "flairs": ["Logo Redesign", "Visual Identity"],
           "paragraphs": [
-            "A full brand overhaul and a trustworthy website that positioned RiseUp to win new partnerships.",
-            "We rebuilt the message architecture and shipped a fast, accessible site with a simple CMS for content updates and better credibility."
+            "We redesigned RiseUp's logo to give them a modern and professional look that reflects their important work.",
+            "The process involved simplifying elements while preserving the core message, resulting in a more versatile and recognizable brand."
+          ],
+          "page": {
+            "back": "Back to services",
+            "badge": "Design Case",
+            "title": "Modernizing RiseUp",
+            "description": "A logo is the heart of any brand. For RiseUp, it was about taking the step from traditional to something that feels modern and future-proof.",
+            "comparison": "Before & After",
+            "before": "Old Logo",
+            "after": "New Logo",
+            "philosophy": "The Philosophy",
+            "philosophyDesc": "RiseUp is an organization prioritizing youth with a difficult upbringing. We wanted the logo to reflect their mission of lifting and supporting these young individuals. The new design combines strength with warmth, symbolizing growth, inclusion, and new opportunities.",
+            "visualModernization": "Visual Modernization",
+            "visualModernizationDesc": "Cleaner lines and optimized geometry for all scales.",
+            "multiPlatform": "Multi-Platform",
+            "multiPlatformDesc": "Designed to thrive on mobile, print, and large scale banners.",
+            "strategy": "The Strategy",
+            "strategyDesc": "Simplification, better readability, and a modern color palette that works across all platforms.",
+            "deliverables": "Deliverables",
+            "deliverablesDesc": "Complete logo package with variants for web, print, and social media.",
+            "primaryLogo": "Primary Logo",
+            "secondaryWordmark": "Secondary Wordmark",
+            "faviconIconography": "Favicon & Iconography",
+            "typographySelection": "Typography Selection",
+            "colorPalette": "Color Palette"
+          }
+        },
+        "renovera": {
+          "heading": "Complete Digital Presence for Renovera",
+          "stack": ["React", "Next.js", "Video Production", "Photography"],
+          "flairs": ["Web Development", "Video Editing", "Before/After"],
+          "paragraphs": [
+            "We built a modern website for Renovera that focuses on their craftsmanship. This included web development, editing a professional promotional film, and assistance with project documentation.",
+            "Through clear before/after imagery and engaging video content, we've made it easier for potential clients to see the value in their services."
           ]
         },
-        "bites": {
-          "heading": "Launching Bites’ festival-ready presence",
+        "jonk": {
+          "heading": "Professional Content for Jønk",
+          "stack": ["Video Production", "Photography", "Marketing"],
+          "flairs": ["Professional Grade", "Video Series", "Product Photo"],
           "paragraphs": [
-            "Early-stage support for a pop-up burger concept: brand identity and a site that helped them stand out when applying to festivals.",
-            "We created a clear visual identity and a mobile-first site with an event schedule so organizers and customers could easily see where they’d pop up next."
-          ]
-        },
-        "datasec": {
-          "heading": "DataSec integrations & live dashboards",
-          "paragraphs": [
-            "Custom tech products integrated into their site—giving clients deeper insight into their assets and stronger security.",
-            "We built internal tools and dashboards and integrated vendor APIs, surfacing clear, real-time insights directly in the website."
-          ]
+            "For Jønk, we delivered a comprehensive series of high-end videos and product photos. The goal was to highlight their 'professional grade' products through a visual style that exudes quality.",
+            "Through tailored video production and professional photography, we created a content library that strengthens Jønk's brand across all digital channels."
+          ],
+          "page": {
+            "back": "Back to services",
+            "badge": "Case Study",
+            "title": "Professional Grade Content",
+            "description": "Jønk delivers high-performance kitchen equipment for professionals. We were tasked with creating a visual identity through high-end video and photography that matches the quality of their products.",
+            "commercial": "Commercial Video",
+            "spiritTitle": "The Jønk Spirit",
+            "spiritDesc": "A cinematic journey through the professional kitchen environment.",
+            "photoTitle": "Professional Photography",
+            "photoDesc": "Over 50+ high-resolution product shots delivered for use across e-commerce, social media, and print catalogs.",
+            "strategy": "The Strategy",
+            "strategyDesc": "Focusing on raw materials, heat, and precision to convey the durability and quality of the Jønk professional range.",
+            "work": "The Work",
+            "workItems": [
+              "Creative Direction",
+              "Cinematography",
+              "Product Photography",
+              "Post-Production & Color"
+            ],
+            "deliverables": "Deliverables",
+            "deliverablesDesc": "Delivered a full library of video assets for social campaigns and a complete product catalog shoot.",
+            "mainFeature": "Main Feature",
+            "cinematicTextures": "Cinematic Textures",
+            "socialAdsCount": "5+ Social Ads",
+            "productPhotosCount": "50+ Product Photos",
+            "professionalGrade": "Professional Grade",
+            "socialCampaign1": "Social Campaign #1",
+            "socialCampaign2": "Social Campaign #2",
+            "socialCampaign3": "Social Campaign #3",
+            "optimizedForReels": "Optimized for Reels"
+          }
         }
       }
     }

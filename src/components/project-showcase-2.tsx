@@ -1,16 +1,20 @@
 // src/components/project-showcase-2.tsx
 import * as React from "react";
-import { CheckCircle2, ExternalLink, Code2, MessageSquare, FileText, Rocket } from "lucide-react";
+import { CheckCircle2, ExternalLink, Code2, MessageSquare, FileText, Rocket, Megaphone, Video, Camera, Palette } from "lucide-react";
 import { getTranslations } from "next-intl/server";
+import ProjectCarousel from "./project-carousel";
 
 /* ===================== Types ===================== */
 export type ProjectCase = {
   heading: string;
   url?: string;
+  isExternal?: boolean;
+  logo: string;
   heroImage: string;
   heroAlt?: string;
   paragraphs: ReadonlyArray<string>;
   stack?: ReadonlyArray<string>;
+  flairs?: ReadonlyArray<string>;
 };
 
 export type WorkIntroProps = {
@@ -39,97 +43,25 @@ const STACK_LOGO: Record<string, string> = {
 
 /* Prosjekt-meta: bilder/urls/stack (språk-uavhengig) */
 const CASE_META = {
-  giroo: {
-    heroImage: "/showcase/giroodesktop.webp",
-    url: "https://giroo-no.vercel.app",
-    stack: ["React", "Next.js", "Tailwind", "Node", "Prisma", "PostgreSQL", "Vercel"],
-  },
   riseup: {
     heroImage: "/showcase/riseupdesktop.webp",
-    url: "https://riseup-seven.vercel.app",
-    stack: ["React", "Next.js", "Tailwind", "Vercel"],
+    logo: "/logos/riseuplogo.svg",
+    url: "/work/riseup",
+    isExternal: false,
   },
-  bites: {
-    heroImage: "/showcase/bitesdesktop.webp",
-    url: "https://bites-lac.vercel.app",
-    stack: ["React", "Next.js", "Tailwind", "Vercel"],
-  },
-  datasec: {
+  renovera: {
     heroImage: "/showcase/datasecw2.webp",
-    url: undefined, // ingen lenke
-    stack: ["React", "Next.js", "Tailwind", "Node", "PostgreSQL"],
+    logo: "/logos/renoveras.svg",
+    url: "https://renovera-as.no",
+    isExternal: true,
+  },
+  jonk: {
+    heroImage: "/showcase/bigpic.webp",
+    logo: "/logos/jønk.png",
+    url: "/work/jonk",
+    isExternal: false,
   },
 } as const;
-
-/* ===================== Case block ===================== */
-function CaseBlock({ c, seeLiveLabel }: { c: ProjectCase; seeLiveLabel: string }) {
-  return (
-    <article className="mx-auto max-w-6xl py-12">
-      {/* Hero image */}
-      <div className="mx-auto max-w-5xl overflow-hidden rounded-2xl border shadow-lg">
-        <img
-          src={c.heroImage}
-          alt={c.heroAlt ?? `${c.heading} cover`}
-          className="aspect-[16/9] w-full object-cover"
-        />
-      </div>
-
-      {/* Heading + link */}
-      <div className="mx-auto mt-8 max-w-5xl">
-        <h3 className="text-3xl font-bold tracking-tight sm:text-4xl">{c.heading}</h3>
-        {c.url && (
-          <div className="mt-2">
-            <a
-              href={c.url}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="text-primary inline-flex items-center gap-1 font-medium hover:underline"
-            >
-              {seeLiveLabel} <ExternalLink className="h-3.5 w-3.5" />
-            </a>
-          </div>
-        )}
-
-        {/* Body copy */}
-        <div className="prose prose-neutral dark:prose-invert mt-5 max-w-none">
-          {c.paragraphs.map((p, i) => (
-            <p key={i} className="text-muted-foreground leading-7">
-              {p}
-            </p>
-          ))}
-        </div>
-
-        {/* Tech stack logos */}
-        {c.stack && c.stack.length > 0 && (
-          <div className="mt-6 flex flex-wrap items-center gap-3">
-            {c.stack.map((label) => {
-              const src = STACK_LOGO[label];
-              return src ? (
-                <div
-                  key={label}
-                  className="grid h-14 w-14 place-items-center rounded-md bg-transparent ring-1 ring-black/5 dark:bg-transparent"
-                  title={label}
-                >
-                  <img src={src} alt={label} className="h-12 w-auto object-contain" />
-                </div>
-              ) : (
-                <div
-                  key={label}
-                  className="grid h-9 w-9 place-items-center rounded-md border bg-background/80"
-                  title={label}
-                >
-                  <Code2 className="h-4 w-4" />
-                </div>
-              );
-            })}
-          </div>
-        )}
-      </div>
-
-      <div className="mt-10 h-px w-full bg-border" />
-    </article>
-  );
-}
 
 /* ===================== Intro + projects (intl) ===================== */
 export default async function WorkIntroSection(props: WorkIntroProps) {
@@ -158,6 +90,8 @@ export default async function WorkIntroSection(props: WorkIntroProps) {
       if (key.startsWith("projects.")) return [];
       return [];
     };
+    t.logo = (key: string) => "";
+    t.flairs = (key: string) => [];
     processT = (key: string) => key;
   }
 
@@ -177,19 +111,29 @@ export default async function WorkIntroSection(props: WorkIntroProps) {
   const seeLive = t("seeLive");
 
   // Prosjektene
-  const projOrder = ["giroo", "riseup", "bites", "datasec"] as const;
+  const projOrder = ["riseup", "renovera", "jonk"] as const;
   const projectsIntl = projOrder.map<ProjectCase>((key) => {
     const heading = t(`projects.${key}.heading`) || "";
-    const raw = t.raw(`projects.${key}.paragraphs`);
-    const paragraphs = Array.isArray(raw) ? raw : [];
+    const rawParagraphs = t.raw(`projects.${key}.paragraphs`);
+    const paragraphs = Array.isArray(rawParagraphs) ? rawParagraphs : [];
+    
+    const rawStack = t.raw(`projects.${key}.stack`);
+    const stack = Array.isArray(rawStack) ? rawStack : [];
+
+    const rawFlairs = t.raw(`projects.${key}.flairs`);
+    const flairs = Array.isArray(rawFlairs) ? rawFlairs : [];
+
     const meta = CASE_META[key];
     return {
       heading,
+      logo: meta.logo,
       heroImage: meta.heroImage,
       heroAlt: heading,
       url: meta.url,
+      isExternal: meta.isExternal,
       paragraphs,
-      stack: meta.stack,
+      stack,
+      flairs,
     };
   });
 
@@ -263,13 +207,9 @@ export default async function WorkIntroSection(props: WorkIntroProps) {
         </div>
       )}
 
-      {/* Projects */}
+      {/* Projects Carousel */}
       {projects.length > 0 && (
-        <div className="mt-6">
-          {projects.map((c) => (
-            <CaseBlock key={c.heading} c={c} seeLiveLabel={seeLive} />
-          ))}
-        </div>
+        <ProjectCarousel projects={projects} seeLive={seeLive} />
       )}
     </section>
   );
