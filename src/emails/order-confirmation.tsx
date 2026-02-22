@@ -6,6 +6,7 @@ interface OrderConfirmationEmailProps {
   addons: { label: string; price: string }[];
   total: string;
   locale: string;
+  project?: string;
 }
 
 const OrderConfirmationEmail: React.FC<OrderConfirmationEmailProps> = ({
@@ -14,6 +15,7 @@ const OrderConfirmationEmail: React.FC<OrderConfirmationEmailProps> = ({
   addons,
   total,
   locale,
+  project,
 }) => {
   const isNorwegian = locale.startsWith('no');
   const translations = {
@@ -24,6 +26,7 @@ const OrderConfirmationEmail: React.FC<OrderConfirmationEmailProps> = ({
     includedLabel: isNorwegian ? 'Inkludert' : 'Included',
     addonsLabel: isNorwegian ? 'TILLEGGSTJENESTER' : 'ADD-ONS',
     totalLabel: isNorwegian ? 'Estimert total' : 'Estimated Total',
+    projectLabel: isNorwegian ? 'PROSJEKTBESKRIVELSE' : 'PROJECT DESCRIPTION',
     companyInfo: isNorwegian ? 'Syntax Studio | E-post: info@syntaxstudio.no' : 'Syntax Studio | Email: info@syntaxstudio.no',
   };
 
@@ -174,11 +177,21 @@ const OrderConfirmationEmail: React.FC<OrderConfirmationEmailProps> = ({
               {included && (
                 <tr style={rowStyle}>
                   <td style={labelCellStyle}>{translations.includedLabel}</td>
-                  <td style={valueCellStyle}>{included.split(': ')[1]}</td>
+                  <td style={valueCellStyle}>{included.includes(': ') ? included.split(': ')[1] : included}</td>
                 </tr>
               )}
             </tbody>
           </table>
+
+          {project && (
+            <>
+              <hr style={hrStyle} />
+              <h2 style={sectionHeadingStyle}>{translations.projectLabel}</h2>
+              <div style={{...pStyle, whiteSpace: 'pre-wrap', backgroundColor: '#f9fafb', padding: '16px', borderRadius: '8px', border: '1px solid #e5e7eb', fontSize: '14px', color: '#374151' }}>
+                {project}
+              </div>
+            </>
+          )}
 
           {addons.length > 0 && (
             <>

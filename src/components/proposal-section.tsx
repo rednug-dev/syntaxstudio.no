@@ -14,7 +14,7 @@ import { useToast } from '@/hooks/use-toast';
 import { handleContactInquiry, type FormState } from '@/actions';
 import { ContactInquirySchema } from '@/lib/schemas';
 import { Input } from '@/components/ui/input';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
 function SubmitButton() {
   const { pending } = useFormStatus();
@@ -38,6 +38,7 @@ function SubmitButton() {
 
 export default function ProposalSection() {
   const t = useTranslations('Proposal');
+  const locale = useLocale();
   const { toast } = useToast();
   const formRef = useRef<HTMLFormElement>(null);
 
@@ -83,6 +84,7 @@ export default function ProposalSection() {
           <Card className="p-6 md:p-8 animate-fade-in-up">
             <Form {...form}>
               <form ref={formRef} action={formAction} className="space-y-6">
+                <input type="hidden" name="locale" value={locale} />
                 <FormField
                   control={form.control}
                   name="name"

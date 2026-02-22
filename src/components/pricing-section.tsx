@@ -135,7 +135,8 @@ export default function Pricing() {
                 </DialogHeader>
 
                 <form action={kickstartAction} className="grid gap-5 sm:grid-cols-2">
-                  <input type="hidden" name="plan" value="custom" />
+                  <input type="hidden" name="plan" value="kickstart" />
+                  <input type="hidden" name="locale" value={locale} />
                   <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" />
 
                   {/* Left */}
@@ -225,7 +226,8 @@ export default function Pricing() {
                   </DialogHeader>
 
                   <form action={growthAction} className="grid gap-5 sm:grid-cols-2">
-                    <input type="hidden" name="plan" value="kickstart" />
+                    <input type="hidden" name="plan" value="growth" />
+                    <input type="hidden" name="locale" value={locale} />
                     <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" />
 
                     <div className="grid gap-4">
@@ -306,7 +308,8 @@ export default function Pricing() {
                   </DialogHeader>
 
                   <form action={scaleAction} className="grid gap-5 sm:grid-cols-2">
-                    <input type="hidden" name="plan" value="business" />
+                    <input type="hidden" name="plan" value="scale" />
+                    <input type="hidden" name="locale" value={locale} />
                     <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" />
 
                     <div className="grid gap-4">

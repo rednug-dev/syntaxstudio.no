@@ -3,6 +3,8 @@
 import nodemailer from 'nodemailer';
 import { ContactInquirySchema } from '@/lib/schemas';
 import { headers } from 'next/headers';
+import { render } from '@react-email/render';
+import OrderConfirmationEmail from './emails/order-confirmation';
 
 /** Shared form-state type for server actions */
 export type FormState = {
@@ -43,6 +45,9 @@ export async function handleContactInquiry(
   prevState: FormState,
   formData: FormData
 ): Promise<FormState> {
+  const localeInput = String(formData.get('locale') || '');
+  const locale = (localeInput === 'no' || localeInput === 'en' ? localeInput : await detectLocale()) as 'no' | 'en';
+
   const validated = ContactInquirySchema.safeParse({
     name: formData.get('name'),
     email: formData.get('email'),
@@ -53,38 +58,46 @@ export async function handleContactInquiry(
     const errs = validated.error.flatten().fieldErrors as Record<string, string[]>;
     return {
       errors: errs,
-      message: 'Validering feilet. Vennligst sjekk det du har skrevet inn.',
+      message: locale === 'no' 
+        ? 'Validering feilet. Vennligst sjekk det du har skrevet inn.' 
+        : 'Validation failed. Please check your input.',
       success: false,
     };
   }
 
   const { name, email, message } = validated.data;
   const transporter = createTransport();
+  const zohoEmail = process.env.ZOHO_EMAIL || '';
 
   try {
     await transporter.sendMail({
       // Viktig: FROM må være den autentiserte Zoho-kontoen
-      from: `"${process.env.MAIL_FROM_NAME || 'Syntax Studio'}" <${process.env.ZOHO_EMAIL}>`,
+      from: `"${process.env.MAIL_FROM_NAME || 'Syntax Studio'}" <${zohoEmail}>`,
       replyTo: email,
-      to: process.env.SALES_INBOX || 'sales@syntaxstudio.no',
+      to: process.env.SALES_INBOX || zohoEmail || 'sales@syntaxstudio.no',
       subject: `Ny henvendelse fra ${name} via nettsiden`,
       html: `<p>Du har mottatt en ny henvendelse fra:</p>
              <p><b>Navn:</b> ${name}</p>
              <p><b>E-post:</b> ${email}</p>
+             <p><b>Språk:</b> ${locale}</p>
              <hr>
              <p><b>Melding:</b></p>
              <p>${String(message).replace(/\n/g, '<br>')}</p>`,
     });
 
     return {
-      message: 'Takk for din henvendelse! Vi kommer tilbake til deg snart.',
+      message: locale === 'no'
+        ? 'Takk for din henvendelse! Vi kommer tilbake til deg snart.'
+        : 'Thanks for your inquiry! We will get back to you soon.',
       errors: null,
       success: true,
     };
   } catch (error) {
     console.error('Email sending error (contact):', error);
     return {
-      message: 'En feil oppstod under sending av e-post. Vennligst prøv igjen senere.',
+      message: locale === 'no'
+        ? 'En feil oppstod under sending av e-post. Vennligst prøv igjen senere.'
+        : 'An error occurred while sending the email. Please try again later.',
       errors: null,
       success: false,
     };
@@ -99,6 +112,7 @@ type SimplePricingPayload = {
   email: string;
   project: string;
   honey: string; // honeypot
+  locale: 'no' | 'en' | string;
 };
 
 function validatePricingPayload(raw: SimplePricingPayload): Record<string, string[]> | null {
@@ -126,6 +140,7 @@ export async function handlePricingOrder(
     email: String(formData.get('email') || ''),
     project: String(formData.get('project') || ''),
     honey: String(formData.get('website') || ''),
+    locale: String(formData.get('locale') || ''),
   };
 
   // Honeypot → pretend OK, do nothing
@@ -138,17 +153,23 @@ export async function handlePricingOrder(
     return { success: false, message: 'Validation error', errors };
   }
 
-  const locale = await detectLocale();
+  // Use passed-in locale or detect from headers
+  const locale = (raw.locale === 'no' || raw.locale === 'en' ? raw.locale : await detectLocale()) as 'no' | 'en';
   const transporter = createTransport();
+  const zohoEmail = process.env.ZOHO_EMAIL || '';
 
   // FROM må **alltid** være den autentiserte kontoen for å unngå "Relaying disallowed"
-  const fromAddress = `${process.env.MAIL_FROM_NAME || 'Syntax Studio'} <${process.env.ZOHO_EMAIL}>`;
-  const toSales = process.env.SALES_INBOX || 'sales@syntaxstudio.no';
+  const fromAddress = `${process.env.MAIL_FROM_NAME || 'Syntax Studio'} <${zohoEmail}>`;
+  const toSales = process.env.SALES_INBOX || zohoEmail || 'sales@syntaxstudio.no';
 
+  // Align labels with Pricing.tsx (which matches no.json keys)
+  // kickstart -> Skreddersydd (Card 1)
+  // growth    -> Kickstart (Card 2)
+  // scale     -> Bedriftspakka (Card 3)
   const planLabel =
-    raw.plan === 'kickstart' ? 'Kickstart'
-    : raw.plan === 'growth' ? 'Vekstpakka'
-    : 'Skaler';
+    raw.plan === 'kickstart' ? (locale === 'no' ? 'Skreddersydd' : 'Custom')
+    : raw.plan === 'growth' ? 'Kickstart'
+    : (locale === 'no' ? 'Bedriftspakka' : 'Business Package');
 
   const subjectSales = `[Lead] ${planLabel} – ${raw.email}`;
   const subjectCustomer =
@@ -159,6 +180,7 @@ export async function handlePricingOrder(
   const htmlSales = `
     <h2>Ny pricing-forespørsel — ${planLabel}</h2>
     <p><b>E-post:</b> ${raw.email}</p>
+    <p><b>Språk:</b> ${locale}</p>
     <h3>Prosjekt</h3>
     <pre style="white-space:pre-wrap">${raw.project}</pre>
   `;
@@ -166,43 +188,31 @@ export async function handlePricingOrder(
   const textSales = `
 Ny pricing-forespørsel — ${planLabel}
 E-post: ${raw.email}
+Språk: ${locale}
 
 Prosjekt:
 ${raw.project}
   `.trim();
 
-  const htmlCustomer =
-    locale === 'no'
-      ? `
-  <div style="font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;font-size:14px;line-height:1.6;color:#111">
-    <p>Hei!</p>
-    <p>Takk for forespørselen din om <b>${planLabel}</b>. Vi ser over informasjonen og kommer tilbake til deg på e-post.</p>
-    <p><b>Oppsummert:</b></p>
-    <ul>
-      <li><b>E-post:</b> ${raw.email}</li>
-      <li><b>Plan:</b> ${planLabel}</li>
-    </ul>
-    <p><b>Prosjektbeskrivelse:</b></p>
-    <pre style="white-space:pre-wrap;background:#f6f6f6;padding:12px;border-radius:8px">${raw.project}</pre>
-    <p>Vi tar bare betalt når du får betalt. Ingen resultater = ingen kostnad.</p>
-    <p>– Syntax Studio</p>
-  </div>
-  `
-      : `
-  <div style="font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;font-size:14px;line-height:1.6;color:#111">
-    <p>Hello!</p>
-    <p>Thanks for your request for <b>${planLabel}</b>. We’ll review and get back to you by email.</p>
-    <p><b>Summary:</b></p>
-    <ul>
-      <li><b>Email:</b> ${raw.email}</li>
-      <li><b>Plan:</b> ${planLabel}</li>
-    </ul>
-    <p><b>Project description:</b></p>
-    <pre style="white-space:pre-wrap;background:#f6f6f6;padding:12px;border-radius:8px">${raw.project}</pre>
-    <p>We only get paid when you get paid. No results = no cost.</p>
-    <p>– Syntax Studio</p>
-  </div>
-  `;
+  // Price labels for the email
+  const planPrice =
+    raw.plan === 'kickstart'
+      ? (locale === 'no' ? 'Etter behov' : 'Tailored pricing')
+      : raw.plan === 'growth'
+      ? (locale === 'no' ? 'Fra 999 kr' : 'From $100')
+      : (locale === 'no' ? 'Fra 14 999 kr' : 'From $1,500');
+
+  // Generate pretty HTML with @react-email/render
+  const htmlCustomer = await render(
+    <OrderConfirmationEmail
+      plan={planLabel}
+      included={null}
+      addons={[]}
+      total={planPrice}
+      locale={locale}
+      project={raw.project}
+    />
+  );
 
   try {
     // Send til sales
@@ -222,8 +232,8 @@ ${raw.project}
       subject: subjectCustomer,
       text:
         locale === 'no'
-          ? `Takk! Vi har mottatt forespørselen din (${planLabel}). Vi svarer så snart vi kan.`
-          : `Thanks! We received your request (${planLabel}). We'll get back to you shortly.`,
+          ? `Takk! Vi har mottatt forespørselen din om ${planLabel}. Vi svarer så snart vi kan.`
+          : `Thanks! We received your request for ${planLabel}. We'll get back to you shortly.`,
       html: htmlCustomer,
     });
 
