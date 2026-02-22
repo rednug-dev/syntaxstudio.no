@@ -5,12 +5,14 @@ import { ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  type CarouselApi,
 } from "@/components/ui/carousel";
 
 export type ProjectCase = {
@@ -88,32 +90,55 @@ function CaseCard({ c, seeLiveLabel }: { c: ProjectCase; seeLiveLabel: string })
 }
 
 export default function ProjectCarousel({ projects, seeLive }: { projects: ProjectCase[]; seeLive: string }) {
+  const [api, setApi] = React.useState<CarouselApi>();
+  const [current, setCurrent] = React.useState(0);
+  const [count, setCount] = React.useState(0);
+
+  React.useEffect(() => {
+    if (!api) return;
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap());
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
+
   return (
-    <Carousel
-      opts={{
-        align: "start",
-        loop: true,
-      }}
-      className="w-full mt-16"
-    >
-      <CarouselContent className="-ml-4">
-        {projects.map((c) => (
-          <CarouselItem key={c.heading} className="pl-4 md:basis-1/2 lg:basis-1/3">
-            <CaseCard c={c} seeLiveLabel={seeLive} />
-          </CarouselItem>
+    <div className="w-full">
+      <Carousel
+        setApi={setApi}
+        opts={{
+          align: "start",
+          loop: true,
+        }}
+        className="w-full mt-16"
+      >
+        <CarouselContent className="-ml-4">
+          {projects.map((c) => (
+            <CarouselItem key={c.heading} className="pl-4 md:basis-1/2 lg:basis-1/3">
+              <CaseCard c={c} seeLiveLabel={seeLive} />
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        {/* Arrows hidden as requested */}
+      </Carousel>
+
+      {/* Pagination Dots / Swipe Indicator */}
+      <div className="flex justify-center gap-2 mt-8">
+        {Array.from({ length: count }).map((_, i) => (
+          <button
+            key={i}
+            className={cn(
+              "h-1.5 transition-all rounded-full",
+              current === i ? "w-8 bg-primary" : "w-2 bg-primary/20"
+            )}
+            onClick={() => api?.scrollTo(i)}
+            aria-label={`Go to slide ${i + 1}`}
+          />
         ))}
-      </CarouselContent>
-      {/* Arrows hidden as requested */}
-      {/* 
-      <div className="hidden md:block">
-        <CarouselPrevious className="-left-12 bg-background/50 hover:bg-background border-border" />
-        <CarouselNext className="-right-12 bg-background/50 hover:bg-background border-border" />
       </div>
-      <div className="flex md:hidden justify-center gap-4 mt-8">
-         <CarouselPrevious className="static translate-y-0" />
-         <CarouselNext className="static translate-y-0" />
-      </div>
-      */}
-    </Carousel>
+    </div>
   );
 }

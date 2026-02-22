@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 
 interface VideoCardProps {
   src: string;
+  poster?: string;
   className?: string;
   videoClassName?: string;
   aspectRatio?: "vertical" | "square" | "video";
@@ -16,6 +17,7 @@ interface VideoCardProps {
 
 export function VideoCard({
   src,
+  poster,
   className,
   videoClassName,
   aspectRatio = "vertical",
@@ -25,10 +27,17 @@ export function VideoCard({
 }: VideoCardProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isHovering, setIsHovering] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const video = videoRef.current;
-    if (!video || alwaysPlay) return;
+    if (!video) return;
+
+    const handleCanPlay = () => {
+      setIsLoading(false);
+    };
+
+    video.addEventListener("canplay", handleCanPlay);
 
     // Mobile: Play when in view
     const observer = new IntersectionObserver(
@@ -49,6 +58,7 @@ export function VideoCard({
     observer.observe(video);
 
     return () => {
+      video.removeEventListener("canplay", handleCanPlay);
       observer.disconnect();
     };
   }, [alwaysPlay]);
@@ -84,16 +94,26 @@ export function VideoCard({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
+      {/* Skeleton Shimmer */}
+      {isLoading && (
+        <div className="absolute inset-0 bg-white/5 animate-pulse flex items-center justify-center">
+           <div className="w-full h-full bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full animate-[shimmer_2s_infinite]" style={{ backgroundSize: '200% 100%' }} />
+        </div>
+      )}
+
       <video
         ref={videoRef}
         src={src}
+        poster={poster}
         loop
         muted
         playsInline
         preload="auto"
         autoPlay={alwaysPlay}
+        onLoadedData={() => setIsLoading(false)}
         className={cn(
           "w-full h-full object-cover transition-transform duration-700 group-hover:scale-105",
+          isLoading ? "opacity-0" : "opacity-100",
           objectPosition === "top" ? "object-top" : 
           objectPosition === "bottom" ? "object-bottom" : "object-center",
           videoClassName
