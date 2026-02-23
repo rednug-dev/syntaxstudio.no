@@ -28,10 +28,29 @@ export function VideoCard({
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isHovering, setIsHovering] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [hasIntersected, setHasIntersected] = useState(false);
 
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
+
+    // If video is already loaded (e.g., from cache), remove loading state immediately
+    if (video.readyState >= 2) {
+      setIsLoading(false);
+    }
+
+    // Observer for lazy loading the video source
+    const loadObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setHasIntersected(true);
+          loadObserver.disconnect();
+        }
+      },
+      { rootMargin: "600px" } // Load when within 600px of viewport
+    );
+
+    loadObserver.observe(video);
 
     const handleCanPlay = () => {
       setIsLoading(false);
@@ -40,7 +59,7 @@ export function VideoCard({
     video.addEventListener("canplay", handleCanPlay);
 
     // Mobile: Play when in view
-    const observer = new IntersectionObserver(
+    const playObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (window.innerWidth < 768) {
@@ -55,11 +74,12 @@ export function VideoCard({
       { threshold: 0.6 }
     );
 
-    observer.observe(video);
+    playObserver.observe(video);
 
     return () => {
       video.removeEventListener("canplay", handleCanPlay);
-      observer.disconnect();
+      loadObserver.disconnect();
+      playObserver.disconnect();
     };
   }, [alwaysPlay]);
 
@@ -103,14 +123,15 @@ export function VideoCard({
 
       <video
         ref={videoRef}
-        src={src}
+        src={alwaysPlay || hasIntersected ? src : undefined}
         poster={poster}
         loop
         muted
         playsInline
-        preload="auto"
+        preload={alwaysPlay ? "auto" : "metadata"}
         autoPlay={alwaysPlay}
         onLoadedData={() => setIsLoading(false)}
+        onCanPlay={() => setIsLoading(false)}
         className={cn(
           "w-full h-full object-cover transition-transform duration-700 group-hover:scale-105",
           isLoading ? "opacity-0" : "opacity-100",

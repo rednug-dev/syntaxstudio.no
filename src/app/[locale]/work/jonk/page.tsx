@@ -128,28 +128,28 @@ export default async function JonkWorkPage() {
 
                 {/* Poster 1 - Square */}
                 <div className="rounded-[2rem] overflow-hidden border border-white/5 shadow-xl group aspect-square">
-                    <img src="/jønk/poster1.png" alt="Product shot 1" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
+                    <img src="/jønk/poster1.jpg" alt="Product shot 1" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
                 </div>
 
                 {/* Pro Photo Vertical - Far right, spanning 2 rows */}
                 <div className="lg:row-span-2 rounded-[2rem] overflow-hidden border border-white/5 shadow-xl group aspect-[9/16] lg:aspect-auto">
-                    <img src="/jønk/prophoto_vertical.png" alt="Main product photo" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
+                    <img src="/jønk/prophoto_vertical.jpg" alt="Main product photo" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
                 </div>
 
                 {/* Poster 2 - Square */}
                 <div className="rounded-[2rem] overflow-hidden border border-white/5 shadow-xl group aspect-square">
-                    <img src="/jønk/poster2.png" alt="Product shot 2" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
+                    <img src="/jønk/poster2.jpg" alt="Product shot 2" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
                 </div>
 
                 {/* Poster 3 - Square */}
                 <div className="rounded-[2rem] overflow-hidden border border-white/5 shadow-xl group aspect-square">
-                    <img src="/jønk/poster3.png" alt="Product shot 3" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
+                    <img src="/jønk/poster3.jpg" alt="Product shot 3" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
                 </div>
 
                 {/* Square Video (Fries) - Square */}
                 <div className="rounded-[2rem] overflow-hidden border border-white/5 bg-black shadow-xl group aspect-square relative">
                     <VideoCard 
-                        src="/jønk/jønkfries_square.mp4" 
+                        src="/jønk/jonkfries_square.mp4" 
                         aspectRatio="square"
                         alwaysPlay
                         className="w-full h-full rounded-none border-none shadow-none"
