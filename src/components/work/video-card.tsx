@@ -144,8 +144,8 @@ export function VideoCard({
       {/* Play indicator for desktop hover - only show if not always playing */}
       {!alwaysPlay && (
         <div className={cn(
-          "absolute inset-0 bg-black/20 flex items-center justify-center transition-opacity duration-300 pointer-events-none",
-          isHovering || (typeof window !== 'undefined' && window.innerWidth < 768) ? "opacity-0" : "opacity-100"
+          "absolute inset-0 bg-black/20 hidden md:flex items-center justify-center transition-opacity duration-300 pointer-events-none",
+          isHovering ? "opacity-0" : "opacity-100"
         )}>
           <div className="h-12 w-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center">
               <Play className="h-5 w-5 text-white fill-white opacity-50" />
