@@ -128,7 +128,7 @@ export default async function JonkWorkPage() {
 
                 {/* Poster 1 - Square */}
                 <div className="rounded-[2rem] overflow-hidden border border-white/5 shadow-xl group aspect-square">
-                    <img src="/jønk/poster1.jpg" alt="Product shot 1" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
+                    <img src="/jønk/p1.5.png" alt="Product shot 1" loading="lazy" className="w-full h-full object-cover object-[center_35%] group-hover:scale-110 transition-transform duration-1000" />
                 </div>
 
                 {/* Pro Photo Vertical - Far right, spanning 2 rows */}
@@ -138,12 +138,12 @@ export default async function JonkWorkPage() {
 
                 {/* Poster 2 - Square */}
                 <div className="rounded-[2rem] overflow-hidden border border-white/5 shadow-xl group aspect-square">
-                    <img src="/jønk/poster2.jpg" alt="Product shot 2" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
+                    <img src="/jønk/p2.1.png" alt="Product shot 2" loading="lazy" className="w-full h-full object-cover object-[center_37%] group-hover:scale-110 transition-transform duration-1000" />
                 </div>
 
                 {/* Poster 3 - Square */}
                 <div className="rounded-[2rem] overflow-hidden border border-white/5 shadow-xl group aspect-square">
-                    <img src="/jønk/poster3.jpg" alt="Product shot 3" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
+                    <img src="/jønk/p3.1.png" alt="Product shot 3" loading="lazy" className="w-full h-full object-cover object-[center_25%] group-hover:scale-110 transition-transform duration-1000" />
                 </div>
 
                 {/* Square Video (Fries) - Square */}
