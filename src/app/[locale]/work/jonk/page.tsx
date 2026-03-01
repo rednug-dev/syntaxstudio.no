@@ -135,7 +135,8 @@ export default async function JonkWorkPage() {
           {/* Photo & Production Gallery */}
           <section className="container mx-auto px-4 py-24">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-                  <div className="lg:col-span-2 rounded-[2rem] bg-primary p-10 flex flex-col justify-center text-primary-foreground border border-white/5 shadow-xl aspect-square md:aspect-auto lg:aspect-[2/1]">
+                  {/* Text Card - Matches height of square images */}
+                  <div className="lg:col-span-2 rounded-[2rem] bg-primary p-10 flex flex-col justify-center text-primary-foreground border border-white/5 shadow-xl aspect-square lg:aspect-auto lg:h-full">
                       <div className="h-12 w-12 rounded-xl bg-white/10 flex items-center justify-center mb-6">
                           <Camera className="h-6 w-6" />
                       </div>
@@ -144,8 +145,8 @@ export default async function JonkWorkPage() {
                           {t("photoDesc")}
                       </p>
                   </div>
-
-                  <div className="rounded-[2rem] overflow-hidden border border-white/5 shadow-xl group aspect-square relative">
+                  {/* Poster 1 - Matches height of text card */}
+                  <div className="rounded-[2rem] overflow-hidden border border-white/5 shadow-xl group aspect-square lg:aspect-auto lg:h-full relative">
                       <Image 
                         src={`${BLOB_BASE}/p1.5.png`} 
                         alt="Product shot 1" 
@@ -201,9 +202,9 @@ export default async function JonkWorkPage() {
 
           {/* Strategy Section */}
           <section className="container mx-auto px-4 pt-12 pb-24">
-            <div className="rounded-[3rem] bg-card/40 border border-white/5 p-12 lg:p-20 shadow-2xl relative overflow-hidden">
-              <div className="absolute top-0 right-0 p-12 opacity-5 pointer-events-none h-64 w-64">
-                  <Image src={`${BLOB_BASE}/jønk.png`} alt="" fill className="object-contain brightness-0 invert" />
+            <div className="rounded-[3rem] bg-card/40 border border-white/5 p-12 pr-16 lg:p-20 lg:pr-32 shadow-2xl relative overflow-hidden">
+              <div className="absolute top-8 right-8 p-8 opacity-5 pointer-events-none h-64 w-64">
+                  <Image src="/logos/jønk.png" alt="" fill className="object-contain brightness-0 invert" />
               </div>
               
               <div className="grid lg:grid-cols-3 gap-16 relative z-10">
