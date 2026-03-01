@@ -16,21 +16,24 @@ export function generateStaticParams() {
 export default async function JonkWorkPage() {
   const t = await getTranslations("About.WorkIntro.projects.jonk.page");
 
+  const BLOB_BASE = "https://iz6e2iomhf0u9x5o.public.blob.vercel-storage.com";
+
+  // Reordered social ads: ad2 (smallest) is now first and preloaded
   const socialAds = [
     { 
-      src: ["https://iz6e2iomhf0u9x5o.public.blob.vercel-storage.com/ad1.webm", "/jønk/ad1_vertical.mp4"], 
-      label: t("socialCampaign1"),
-      preload: false // Changed to false to speed up initial reveal
-    },
-    { 
-      src: ["https://iz6e2iomhf0u9x5o.public.blob.vercel-storage.com/ad2.webm", "/jønk/ad2_vertical.mp4"], 
+      src: [`${BLOB_BASE}/ad2.webm`, "/jønk/ad2_vertical.mp4"], 
       label: t("socialCampaign2"),
-      preload: false 
+      preload: true 
     },
     { 
-      src: ["https://iz6e2iomhf0u9x5o.public.blob.vercel-storage.com/ad3.webm", "/jønk/ad3_vertical.mp4"], 
+      src: [`${BLOB_BASE}/ad1.webm`, "/jønk/ad1_vertical.mp4"], 
+      label: t("socialCampaign1"),
+      preload: true 
+    },
+    { 
+      src: [`${BLOB_BASE}/ad3.webm`, "/jønk/ad3_vertical.mp4"], 
       label: t("socialCampaign3"),
-      preload: false 
+      preload: true 
     },
   ];
 
@@ -84,9 +87,9 @@ export default async function JonkWorkPage() {
                 </div>
               </div>
 
-              {/* Hero Video - Preloaded */}
+              {/* Hero Video - Restored to burgers.webm and preloaded */}
               <VideoCard 
-                  src={["https://iz6e2iomhf0u9x5o.public.blob.vercel-storage.com/burgers.webm", "/jønk/burgers_vertical.mp4"]}
+                  src={[`${BLOB_BASE}/burgers.webm`, "/jønk/burgers_vertical.mp4"]}
                   aspectRatio="vertical"
                   objectPosition="bottom"
                   alwaysPlay
@@ -129,7 +132,7 @@ export default async function JonkWorkPage() {
             </div>
           </section>
 
-          {/* Photo & Production Gallery - Standard Images (No Preload) */}
+          {/* Photo & Production Gallery */}
           <section className="container mx-auto px-4 py-24">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
                   <div className="lg:col-span-2 rounded-[2rem] bg-primary p-10 flex flex-col justify-center text-primary-foreground border border-white/5 shadow-xl aspect-square md:aspect-auto lg:aspect-[2/1]">
@@ -142,10 +145,9 @@ export default async function JonkWorkPage() {
                       </p>
                   </div>
 
-                  {/* Normal Images */}
                   <div className="rounded-[2rem] overflow-hidden border border-white/5 shadow-xl group aspect-square relative">
                       <Image 
-                        src="/jønk/p1.5.png" 
+                        src={`${BLOB_BASE}/p1.5.png`} 
                         alt="Product shot 1" 
                         fill
                         sizes="(max-width: 768px) 100vw, 25vw"
@@ -155,7 +157,7 @@ export default async function JonkWorkPage() {
 
                   <div className="lg:row-span-2 rounded-[2rem] overflow-hidden border border-white/5 shadow-xl group aspect-[9/16] lg:aspect-auto relative">
                       <Image 
-                        src="/jønk/prophoto_vertical.jpg" 
+                        src={`${BLOB_BASE}/prophoto_vertical.jpg`} 
                         alt="Main product photo" 
                         fill
                         sizes="(max-width: 768px) 100vw, 25vw"
@@ -165,7 +167,7 @@ export default async function JonkWorkPage() {
 
                   <div className="rounded-[2rem] overflow-hidden border border-white/5 shadow-xl group aspect-square relative">
                       <Image 
-                        src="/jønk/p2.1.png" 
+                        src={`${BLOB_BASE}/p2.1.png`} 
                         alt="Product shot 2" 
                         fill
                         sizes="(max-width: 768px) 100vw, 25vw"
@@ -175,7 +177,7 @@ export default async function JonkWorkPage() {
 
                   <div className="rounded-[2rem] overflow-hidden border border-white/5 shadow-xl group aspect-square relative">
                       <Image 
-                        src="/jønk/p3.1.png" 
+                        src={`${BLOB_BASE}/p3.1.png`} 
                         alt="Product shot 3" 
                         fill
                         sizes="(max-width: 768px) 100vw, 25vw"
@@ -183,10 +185,10 @@ export default async function JonkWorkPage() {
                       />
                   </div>
 
-                  {/* Square Video (No Preload) */}
+                  {/* Square Video */}
                   <div className="rounded-[2rem] overflow-hidden border border-white/5 bg-black shadow-xl group aspect-square relative">
                       <VideoCard 
-                          src="/jønk/jonkfries_square.mp4" 
+                          src={`${BLOB_BASE}/jonkfries_square.mp4`} 
                           aspectRatio="square"
                           alwaysPlay
                           preload={false}
@@ -201,7 +203,7 @@ export default async function JonkWorkPage() {
           <section className="container mx-auto px-4 pt-12 pb-24">
             <div className="rounded-[3rem] bg-card/40 border border-white/5 p-12 lg:p-20 shadow-2xl relative overflow-hidden">
               <div className="absolute top-0 right-0 p-12 opacity-5 pointer-events-none h-64 w-64">
-                  <Image src="/logos/jønk.png" alt="" fill className="object-contain brightness-0 invert" />
+                  <Image src={`${BLOB_BASE}/jønk.png`} alt="" fill className="object-contain brightness-0 invert" />
               </div>
               
               <div className="grid lg:grid-cols-3 gap-16 relative z-10">

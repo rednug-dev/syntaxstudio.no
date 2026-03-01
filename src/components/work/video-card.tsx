@@ -144,7 +144,7 @@ export function VideoCard({
         loop
         muted
         playsInline
-        preload={alwaysPlay ? "auto" : "metadata"}
+        preload={(alwaysPlay || preload) ? "auto" : "metadata"}
         autoPlay={alwaysPlay}
         onLoadedData={() => setIsLoading(false)}
         onCanPlay={() => setIsLoading(false)}
@@ -156,7 +156,7 @@ export function VideoCard({
           videoClassName
         )}
       >
-        {(alwaysPlay || hasIntersected) && sources.map((source) => (
+        {(alwaysPlay || hasIntersected || preload) && sources.map((source) => (
           <source 
             key={source} 
             src={source} 
