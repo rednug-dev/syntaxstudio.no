@@ -33,23 +33,20 @@ export function VideoCard({
   const { registerAsset, markAssetLoaded } = usePreloader();
 
   useEffect(() => {
-    if (alwaysPlay) {
-      const assetId = Array.isArray(src) ? src[0] : src;
-      registerAsset(assetId);
-    }
-  }, [alwaysPlay, src, registerAsset]);
+    const assetId = Array.isArray(src) ? src[0] : src;
+    registerAsset(assetId);
+  }, [src, registerAsset]);
 
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
 
+    const assetId = Array.isArray(src) ? src[0] : src;
+
     // If video is already loaded (e.g., from cache), remove loading state immediately
     if (video.readyState >= 2) {
       setIsLoading(false);
-      if (alwaysPlay) {
-        const assetId = Array.isArray(src) ? src[0] : src;
-        markAssetLoaded(assetId);
-      }
+      markAssetLoaded(assetId);
     }
 
     // Observer for lazy loading the video source
@@ -67,10 +64,7 @@ export function VideoCard({
 
     const handleCanPlay = () => {
       setIsLoading(false);
-      if (alwaysPlay) {
-        const assetId = Array.isArray(src) ? src[0] : src;
-        markAssetLoaded(assetId);
-      }
+      markAssetLoaded(assetId);
     };
 
     video.addEventListener("canplay", handleCanPlay);

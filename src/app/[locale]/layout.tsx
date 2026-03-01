@@ -55,13 +55,11 @@ export default async function RootLayout({
       </head>
       <body className={cn('font-body antialiased', inter.variable, spaceGrotesk.variable)}>
         <NextIntlClientProvider messages={messages} locale={locale}>
-          <PreloaderProvider>
-            {children}
-            <Toaster />
-            <FloatingLocaleSwitch />
-            <Analytics />
-            <SpeedInsights />
-          </PreloaderProvider>
+          {children}
+          <Toaster />
+          <FloatingLocaleSwitch />
+          <Analytics />
+          <SpeedInsights />
         </NextIntlClientProvider>
       </body>
     </html>

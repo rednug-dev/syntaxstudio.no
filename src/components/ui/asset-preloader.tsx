@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useContext, useState, useEffect, useCallback } from "react";
+import React, { createContext, useContext, useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
@@ -17,7 +17,12 @@ const PreloaderContext = createContext<PreloaderContextType | undefined>(undefin
 export function usePreloader() {
   const context = useContext(PreloaderContext);
   if (!context) {
-    throw new Error("usePreloader must be used within a PreloaderProvider");
+    return {
+      registerAsset: () => {},
+      markAssetLoaded: () => {},
+      isLoading: false,
+      progress: 100
+    };
   }
   return context;
 }
@@ -25,45 +30,84 @@ export function usePreloader() {
 export function PreloaderProvider({ children }: { children: React.ReactNode }) {
   const [assets, setAssets] = useState<Record<string, boolean>>({});
   const [isLoading, setIsLoading] = useState(true);
-  const [isDoneAnimating, setIsDoneAnimating] = useState(false);
-  const t = useTranslations("Preloader");
+  const [isExiting, setIsExiting] = useState(false);
+  const [displayedProgress, setDisplayedProgress] = useState(0);
+  const registrationStarted = useRef(false);
+  const forceFinish = useRef(false);
+
+  // Safely get translations
+  let t;
+  try {
+    t = useTranslations("Preloader");
+  } catch (e) {
+    t = (key: string) => key === "title" ? "Loading..." : "";
+  }
 
   const registerAsset = useCallback((id: string) => {
-    setAssets((prev) => ({ ...prev, [id]: false }));
-    setIsLoading(true);
+    registrationStarted.current = true;
+    setAssets((prev) => {
+      if (prev[id] !== undefined) return prev;
+      return { ...prev, [id]: false };
+    });
   }, []);
 
   const markAssetLoaded = useCallback((id: string) => {
-    setAssets((prev) => ({ ...prev, [id]: true }));
+    setAssets((prev) => {
+      if (prev[id] === true) return prev;
+      return { ...prev, [id]: true };
+    });
   }, []);
 
   const totalAssets = Object.keys(assets).length;
   const loadedAssets = Object.values(assets).filter(Boolean).length;
-  const progress = totalAssets === 0 ? 0 : (loadedAssets / totalAssets) * 100;
+  
+  // Real progress: weighted slightly so it doesn't jump too much
+  const realProgress = totalAssets === 0 ? (registrationStarted.current ? 0 : 100) : (loadedAssets / totalAssets) * 100;
 
+  // Animation Loop
   useEffect(() => {
-    if (totalAssets > 0 && loadedAssets === totalAssets) {
-      // Small delay to show 100% before disappearing
-      const timer = setTimeout(() => {
-        setIsLoading(false);
-      }, 500);
-      return () => clearTimeout(timer);
-    }
-  }, [loadedAssets, totalAssets]);
+    const interval = setInterval(() => {
+      setDisplayedProgress((prev) => {
+        // If we are forcing a finish (timeout or success)
+        if (forceFinish.current || (registrationStarted.current && totalAssets > 0 && loadedAssets === totalAssets)) {
+          if (prev >= 100) {
+            clearInterval(interval);
+            setTimeout(() => setIsLoading(false), 400);
+            return 100;
+          }
+          return Math.min(100, prev + 2);
+        }
 
-  // If no assets are registered within 2 seconds, assume ready
+        let increment = 0;
+        if (prev < realProgress) {
+          // If we're behind reality, move faster but still smooth
+          increment = (realProgress - prev) * 0.05 + 0.1;
+        } else {
+          // Constant creep: gets slower as it goes higher
+          // This keeps the bar moving even if assets are slow
+          const remaining = 100 - prev;
+          increment = Math.max(0.01, remaining * 0.005);
+        }
+        
+        const next = prev + increment;
+        return next >= 99.9 ? 99.9 : next;
+      });
+    }, 30);
+
+    return () => clearInterval(interval);
+  }, [realProgress, totalAssets, loadedAssets]);
+
+  // Emergency timeout: 30 seconds for 4K content
   useEffect(() => {
     const timer = setTimeout(() => {
-      if (Object.keys(assets).length === 0) {
-        setIsLoading(false);
-      }
-    }, 2000);
+      forceFinish.current = true;
+    }, 30000);
     return () => clearTimeout(timer);
-  }, [assets]);
+  }, []);
 
   return (
-    <PreloaderContext.Provider value={{ registerAsset, markAssetLoaded, isLoading, progress }}>
-      <AnimatePresence onExitComplete={() => setIsDoneAnimating(true)}>
+    <PreloaderContext.Provider value={{ registerAsset, markAssetLoaded, isLoading, progress: displayedProgress }}>
+      <AnimatePresence>
         {isLoading && (
           <motion.div
             initial={{ opacity: 1 }}
@@ -87,14 +131,13 @@ export function PreloaderProvider({ children }: { children: React.ReactNode }) {
                 
                 <div className="flex justify-between text-[10px] font-bold uppercase tracking-[0.3em] text-white/40 mb-2">
                   <span>{t("title")}</span>
-                  <span>{Math.round(progress)}%</span>
+                  <span>{Math.round(displayedProgress)}%</span>
                 </div>
                 
                 <div className="relative h-[2px] w-full bg-white/5 overflow-hidden rounded-full">
                   <motion.div
-                    initial={{ width: 0 }}
-                    animate={{ width: `${progress}%` }}
-                    transition={{ type: "spring", stiffness: 50, damping: 20 }}
+                    animate={{ width: `${displayedProgress}%` }}
+                    transition={{ type: "tween", ease: "linear", duration: 0.03 }}
                     className="absolute top-0 left-0 h-full bg-primary shadow-[0_0_15px_rgba(var(--primary),0.5)]"
                   />
                 </div>
