@@ -111,7 +111,7 @@ export default async function WorkIntroSection(props: WorkIntroProps) {
   const seeLive = t("seeLive");
 
   // Prosjektene
-  const projOrder = ["riseup", "renovera", "jonk"] as const;
+  const projOrder = ["jonk", "riseup", "renovera"] as const;
   const projectsIntl = projOrder.map<ProjectCase>((key) => {
     const heading = t(`projects.${key}.heading`) || "";
     const rawParagraphs = t.raw(`projects.${key}.paragraphs`);

@@ -116,8 +116,17 @@ export default function ProjectCarousel({ projects, seeLive }: { projects: Proje
         className="w-full mt-16"
       >
         <CarouselContent className="-ml-4">
-          {projects.map((c) => (
-            <CarouselItem key={c.heading} className="pl-4 md:basis-1/2 lg:basis-1/3">
+          {projects.map((c, index) => (
+            <CarouselItem 
+              key={c.heading} 
+              className={cn(
+                "pl-4 md:basis-1/2 lg:basis-1/3",
+                // On desktop (lg), place the first item (index 0) in the middle (order-2)
+                // The second item (index 1) goes first (order-1)
+                // The third item (index 2) stays last (order-3)
+                index === 0 ? "lg:order-2" : index === 1 ? "lg:order-1" : "lg:order-3"
+              )}
+            >
               <CaseCard c={c} seeLiveLabel={seeLive} />
             </CarouselItem>
           ))}
