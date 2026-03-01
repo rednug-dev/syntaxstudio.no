@@ -6,6 +6,10 @@
     "cta": "See the offer",
     "dismiss": "Close"
   },
+  "Preloader": {
+    "title": "Loading...",
+    "subtitle": "Optimizing high quality assets"
+  },
   "Nav": {
     "showcase": "Work",
     "about": "About",

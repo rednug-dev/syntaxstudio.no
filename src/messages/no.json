@@ -6,6 +6,10 @@
     "cta": "Se tilbudet",
     "dismiss": "Lukk"
   },
+  "Preloader": {
+    "title": "Laster...",
+    "subtitle": "Optimaliserer innhold"
+  },
   "Nav": {
     "showcase": "Arbeid",
     "about": "Om oss",

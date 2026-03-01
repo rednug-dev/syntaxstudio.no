@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Play } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { usePreloader } from "@/components/ui/asset-preloader";
 
 interface VideoCardProps {
   src: string | string[];
@@ -29,6 +30,14 @@ export function VideoCard({
   const [isHovering, setIsHovering] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [hasIntersected, setHasIntersected] = useState(false);
+  const { registerAsset, markAssetLoaded } = usePreloader();
+
+  useEffect(() => {
+    if (alwaysPlay) {
+      const assetId = Array.isArray(src) ? src[0] : src;
+      registerAsset(assetId);
+    }
+  }, [alwaysPlay, src, registerAsset]);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -37,6 +46,10 @@ export function VideoCard({
     // If video is already loaded (e.g., from cache), remove loading state immediately
     if (video.readyState >= 2) {
       setIsLoading(false);
+      if (alwaysPlay) {
+        const assetId = Array.isArray(src) ? src[0] : src;
+        markAssetLoaded(assetId);
+      }
     }
 
     // Observer for lazy loading the video source
@@ -54,6 +67,10 @@ export function VideoCard({
 
     const handleCanPlay = () => {
       setIsLoading(false);
+      if (alwaysPlay) {
+        const assetId = Array.isArray(src) ? src[0] : src;
+        markAssetLoaded(assetId);
+      }
     };
 
     video.addEventListener("canplay", handleCanPlay);
@@ -81,7 +98,7 @@ export function VideoCard({
       loadObserver.disconnect();
       playObserver.disconnect();
     };
-  }, [alwaysPlay]);
+  }, [alwaysPlay, src, markAssetLoaded]);
 
   // Desktop: Play on hover
   const handleMouseEnter = () => {

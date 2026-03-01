@@ -6,6 +6,7 @@ import {cn} from '@/lib/utils';
 import FloatingLocaleSwitch from '@/components/floating-locale-switch';
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
+import { PreloaderProvider } from '@/components/ui/asset-preloader';
 import 'flag-icons/css/flag-icons.min.css';
 
 import {NextIntlClientProvider} from 'next-intl';
@@ -54,11 +55,13 @@ export default async function RootLayout({
       </head>
       <body className={cn('font-body antialiased', inter.variable, spaceGrotesk.variable)}>
         <NextIntlClientProvider messages={messages} locale={locale}>
-          {children}
-          <Toaster />
-          <FloatingLocaleSwitch />
-          <Analytics />
-          <SpeedInsights />
+          <PreloaderProvider>
+            {children}
+            <Toaster />
+            <FloatingLocaleSwitch />
+            <Analytics />
+            <SpeedInsights />
+          </PreloaderProvider>
         </NextIntlClientProvider>
       </body>
     </html>
