@@ -7,7 +7,6 @@ import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { VideoCard } from "@/components/work/video-card";
 import { PreloaderProvider } from "@/components/ui/asset-preloader";
-import { PreloadableImage } from "@/components/ui/preloadable-image";
 import Image from "next/image";
 
 export function generateStaticParams() {
@@ -18,9 +17,21 @@ export default async function JonkWorkPage() {
   const t = await getTranslations("About.WorkIntro.projects.jonk.page");
 
   const socialAds = [
-    { src: ["https://iz6e2iomhf0u9x5o.public.blob.vercel-storage.com/ad1.webm", "/jønk/ad1_vertical.mp4"], label: t("socialCampaign1") },
-    { src: ["https://iz6e2iomhf0u9x5o.public.blob.vercel-storage.com/ad2.webm", "/jønk/ad2_vertical.mp4"], label: t("socialCampaign2") },
-    { src: ["https://iz6e2iomhf0u9x5o.public.blob.vercel-storage.com/ad3.webm", "/jønk/ad3_vertical.mp4"], label: t("socialCampaign3") },
+    { 
+      src: ["https://iz6e2iomhf0u9x5o.public.blob.vercel-storage.com/ad1.webm", "/jønk/ad1_vertical.mp4"], 
+      label: t("socialCampaign1"),
+      preload: false // Changed to false to speed up initial reveal
+    },
+    { 
+      src: ["https://iz6e2iomhf0u9x5o.public.blob.vercel-storage.com/ad2.webm", "/jønk/ad2_vertical.mp4"], 
+      label: t("socialCampaign2"),
+      preload: false 
+    },
+    { 
+      src: ["https://iz6e2iomhf0u9x5o.public.blob.vercel-storage.com/ad3.webm", "/jønk/ad3_vertical.mp4"], 
+      label: t("socialCampaign3"),
+      preload: false 
+    },
   ];
 
   return (
@@ -73,12 +84,13 @@ export default async function JonkWorkPage() {
                 </div>
               </div>
 
-              {/* Hero Video - Always playing, no hover required */}
+              {/* Hero Video - Preloaded */}
               <VideoCard 
                   src={["https://iz6e2iomhf0u9x5o.public.blob.vercel-storage.com/burgers.webm", "/jønk/burgers_vertical.mp4"]}
                   aspectRatio="vertical"
                   objectPosition="bottom"
                   alwaysPlay
+                  preload={true}
                   className="aspect-[4/5] lg:aspect-square"
                   overlay={
                       <div className="absolute bottom-10 left-10">
@@ -110,16 +122,16 @@ export default async function JonkWorkPage() {
                           key={idx}
                           src={ad.src}
                           aspectRatio="vertical"
+                          preload={ad.preload}
                       />
                   ))}
               </div>
             </div>
           </section>
 
-          {/* Photo & Production Gallery - Optimized Grid Layout */}
+          {/* Photo & Production Gallery - Standard Images (No Preload) */}
           <section className="container mx-auto px-4 py-24">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-                  {/* Text Card - Double width, single height */}
                   <div className="lg:col-span-2 rounded-[2rem] bg-primary p-10 flex flex-col justify-center text-primary-foreground border border-white/5 shadow-xl aspect-square md:aspect-auto lg:aspect-[2/1]">
                       <div className="h-12 w-12 rounded-xl bg-white/10 flex items-center justify-center mb-6">
                           <Camera className="h-6 w-6" />
@@ -130,9 +142,9 @@ export default async function JonkWorkPage() {
                       </p>
                   </div>
 
-                  {/* Poster 1 - Square */}
+                  {/* Normal Images */}
                   <div className="rounded-[2rem] overflow-hidden border border-white/5 shadow-xl group aspect-square relative">
-                      <PreloadableImage 
+                      <Image 
                         src="/jønk/p1.5.png" 
                         alt="Product shot 1" 
                         fill
@@ -141,9 +153,8 @@ export default async function JonkWorkPage() {
                       />
                   </div>
 
-                  {/* Pro Photo Vertical - Far right, spanning 2 rows */}
                   <div className="lg:row-span-2 rounded-[2rem] overflow-hidden border border-white/5 shadow-xl group aspect-[9/16] lg:aspect-auto relative">
-                      <PreloadableImage 
+                      <Image 
                         src="/jønk/prophoto_vertical.jpg" 
                         alt="Main product photo" 
                         fill
@@ -152,9 +163,8 @@ export default async function JonkWorkPage() {
                       />
                   </div>
 
-                  {/* Poster 2 - Square */}
                   <div className="rounded-[2rem] overflow-hidden border border-white/5 shadow-xl group aspect-square relative">
-                      <PreloadableImage 
+                      <Image 
                         src="/jønk/p2.1.png" 
                         alt="Product shot 2" 
                         fill
@@ -163,9 +173,8 @@ export default async function JonkWorkPage() {
                       />
                   </div>
 
-                  {/* Poster 3 - Square */}
                   <div className="rounded-[2rem] overflow-hidden border border-white/5 shadow-xl group aspect-square relative">
-                      <PreloadableImage 
+                      <Image 
                         src="/jønk/p3.1.png" 
                         alt="Product shot 3" 
                         fill
@@ -174,12 +183,13 @@ export default async function JonkWorkPage() {
                       />
                   </div>
 
-                  {/* Square Video (Fries) - Square */}
+                  {/* Square Video (No Preload) */}
                   <div className="rounded-[2rem] overflow-hidden border border-white/5 bg-black shadow-xl group aspect-square relative">
                       <VideoCard 
                           src="/jønk/jonkfries_square.mp4" 
                           aspectRatio="square"
                           alwaysPlay
+                          preload={false}
                           className="w-full h-full rounded-none border-none shadow-none"
                           videoClassName="object-cover"
                       />

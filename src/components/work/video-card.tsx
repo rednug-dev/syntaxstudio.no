@@ -14,6 +14,7 @@ interface VideoCardProps {
   objectPosition?: string;
   overlay?: React.ReactNode;
   alwaysPlay?: boolean;
+  preload?: boolean;
 }
 
 export function VideoCard({
@@ -25,6 +26,7 @@ export function VideoCard({
   objectPosition = "center",
   overlay,
   alwaysPlay = false,
+  preload = false,
 }: VideoCardProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isHovering, setIsHovering] = useState(false);
@@ -33,9 +35,11 @@ export function VideoCard({
   const { registerAsset, markAssetLoaded } = usePreloader();
 
   useEffect(() => {
-    const assetId = Array.isArray(src) ? src[0] : src;
-    registerAsset(assetId);
-  }, [src, registerAsset]);
+    if (preload) {
+      const assetId = Array.isArray(src) ? src[0] : src;
+      registerAsset(assetId);
+    }
+  }, [src, registerAsset, preload]);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -46,7 +50,7 @@ export function VideoCard({
     // If video is already loaded (e.g., from cache), remove loading state immediately
     if (video.readyState >= 2) {
       setIsLoading(false);
-      markAssetLoaded(assetId);
+      if (preload) markAssetLoaded(assetId);
     }
 
     // Observer for lazy loading the video source
@@ -64,7 +68,7 @@ export function VideoCard({
 
     const handleCanPlay = () => {
       setIsLoading(false);
-      markAssetLoaded(assetId);
+      if (preload) markAssetLoaded(assetId);
     };
 
     video.addEventListener("canplay", handleCanPlay);
