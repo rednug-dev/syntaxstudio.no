@@ -1,11 +1,4 @@
 {
-  "PromoBanner": {
-    "headline": "Website for your business?",
-    "originalPrice": "$1000",
-    "salePrice": "from $100",
-    "cta": "See the offer",
-    "dismiss": "Close"
-  },
   "Preloader": {
     "title": "Loading...",
     "subtitle": "Optimizing high quality assets"

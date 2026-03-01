@@ -1,11 +1,4 @@
 {
-  "PromoBanner": {
-    "headline": "Nettside til bedriften din?",
-    "originalPrice": "9 999 kr",
-    "salePrice": "fra 999 kr",
-    "cta": "Se tilbudet",
-    "dismiss": "Lukk"
-  },
   "Preloader": {
     "title": "Laster...",
     "subtitle": "Optimaliserer innhold"
