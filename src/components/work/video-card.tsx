@@ -5,7 +5,7 @@ import { Play } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface VideoCardProps {
-  src: string;
+  src: string | string[];
   poster?: string;
   className?: string;
   videoClassName?: string;
@@ -104,6 +104,8 @@ export function VideoCard({
     video: "aspect-video",
   }[aspectRatio];
 
+  const sources = Array.isArray(src) ? src : [src];
+
   return (
     <div
       className={cn(
@@ -123,7 +125,6 @@ export function VideoCard({
 
       <video
         ref={videoRef}
-        src={alwaysPlay || hasIntersected ? src : undefined}
         poster={poster}
         loop
         muted
@@ -139,7 +140,15 @@ export function VideoCard({
           objectPosition === "bottom" ? "object-bottom" : "object-center",
           videoClassName
         )}
-      />
+      >
+        {(alwaysPlay || hasIntersected) && sources.map((source) => (
+          <source 
+            key={source} 
+            src={source} 
+            type={source.endsWith('.webm') ? 'video/webm' : 'video/mp4'} 
+          />
+        ))}
+      </video>
       
       {/* Play indicator for desktop hover - only show if not always playing */}
       {!alwaysPlay && (

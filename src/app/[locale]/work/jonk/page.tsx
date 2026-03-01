@@ -15,9 +15,9 @@ export default async function JonkWorkPage() {
   const t = await getTranslations("About.WorkIntro.projects.jonk.page");
 
   const socialAds = [
-    { src: "/jønk/ad1_vertical.mp4", label: t("socialCampaign1") },
-    { src: "/jønk/ad2_vertical.mp4", label: t("socialCampaign2") },
-    { src: "/jønk/ad3_vertical.mp4", label: t("socialCampaign3") },
+    { src: ["/jønk/ad1.webm", "/jønk/ad1_vertical.mp4"], label: t("socialCampaign1") },
+    { src: ["/jønk/ad2.webm", "/jønk/ad2_vertical.mp4"], label: t("socialCampaign2") },
+    { src: ["/jønk/ad3.webm", "/jønk/ad3_vertical.mp4"], label: t("socialCampaign3") },
   ];
 
   return (
@@ -71,7 +71,7 @@ export default async function JonkWorkPage() {
 
             {/* Hero Video - Always playing, no hover required */}
             <VideoCard 
-                src="/jønk/burgers_vertical.mp4"
+                src={["/jønk/burgers.webm", "/jønk/burgers_vertical.mp4"]}
                 aspectRatio="vertical"
                 objectPosition="bottom"
                 alwaysPlay
