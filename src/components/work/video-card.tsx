@@ -131,6 +131,13 @@ export function VideoCard({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
+      {/* Skeleton Shimmer — visible until video is ready */}
+      {isLoading && (
+        <div className="absolute inset-0 bg-white/5 animate-pulse flex items-center justify-center">
+           <div className="w-full h-full bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full animate-[shimmer_2s_infinite]" style={{ backgroundSize: '200% 100%' }} />
+        </div>
+      )}
+
       <video
         ref={videoRef}
         poster={poster}

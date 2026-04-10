@@ -59,7 +59,7 @@ export default function FeaturedWorkSection() {
           <Link href="/work/jonk" className="block h-full">
             <VideoCard
               src="/webmat/oskarburger.mp4"
-              poster="/webmat/bak1.webp"
+              poster="/webmat/oskarburger-poster.webp"
               aspectRatio="vertical"
               objectPosition="center"
               className="w-full h-full !rounded-[2rem]"
@@ -153,7 +153,7 @@ export default function FeaturedWorkSection() {
           <Link href="/work/jonk">
             <VideoCard
               src="/webmat/oskarburger.mp4"
-              poster="/webmat/bak1.webp"
+              poster="/webmat/oskarburger-poster.webp"
               aspectRatio="vertical"
               objectPosition="center"
               className="w-full !rounded-2xl"
