@@ -131,13 +131,6 @@ export function VideoCard({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {/* Skeleton Shimmer */}
-      {isLoading && (
-        <div className="absolute inset-0 bg-white/5 animate-pulse flex items-center justify-center">
-           <div className="w-full h-full bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full animate-[shimmer_2s_infinite]" style={{ backgroundSize: '200% 100%' }} />
-        </div>
-      )}
-
       <video
         ref={videoRef}
         poster={poster}
@@ -150,7 +143,6 @@ export function VideoCard({
         onCanPlay={() => setIsLoading(false)}
         className={cn(
           "w-full h-full object-cover transition-transform duration-700 group-hover:scale-105",
-          isLoading ? "opacity-0" : "opacity-100",
           objectPosition === "top" ? "object-top" : 
           objectPosition === "bottom" ? "object-bottom" : "object-center",
           videoClassName
