@@ -1,26 +1,28 @@
 "use client";
 
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
 
-const BLOB_BASE = "https://iz6e2iomhf0u9x5o.public.blob.vercel-storage.com";
-
 export default function HeroVideoSection() {
   const t = useTranslations("Hero");
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [videoReady, setVideoReady] = useState(false);
 
   return (
-    <section className="relative min-h-dvh flex items-end justify-center overflow-hidden">
+    <section className="relative min-h-dvh flex items-end justify-center overflow-hidden bg-background">
       {/* Background Video */}
       <video
+        ref={videoRef}
         autoPlay
         muted
         loop
         playsInline
         preload="auto"
-        poster="/jønk/poster1.jpg"
-        className="absolute inset-0 h-full w-full object-cover object-[center_80%]"
+        onCanPlay={() => setVideoReady(true)}
+        className={`absolute inset-0 h-full w-full object-cover object-[center_80%] transition-opacity duration-700 ${videoReady ? "opacity-100" : "opacity-0"}`}
       >
         <source src="/jønk/burgers_vertical.mp4" type="video/mp4" />
       </video>
