@@ -62,6 +62,7 @@ export default function FeaturedWorkSection() {
               poster="/webmat/oskarburger-poster.webp"
               aspectRatio="vertical"
               objectPosition="center"
+              alwaysPlay
               className="w-full h-full !rounded-[2rem]"
             />
           </Link>
@@ -74,6 +75,7 @@ export default function FeaturedWorkSection() {
               src="/jønk/jonkfries_square.mp4"
               aspectRatio="square"
               objectPosition="center"
+              alwaysPlay
               className="w-full h-full !rounded-[2rem] !border-none !shadow-none"
             />
           </Link>
