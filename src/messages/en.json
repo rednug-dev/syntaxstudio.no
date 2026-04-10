@@ -7,49 +7,52 @@
     "showcase": "Work",
     "about": "About",
     "pricing": "Pricing",
-    "contact": "Contact"
+    "contact": "Contact us",
+    "bookCall": "Book a meeting",
+    "sendEmail": "Send email"
   },
   "Hero": {
-    "title": "We take full responsibility for your digital growth",
-    "subtitle": "From strategy, Google Ads, and professional video production to hand-coded websites – we deliver everything you need to win more customers.",
-    "primaryCta": "Get started",
-    "secondaryCta": "See what we do"
+    "title": "Websites, video and ads that deliver results",
+    "subtitle": "We're the marketing partner that handles everything from strategy and campaigns to video production and websites, so you can focus on what you do best.",
+    "primaryCta": "Book a free intro call",
+    "secondaryCta": "See what we do",
+    "scrollCta": "See our work"
   },
   "Services": {
-    "title": "What we help you with",
-    "subtitle": "We build websites and ads that bring you more customers.",
-    "cta": "Get started",
+    "title": "Everything you need, one place",
+    "subtitle": "Strategy, production and technology. All from one partner.",
+    "cta": "Book a call",
     "badges": { "new": "New" },
     "features": {
       "ai": {
-        "title": "Marketing & Ad Campaigns",
-        "desc": "Targeted campaigns on Google, Meta, and LinkedIn. We take full responsibility for your digital growth and leads."
+        "title": "Marketing & Campaigns",
+        "desc": "Targeted campaigns on Google, Meta and LinkedIn that bring you more customers and visibility."
       },
       "fast": {
         "title": "Video & Production",
-        "desc": "Professional video production, 2D animation, and social reels that capture attention and build trust."
+        "desc": "Commercials, reels and animations that capture attention and build trust."
       },
       "security": {
-        "title": "High-End Photography",
-        "desc": "Professional product and corporate photography that elevates your brand to a new level."
+        "title": "Photography",
+        "desc": "Product and corporate photography that makes your brand look professional."
       },
       "scale": {
-        "title": "Websites & Funnels",
-        "desc": "Hand-coded websites and converting sales funnels built for maximum ROI and performance."
+        "title": "Websites & Landing Pages",
+        "desc": "Websites and landing pages built to turn visitors into customers."
       },
       "cloud": {
-        "title": "Graphic Design & Assets",
-        "desc": "Design of everything from motion graphics in AE and Photoshop to print materials in InDesign."
+        "title": "Graphic Design",
+        "desc": "Logos, promo materials, animations and print that strengthen your brand."
       },
       "dev": {
-        "title": "Full-Service Partner",
-        "desc": "We act as your outsourced marketing department, tailoring every delivery to your specific goals."
+        "title": "Everything under one roof",
+        "desc": "One partner for everything. We tailor deliveries to your goals, without you having to coordinate anyone else."
       }
     }
   },
   "Proposal": {
-    "title": "Let’s work together!",
-    "subtitle": "Tell us briefly about your project and we’ll get back with a proposal.",
+    "title": "Tell us about your project",
+    "subtitle": "Describe what you need and we’ll get in touch.",
     "name": "Name",
     "namePh": "Your name",
     "email": "Email",
@@ -62,52 +65,51 @@
     "errorTitle": "Error"
   },
   "Footer": {
-    "tagline": "Websites and ads that win you more customers",
+    "tagline": "Your marketing partner for websites, video and ads",
     "links": "Links",
     "examples": "Examples",
     "about": "About",
-    "pricing": "Pricing",
     "contact": "Contact",
     "question": "Got a question?"
   },
   "About": {
-    "missionTitle": "Your Outsourced Marketing Department",
-    "missionP1": "Syntax Studio takes full responsibility for your digital growth. We go beyond websites – delivering everything from Google Ads and targeted campaigns to professional video production, 2D animation, and high-end photography.",
-    "missionP2": "We combine technical precision with creative content. Whether it's After Effects animations, Photoshop design, or hand-coded web apps, we ensure your brand stands out and converts.",
+    "missionTitle": "Your marketing partner",
+    "missionP1": "Syntax Studio is the partner that handles the full picture. From campaigns and video production to websites and design. You get one team that understands your goal and delivers everything needed to reach it.",
+    "missionP2": "We combine creative content with technical expertise. The result is brands that stand out and solutions that actually convert.",
     "metrics": {
-      "lighthouseValue": "90+",
-      "lighthouseSubtitle": "Average Lighthouse scores (Performance/SEO/Best Practices)",
-      "responseValue": "Under 24h",
-      "responseSubtitle": "Typical response time on weekdays",
-      "timeToLiveValue": "1–2 weeks",
-      "timeToLiveSubtitle": "From kickoff to first live version for a standard site"
+      "lighthouseValue": "Under 24h",
+      "lighthouseSubtitle": "Typical response time on weekdays. We're available when you need us.",
+      "responseValue": "1–2 weeks",
+      "responseSubtitle": "From kickoff to first delivery for a standard project",
+      "timeToLiveValue": "100%",
+      "timeToLiveSubtitle": "Custom-built. No templates, everything made from scratch for you."
     },
-    "valuesTitle": "Our values",
-    "valuesSubtitle": "How we work at Syntax Studio—principles that shape every project.",
+    "valuesTitle": "Why us",
+    "valuesSubtitle": "What you can expect working with Syntax Studio.",
     "principles": {
       "craft": {
-        "title": "Build with craft",
-        "desc": "We hand-code every project for speed, accessibility and maintainability. Clean code, clean UI."
+        "title": "Fast delivery",
+        "desc": "We keep timelines and deliver when we say we will. No surprises, no delays."
       },
       "share": {
-        "title": "Share openly",
-        "desc": "Transparent roadmaps, regular demos and async updates keep everyone aligned."
+        "title": "Close communication",
+        "desc": "You get regular updates and see the work in progress. No black box, full transparency."
       },
       "learn": {
-        "title": "Learn fast",
-        "desc": "Short feedback loops and quick iterations—ship, measure, improve."
+        "title": "Results first",
+        "desc": "Everything we build should give you something back. More customers, more visibility, better conversion."
       },
       "partner": {
-        "title": "Partner mindset",
-        "desc": "We act like an in-house team, aligning design and engineering with your goals."
+        "title": "One point of contact",
+        "desc": "You won't deal with different people. One person who knows your project from A to Z."
       },
       "ownership": {
-        "title": "Ownership",
-        "desc": "We stand by what we ship—reliable releases and clear accountability."
+        "title": "We own the delivery",
+        "desc": "When something doesn't work, we fix it, no extra invoice. We stand behind everything we deliver."
       },
       "simple": {
-        "title": "Keep it simple",
-        "desc": "Clarity over complexity. The simplest solution that solves the real problem wins."
+        "title": "Everything under one roof",
+        "desc": "Website, video, photo, design and marketing. You don't need to coordinate five different agencies."
       }
     },
     "WorkIntro": {
@@ -128,67 +130,17 @@
         "Graphic design (AE, PS, ID)",
         "SEO, analytics & continuous optimization"
       ],
+      "partnersTitle": "Clients we've worked with",
       "projects": {
-        "giroo": {
-          "heading": "Full Responsibility for Giroo's Marketing & Growth",
-          "stack": ["React", "Next.js", "Marketing", "Ad Campaigns", "Video Production"],
-          "flairs": ["Growth Package", "Google Ads", "Custom App"],
+        "jonk": {
+          "heading": "Full Campaign for Jønk",
+          "stack": ["Video Production", "Photography", "Marketing", "Graphic Design"],
+          "flairs": ["4K Ads", "Product Photo", "Social Media"],
           "paragraphs": [
-            "We took over full responsibility for Giroo's digital presence. This included everything from branding and a full Next.js app to targeted Google Ads and professional video production for social media.",
-            "Through a combination of high-performance code, animated explainer videos, and data-driven advertising, we helped Giroo go from idea to a robust platform with a growing user base."
-          ]
-        },
-        "riseup": {
-          "heading": "Logo Redesign for RiseUp",
-          "stack": ["Graphic Design", "Brand Strategy", "Vector Art"],
-          "flairs": ["Logo Redesign", "Visual Identity"],
-          "paragraphs": [
-            "We redesigned RiseUp's logo to give them a modern and professional look that reflects their important work.",
-            "The process involved simplifying elements while preserving the core message, resulting in a more versatile and recognizable brand."
+            "For Jønk, we delivered a complete visual campaign – from cinematic 4K ads to a library of 50+ high-end product photos.",
+            "Everything was designed to capture the raw energy and urban identity that defines the Jønk brand."
           ],
           "page": {
-            "back": "Back to services",
-            "badge": "Design Case",
-            "title": "Modernizing RiseUp",
-            "description": "A logo is the heart of any brand. For RiseUp, it was about taking the step from traditional to something that feels modern and future-proof.",
-            "comparison": "Before & After",
-            "before": "Old Logo",
-            "after": "New Logo",
-            "philosophy": "The Philosophy",
-            "philosophyDesc": "RiseUp is an organization prioritizing youth with a difficult upbringing. We wanted the logo to reflect their mission of lifting and supporting these young individuals. The new design combines strength with warmth, symbolizing growth, inclusion, and new opportunities.",
-            "visualModernization": "Visual Modernization",
-            "visualModernizationDesc": "Cleaner lines and optimized geometry for all scales.",
-            "multiPlatform": "Multi-Platform",
-            "multiPlatformDesc": "Designed to thrive on mobile, print, and large scale banners.",
-            "strategy": "The Strategy",
-            "strategyDesc": "Simplification, better readability, and a modern color palette that works across all platforms.",
-            "deliverables": "Deliverables",
-            "deliverablesDesc": "Complete logo package with variants for web, print, and social media.",
-            "primaryLogo": "Primary Logo",
-            "secondaryWordmark": "Secondary Wordmark",
-            "faviconIconography": "Favicon & Iconography",
-            "typographySelection": "Typography Selection",
-            "colorPalette": "Color Palette"
-          }
-        },
-        "renovera": {
-          "heading": "Complete Digital Presence for Renovera",
-          "stack": ["React", "Next.js", "Video Production", "Photography"],
-          "flairs": ["Web Development", "Video Editing", "Before/After"],
-          "paragraphs": [
-            "We built a modern website for Renovera that focuses on their craftsmanship. This included web development, editing a professional promotional film, and assistance with project documentation.",
-            "Through clear before/after imagery and engaging video content, we've made it easier for potential clients to see the value in their services."
-          ]
-        },
-        "jonk": {
-          "heading": "Professional Content for Jønk",
-          "stack": ["Video Production", "Photography", "Marketing"],
-          "flairs": ["Professional Grade", "Video Series", "Product Photo"],
-          "paragraphs": [
-            "For Jønk, we delivered a comprehensive series of high-end videos and product photos. The goal was to highlight their 'professional grade' products through a visual style that exudes quality.",
-            "Through tailored video production and professional photography, we created a content library that strengthens Jønk's brand across all digital channels."
-          ],
-            "page": {
             "back": "Back to services",
             "badge": "Campaign Delivery",
             "title": "High-Energy Campaign Delivery",
@@ -218,6 +170,67 @@
             "socialCampaign2": "Pure Quality",
             "socialCampaign3": "Jønk Energy",
             "optimizedForReels": "Optimized for Reels"
+          }
+        },
+        "fcr": {
+          "heading": "Fighter Promo for FCR",
+          "stack": ["Video Production", "Editing", "Motion Graphics", "Color Grading"],
+          "flairs": ["MMA", "Promo Video", "Sweden"],
+          "paragraphs": [
+            "We produced an intense promo video for MMA fighter Tamerlan Akhmadov under FCR – Full Contact Rumble, a UFC subsidiary in Sweden.",
+            "The film captures the raw intensity of the sport and was designed to build hype around the fighter and the event."
+          ],
+          "page": {
+            "back": "Back to services",
+            "badge": "Promo Production",
+            "title": "Raw MMA Promo",
+            "description": "FCR (Full Contact Rumble) is a Swedish MMA promotion under the UFC umbrella. We were tasked with creating a promo video for fighter Tamerlan Akhmadov – a film that needed to capture the intensity of the sport and build hype ahead of the fight.",
+            "videoTitle": "The Promo",
+            "videoDesc": "An intensely edited promo blending training sequences, close-ups, and dramatic lighting to build tension.",
+            "strategy": "The Strategy",
+            "strategyDesc": "We focused on conveying the fighter's raw power and dedication. Fast cuts, heavy bass, and dark aesthetics create a sense of intensity that matches the world of MMA.",
+            "work": "The Work",
+            "workItems": [
+              "Fighter promo video",
+              "Professional color grading",
+              "Motion graphics and titles",
+              "Sound design and mixing"
+            ],
+            "deliverables": "Deliverables",
+            "deliverablesDesc": "A finished promo video ready for social media and event marketing, optimized for maximum engagement."
+          }
+        },
+        "snatched": {
+          "heading": "Promo Video for Snatched",
+          "stack": ["Video Production", "3D Modeling", "Infographics", "Motion Graphics"],
+          "flairs": ["3D", "Infographics", "Shapewear"],
+          "paragraphs": [
+            "For Snatched – Norway's fastest-growing shapewear brand – we delivered a promo video featuring custom infographics and 3D modeling.",
+            "The video combines visual storytelling with data-driven elements to communicate the brand's position and success."
+          ],
+          "page": {
+            "back": "Back to services",
+            "badge": "Video & 3D",
+            "title": "Visual Storytelling with 3D",
+            "description": "Snatched is a Norwegian shapewear brand combining shaping, comfort, and modern fit. With NOK 7 million in revenue, 5,000+ Instagram followers, and a 4.3 Trustpilot score, they needed a promo video that visually communicates this success.",
+            "videoTitle": "The Promo",
+            "videoDesc": "A visually striking video combining live-action with 3D-modeled product displays and animated infographics.",
+            "strategy": "The Strategy",
+            "strategyDesc": "We combined 3D product modeling with animated infographics highlighting key metrics – revenue, customer satisfaction, and growth. The result is a video that both informs and captivates.",
+            "work": "The Work",
+            "workItems": [
+              "Promo video with 3D elements",
+              "Custom infographics",
+              "3D product modeling",
+              "Motion graphics and animation"
+            ],
+            "deliverables": "Deliverables",
+            "deliverablesDesc": "A complete promo video with integrated 3D and infographics, ready for use on social media, website, and presentations.",
+            "stats": {
+              "revenue": "NOK 7M+ revenue",
+              "followers": "5,000+ followers",
+              "trustpilot": "4.3 Trustpilot"
+            }
           }
         }
       }
@@ -296,15 +309,15 @@
     },
     "dialogs": {
       "kickstart": {
-        "title": "Custom — Tell us what you need",
+        "title": "Custom: Tell us what you need",
         "desc": "Describe what you're looking for and we'll create a tailored proposal."
       },
       "growth": {
-        "title": "Kickstart — Get started",
+        "title": "Kickstart: Get started",
         "desc": "Tell us about your project and we'll get back with a proposal."
       },
       "scale": {
-        "title": "Business Package — Let's talk",
+        "title": "Business Package: Let's talk",
         "desc": "Tell us about your business and goals, and we'll create a complete solution."
       }
     },
@@ -325,6 +338,20 @@
       },
       "actions": { "submit": "Send request", "sending": "Sending…" }
     }
+  },
+  "FeaturedWork": {
+    "title": "Selected work",
+    "seeProject": "See project",
+    "seeAll": "See all projects"
+  },
+  "Testimonials": {
+    "title": "What our clients say"
+  },
+  "CtaBridge": {
+    "title": "Ready to get started?",
+    "subtitle": "Book a free intro call or send us a message.",
+    "bookCta": "Book a meeting",
+    "messageCta": "Send a message"
   },
   "ServicesPage": {
     "process": {
@@ -359,7 +386,7 @@
         },
         "cost": {
           "q": "What does it cost?",
-          "a": "The price depends on scope. A simple static page starts from $100, while a complete business package with filming starts from $1,500."
+          "a": "The price depends on what you need. We always give you a clear quote after a no-obligation call, no hidden costs."
         },
         "changes": {
           "q": "Can I make changes along the way?",
@@ -370,8 +397,8 @@
           "a": "Absolutely. We offer maintenance agreements and are always available for updates and support."
         },
         "tech": {
-          "q": "What technology do you use?",
-          "a": "We use modern tools like React, Next.js, and Tailwind. Everything is hand-coded for optimal performance."
+          "q": "How do we get started?",
+          "a": "Book a no-obligation call so we can understand your needs. Then you'll receive a clear proposal with pricing, timeline and deliverables."
         }
       }
     }

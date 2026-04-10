@@ -7,51 +7,54 @@
     "showcase": "Arbeid",
     "about": "Om oss",
     "pricing": "Priser",
-    "contact": "Kontakt"
+    "contact": "Kontakt oss",
+    "bookCall": "Book et møte",
+    "sendEmail": "Send e-post"
   },
   "Hero": {
-    "title": "Vi tar det fulle ansvaret for din digitale vekst",
-    "subtitle": "Fra strategi, Google Ads og profesjonell videoproduksjon til håndkodede nettsider – vi leverer alt du trenger for å vinne flere kunder.",
-    "primaryCta": "Kom i gang",
-    "secondaryCta": "Se hva vi gjør"
+    "title": "Nettsider, video og reklame som gir resultater",
+    "subtitle": "Vi er markedsføringspartneren som leverer alt fra strategi og kampanjer til videoproduksjon og nettsider, så du kan fokusere på det du gjør best.",
+    "primaryCta": "Book en uforpliktende prat",
+    "secondaryCta": "Se hva vi gjør",
+    "scrollCta": "Se arbeidet vårt"
   },
   "Services": {
-    "title": "Hva vi hjelper deg med",
-    "subtitle": "Vi lager nettsider og reklame som gir deg flere kunder.",
-    "cta": "Kom i gang",
+    "title": "Alt du trenger, ett sted",
+    "subtitle": "Strategi, produksjon og teknologi. Samlet hos én partner.",
+    "cta": "Book en prat",
     "badges": {
       "new": "Ny"
     },
     "features": {
       "ai": {
         "title": "Markedsføring & kampanjer",
-        "desc": "Målrettede kampanjer på Google, Meta og LinkedIn. Vi tar det fulle ansvaret for din digitale vekst og leads."
+        "desc": "Målrettede kampanjer på Google, Meta og LinkedIn som gir deg flere kunder og mer synlighet."
       },
       "fast": {
         "title": "Film & videoproduksjon",
-        "desc": "Profesjonell videoproduksjon, 2D-animasjon og reels som fanger oppmerksomhet og bygger tillit."
+        "desc": "Reklamefilm, reels og animasjoner som fanger oppmerksomhet og bygger tillit."
       },
       "security": {
         "title": "Foto & visuelt innhold",
-        "desc": "High-end produkt- og bedriftsfotografering som løfter din merkevare til et nytt nivå."
+        "desc": "Produktfoto og bedriftsfotografering som får merkevaren din til å se profesjonell ut."
       },
       "scale": {
         "title": "Nettsider & salgstrakter",
-        "desc": "Håndkodede nettsider og konverterende salgstrakter bygget for maksimalt salg og ROI."
+        "desc": "Nettsider og landingssider bygget for å konvertere besøkende til kunder."
       },
       "cloud": {
         "title": "Grafisk design & materiell",
-        "desc": "Design av alt fra promo-materiell i After Effects og Photoshop til trykksaker i InDesign."
+        "desc": "Logoer, promo-materiell, animasjoner og trykksaker som styrker merkevaren din."
       },
       "dev": {
-        "title": "Alt skreddersydd",
-        "desc": "Vi fungerer som din eksterne markedsavdeling og tilpasser alle leveranser til dine mål."
+        "title": "Alt under ett tak",
+        "desc": "Én partner for alt. Vi tilpasser leveransene til dine mål, uten at du trenger å koordinere noen andre."
       }
     }
   },
   "Proposal": {
-    "title": "La oss jobbe sammen!",
-    "subtitle": "Fortell kort om prosjektet ditt, så kommer vi tilbake med et forslag.",
+    "title": "Fortell oss om prosjektet ditt",
+    "subtitle": "Beskriv kort hva du trenger, så tar vi kontakt.",
     "name": "Navn",
     "namePh": "Ditt navn",
     "email": "E-post",
@@ -64,52 +67,51 @@
     "errorTitle": "Feil"
   },
   "Footer": {
-    "tagline": "Vi lager nettsider og reklame som gir deg flere kunder",
+    "tagline": "Din markedsføringspartner for nettsider, video og reklame",
     "links": "Lenker",
     "examples": "Eksempler",
     "about": "Om oss",
-    "pricing": "Priser",
     "contact": "Kontakt",
     "question": "Har du et spørsmål?"
   },
   "About": {
-    "missionTitle": "Din eksterne markedsavdeling",
-    "missionP1": "Syntax Studio tar det fulle ansvaret for din digitale vekst. Vi går lenger enn bare nettsider – vi leverer alt fra Google Ads og målrettede kampanjer til profesjonell videoproduksjon, 2D-animasjon og high-end foto.",
-    "missionP2": "Vi kombinerer teknisk presisjon med kreativt innhold. Enten det er After Effects-animasjoner, Photoshop-design eller håndkodede web-apper, sørger vi for at merkevaren din skiller seg ut og konverterer.",
+    "missionTitle": "Din markedsføringspartner",
+    "missionP1": "Syntax Studio er partneren som tar seg av hele bildet. Fra kampanjer og videoproduksjon til nettsider og design. Du får ett team som forstår målet ditt og leverer alt som trengs for å nå det.",
+    "missionP2": "Vi kombinerer kreativt innhold med teknisk kompetanse. Resultatet er merkevarer som skiller seg ut og løsninger som faktisk konverterer.",
     "metrics": {
-      "lighthouseValue": "90+",
-      "lighthouseSubtitle": "Snittscore i Lighthouse (Ytelse/SEO/Best Practices)",
-      "responseValue": "Under 24 t",
-      "responseSubtitle": "Typisk svartid på hverdager",
-      "timeToLiveValue": "1–2 uker",
-      "timeToLiveSubtitle": "Fra oppstart til første live-versjon (standard side)"
+      "lighthouseValue": "Under 24 t",
+      "lighthouseSubtitle": "Typisk svartid på hverdager. Vi er tilgjengelige når du trenger oss.",
+      "responseValue": "1–2 uker",
+      "responseSubtitle": "Fra oppstart til første leveranse for et standard prosjekt",
+      "timeToLiveValue": "100%",
+      "timeToLiveSubtitle": "Skreddersydd. Ingen templates, alt bygges fra bunnen av for deg."
     },
-    "valuesTitle": "Våre verdier",
-    "valuesSubtitle": "Slik jobber vi i Syntax Studio—prinsippene som former hvert prosjekt.",
+    "valuesTitle": "Hvorfor oss",
+    "valuesSubtitle": "Det du kan forvente når du jobber med Syntax Studio.",
     "principles": {
       "craft": {
-        "title": "Bygg med håndverk",
-        "desc": "Vi håndkoder for fart, tilgjengelighet og vedlikeholdbarhet. Ren kode, ren UI."
+        "title": "Rask levering",
+        "desc": "Vi holder tidslinjer og leverer når vi sier vi skal. Ingen overraskelser, ingen forsinkelser."
       },
       "share": {
-        "title": "Del åpent",
-        "desc": "Åpne veikart, jevnlige demoer og asynkrone oppdateringer holder alle på linje."
+        "title": "Tett dialog",
+        "desc": "Du får jevnlige oppdateringer og ser arbeidet underveis. Ingen black box, full åpenhet."
       },
       "learn": {
-        "title": "Lær raskt",
-        "desc": "Korte feedback-sløyfer og raske iterasjoner—ship, mål, forbedre."
+        "title": "Resultater først",
+        "desc": "Alt vi lager skal gi deg noe tilbake. Flere kunder, mer synlighet, bedre konvertering."
       },
       "partner": {
-        "title": "Partner-tankesett",
-        "desc": "Vi opptrer som et in-house team, der design og utvikling støtter dine mål."
+        "title": "Én kontaktperson",
+        "desc": "Du slipper å forholde deg til ulike folk. Én person som kjenner prosjektet ditt fra A til Å."
       },
       "ownership": {
-        "title": "Ansvarlighet",
-        "desc": "Vi står for det vi leverer—stabile releaser og tydelig ansvar."
+        "title": "Vi eier leveransen",
+        "desc": "Når noe ikke fungerer fikser vi det, uten ekstra faktura. Vi står bak alt vi leverer."
       },
       "simple": {
-        "title": "Hold det enkelt",
-        "desc": "Klarhet foran kompleksitet. Den enkleste løsningen som løser det egentlige problemet vinner."
+        "title": "Alt under ett tak",
+        "desc": "Nettside, video, foto, design og markedsføring. Du slipper å koordinere fem ulike byråer."
       }
     },
     "WorkIntro": {
@@ -130,67 +132,17 @@
         "Grafisk design (AE, PS, ID)",
         "SEO, analyse & løpende optimalisering"
       ],
+      "partnersTitle": "Kunder vi har jobbet med",
       "projects": {
-        "giroo": {
-          "heading": "Totalansvar for Giroo sin markedsføring & vekst",
-          "stack": ["React", "Next.js", "Marketing", "Ad Campaigns", "Video Production"],
-          "flairs": ["Vekstpakke", "Google Ads", "Custom App"],
+        "jonk": {
+          "heading": "Komplett kampanje for Jønk",
+          "stack": ["Videoproduksjon", "Foto", "Markedsføring", "Grafisk design"],
+          "flairs": ["4K Reklamefilm", "Produktfoto", "Sosiale medier"],
           "paragraphs": [
-            "Vi tok over det fulle ansvaeret for Giroo sin digitale tilstedeværelse. Dette inkluderte alt fra merkevare og en full Next.js-app til målrettede Google Ads og profesjonell videoproduksjon for sosiale medier.",
-            "Gjennom en kombinasjon av høyytelses-kode, animerte forklaringsvideoer og datadrevet annonsering, hjalp vi Giroo med å gå fra idé til en robust plattform med økende brukermasse."
-          ]
-        },
-        "riseup": {
-          "heading": "Logo-redesign for RiseUp",
-          "stack": ["Graphic Design", "Brand Strategy", "Vector Art"],
-          "flairs": ["Logo-redesign", "Visuell Identitet"],
-          "paragraphs": [
-            "Vi redesignet logoen til RiseUp for å gi dem et moderne og profesjonelt uttrykk som reflekterer deres viktige arbeid.",
-            "Prosessen innebar å forenkle elementer samtidig som vi bevarte kjernebudskapet, noe som resulterte i en mer allsidig og gjenkjennelig merkevare."
+            "For Jønk leverte vi en komplett visuell kampanje – fra cinematiske 4K-reklamefilmer til et bibliotek med over 50 high-end produktbilder.",
+            "Alt ble designet for å fange den rå energien og urbane identiteten som definerer Jønk som merkevare."
           ],
           "page": {
-            "back": "Tilbake til tjenester",
-            "badge": "Design-case",
-            "title": "Modernisering av RiseUp",
-            "description": "En logo er hjertet i enhver merkevare. For RiseUp handlet det om å ta steget fra det tradisjonelle til noe som føles moderne og fremtidsrettet.",
-            "comparison": "Før & Etter",
-            "before": "Gammel Logo",
-            "after": "Ny Logo",
-            "philosophy": "Tanker bak logoen",
-            "philosophyDesc": "RiseUp er en organisasjon som prioriterer ungdom med en utfordrende oppvekst. Vi ønsket at logoen skulle gjenspeile deres misjon om å løfte og støtte disse ungdommene. Det nye uttrykket kombinerer styrke med varme, og symboliserer vekst, inkludering og nye muligheter.",
-            "visualModernization": "Visuell modernisering",
-            "visualModernizationDesc": "Renere linjer og optimalisert geometri for alle størrelser.",
-            "multiPlatform": "Multi-plattform",
-            "multiPlatformDesc": "Designet for å fungere like godt på mobil som på store bannere.",
-            "strategy": "Strategien",
-            "strategyDesc": "Forenkling, bedre lesbarhet og et moderne fargevalg som fungerer på alle flater.",
-            "deliverables": "Leveranser",
-            "deliverablesDesc": "Komplett logopakke med varianter for web, trykk og sosiale medier.",
-            "primaryLogo": "Hovedlogo",
-            "secondaryWordmark": "Sekundær tekstlogo",
-            "faviconIconography": "Favicon & Ikonografi",
-            "typographySelection": "Typografivalg",
-            "colorPalette": "Fargepalett"
-          }
-        },
-        "renovera": {
-          "heading": "Helhetlig digital profil for Renovera",
-          "stack": ["React", "Next.js", "Video Production", "Photography"],
-          "flairs": ["Webutvikling", "Videoredigering", "Før/Etter"],
-          "paragraphs": [
-            "Vi bygde en moderne nettside for Renovera som setter fokus på deres håndverk. Dette inkluderte utvikling av siden, redigering av en profesjonell reklamefilm og bistand med dokumentasjon av prosjekter.",
-            "Gjennom tydelige før/etter-bilder og engasjerende videoinnhold, har vi gjort det lettere for potensielle kunder å se verdien i deres tjenester."
-          ]
-        },
-        "jonk": {
-          "heading": "Profesjonelt innhold for Jønk",
-          "stack": ["Video Production", "Photography", "Marketing"],
-          "flairs": ["Toppkvalitet", "Videoserie", "Produktfoto"],
-          "paragraphs": [
-            "For Jønk leverte vi en omfattende serie med videoer og produktbilder i toppklasse. Målet var å fremheve produktene deres gjennom et visuelt uttrykk som oser av kvalitet.",
-            "Gjennom skreddersydd videoproduksjon og high-end fotografering har vi skapt et innholdsbibliotek som styrker Jønks merkevare på tvers av alle digitale kanaler."
-          ],
-            "page": {
             "back": "Tilbake til tjenester",
             "badge": "Kampanje-leveranse",
             "title": "Leveranse av en rå kampanje",
@@ -220,6 +172,67 @@
             "socialCampaign2": "Ren Kvalitet",
             "socialCampaign3": "Jønk Energi",
             "optimizedForReels": "Optimalisert for Reels"
+          }
+        },
+        "fcr": {
+          "heading": "Fighter-promo for FCR",
+          "stack": ["Videoproduksjon", "Redigering", "Motion Graphics", "Fargegradering"],
+          "flairs": ["MMA", "Promo-video", "Sverige"],
+          "paragraphs": [
+            "Vi produserte en intens promo-video for MMA-fighter Tamerlan Akhmadov under FCR – Full Contact Rumble, en underenhet av UFC i Sverige.",
+            "Filmen fanger råskapen og intensiteten i sporten, og ble designet for å bygge hype rundt fighteren og eventet."
+          ],
+          "page": {
+            "back": "Tilbake til tjenester",
+            "badge": "Promo-produksjon",
+            "title": "Rå promo for MMA",
+            "description": "FCR (Full Contact Rumble) er en svensk MMA-promosjon under UFC-paraplyen. Vi fikk oppdraget med å lage en promo-video for fighter Tamerlan Akhmadov – en film som skulle fange intensiteten i sporten og bygge hype foran kampen.",
+            "videoTitle": "Promo-filmen",
+            "videoDesc": "En intenst klippet promo som blander treningssekvenser, close-ups og dramatisk lyssetting for å bygge spenning.",
+            "strategy": "Strategien",
+            "strategyDesc": "Vi fokuserte på å formidle fighterens råskap og dedikasjon. Hurtige klipp, tung bass og mørk estetikk skaper en følelse av intensitet som matcher MMA-verdenen.",
+            "work": "Arbeidet",
+            "workItems": [
+              "Promo-video for fighter",
+              "Profesjonell fargegradering",
+              "Motion graphics og titler",
+              "Lyddesign og miksing"
+            ],
+            "deliverables": "Leveranser",
+            "deliverablesDesc": "En ferdig promo-video klar for sosiale medier og event-markedsføring, optimalisert for maksimalt engasjement."
+          }
+        },
+        "snatched": {
+          "heading": "Promo-video for Snatched",
+          "stack": ["Videoproduksjon", "3D-modellering", "Infografikk", "Motion Graphics"],
+          "flairs": ["3D", "Infografikk", "Shapewear"],
+          "paragraphs": [
+            "For Snatched – Norges raskest voksende shapewear-brand – leverte vi en promo-video med skreddersydd infografikk og 3D-modellering.",
+            "Videoen kombinerer visuell storytelling med datadrevne elementer for å kommunisere merkets posisjon og suksess."
+          ],
+          "page": {
+            "back": "Tilbake til tjenester",
+            "badge": "Video & 3D",
+            "title": "Visuell storytelling med 3D",
+            "description": "Snatched er et norsk shapewear-brand som kombinerer shaping, komfort og moderne passform. Med 7 millioner kroner i omsetning, over 5 000 Instagram-følgere og 4,3 i Trustpilot-score, trengte de en promo-video som kommuniserer denne suksessen visuelt.",
+            "videoTitle": "Promo-filmen",
+            "videoDesc": "En visuelt slående video som kombinerer live-action med 3D-modellerte produktvisninger og animert infografikk.",
+            "strategy": "Strategien",
+            "strategyDesc": "Vi kombinerte 3D-modellering av produktene med animert infografikk som fremhever nøkkeltall – omsetning, kundetilfredshet og vekst. Resultatet er en video som både informerer og fascinerer.",
+            "work": "Arbeidet",
+            "workItems": [
+              "Promo-video med 3D-elementer",
+              "Skreddersydd infografikk",
+              "3D-modellering av produkter",
+              "Motion graphics og animasjon"
+            ],
+            "deliverables": "Leveranser",
+            "deliverablesDesc": "En komplett promo-video med integrert 3D og infografikk, klar for bruk på sosiale medier, nettside og presentasjoner.",
+            "stats": {
+              "revenue": "7M+ i omsetning",
+              "followers": "5 000+ følgere",
+              "trustpilot": "4,3 Trustpilot"
+            }
           }
         }
       }
@@ -307,15 +320,15 @@
     },
     "dialogs": {
       "kickstart": {
-        "title": "Skreddersydd — Fortell oss hva du trenger",
+        "title": "Skreddersydd: Fortell oss hva du trenger",
         "desc": "Beskriv hva du er ute etter, så lager vi et tilbud tilpasset deg."
       },
       "growth": {
-        "title": "Kickstart — Kom i gang",
+        "title": "Kickstart: Kom i gang",
         "desc": "Fortell oss om prosjektet ditt, så kommer vi tilbake med et forslag."
       },
       "scale": {
-        "title": "Bedriftspakka — La oss ta en prat",
+        "title": "Bedriftspakka: La oss ta en prat",
         "desc": "Fortell oss om bedriften og målene deres, så skreddersyr vi en komplett løsning."
       }
     },
@@ -342,6 +355,20 @@
         "sending": "Sender…"
       }
     }
+  },
+  "FeaturedWork": {
+    "title": "Utvalgte prosjekter",
+    "seeProject": "Se prosjekt",
+    "seeAll": "Se alle prosjekter"
+  },
+  "Testimonials": {
+    "title": "Hva kundene sier"
+  },
+  "CtaBridge": {
+    "title": "Klar for å komme i gang?",
+    "subtitle": "Book et uforpliktende møte eller send oss en melding.",
+    "bookCta": "Book et møte",
+    "messageCta": "Send en melding"
   },
   "ServicesPage": {
     "process": {
@@ -376,7 +403,7 @@
         },
         "cost": {
           "q": "Hva koster det?",
-          "a": "Prisen avhenger av omfanget. En enkel statisk side starter fra 999 kr, mens en komplett bedriftspakke med filming starter fra 14 999 kr."
+          "a": "Prisen avhenger av hva du trenger. Vi gir deg alltid et tydelig tilbud etter en uforpliktende prat, uten skjulte kostnader."
         },
         "changes": {
           "q": "Kan jeg gjøre endringer underveis?",
@@ -387,8 +414,8 @@
           "a": "Absolutt. Vi tilbyr vedlikeholdsavtaler og er alltid tilgjengelige for oppdateringer og support."
         },
         "tech": {
-          "q": "Hvilken teknologi bruker dere?",
-          "a": "Vi bruker moderne verktøy som React, Next.js og Tailwind. Alt er håndkodet for best mulig ytelse."
+          "q": "Hvordan kommer vi i gang?",
+          "a": "Book en uforpliktende prat så vi kan forstå behovet ditt. Deretter får du et tydelig forslag med pris, tidslinje og hva vi leverer."
         }
       }
     }

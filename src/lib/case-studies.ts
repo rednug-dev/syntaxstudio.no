@@ -1,48 +1,37 @@
 export const caseStudies = [
     {
-        customer: "RiseUp",
-        title: "Digital Rebrand",
-        intro: "Ny branding og nettside for å booste RiseUps digitale profil og styrke søknadene deres om midler.",
-        thumbnail: "/riseup/riseupnewlogo-2.webp",
-        details: `RiseUp, en organisasjon for ungdom med minoritetsbakgrunn, trengte en digital oppgradering for å matche sitt viktige arbeid og styrke søknadsprosesser for finansiering.
-        
-        Vår løsning var en total-makeover av merkevaren og en ny, proff nettside:
-        - Ny visuell identitet og logo som utstråler profesjonalitet og varme.
-        - Moderne, brukervennlig nettside som kommuniserer deres misjon og resultater.
-        - Fremheving av arrangementer og suksesshistorier for å bygge tillit.
-        
-        Med en styrket digital plattform fremstår RiseUp nå som en mer seriøs aktør, noe som har økt deres troverdighet og sjanser i kampen om viktige midler.`,
-        logoComparison: {
-            before: "/riseup/riseupoldlogo.webp",
-            after: "/riseup/riseupnewlogo-2.webp"
-        },
-        gallery: ["/riseup/riseupw.webp"]
+        slug: "jonk",
+        customer: "Jønk",
+        title: "Kampanjeproduksjon",
+        intro: "Komplett visuell kampanje med 4K-reklamefilmer og high-end produktfoto for et urbant burgermerke.",
+        logo: "/logos/Jønksvg.svg",
+        services: ["Videoproduksjon", "Foto", "Grafisk design"],
     },
     {
-        customer: "Bites",
-        title: "Proff Plattform",
-        intro: "Fra pop-up til proft. Vi ga Bites den digitale plattformen de trengte for å lande større festivaler og events.",
-        thumbnail: "/bites/biteslogo.webp",
-        details: `Bites startet som et kult pop-up konsept, men manglet en proff plattform for bestillinger og merkevarebygging. 
-        
-        Vi utviklet en stilren og mobilvennlig nettside med en smooth bestillingsprosess:
-        - Intuitiv bestillingsflyt for rask service.
-        - Sikker og enkel online betaling.
-        - Et proft design som bygger tillit og gjenkjennelse.
-        
-        Med sin nye digitale plattform ble Bites en seriøs aktør. Dette åpnet dører til store festivaler og events, og la grunnlaget for videre vekst.`,
-        gallery: ["/bites/bitesw.webp"]
+        slug: "fcr",
+        customer: "FCR (Full Contact Rumble)",
+        title: "Promo for MMA",
+        intro: "Promo-video for MMA-fighter Tamerlan Akhmadov under UFC-underenheten FCR i Sverige.",
+        logo: "/logos/FCRNM.svg",
+        services: ["Videoproduksjon", "Redigering", "Motion Graphics"],
     },
     {
-        customer: "DataSec",
-        title: "Smarte løsninger",
-        intro: "Ny identitet, ny nettside og custom tech for DataSec. Vi leverer sanntidsdata som forbedrer sikkerheten.",
-        thumbnail: "/datasec/DataSec-Logo.png",
-        details: `DataSec utfordrer vekterbransjen med innovativ teknologi. Vi ga dem en ny visuell identitet og en proff nettside som matcher deres moderne tilnærming.
+        slug: "snatched",
+        customer: "Snatched",
+        title: "Promo med 3D & infografikk",
+        intro: "Promo-video med skreddersydd infografikk og 3D-modellering for Norges raskest voksende shapewear-brand.",
+        logo: "/logos/Snatched.svg",
+        services: ["Videoproduksjon", "3D-modellering", "Infografikk"],
+    },
+];
 
-En sentral del av samarbeidet er utviklingen av skreddersydd teknologi, som en sanntidsteller for utesteder. Systemet gir full oversikt over antall gjester via et dashbord, som lar kundene optimalisere bemanning og forbedre sikkerheten. Dette gir også verdifull data for smartere, datadrevne beslutninger.`,
-        gallery: ["/datasec/datasecw3.webp", "/datasec/datasecw1.webp", "/datasec/datasecw2.webp"]
-    }
+export const partners = [
+    { name: "Jønk", logo: "/logos/Jønksvg.svg" },
+    { name: "FCR", logo: "/logos/FCRNM.svg" },
+    { name: "Snatched", logo: "/logos/Snatched.svg" },
+    { name: "RiseUp", logo: "/logos/riseuplogo.svg" },
+    { name: "Renovera", logo: "/logos/renoveras.svg" },
+    { name: "Hammerblad", logo: "/logos/Hammerblad.svg" },
 ];
 
 export const services = [

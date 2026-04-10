@@ -120,7 +120,7 @@ export default function ServicesIntroSection() {
         className="mt-10 flex justify-center"
       >
         <Button size="lg" className="gap-2" asChild>
-          <Link href="/pricing">{t('cta')}</Link>
+          <a href="https://cal.com/syntaxstudio" target="_blank" rel="noopener noreferrer">{t('cta')}</a>
         </Button>
       </motion.div>
     </section>

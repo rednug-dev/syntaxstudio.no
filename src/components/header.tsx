@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import Image from 'next/image';
-import { Briefcase, Users, Menu, X, Banknote } from 'lucide-react';
+import { Briefcase, Users, Menu, X, Calendar, Mail, ChevronDown } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
 export default function Header() {
@@ -31,13 +31,26 @@ export default function Header() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  const [isContactOpen, setIsContactOpen] = useState(false);
+  const contactRef = React.useRef<HTMLDivElement>(null);
+
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
+
+  // Close dropdown on outside click
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (contactRef.current && !contactRef.current.contains(e.target as Node)) {
+        setIsContactOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const navLinks = [
     { href: '/services',   label: t('showcase'), icon: <Briefcase className="w-5 h-5" /> },
     { href: '/about-us',   label: t('about'),    icon: <Users className="w-5 h-5" /> },
-    { href: '/pricing',    label: t('pricing'),  icon: <Banknote className="w-5 h-5" /> }
   ];
 
   return (
@@ -69,10 +82,37 @@ export default function Header() {
 
           {/* Right: CTA & Mobile Toggle */}
           <div className="flex-1 flex justify-end items-center">
-            <div className="hidden sm:block">
-              <Button asChild>
-                <Link href="/#proposal">{t('contact')}</Link>
+            <div className="hidden sm:block relative" ref={contactRef}>
+              <Button
+                onClick={() => setIsContactOpen(!isContactOpen)}
+                className={cn(isContactOpen && "rounded-b-none")}
+              >
+                {t('contact')}
+                <ChevronDown className={cn("ml-1.5 h-4 w-4 transition-transform", isContactOpen && "rotate-180")} />
               </Button>
+              <div className={cn(
+                "absolute right-0 top-full w-full rounded-b-md border border-t-0 border-primary bg-primary text-primary-foreground overflow-hidden transition-all duration-200 origin-top",
+                isContactOpen ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0 pointer-events-none"
+              )}>
+                <a
+                  href="https://cal.com/syntaxstudio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2.5 px-4 py-2.5 text-sm font-medium hover:bg-primary-foreground/10 transition-colors"
+                  onClick={() => setIsContactOpen(false)}
+                >
+                  <Calendar className="h-4 w-4" />
+                  {t('bookCall')}
+                </a>
+                <Link
+                  href="/#proposal"
+                  className="flex items-center gap-2.5 px-4 py-2.5 text-sm font-medium hover:bg-primary-foreground/10 transition-colors"
+                  onClick={() => setIsContactOpen(false)}
+                >
+                  <Mail className="h-4 w-4" />
+                  {t('sendEmail')}
+                </Link>
+              </div>
             </div>
             <div className="lg:hidden ml-2">
               <Button onClick={toggleMenu} variant="ghost" size="icon" aria-label="Open menu">
@@ -101,10 +141,21 @@ export default function Header() {
               {link.icon}{link.label}
             </Link>
           ))}
-          <div className="sm:hidden mt-4">
-            <Button asChild className="w-full">
-              <Link href="/#proposal">{t('contact')}</Link>
-            </Button>
+          <div className="mt-4 space-y-2">
+            <a
+              href="https://cal.com/syntaxstudio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-lg font-semibold flex items-center gap-3 p-3 hover:bg-muted rounded-lg"
+            >
+              <Calendar className="w-5 h-5" />{t('bookCall')}
+            </a>
+            <Link
+              href="/#proposal"
+              className="text-lg font-semibold flex items-center gap-3 p-3 hover:bg-muted rounded-lg"
+            >
+              <Mail className="w-5 h-5" />{t('sendEmail')}
+            </Link>
           </div>
         </div>
       </div>

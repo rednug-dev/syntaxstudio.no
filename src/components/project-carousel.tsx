@@ -35,9 +35,9 @@ function CaseCard({ c, seeLiveLabel }: { c: ProjectCase; seeLiveLabel: string })
     <div className="flex flex-col h-full min-h-[480px] rounded-3xl border bg-card/40 p-8 shadow-sm transition-all hover:shadow-xl hover:border-primary/20 group">
       {/* Centered Logo at Top */}
       <div className="flex flex-col items-center mb-8">
-        <div className="h-12 flex items-center justify-center mb-4">
+        <div className="h-24 w-40 flex items-center justify-center mb-4">
           {isImagePath ? (
-            <img src={c.logo} alt={c.heading} className="h-full w-auto object-contain brightness-0 invert opacity-80 group-hover:opacity-100 transition-opacity" />
+            <img src={c.logo} alt={c.heading} className={cn("max-h-full max-w-full object-contain brightness-0 invert opacity-80 group-hover:opacity-100 transition-opacity", c.logo.includes("Jønk") && "max-h-[70%]")} />
           ) : (
             <span className="text-3xl font-bold tracking-tighter text-foreground/90">
               {c.logo}
@@ -45,11 +45,11 @@ function CaseCard({ c, seeLiveLabel }: { c: ProjectCase; seeLiveLabel: string })
           )}
         </div>
         
-        {/* Centered Flairs */}
+        {/* Services */}
         <div className="flex flex-wrap justify-center gap-2">
-          {c.flairs?.map((f) => (
-            <Badge key={f} variant="outline" className="text-[10px] uppercase tracking-[0.15em] font-semibold px-2.5 py-0.5 bg-primary/5 border-primary/10">
-              {f}
+          {c.stack?.map((s) => (
+            <Badge key={s} variant="outline" className="text-[10px] uppercase tracking-[0.15em] font-semibold px-2.5 py-0.5 bg-primary/5 border-primary/10">
+              {s}
             </Badge>
           ))}
         </div>
@@ -106,47 +106,54 @@ export default function ProjectCarousel({ projects, seeLive }: { projects: Proje
   }, [api]);
 
   return (
-    <div className="w-full">
-      <Carousel
-        setApi={setApi}
-        opts={{
-          align: "start",
-          loop: true,
-        }}
-        className="w-full mt-16"
-      >
-        <CarouselContent className="-ml-4">
-          {projects.map((c, index) => (
-            <CarouselItem 
-              key={c.heading} 
-              className={cn(
-                "pl-4 md:basis-1/2 lg:basis-1/3",
-                // On desktop (lg), place the first item (index 0) in the middle (order-2)
-                // The second item (index 1) goes first (order-1)
-                // The third item (index 2) stays last (order-3)
-                index === 0 ? "lg:order-2" : index === 1 ? "lg:order-1" : "lg:order-3"
-              )}
-            >
-              <CaseCard c={c} seeLiveLabel={seeLive} />
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        {/* Arrows hidden as requested */}
-      </Carousel>
-
-      {/* Pagination Dots / Swipe Indicator */}
-      <div className="flex justify-center gap-2 mt-8">
-        {Array.from({ length: count }).map((_, i) => (
-          <button
-            key={i}
+    <div className="w-full mt-16">
+      {/* Desktop: static grid */}
+      <div className="hidden lg:grid lg:grid-cols-3 gap-4">
+        {projects.map((c, index) => (
+          <div
+            key={c.heading}
             className={cn(
-              "h-1.5 transition-all rounded-full",
-              current === i ? "w-8 bg-primary" : "w-2 bg-primary/20"
+              index === 0 ? "order-2" : index === 1 ? "order-1" : "order-3"
             )}
-            onClick={() => api?.scrollTo(i)}
-            aria-label={`Go to slide ${i + 1}`}
-          />
+          >
+            <CaseCard c={c} seeLiveLabel={seeLive} />
+          </div>
         ))}
+      </div>
+
+      {/* Mobile: carousel */}
+      <div className="lg:hidden">
+        <Carousel
+          setApi={setApi}
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full"
+        >
+          <CarouselContent className="-ml-4">
+            {projects.map((c) => (
+              <CarouselItem key={c.heading} className="pl-4 basis-[85%] sm:basis-1/2">
+                <CaseCard c={c} seeLiveLabel={seeLive} />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
+
+        {/* Pagination Dots */}
+        <div className="flex justify-center gap-2 mt-8">
+          {Array.from({ length: count }).map((_, i) => (
+            <button
+              key={i}
+              className={cn(
+                "h-1.5 transition-all rounded-full",
+                current === i ? "w-8 bg-primary" : "w-2 bg-primary/20"
+              )}
+              onClick={() => api?.scrollTo(i)}
+              aria-label={`Go to slide ${i + 1}`}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

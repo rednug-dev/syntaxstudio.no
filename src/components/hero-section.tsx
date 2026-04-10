@@ -21,9 +21,9 @@ export default function HeroSection() {
         </p>
         <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
           <Button size="lg" asChild>
-            <Link href="/pricing">
+            <a href="https://cal.com/syntaxstudio" target="_blank" rel="noopener noreferrer">
               {t('primaryCta')} <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
+            </a>
           </Button>
           <Button size="lg" variant="outline" asChild>
             <Link href="/services">

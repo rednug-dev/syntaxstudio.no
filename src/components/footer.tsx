@@ -26,8 +26,7 @@ export default function Footer() {
               <ul className="space-y-2 text-base">
                 <li><Link href="/services#case-studies" className="text-muted-foreground hover:text-primary">{t('examples')}</Link></li>
                 <li><Link href="/about-us" className="text-muted-foreground hover:text-primary">{t('about')}</Link></li>
-                <li><Link href="/pricing" className="text-muted-foreground hover:text-primary">{t('pricing')}</Link></li>
-                <li><Link href="/#proposal" className="text-muted-foreground hover:text-primary">{t('contact')}</Link></li>
+                <li><a href="https://cal.com/syntaxstudio" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">{t('contact')}</a></li>
               </ul>
             </div>
 

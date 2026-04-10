@@ -15,7 +15,7 @@ export default function AboutUsPage() {
       skills: ["React", "Next.js", "Node.js", "Strategy"],
       email: "gunder@syntaxstudio.no",
       phone: "+47 9444 3355",
-      socials: {},
+      socials: undefined,
       discordId: "795681296658989056"
     },
     {
@@ -27,7 +27,7 @@ export default function AboutUsPage() {
       skills: ["Python", "AI", "Systems Architecture", "Database"],
       email: "rasul@syntaxstudio.no",
       phone: "+47 4639 6797",
-      socials: {},
+      socials: undefined,
       discordId: "414385859845160970"
     },
     {
@@ -39,7 +39,7 @@ export default function AboutUsPage() {
       skills: ["Filming", "Editing", "Marketing", "Content Creation"],
       email: "khamzat@syntaxstudio.no",
       phone: "+47 4626 4815",
-      socials: {},
+      socials: undefined,
       discordId: "925851067235848192"
     }
   ];
