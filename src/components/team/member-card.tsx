@@ -136,7 +136,14 @@ export default function MemberCard({
                     <AvatarImage
                       src={m.avatarSrc}
                       alt={m.name}
-                      style={m.avatarPosition ? { objectPosition: m.avatarPosition } : undefined}
+                      style={
+                        m.avatarPosition || m.avatarTransform
+                          ? {
+                              ...(m.avatarPosition ? { objectPosition: m.avatarPosition } : {}),
+                              ...(m.avatarTransform ? { transform: m.avatarTransform } : {}),
+                            }
+                          : undefined
+                      }
                     />
                     <AvatarFallback>
                       {m.name
