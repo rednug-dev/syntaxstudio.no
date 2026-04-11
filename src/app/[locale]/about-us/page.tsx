@@ -11,7 +11,7 @@ export default function AboutUsPage() {
       name: "Gunder Rollufson",
       role: "Founder & CEO", // fallback
       bio: "Founder bridging strategy and engineering; hands-on across every build.", // fallback
-      avatarSrc: "/avatars/placeholder.svg",
+      avatarSrc: "/portraits/gunder.webp",
       skills: ["React", "Next.js", "Node.js", "Strategy"],
       email: "gunder@syntaxstudio.no",
       phone: "+47 9444 3355",
@@ -23,7 +23,7 @@ export default function AboutUsPage() {
       name: "Rasul Uzdijev",
       role: "Partner & Chief Architect",
       bio: "Partner who turns ideas into robust, scalable systems.",
-      avatarSrc: "/avatars/placeholder.svg",
+      avatarSrc: "/portraits/rasul.webp",
       skills: ["Python", "AI", "Systems Architecture", "Database"],
       email: "rasul@syntaxstudio.no",
       phone: "+47 4639 6797",
@@ -35,7 +35,7 @@ export default function AboutUsPage() {
       name: "Khamzat Dudaev",
       role: "Partner & CMO",
       bio: "Partner who captures moments and creates content that engages.",
-      avatarSrc: "/avatars/placeholder.svg",
+      avatarSrc: "/portraits/khamzat.webp",
       skills: ["Filming", "Editing", "Marketing", "Content Creation"],
       email: "khamzat@syntaxstudio.no",
       phone: "+47 4626 4815",
