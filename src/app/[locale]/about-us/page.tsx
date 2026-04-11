@@ -12,6 +12,7 @@ export default function AboutUsPage() {
       role: "Founder & CEO", // fallback
       bio: "Founder bridging strategy and engineering; hands-on across every build.", // fallback
       avatarSrc: "/portraits/gunder.webp",
+      avatarPosition: "center 22%",
       skills: ["React", "Next.js", "Node.js", "Strategy"],
       email: "gunder@syntaxstudio.no",
       phone: "+47 9444 3355",
@@ -24,6 +25,7 @@ export default function AboutUsPage() {
       role: "Partner & Chief Architect",
       bio: "Partner who turns ideas into robust, scalable systems.",
       avatarSrc: "/portraits/rasul.webp",
+      avatarPosition: "center 8%",
       skills: ["Python", "AI", "Systems Architecture", "Database"],
       email: "rasul@syntaxstudio.no",
       phone: "+47 4639 6797",
@@ -36,6 +38,7 @@ export default function AboutUsPage() {
       role: "Partner & CMO",
       bio: "Partner who captures moments and creates content that engages.",
       avatarSrc: "/portraits/khamzat.webp",
+      avatarPosition: "center 20%",
       skills: ["Filming", "Editing", "Marketing", "Content Creation"],
       email: "khamzat@syntaxstudio.no",
       phone: "+47 4626 4815",

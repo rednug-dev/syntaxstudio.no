@@ -133,7 +133,11 @@ export default function MemberCard({
                 <div className="absolute inset-0 -z-10 rounded-full bg-muted/60 p-3" />
                 <div className="relative rounded-full ring-8 ring-background">
                   <Avatar className="h-28 w-28 ring-4 ring-muted">
-                    <AvatarImage src={m.avatarSrc} alt={m.name} className="object-top" />
+                    <AvatarImage
+                      src={m.avatarSrc}
+                      alt={m.name}
+                      style={m.avatarPosition ? { objectPosition: m.avatarPosition } : undefined}
+                    />
                     <AvatarFallback>
                       {m.name
                         .split(" ")
