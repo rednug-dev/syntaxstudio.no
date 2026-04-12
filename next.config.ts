@@ -17,6 +17,19 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async headers() {
+    return [
+      {
+        source: '/:path*.(webp|jpg|jpeg|png|svg|mp4|webm|woff2|woff)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+    ];
+  },
   async redirects() {
     return [
       { source: '/pricing', destination: '/services', permanent: true },
