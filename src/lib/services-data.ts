@@ -323,19 +323,19 @@ export const SERVICES: Service[] = [
       en: {
         title: "Video production and 4K commercials in Oslo",
         description:
-          "4K commercials, social ads and music-video grade production shot on Sony FX30. Led by a videographer with deep roots in the Norwegian music video scene.",
+          "4K commercials, social ads and product video shot on Sony FX30. Led by a videographer with a background in the Norwegian music video scene.",
       },
       no: {
         title: "Videoproduksjon og 4K-reklamefilmer i Oslo",
         description:
-          "4K-reklamefilmer, sosiale annonser og produksjon på musikkvideo-nivå filmet på Sony FX30. Ledet av en videograf med dype røtter i det norske musikkvideo-miljøet.",
+          "4K-reklamefilmer, sosiale annonser og produktvideo filmet på Sony FX30. Ledet av en videograf med bakgrunn fra det norske musikkvideo-miljøet.",
       },
     },
     content: {
       no: {
         title: "Video som faktisk får oppmerksomhet",
         tagline:
-          "Reklamefilm, sosiale annonser og produktvideo levert av en av Norges mest erfarne musikkvideo-folk.",
+          "Reklamefilm, sosiale annonser og produktvideo levert av en videograf med bakgrunn fra norsk musikkvideo.",
         intro:
           "Vår partner og markedssjef Khamzat har lang fartstid fra norsk musikkvideo og var i en periode blant de mest ettertraktede i bransjen. Den erfaringen legger vi inn i alt vi lager, fra 4K-reklamefilmer til 15-sekunders sosiale annonser. Vi filmer på Sony FX30, et kamera bygget for kommersiell videoproduksjon, og resultatet er video som folk faktisk stopper for å se på.",
         whatWeDo: [
@@ -382,10 +382,6 @@ export const SERVICES: Service[] = [
             a: "Sony FX30 er hovedkameraet vårt, sammen med riktig lyssetting og lydutstyr. Vi velger hva vi tar med ut fra hva prosjektet faktisk trenger. Ikke alt krever det største oppsettet.",
           },
           {
-            q: "Kan dere lage musikkvideo?",
-            a: "Ja. Det er der vi har røttene våre. Hvis du er artist eller representerer en, ta kontakt så snakker vi.",
-          },
-          {
             q: "Hvor lang tid tar en reklamefilm?",
             a: "Fra første samtale til ferdig film: typisk 3-6 uker for en fullstendig produksjon. Kortere for enklere ting.",
           },
@@ -394,7 +390,7 @@ export const SERVICES: Service[] = [
       en: {
         title: "Video that actually gets attention",
         tagline:
-          "Commercials, social ads and product video delivered by one of Norway's most experienced music video directors.",
+          "Commercials, social ads and product video delivered by a videographer with a background in Norwegian music video.",
         intro:
           "Our partner and marketing director Khamzat has years in Norwegian music video, where he was among the most sought-after in the scene. We carry that experience into everything we make, from 4K commercials to 15-second social ads. We shoot on the Sony FX30, a camera built for commercial video, and the result is footage people actually stop to watch.",
         whatWeDo: [
@@ -439,10 +435,6 @@ export const SERVICES: Service[] = [
           {
             q: "What gear do you shoot on?",
             a: "The Sony FX30 is our main camera, paired with proper lighting and audio. We pick what to bring based on what the project actually needs. Not everything requires the biggest setup.",
-          },
-          {
-            q: "Can you make music videos?",
-            a: "Yes. That's where our roots are. If you're an artist or represent one, get in touch.",
           },
           {
             q: "How long does a commercial take?",
