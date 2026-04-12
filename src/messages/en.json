@@ -359,29 +359,29 @@
       "description": "We handle websites, campaigns and video production for small and mid-sized businesses. One partner, the whole job."
     },
     "services": {
-      "title": "Services",
-      "description": "Websites, video production, photo, campaigns and graphic design – all from one team."
+      "title": "Websites, video and marketing in Oslo",
+      "description": "We deliver websites, video production, photo, campaigns and graphic design from one team. Custom-built for businesses that want to grow, from our studio in Oslo."
     },
     "about": {
-      "title": "About",
-      "description": "A small team building websites, making video and running marketing for businesses that want to be seen."
+      "title": "About Syntax Studio, marketing agency in Oslo",
+      "description": "A small team building websites, making video and running marketing for businesses that want to be seen. Based in Oslo, working nationally and internationally."
     },
     "workJonk": {
-      "title": "Jønk – full campaign",
-      "description": "A complete visual campaign for Jønk: 4K ads, over 50 product photos and content for social media."
+      "title": "Jønk, full campaign for Oslo's burger scene",
+      "description": "Cemented as part of Jønk's marketing team we deliver everything from 4K commercials and product photos to daily content, tracking and campaign strategy."
     },
     "workFcr": {
-      "title": "FCR – fighter promo",
-      "description": "Promo video for MMA fighter Tamerlan Akhmadov under FCR – Full Contact Rumble in Sweden."
+      "title": "FCR, fighter promo for Tamerlan Akhmadov",
+      "description": "We wrote the script, filmed and edited the introduction video for MMA fighter Tamerlan Akhmadov ahead of his bout under FCR in Sweden. Entirely without music."
     },
     "workSnatched": {
-      "title": "Snatched – 3D promo",
-      "description": "Promo video with custom infographics and 3D modeling for shapewear brand Snatched."
+      "title": "Snatched, pitch video with 3D and infographics",
+      "description": "Pitch video with 3D-modeled boxes, pallets and packages visualizing Snatched's sales figures for investors. Delivered after close collaboration and many revisions."
     }
   },
   "BookPage": {
-    "metaTitle": "Book a meeting | Syntax Studio",
-    "metaDescription": "Book a free intro call with Syntax Studio. We help you with websites, video, and marketing that delivers results.",
+    "metaTitle": "Book a free meeting with Syntax Studio",
+    "metaDescription": "Book a free 30-minute video call with Syntax Studio. We talk through what you need in websites, video and marketing, and give you a clear plan forward.",
     "title": "Book a meeting",
     "subtitle": "Pick a time that suits you. 30 minutes on video, we get to know each other and figure out what you need.",
     "bookCta": "Pick a time",

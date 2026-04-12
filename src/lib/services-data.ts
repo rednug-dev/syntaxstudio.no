@@ -53,14 +53,14 @@ export const SERVICES: Service[] = [
     icon: "TrendingUp",
     meta: {
       en: {
-        title: "Data-driven marketing",
+        title: "Data-driven marketing with tracking at every step",
         description:
-          "ICP modeling, geomapping and campaigns measured at every step. Built by a data engineer, fine-tuned per customer.",
+          "Customer profiling, geomapping and campaigns measured from first click to final purchase. Built by a data engineer, fine-tuned weekly per customer.",
       },
       no: {
-        title: "Datadrevet markedsføring",
+        title: "Datadrevet markedsføring med tracking i hvert ledd",
         description:
-          "ICP-modellering, geomapping og kampanjer målt i hvert ledd. Bygget av en dataingeniør, finjustert per kunde.",
+          "Kundeprofilering, geomapping og kampanjer målt fra første klikk til sluttkjøp. Bygget av en dataingeniør, finjustert ukentlig per kunde.",
       },
     },
     content: {
@@ -189,14 +189,14 @@ export const SERVICES: Service[] = [
     icon: "Camera",
     meta: {
       en: {
-        title: "Photography",
+        title: "Professional product and food photography",
         description:
-          "Product, food and corporate photography shot on Sony A7V. Specialized in food photography for restaurants and food brands.",
+          "Product, food and corporate photography shot on Sony A7V. Specialized in food photography for restaurants and food brands, with full editing and delivery included.",
       },
       no: {
-        title: "Fotografering",
+        title: "Profesjonell produkt- og matfotografering",
         description:
-          "Produktfoto, matfoto og bedriftsfoto tatt på Sony A7V. Spesialiserte på matfoto for restauranter og matmerker.",
+          "Produktfoto, matfoto og bedriftsfoto tatt på Sony A7V. Spesialiserte på matfoto for restauranter og matmerker, med full etterbehandling og levering inkludert.",
       },
     },
     content: {
@@ -321,14 +321,14 @@ export const SERVICES: Service[] = [
     icon: "Video",
     meta: {
       en: {
-        title: "Video production",
+        title: "Video production and 4K commercials in Oslo",
         description:
-          "4K commercials, social ads and music-video grade production. Led by a videographer with deep roots in the Norwegian music video scene.",
+          "4K commercials, social ads and music-video grade production shot on Sony FX30. Led by a videographer with deep roots in the Norwegian music video scene.",
       },
       no: {
-        title: "Videoproduksjon",
+        title: "Videoproduksjon og 4K-reklamefilmer i Oslo",
         description:
-          "4K-reklamefilmer, sosiale annonser og produksjon på musikkvideo-nivå. Ledet av en videograf med dype røtter i det norske musikkvideo-miljøet.",
+          "4K-reklamefilmer, sosiale annonser og produksjon på musikkvideo-nivå filmet på Sony FX30. Ledet av en videograf med dype røtter i det norske musikkvideo-miljøet.",
       },
     },
     content: {
@@ -461,14 +461,14 @@ export const SERVICES: Service[] = [
     icon: "Globe",
     meta: {
       en: {
-        title: "Web design and development",
+        title: "Custom web design and development in Oslo",
         description:
-          "Custom-built websites from 10 000 to 200 000 NOK. No templates. Webshops, dashboards, live tracking, all delivered fast.",
+          "Custom-built websites from 10 000 to 200 000 NOK. No templates ever. From simple landing pages and webshops to dashboards and live tracking, delivered fast.",
       },
       no: {
-        title: "Webdesign og utvikling",
+        title: "Skreddersydd webdesign og utvikling i Oslo",
         description:
-          "Skreddersydde nettsider fra 10 000 til 200 000 kr. Aldri maler. Nettbutikk, dashbord, livestatistikk, levert raskt.",
+          "Skreddersydde nettsider fra 10 000 til 200 000 kr. Aldri maler. Fra enkle landingssider og nettbutikker til dashbord og livestatistikk, levert raskt.",
       },
     },
     content: {
@@ -612,14 +612,14 @@ export const SERVICES: Service[] = [
     icon: "Megaphone",
     meta: {
       en: {
-        title: "Social media management",
+        title: "Social media management with a 30-day guarantee",
         description:
-          "We take over your social channels and grow them with content built for the algorithm. If we don't grow your traffic in 30 days, you pay nothing.",
+          "We take over your social channels and grow them with content built for the algorithm. If we don't grow your traffic in 30 days, you pay nothing. Zero risk.",
       },
       no: {
-        title: "Sosiale medier-administrasjon",
+        title: "Sosiale medier med 30-dagers garanti",
         description:
-          "Vi tar over kanalene dine og bygger dem med innhold tilpasset algoritmen. Hvis vi ikke øker trafikken på 30 dager, betaler du ingenting.",
+          "Vi tar over kanalene dine og bygger dem med innhold tilpasset algoritmen. Hvis vi ikke øker trafikken din på 30 dager, betaler du ingenting. Null risiko.",
       },
     },
     content: {

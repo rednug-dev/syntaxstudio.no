@@ -361,29 +361,29 @@
       "description": "Vi tar oss av nettside, kampanjer og videoproduksjon for små og mellomstore bedrifter. Én partner, hele leveransen."
     },
     "services": {
-      "title": "Tjenester",
-      "description": "Nettsider, videoproduksjon, foto, kampanjer og grafisk design – samlet hos ett team."
+      "title": "Nettsider, video og markedsføring i Oslo",
+      "description": "Vi leverer nettsider, videoproduksjon, foto, kampanjer og grafisk design samlet hos ett team. Skreddersydd for bedrifter som vil vokse, fra ett studio i Oslo."
     },
     "about": {
-      "title": "Om oss",
-      "description": "Et lite team som bygger nettsider, lager video og driver markedsføring for bedrifter som vil bli sett."
+      "title": "Om Syntax Studio, markedsføringsbyrå i Oslo",
+      "description": "Vi er et lite team som bygger nettsider, lager video og driver markedsføring for bedrifter som vil bli sett. Basert i Oslo, jobber nasjonalt og internasjonalt."
     },
     "workJonk": {
-      "title": "Jønk – komplett kampanje",
-      "description": "Komplett visuell kampanje for Jønk: 4K-reklamefilmer, over 50 produktbilder og innhold til sosiale medier."
+      "title": "Jønk, komplett kampanje for Oslos burgerscene",
+      "description": "Sementert som en del av Jønks markedsføringsteam leverer vi alt fra 4K-reklamefilmer og produktfoto til daglig innhold, tracking og kampanjestrategi."
     },
     "workFcr": {
-      "title": "FCR – fighter-promo",
-      "description": "Promo-video for MMA-fighter Tamerlan Akhmadov under FCR – Full Contact Rumble i Sverige."
+      "title": "FCR, fighter-promo for Tamerlan Akhmadov",
+      "description": "Vi skrev manuset, filmet og redigerte introduksjonsvideoen til MMA-fighter Tamerlan Akhmadov foran hans kamp under FCR i Sverige. Helt uten musikk."
     },
     "workSnatched": {
-      "title": "Snatched – promo med 3D",
-      "description": "Promo-video med skreddersydd infografikk og 3D-modellering for shapewear-merket Snatched."
+      "title": "Snatched, pitch-video med 3D og infografikk",
+      "description": "Pitch-video med 3D-modellerte pappesker, paller og pakker som visualiserer Snatched sine salgstall for investorer. Levert etter tett samarbeid og mange revisjoner."
     }
   },
   "BookPage": {
-    "metaTitle": "Book et møte | Syntax Studio",
-    "metaDescription": "Book en uforpliktende videosamtale med Syntax Studio. Vi hjelper deg med nettsider, video og markedsføring som gir resultater.",
+    "metaTitle": "Book et gratis møte med Syntax Studio",
+    "metaDescription": "Book en uforpliktende 30-minutters videosamtale med Syntax Studio. Vi snakker om hva du trenger innen nettsider, video og markedsføring, og gir deg en tydelig plan.",
     "title": "Book et møte",
     "subtitle": "Velg en tid som passer deg. 30 minutter på video, vi blir kjent og finner ut hva du trenger.",
     "bookCta": "Velg tidspunkt",
