@@ -6,14 +6,13 @@
   "Nav": {
     "showcase": "Work",
     "about": "About",
-    "pricing": "Pricing",
     "contact": "Contact us",
     "bookCall": "Book a meeting",
     "sendEmail": "Send email"
   },
   "Hero": {
-    "title": "Websites, video and ads that deliver results",
-    "subtitle": "We're the marketing partner that handles everything from strategy and campaigns to video production and websites, so you can focus on what you do best.",
+    "title": "Norway's most complete marketing studio",
+    "subtitle": "Strategy, video, photo, websites and daily publishing. All under one roof, so you don't have to coordinate multiple agencies.",
     "primaryCta": "Book a free intro call",
     "secondaryCta": "See what we do",
     "scrollCta": "See our work"
@@ -130,42 +129,65 @@
         "Graphic design (AE, PS, ID)",
         "SEO, analytics & continuous optimization"
       ],
-      "partnersTitle": "Clients we've worked with",
       "projects": {
         "jonk": {
           "heading": "Full Campaign for Jønk",
           "stack": ["Video Production", "Photography", "Marketing", "Graphic Design"],
           "flairs": ["4K Ads", "Product Photo", "Social Media"],
           "paragraphs": [
-            "For Jønk, we delivered a complete visual campaign – from cinematic 4K ads to a library of 50+ high-end product photos.",
-            "Everything was designed to capture the raw energy and urban identity that defines the Jønk brand."
+            "For Jønk we deliver a complete visual campaign, from cinematic 4K ads to a large library of high-end product photos.",
+            "Everything designed to capture the raw energy and urban identity that defines the Jønk brand."
           ],
           "page": {
             "back": "Back to services",
-            "badge": "Campaign Delivery",
+            "badge": "Cemented marketing partner",
             "title": "High-Energy Campaign Delivery",
-            "description": "Jønk is a bold, urban burger brand built on quality and attitude. We delivered a comprehensive high-energy campaign designed to dominate social media, featuring 5 custom-tailored 4K ads and 50+ high-end product photos that capture the raw energy of the kitchen and the perfect smash burger.",
+            "description": "A cemented part of Jønk's marketing team since the launch of Burgerkrigen.",
+            "backgroundTitle": "Background",
+            "backgroundBody": "We came in as an external unit on Jønk's marketing team during one of Norway's biggest marketing campaigns. The engagement was defined to begin with. Today we're a cemented part of the team and work on everything visual and strategic that actually reaches the customer.",
+            "campaignTitle": "Burgerkrigen",
+            "campaignBody": "Burgerkrigen is a head-to-head competition between Oskar Westerlin and Mathea Bjørndalen where the audience picks the winner. We deliver everything visual, everything physical, and all the tracking that makes it possible to measure what actually works.",
             "commercial": "Social Campaign",
             "spiritTitle": "The Jønk Attitude",
             "spiritDesc": "Punchy, fast-paced content we produced to capture the raw energy of the kitchen and the crunch of the perfect smash burger.",
             "photoTitle": "High-End Visuals",
-            "photoDesc": "We delivered a complete library of 50+ edgy product shots and posters designed for social media, print, and digital menus—all keeping the urban Jønk identity front and center.",
+            "photoDesc": "We deliver a large library of edgy product shots and posters designed for social media, print, and digital menus, all keeping the urban Jønk identity front and center.",
+            "scopeTitle": "We deliver on every front",
+            "scopeIntro": "What you've seen above is one piece of the delivery. As a cemented part of Jønk's marketing team we work across everything visual, physical and measurable:",
+            "scopeItems": [
+              "Sidewalk signs, rollups, flyers and press walls",
+              "Product video and product photography in full production",
+              "Social video and daily content",
+              "Marketing plan and campaign ideas",
+              "Tracking setup and analytics reporting",
+              "Graphic design and digital materials"
+            ],
             "strategy": "The Strategy",
-            "strategyDesc": "Focusing on raw materials, high heat, and textures. We highlighted the 'crunch' and clean flavors to communicate quality through a high-energy delivery that matches Jønk's edgy vibe.",
+            "strategyDesc": "Focusing on raw materials, high heat, and textures. We highlight the crunch and clean flavors, communicating quality through a high-energy delivery that matches Jønk's edgy vibe.",
             "work": "The Work",
             "workItems": [
-              "5+ Social Media Ads (4K)",
-              "50+ Professional Product Photos",
+              "Social Media Ads (4K)",
+              "Professional Product Photos",
               "Cinematic Video Production",
               "Digital Poster Design"
             ],
             "deliverables": "Deliverables",
-            "deliverablesDesc": "A high-performance library of 5 cinematic 4K social ads and 50+ high-resolution photos tailored for maximum engagement on Reels and TikTok.",
+            "deliverablesDesc": "A high-performance library of cinematic 4K social ads and high-resolution photos tailored for maximum engagement on Reels and TikTok.",
+            "resultsTitle": "The results",
+            "resultsBody": "In April 2026 alone, the social channels we manage for Jønk have generated over 400,000 views on TikTok and Instagram. Just as important: Jønk is still an active client, and there are no plans for that to change.",
+            "resultsStatNumber": "400,000+",
+            "resultsStatLabel": "views on TikTok and Instagram, April 2026",
+            "quoteText": "[Quote from Jønk coming]",
+            "quoteAuthor": "Jønk",
+            "ctaTitle": "Want the same depth in your marketing?",
+            "ctaBody": "We take clients through the full pipeline, from strategy and campaign to production and daily publishing. Tell us where you are and we'll figure out how we can help.",
+            "ctaServiceLink": "See our marketing service",
+            "ctaBookLink": "Book a meeting",
             "mainFeature": "Main Feature",
             "cinematicTextures": "Smash Quality",
-            "socialAdsCount": "5 Social Ads",
-            "productPhotosCount": "50+ Product Photos",
-            "professionalGrade": "Urban Identity",
+            "socialAdsCount": "Commercials",
+            "productPhotosCount": "Product Photos",
+            "professionalGrade": "Cemented Partner",
             "socialCampaign1": "Smash & Crunch",
             "socialCampaign2": "Pure Quality",
             "socialCampaign3": "Jønk Energy",
@@ -184,20 +206,34 @@
             "back": "Back to services",
             "badge": "Promo Production",
             "title": "Raw MMA Promo",
-            "description": "FCR (Full Contact Rumble) is a Swedish MMA promotion under the UFC umbrella. We were tasked with creating a promo video for fighter Tamerlan Akhmadov – a film that needed to capture the intensity of the sport and build hype ahead of the fight.",
+            "description": "We were brought in to create the introduction video for Tamerlan Akhmadov, a young rising MMA fighter ahead of his bout under FCR (Full Contact Rumble) in Sweden.",
+            "backgroundTitle": "Background",
+            "backgroundBody": "Tamerlan Akhmadov is a young MMA fighter on the rise on the international scene. He came to us because he wanted to be seen as a serious player going into his next fight. He didn't need a standard fighter portrait. He needed a professional introduction video that matched his ambitions.",
             "videoTitle": "The Promo",
-            "videoDesc": "An intensely edited promo blending training sequences, close-ups, and dramatic lighting to build tension.",
+            "videoDesc": "A quiet but intense introduction that lets the training and the fighter speak for themselves. Editing, lighting and sound design are built around Tamerlan's own request for a completely music-free production.",
+            "approachTitle": "How we worked",
+            "approachIntro": "We took full ownership of the production. We wrote the script, filmed at his own training space and at outdoor locations, and edited everything ourselves.",
+            "approachKeyTitle": "The key creative call",
+            "approachKeyBody": "Tamerlan didn't want any music in the video. Not even as background. Most agencies would have tried to talk him out of it, because music is the easiest tool to build mood. We did the opposite. We took his idea and built the production around it. Breath, footsteps on the mat, gloves hitting pads. The result is a video that feels real because it isn't hiding behind a soundtrack.",
             "strategy": "The Strategy",
-            "strategyDesc": "We focused on conveying the fighter's raw power and dedication. Fast cuts, heavy bass, and dark aesthetics create a sense of intensity that matches the world of MMA.",
+            "strategyDesc": "We conveyed Tamerlan's dedication and focus without resorting to clichés. We let the sound of training, breath and movement carry the film. It feels real because it is real.",
             "work": "The Work",
             "workItems": [
-              "Fighter promo video",
-              "Professional color grading",
-              "Motion graphics and titles",
-              "Sound design and mixing"
+              "Script and concept development",
+              "Filming in gym and outdoors",
+              "Editing and color grading",
+              "Sound design without background music"
             ],
             "deliverables": "Deliverables",
-            "deliverablesDesc": "A finished promo video ready for social media and event marketing, optimized for maximum engagement."
+            "deliverablesDesc": "A finished introduction video ready for social media and event marketing, delivered in every format needed.",
+            "resultsTitle": "The result",
+            "resultsBody": "When the card was announced his fight became one of the most anticipated of the entire event. He went in as the heavy favorite and won in style. Just as important: he has already reached out to continue the collaboration with more videos and photoshoots ahead of upcoming fights.",
+            "quoteText": "[Quote from Tamerlan coming]",
+            "quoteAuthor": "Tamerlan Akhmadov",
+            "ctaTitle": "Need something in the same style?",
+            "ctaBody": "We take on projects for sport, brand and individuals who want something that doesn't look like everything else. Describe your idea and you'll hear from us.",
+            "ctaServiceLink": "See our video services",
+            "ctaBookLink": "Book a meeting"
           }
         },
         "snatched": {
@@ -205,29 +241,42 @@
           "stack": ["Video Production", "3D Modeling", "Infographics", "Motion Graphics"],
           "flairs": ["3D", "Infographics", "Shapewear"],
           "paragraphs": [
-            "For Snatched – Norway's fastest-growing shapewear brand – we delivered a promo video featuring custom infographics and 3D modeling.",
-            "The video combines visual storytelling with data-driven elements to communicate the brand's position and success."
+            "For Snatched, a fast-growing Norwegian shapewear brand, we delivered a pitch video with 3D modeling and animated infographics for their next investment round.",
+            "The video visualizes sales volume as a physical warehouse, making scale concrete instead of abstract."
           ],
           "page": {
             "back": "Back to services",
-            "badge": "Video & 3D",
+            "badge": "Pitch Video",
             "title": "Visual Storytelling with 3D",
-            "description": "Snatched is a Norwegian shapewear brand combining shaping, comfort, and modern fit. With NOK 7 million in revenue, 5,000+ Instagram followers, and a 4.3 Trustpilot score, they needed a promo video that visually communicates this success.",
-            "videoTitle": "The Promo",
-            "videoDesc": "A visually striking video combining live-action with 3D-modeled product displays and animated infographics.",
+            "description": "Snatched asked us to create a pitch video for their next investment round. The goal was to show the size of the company visually, without just throwing numbers on a screen.",
+            "backgroundTitle": "Background",
+            "backgroundBody": "Snatched is a fast-growing Norwegian shapewear brand preparing for their next investment round. They came to us because they wanted a top-quality video that could secure maximum attention and capital in the pitch process. They wanted 3D, infographics and motion graphics at a level that matched their ambitions.",
+            "approachTitle": "The creative idea",
+            "approachBody": "We could easily have thrown big numbers on a screen and called it a day. Instead we built the sales figures as a physical warehouse. 3D-modeled cardboard boxes, pallets and packages filling the screen in step with the revenue Snatched has actually delivered. It visualizes scale in a way numbers alone never can, and it sticks in an investor's head.",
+            "clientStatsTitle": "Snatched in numbers",
+            "videoTitle": "The Pitch Video",
+            "videoDesc": "A high-end pitch video combining live-action, 3D-modeled warehouse visualizations and animated infographics to communicate the size and momentum of Snatched.",
             "strategy": "The Strategy",
-            "strategyDesc": "We combined 3D product modeling with animated infographics highlighting key metrics – revenue, customer satisfaction, and growth. The result is a video that both informs and captivates.",
+            "strategyDesc": "We visualized the sales volume as a physical warehouse. 3D-modeled boxes, pallets and packages stack up in step with the numbers, making scale concrete instead of abstract.",
             "work": "The Work",
             "workItems": [
-              "Promo video with 3D elements",
-              "Custom infographics",
-              "3D product modeling",
-              "Motion graphics and animation"
+              "Concept development and scripting",
+              "3D modeling of warehouse, pallets and packages",
+              "Animated infographics and motion graphics",
+              "Color grading and sound design"
             ],
             "deliverables": "Deliverables",
-            "deliverablesDesc": "A complete promo video with integrated 3D and infographics, ready for use on social media, website, and presentations.",
+            "deliverablesDesc": "A finished pitch video tailored for investor presentations and digital distribution, delivered in every format needed.",
+            "resultsTitle": "The result so far",
+            "resultsBody": "Snatched were very happy with the delivery after a thorough revision process where we fine-tuned every scene together with their team. The video is now in their hands and being used in the ongoing investment round. We're waiting to see how it lands with investors.",
+            "quoteText": "[Quote from Snatched coming]",
+            "quoteAuthor": "Snatched",
+            "ctaTitle": "Need a video that actually convinces?",
+            "ctaBody": "We take on pitch videos, product videos and content that requires above-average production value. Describe the project and you'll hear from us.",
+            "ctaServiceLink": "See our video services",
+            "ctaBookLink": "Book a meeting",
             "stats": {
-              "revenue": "NOK 7M+ revenue",
+              "revenue": "NOK 14M+ revenue (2026)",
               "followers": "5,000+ followers",
               "trustpilot": "4.3 Trustpilot"
             }
@@ -242,7 +291,7 @@
     "members": {
       "gunder": {
         "role": "Founder & CEO",
-        "bio": "Founder who connects strategy and development—hands-on in every delivery."
+        "bio": "Founder who connects strategy and development, hands-on in every delivery."
       },
       "rasul": {
         "role": "Partner & Chief Architect",
@@ -261,82 +310,33 @@
       "unknown": "I’m offline but will reply as soon as I’m back."
     }
   },
-  "Pricing": {
-    "title": "Simple, transparent pricing",
-    "subtitle": "Choose the plan that fits your needs. Fixed prices, no surprises.",
-    "badgeMostPopular": "Most popular",
-    "badgeCampaign": "Campaign",
-    "cta": { "getStarted": "Get started", "contactSales": "Get a quote" },
-    "shared": { "payWhenPaid": "" },
-    "faq": { "cost": { "question": "What does it cost?" } },
-    "plans": {
-      "kickstart": {
-        "name": "Custom",
-        "price": "Tailored pricing",
-        "desc": "Pick what you need – we tailor the solution to you.",
-        "features": [
-          "Choose between website, ads, or both",
-          "Flexible pricing based on scope",
-          "Custom design and content",
-          "Personal guidance from start to finish"
-        ],
-        "costHint": "<p><strong>Price based on your needs</strong> – you decide the scope.</p><p>Contact us for a no-obligation chat and quote.</p>"
+  "NotFound": {
+    "title": "Page not found",
+    "subtitle": "The link may be old, or the page has moved. Try one of these instead:",
+    "home": "Go to the homepage",
+    "services": "See our services",
+    "book": "Book a meeting"
+  },
+  "Stats": {
+    "eyebrow": "Numbers that count",
+    "items": {
+      "revenue": {
+        "value": "100M+",
+        "suffix": "NOK",
+        "label": "in combined client revenue (2025)"
       },
-      "growth": {
-        "name": "Kickstart",
-        "price": "From $100",
-        "desc": "A simple, fast static website for your business or project.",
-        "features": [
-          "Website with responsive design",
-          "Fast loading and SEO-optimized",
-          "Contact form or basic integrations",
-          "Hosting setup assistance"
-        ],
-        "costHint": "<p>Starting at <strong>$100</strong> for a simple static page.</p><p>Final price depends on scope and customization needs.</p>"
+      "views": {
+        "value": "516K",
+        "label": "social media views in April 2026"
       },
-      "scale": {
-        "name": "Business Package",
-        "price": "From $1,500",
-        "desc": "Everything you need to succeed online – website, ads, and video production.",
-        "features": [
-          "Professional website with custom design",
-          "Commercial video filming and production",
-          "Marketing strategy and advertising",
-          "Ongoing support, analytics, and optimization"
-        ],
-        "costHint": "<p>From <strong>$1,500</strong> for the complete business package.</p><p>Includes website, filming, and advertising – all under one roof.</p>"
+      "inhouse": {
+        "value": "~400K",
+        "label": "of those from video produced 100% in-house"
+      },
+      "projects": {
+        "value": "20",
+        "label": "client projects delivered in 2026 to date"
       }
-    },
-    "dialogs": {
-      "kickstart": {
-        "title": "Custom: Tell us what you need",
-        "desc": "Describe what you're looking for and we'll create a tailored proposal."
-      },
-      "growth": {
-        "title": "Kickstart: Get started",
-        "desc": "Tell us about your project and we'll get back with a proposal."
-      },
-      "scale": {
-        "title": "Business Package: Let's talk",
-        "desc": "Tell us about your business and goals, and we'll create a complete solution."
-      }
-    },
-    "forms": {
-      "labels": { "project": "Project / goal", "email": "Email" },
-      "placeholders": {
-        "project": "Describe your project and what you need.",
-        "custom": "What do you need? Website, ads, filming – or a combination?",
-        "kickstart": "Tell us briefly about your business and what the website should include.",
-        "business": "Tell us about your business, target audience, and what you want to achieve."
-      },
-      "summary": {
-        "title": "What's included",
-        "howWeMeasure": "We'll provide a detailed proposal with timeline and deliverables based on your requirements.",
-        "custom": "You choose what you need. We'll create a tailored proposal based on your wishes.",
-        "kickstart": "Simple website with responsive design, contact form, and SEO optimization. Fast delivery.",
-        "business": "Complete package with website, commercial video, and marketing. Everything you need to succeed online."
-      },
-      "actions": { "submit": "Send request", "sending": "Sending…" }
     }
   },
   "FeaturedWork": {
@@ -352,6 +352,47 @@
     "subtitle": "Book a free intro call or send us a message.",
     "bookCta": "Book a meeting",
     "messageCta": "Send a message"
+  },
+  "Meta": {
+    "home": {
+      "title": "Syntax Studio – websites, video and marketing",
+      "description": "We handle websites, campaigns and video production for small and mid-sized businesses. One partner, the whole job."
+    },
+    "services": {
+      "title": "Services",
+      "description": "Websites, video production, photo, campaigns and graphic design – all from one team."
+    },
+    "about": {
+      "title": "About",
+      "description": "A small team building websites, making video and running marketing for businesses that want to be seen."
+    },
+    "workJonk": {
+      "title": "Jønk – full campaign",
+      "description": "A complete visual campaign for Jønk: 4K ads, over 50 product photos and content for social media."
+    },
+    "workFcr": {
+      "title": "FCR – fighter promo",
+      "description": "Promo video for MMA fighter Tamerlan Akhmadov under FCR – Full Contact Rumble in Sweden."
+    },
+    "workSnatched": {
+      "title": "Snatched – 3D promo",
+      "description": "Promo video with custom infographics and 3D modeling for shapewear brand Snatched."
+    }
+  },
+  "BookPage": {
+    "metaTitle": "Book a meeting | Syntax Studio",
+    "metaDescription": "Book a free intro call with Syntax Studio. We help you with websites, video, and marketing that delivers results.",
+    "title": "Book a meeting",
+    "subtitle": "Pick a time that suits you. 30 minutes on video, we get to know each other and figure out what you need.",
+    "bookCta": "Pick a time",
+    "emailCta": "Send an email",
+    "expect": {
+      "title": "What to expect",
+      "duration": "30 minutes, no obligation",
+      "format": "Video call via Google Meet",
+      "outcome": "A clear plan and estimate, or just a good conversation",
+      "noCommitment": "No sales pressure, no commitments"
+    }
   },
   "ServicesPage": {
     "process": {

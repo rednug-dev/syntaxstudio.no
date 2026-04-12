@@ -18,14 +18,88 @@ import '../globals.css';
 const inter = Inter({subsets: ['latin'], variable: '--font-inter', display: 'swap'});
 const spaceGrotesk = Space_Grotesk({subsets: ['latin'], variable: '--font-space-grotesk', display: 'swap'});
 
+const SITE_URL = 'https://syntaxstudio.no';
+
 export const metadata: Metadata = {
-  title: 'Syntax Studio',
-  description: 'Webdesign, merkevarebygging og automatisering',
+  metadataBase: new URL(SITE_URL),
+  title: {
+    template: '%s | Syntax Studio',
+    default: 'Syntax Studio – nettsider, video og markedsføring',
+  },
+  description: 'Vi tar oss av nettside, kampanjer og videoproduksjon for små og mellomstore bedrifter. Én partner, hele leveransen.',
   icons: {
     icon: '/logos/syntax-i.webp?v=2',
     shortcut: '/logos/syntax-i.webp?v=2',
     apple: '/logos/syntax-i.webp?v=2',
   },
+  openGraph: {
+    siteName: 'Syntax Studio',
+    type: 'website',
+    url: SITE_URL,
+  },
+  twitter: {
+    card: 'summary_large_image',
+  },
+};
+
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Syntax Studio',
+  url: SITE_URL,
+  logo: `${SITE_URL}/logos/syntax-i.webp`,
+  description: 'Markedsføringspartner for nettsider, video og kampanjer.',
+  email: 'gunder@syntaxstudio.no',
+  telephone: '+47 9444 3355',
+  areaServed: 'NO',
+  founder: {
+    '@type': 'Person',
+    name: 'Gunder Rollufson',
+  },
+  sameAs: [
+    'https://www.instagram.com/syntaxstudio.no/',
+    'https://www.tiktok.com/@syntaxstudio.no',
+    'https://www.linkedin.com/company/syntax-studio-no/',
+  ],
+  contactPoint: [
+    {
+      '@type': 'ContactPoint',
+      contactType: 'sales',
+      email: 'gunder@syntaxstudio.no',
+      telephone: '+47 9444 3355',
+      areaServed: 'NO',
+      availableLanguage: ['Norwegian', 'English'],
+    },
+  ],
+};
+
+const localBusinessJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  '@id': `${SITE_URL}#business`,
+  name: 'Syntax Studio',
+  url: SITE_URL,
+  image: `${SITE_URL}/logos/syntax-i.webp`,
+  description: 'Nettsider, videoproduksjon, markedsføring, foto og grafisk design.',
+  email: 'gunder@syntaxstudio.no',
+  telephone: '+47 9444 3355',
+  priceRange: '$$',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Heimdalsgata 34B',
+    postalCode: '0561',
+    addressLocality: 'Oslo',
+    addressCountry: 'NO',
+  },
+  areaServed: {
+    '@type': 'Country',
+    name: 'Norway',
+  },
+  sameAs: [
+    'https://www.instagram.com/syntaxstudio.no/',
+    'https://www.tiktok.com/@syntaxstudio.no',
+    'https://www.linkedin.com/company/syntax-studio-no/',
+  ],
 };
 
 export default async function RootLayout({
@@ -52,6 +126,16 @@ export default async function RootLayout({
         <Script type="text/javascript" src="https://cs.iubenda.com/autoblocking/4151649.js" />
         <Script type="text/javascript" src="//cdn.iubenda.com/cs/gpp/stub.js" />
         <Script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charSet="UTF-8" async />
+        <Script
+          id="ld-organization"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <Script
+          id="ld-localbusiness"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+        />
       </head>
       <body className={cn('font-body antialiased', inter.variable, spaceGrotesk.variable)}>
         <NextIntlClientProvider messages={messages} locale={locale}>

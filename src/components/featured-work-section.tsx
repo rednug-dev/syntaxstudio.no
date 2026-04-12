@@ -83,7 +83,7 @@ export default function FeaturedWorkSection() {
 
         <motion.div variants={item} className="relative group">
           <Link href="/work/jonk" className="block relative rounded-[2rem] overflow-hidden border border-white/5 shadow-xl aspect-square">
-            <Image src="/webmat/p3_1.webp" alt="Product photo" fill sizes="25vw" className="object-cover object-[center_25%] group-hover:scale-105 transition-transform duration-700" />
+            <Image src="/webmat/p3_1.webp" alt="Jønk chicken wings reklameplakat" fill sizes="25vw" className="object-cover object-[center_25%] group-hover:scale-105 transition-transform duration-700" />
           </Link>
         </motion.div>
 

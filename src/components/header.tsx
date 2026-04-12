@@ -55,6 +55,9 @@ export default function Header() {
 
   return (
     <>
+      <a href="#main-content" className="sr-only">
+        Skip to content
+      </a>
       <header className={cn(
         "sticky top-0 z-50 w-full transition-transform duration-300",
         isHidden ? "-translate-y-full" : "translate-y-0",
@@ -94,16 +97,14 @@ export default function Header() {
                 "absolute right-0 top-full w-full rounded-b-md border border-t-0 border-primary bg-primary text-primary-foreground overflow-hidden transition-all duration-200 origin-top",
                 isContactOpen ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0 pointer-events-none"
               )}>
-                <a
-                  href="https://cal.com/syntaxstudio"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/book"
                   className="flex items-center gap-2.5 px-4 py-2.5 text-sm font-medium hover:bg-primary-foreground/10 transition-colors"
                   onClick={() => setIsContactOpen(false)}
                 >
                   <Calendar className="h-4 w-4" />
                   {t('bookCall')}
-                </a>
+                </Link>
                 <Link
                   href="/#proposal"
                   className="flex items-center gap-2.5 px-4 py-2.5 text-sm font-medium hover:bg-primary-foreground/10 transition-colors"
@@ -142,14 +143,12 @@ export default function Header() {
             </Link>
           ))}
           <div className="mt-4 space-y-2">
-            <a
-              href="https://cal.com/syntaxstudio"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/book"
               className="text-lg font-semibold flex items-center gap-3 p-3 hover:bg-muted rounded-lg"
             >
               <Calendar className="w-5 h-5" />{t('bookCall')}
-            </a>
+            </Link>
             <Link
               href="/#proposal"
               className="text-lg font-semibold flex items-center gap-3 p-3 hover:bg-muted rounded-lg"

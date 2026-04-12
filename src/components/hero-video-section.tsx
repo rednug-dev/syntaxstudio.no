@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 
 export default function HeroVideoSection() {
@@ -16,6 +17,7 @@ export default function HeroVideoSection() {
         loop
         playsInline
         preload="auto"
+        poster="/jønk/burgers_vertical_poster.webp"
         className="absolute inset-0 h-full w-full object-cover object-[center_80%]"
       >
         <source src="/jønk/burgers_vertical.mp4" type="video/mp4" />
@@ -51,9 +53,9 @@ export default function HeroVideoSection() {
           className="mt-8 flex flex-col sm:flex-row justify-center gap-4"
         >
           <Button size="lg" asChild>
-            <a href="https://cal.com/syntaxstudio" target="_blank" rel="noopener noreferrer">
+            <Link href="/book">
               {t("primaryCta")} <ArrowRight className="ml-2 h-4 w-4" />
-            </a>
+            </Link>
           </Button>
           <Button size="lg" variant="outline" asChild>
             <a href="#work">

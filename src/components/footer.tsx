@@ -1,5 +1,5 @@
 "use client";
-import { Instagram, Linkedin } from "lucide-react";
+import { Instagram, Linkedin, MapPin } from "lucide-react";
 import {Link} from '@/i18n/navigation';
 import Image from "next/image";
 import { useTranslations } from "next-intl";
@@ -16,7 +16,14 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-2 font-bold text-lg font-headline mb-4">
               <Image src="/logosyntax-nbnm.png" alt="Syntax Studio logo" width={150} height={40} />
             </Link>
-            <p className="text-muted-foreground text-base">{t('tagline')}</p>
+            <p className="text-muted-foreground text-base mb-4">{t('tagline')}</p>
+            <address className="not-italic text-sm text-muted-foreground flex items-start gap-2">
+              <MapPin className="h-4 w-4 mt-0.5 shrink-0" />
+              <span>
+                Heimdalsgata 34B<br />
+                0561 Oslo
+              </span>
+            </address>
           </div>
 
           {/* Links & Contact */}
@@ -26,13 +33,18 @@ export default function Footer() {
               <ul className="space-y-2 text-base">
                 <li><Link href="/services#case-studies" className="text-muted-foreground hover:text-primary">{t('examples')}</Link></li>
                 <li><Link href="/about-us" className="text-muted-foreground hover:text-primary">{t('about')}</Link></li>
-                <li><a href="https://cal.com/syntaxstudio" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">{t('contact')}</a></li>
+                <li><Link href="/book" className="text-muted-foreground hover:text-primary">{t('contact')}</Link></li>
               </ul>
             </div>
 
             <div className="text-center sm:text-left">
               <h4 className="font-semibold mb-3 font-headline">{t('question')}</h4>
-              <p className="text-base text-muted-foreground break-words">info@syntaxstudio.no</p>
+              <p className="text-base text-muted-foreground break-words">
+                <a href="mailto:info@syntaxstudio.no" className="hover:text-primary">info@syntaxstudio.no</a>
+              </p>
+              <p className="text-base text-muted-foreground mt-1">
+                <a href="tel:+4794443355" className="hover:text-primary">+47 944 43 355</a>
+              </p>
               <div className="flex justify-center sm:justify-start mt-4 gap-4">
                 <a href="https://www.tiktok.com/@syntaxstudio.no" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="text-muted-foreground hover:text-primary">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">

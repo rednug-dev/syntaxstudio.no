@@ -6,14 +6,13 @@
   "Nav": {
     "showcase": "Arbeid",
     "about": "Om oss",
-    "pricing": "Priser",
     "contact": "Kontakt oss",
     "bookCall": "Book et møte",
     "sendEmail": "Send e-post"
   },
   "Hero": {
-    "title": "Nettsider, video og reklame som gir resultater",
-    "subtitle": "Vi er markedsføringspartneren som leverer alt fra strategi og kampanjer til videoproduksjon og nettsider, så du kan fokusere på det du gjør best.",
+    "title": "Norges mest komplette markedsføringsstudio",
+    "subtitle": "Strategi, video, foto, nettsider og daglig publisering. Alt under ett tak, så du slipper å koordinere flere byråer.",
     "primaryCta": "Book en uforpliktende prat",
     "secondaryCta": "Se hva vi gjør",
     "scrollCta": "Se arbeidet vårt"
@@ -132,42 +131,65 @@
         "Grafisk design (AE, PS, ID)",
         "SEO, analyse & løpende optimalisering"
       ],
-      "partnersTitle": "Kunder vi har jobbet med",
       "projects": {
         "jonk": {
           "heading": "Komplett kampanje for Jønk",
           "stack": ["Videoproduksjon", "Foto", "Markedsføring", "Grafisk design"],
           "flairs": ["4K Reklamefilm", "Produktfoto", "Sosiale medier"],
           "paragraphs": [
-            "For Jønk leverte vi en komplett visuell kampanje – fra cinematiske 4K-reklamefilmer til et bibliotek med over 50 high-end produktbilder.",
-            "Alt ble designet for å fange den rå energien og urbane identiteten som definerer Jønk som merkevare."
+            "For Jønk leverer vi en komplett visuell kampanje, fra cinematiske 4K-reklamefilmer til et stort bibliotek med high-end produktbilder.",
+            "Alt designet for å fange den rå energien og urbane identiteten som definerer Jønk som merkevare."
           ],
           "page": {
             "back": "Tilbake til tjenester",
-            "badge": "Kampanje-leveranse",
+            "badge": "Sementert markedsføringspartner",
             "title": "Leveranse av en rå kampanje",
-            "description": "Jønk er en burgeraktør med en rå, urban og leken profil bygget på kvalitet og attitude. Vi leverte en komplett og energisk kampanje designet for å dominere sosiale medier, bestående av 5 skreddersydde 4K-reklamefilmer og over 50 high-end produktbilder som fanger den rå energien på kjøkkenet og den perfekte smash-burgeren.",
+            "description": "En sementert del av Jønks markedsføringsteam siden lanseringen av Burgerkrigen.",
+            "backgroundTitle": "Bakgrunnen",
+            "backgroundBody": "Vi kom inn som en ekstern enhet i Jønks markedsføringsteam under en av Norges største markedsføringskampanjer. Oppdraget var avgrenset til å starte med. I dag er vi en sementert del av teamet og jobber på alt det visuelle og strategiske som faktisk når kunden.",
+            "campaignTitle": "Burgerkrigen",
+            "campaignBody": "Burgerkrigen er en head-to-head konkurranse mellom Oskar Westerlin og Mathea Bjørndalen, hvor publikum kårer vinneren. Vi leverer alt det visuelle, alt det fysiske og all sporingen som gjør det mulig å måle hva som faktisk fungerer.",
             "commercial": "Sosial Kampanje",
             "spiritTitle": "Jønk-stilen",
             "spiritDesc": "Raske, fengende klipp vi produserte for å fange den rå energien på kjøkkenet og crunchen i den perfekte smash-burgeren.",
             "photoTitle": "Visuelt i toppklasse",
-            "photoDesc": "Vi leverte et komplett bibliotek med over 50 edgy produktbilder og postere designet for sosiale medier, trykk og digitale menyer – alt med den urbane Jønk-identiteten i fokus.",
+            "photoDesc": "Vi leverer et stort bibliotek med edgy produktbilder og postere designet for sosiale medier, trykk og digitale menyer, alt med den urbane Jønk-identiteten i fokus.",
+            "scopeTitle": "Vi leverer på alle fronter",
+            "scopeIntro": "Det du har sett over er én del av leveransen. Som sementert del av Jønks markedsføringsteam jobber vi på alt det visuelle, det fysiske og det målbare:",
+            "scopeItems": [
+              "Gatebukker, rollups, flyers og pressevegger",
+              "Produktvideo og produktfoto i full produksjon",
+              "Sosial-video og daglig innhold",
+              "Markedsføringsplan og kampanjeideer",
+              "Tracking-oppsett og statistikkrapportering",
+              "Grafisk design og digitalt materiell"
+            ],
             "strategy": "Strategien",
-            "strategyDesc": "Fokus på råvarer, varme og teksturer. Vi løftet frem 'crunch' og rene smaker for å kommunisere kvalitet gjennom en energisk leveranse som matcher merkets edgy uttrykk.",
+            "strategyDesc": "Fokus på råvarer, varme og teksturer. Vi løfter frem crunch og rene smaker, og kommuniserer kvalitet gjennom en energisk leveranse som matcher merkets edgy uttrykk.",
             "work": "Arbeidet",
             "workItems": [
-              "5+ sosiale reklamefilmer (4K)",
-              "50+ profesjonelle produktbilder",
+              "Reklamefilmer for sosiale medier (4K)",
+              "Profesjonelle produktbilder",
               "Cinematisk videoproduksjon",
               "Digitalt poster-design"
             ],
             "deliverables": "Leveranser",
-            "deliverablesDesc": "Et kraftfullt bibliotek med 5 cinematiske 4K-annonser og 50+ høyoppløselige bilder skreddersydd for maksimal engasjement på Reels og TikTok.",
+            "deliverablesDesc": "Et kraftfullt bibliotek med cinematiske 4K-annonser og høyoppløselige bilder skreddersydd for maksimalt engasjement på Reels og TikTok.",
+            "resultsTitle": "Resultatene",
+            "resultsBody": "Bare i april 2026 har de sosiale kanalene vi forvalter for Jønk generert over 400 000 visninger på TikTok og Instagram. Like viktig: Jønk er fortsatt aktiv kunde og det er ingen planer om at det skal endre seg.",
+            "resultsStatNumber": "400 000+",
+            "resultsStatLabel": "visninger på TikTok og Instagram, april 2026",
+            "quoteText": "[Sitat fra Jønk kommer]",
+            "quoteAuthor": "Jønk",
+            "ctaTitle": "Vil du ha samme dybde i din markedsføring?",
+            "ctaBody": "Vi tar kunder gjennom hele løpet, fra strategi og kampanje til produksjon og daglig publisering. Beskriv hvor du står, så finner vi ut hvordan vi kan hjelpe.",
+            "ctaServiceLink": "Se markedsføringstjenesten vår",
+            "ctaBookLink": "Book et møte",
             "mainFeature": "Hovedfilm",
             "cinematicTextures": "Smash-kvalitet",
-            "socialAdsCount": "5 reklamefilmer",
-            "productPhotosCount": "50+ produktbilder",
-            "professionalGrade": "Urban Identitet",
+            "socialAdsCount": "Reklamefilm",
+            "productPhotosCount": "Produktfoto",
+            "professionalGrade": "Sementert partner",
             "socialCampaign1": "Smash & Crunch",
             "socialCampaign2": "Ren Kvalitet",
             "socialCampaign3": "Jønk Energi",
@@ -186,20 +208,34 @@
             "back": "Tilbake til tjenester",
             "badge": "Promo-produksjon",
             "title": "Rå promo for MMA",
-            "description": "FCR (Full Contact Rumble) er en svensk MMA-promosjon under UFC-paraplyen. Vi fikk oppdraget med å lage en promo-video for fighter Tamerlan Akhmadov – en film som skulle fange intensiteten i sporten og bygge hype foran kampen.",
+            "description": "Vi fikk oppdraget med å lage introduksjonsvideoen til Tamerlan Akhmadov, en ung MMA-fighter på vei opp foran sin kamp under FCR (Full Contact Rumble) i Sverige.",
+            "backgroundTitle": "Bakgrunnen",
+            "backgroundBody": "Tamerlan Akhmadov er en ung MMA-fighter på vei opp i internasjonal sammenheng. Han tok kontakt med oss fordi han ville bli sett på som en seriøs aktør foran neste kamp. Han trengte ikke et standard fighter-portrett. Han trengte en profesjonell introduksjonsvideo som matchet ambisjonene hans.",
             "videoTitle": "Promo-filmen",
-            "videoDesc": "En intenst klippet promo som blander treningssekvenser, close-ups og dramatisk lyssetting for å bygge spenning.",
+            "videoDesc": "En stille men intens introduksjon som lar treningen og fighteren tale for seg selv. Klipping, lyssetting og lyddesign er bygget rundt Tamerlans eget ønske om en helt musikkfri produksjon.",
+            "approachTitle": "Slik jobbet vi",
+            "approachIntro": "Vi tok et helhetlig grep om produksjonen. Vi skrev manuset, filmet i hans eget treningssted og på utendørs lokasjoner, og redigerte det hele selv.",
+            "approachKeyTitle": "Det viktigste kreative valget",
+            "approachKeyBody": "Tamerlan ville ikke ha musikk i videoen. Ikke en gang som bakgrunn. De fleste byråer ville prøvd å snakke han fra det, fordi musikk er det enkleste verktøyet for å bygge stemning. Vi gjorde det motsatte. Vi tok ideen hans og bygde produksjonen rundt det. Lyden av pust, fottrinn på matten, hansker som treffer pads. Resultatet ble en video som føles ekte fordi den ikke gjemmer seg bak et lydspor.",
             "strategy": "Strategien",
-            "strategyDesc": "Vi fokuserte på å formidle fighterens råskap og dedikasjon. Hurtige klipp, tung bass og mørk estetikk skaper en følelse av intensitet som matcher MMA-verdenen.",
+            "strategyDesc": "Vi formidlet Tamerlans dedikasjon og fokus uten å ty til klisjéene. Vi lot lyden av treningen, pusten og bevegelsen bære filmen. Det føles ekte fordi det er ekte.",
             "work": "Arbeidet",
             "workItems": [
-              "Promo-video for fighter",
-              "Profesjonell fargegradering",
-              "Motion graphics og titler",
-              "Lyddesign og miksing"
+              "Manus og konseptutvikling",
+              "Filming i gym og utendørs",
+              "Redigering og fargegradering",
+              "Lyddesign uten bakgrunnsmusikk"
             ],
             "deliverables": "Leveranser",
-            "deliverablesDesc": "En ferdig promo-video klar for sosiale medier og event-markedsføring, optimalisert for maksimalt engasjement."
+            "deliverablesDesc": "En ferdig introduksjonsvideo klar for sosiale medier og event-markedsføring, levert i alle nødvendige formater.",
+            "resultsTitle": "Resultatet",
+            "resultsBody": "Da kortet ble annonsert ble Tamerlans kamp en av de mest etterlengtede på hele eventet. Han gikk inn som storfavoritt og vant med stil. Like viktig: han har allerede tatt kontakt for å fortsette samarbeidet med flere videoer og fotoshoots foran kommende kamper.",
+            "quoteText": "[Sitat fra Tamerlan kommer]",
+            "quoteAuthor": "Tamerlan Akhmadov",
+            "ctaTitle": "Trenger du noe i samme stil?",
+            "ctaBody": "Vi tar imot prosjekter for sport, brand og personer som vil ha noe som ikke ser ut som alt annet. Beskriv ideen din, så hører du fra oss.",
+            "ctaServiceLink": "Se våre videotjenester",
+            "ctaBookLink": "Book et møte"
           }
         },
         "snatched": {
@@ -207,29 +243,42 @@
           "stack": ["Videoproduksjon", "3D-modellering", "Infografikk", "Motion Graphics"],
           "flairs": ["3D", "Infografikk", "Shapewear"],
           "paragraphs": [
-            "For Snatched – Norges raskest voksende shapewear-brand – leverte vi en promo-video med skreddersydd infografikk og 3D-modellering.",
-            "Videoen kombinerer visuell storytelling med datadrevne elementer for å kommunisere merkets posisjon og suksess."
+            "For Snatched, et raskt voksende norsk shapewear-brand, leverte vi en pitch-video med 3D-modellering og animert infografikk foran neste investeringsrunde.",
+            "Videoen visualiserer salgsvolumet som et fysisk lager, og gjør skala konkret i stedet for abstrakt."
           ],
           "page": {
             "back": "Tilbake til tjenester",
-            "badge": "Video & 3D",
+            "badge": "Pitch-video",
             "title": "Visuell storytelling med 3D",
-            "description": "Snatched er et norsk shapewear-brand som kombinerer shaping, komfort og moderne passform. Med 7 millioner kroner i omsetning, over 5 000 Instagram-følgere og 4,3 i Trustpilot-score, trengte de en promo-video som kommuniserer denne suksessen visuelt.",
-            "videoTitle": "Promo-filmen",
-            "videoDesc": "En visuelt slående video som kombinerer live-action med 3D-modellerte produktvisninger og animert infografikk.",
+            "description": "Snatched ba oss lage en pitch-video til neste investeringsrunde. Målet var å vise størrelsen på selskapet visuelt, uten å bare slenge tall på skjermen.",
+            "backgroundTitle": "Bakgrunnen",
+            "backgroundBody": "Snatched er et raskt voksende norsk shapewear-brand som forbereder neste runde med investering. De kom til oss fordi de ville ha en video i topp kvalitet som kunne sikre størst mulig oppmerksomhet og kapital i pitch-prosessen. De ønsket 3D, infografikk og motion graphics på et nivå som matchet ambisjonene deres.",
+            "approachTitle": "Den kreative ideen",
+            "approachBody": "Vi kunne lett slått store tall opp på skjermen og kalt det en dag. I stedet bygde vi salgstallene som et fysisk lager. 3D-modellerte pappesker, paller og pakker som fyller skjermen i takt med omsetningen Snatched faktisk har levert. Det visualiserer skala på en måte som tall alene aldri klarer, og det blir hengende igjen i hodet på en investor.",
+            "clientStatsTitle": "Snatched i tall",
+            "videoTitle": "Pitch-filmen",
+            "videoDesc": "En high-end pitch-video som kombinerer live-action, 3D-modellerte lagervisninger og animert infografikk for å kommunisere størrelsen og momentumet i Snatched.",
             "strategy": "Strategien",
-            "strategyDesc": "Vi kombinerte 3D-modellering av produktene med animert infografikk som fremhever nøkkeltall – omsetning, kundetilfredshet og vekst. Resultatet er en video som både informerer og fascinerer.",
+            "strategyDesc": "Vi visualiserte salgsvolumet som et fysisk lager. 3D-modellerte pappesker, paller og pakker bygger seg opp i takt med tallene, og gjør skala konkret i stedet for abstrakt.",
             "work": "Arbeidet",
             "workItems": [
-              "Promo-video med 3D-elementer",
-              "Skreddersydd infografikk",
-              "3D-modellering av produkter",
-              "Motion graphics og animasjon"
+              "Konseptutvikling og skripting",
+              "3D-modellering av lager, paller og pakker",
+              "Animert infografikk og motion graphics",
+              "Color grading og lyddesign"
             ],
             "deliverables": "Leveranser",
-            "deliverablesDesc": "En komplett promo-video med integrert 3D og infografikk, klar for bruk på sosiale medier, nettside og presentasjoner.",
+            "deliverablesDesc": "En ferdig pitch-video skreddersydd for investor-presentasjoner og digital distribusjon, levert i alle nødvendige formater.",
+            "resultsTitle": "Resultatet så langt",
+            "resultsBody": "Snatched ble veldig godt fornøyd med leveransen etter en grundig revisjonsprosess hvor vi finjusterte hver scene sammen med teamet deres. Videoen er nå i hendene på Snatched og brukes i den pågående investeringsrunden. Vi avventer å se hvordan den lander hos investorene.",
+            "quoteText": "[Sitat fra Snatched kommer]",
+            "quoteAuthor": "Snatched",
+            "ctaTitle": "Trenger du en video som faktisk overbeviser?",
+            "ctaBody": "Vi tar pitch-videoer, produktvideoer og innhold som krever produksjonsverdi over middels. Beskriv prosjektet, så hører du fra oss.",
+            "ctaServiceLink": "Se våre videotjenester",
+            "ctaBookLink": "Book et møte",
             "stats": {
-              "revenue": "7M+ i omsetning",
+              "revenue": "14M+ i omsetning (2026)",
               "followers": "5 000+ følgere",
               "trustpilot": "4,3 Trustpilot"
             }
@@ -244,7 +293,7 @@
     "members": {
       "gunder": {
         "role": "Grunnlegger og daglig leder",
-        "bio": "Grunnlegger som kobler strategi og utvikling—hands-on i alle leveranser."
+        "bio": "Grunnlegger som kobler strategi og utvikling, hands-on i alle leveranser."
       },
       "rasul": {
         "role": "Partner og sjefsarkitekt",
@@ -263,96 +312,32 @@
       "unknown": "Jeg er offline, men vil svare deg så fort jeg er tilbake."
     }
   },
-  "Pricing": {
-    "title": "Enkle, transparente priser",
-    "subtitle": "Velg pakken som passer deg. Faste priser, ingen overraskelser.",
-    "badgeMostPopular": "Mest valgt",
-    "badgeCampaign": "Kampanje",
-    "cta": {
-      "getStarted": "Kom i gang",
-      "contactSales": "Få et tilbud"
-    },
-    "shared": {
-      "payWhenPaid": ""
-    },
-    "faq": {
-      "cost": {
-        "question": "Hva koster det?"
-      }
-    },
-    "plans": {
-      "kickstart": {
-        "name": "Skreddersydd",
-        "price": "Etter behov",
-        "desc": "Velg selv hva du trenger – vi tilpasser løsningen til deg.",
-        "features": [
-          "Velg mellom nettside, reklame, eller begge deler",
-          "Fleksibel pris basert på omfang",
-          "Skreddersydd design og innhold",
-          "Personlig oppfølging fra start til mål"
-        ],
-        "costHint": "<p><strong>Pris basert på dine behov</strong> – du bestemmer omfanget.</p><p>Ta kontakt for en uforpliktende prat og tilbud.</p>"
+  "NotFound": {
+    "title": "Siden finnes ikke",
+    "subtitle": "Lenken er kanskje gammel, eller siden er flyttet. Prøv en av disse i stedet:",
+    "home": "Gå til forsiden",
+    "services": "Se tjenestene våre",
+    "book": "Book et møte"
+  },
+  "Stats": {
+    "eyebrow": "Tall som teller",
+    "items": {
+      "revenue": {
+        "value": "100M+",
+        "suffix": "NOK",
+        "label": "kombinert kundeomsetning i 2025"
       },
-      "growth": {
-        "name": "Kickstart",
-        "price": "Fra 999 kr",
-        "desc": "En enkel, rask statisk nettside for din bedrift eller prosjekt.",
-        "features": [
-          "Nettside med responsivt design",
-          "Rask lasting og SEO-optimalisert",
-          "Kontaktskjema eller enkel integrasjon",
-          "Hjelp med hosting-oppsett"
-        ],
-        "costHint": "<p>Fra <strong>999 kr</strong> for en enkel statisk side.</p><p>Endelig pris avhenger av omfang og tilpasningsbehov.</p>"
+      "views": {
+        "value": "516K",
+        "label": "visninger på sosiale medier i april 2026"
       },
-      "scale": {
-        "name": "Bedriftspakka",
-        "price": "Fra 14 999 kr",
-        "desc": "Alt du trenger for å lykkes digitalt – nettside, reklame og videoproduksjon.",
-        "features": [
-          "Profesjonell nettside med skreddersydd design",
-          "Filming og produksjon av reklamefilm",
-          "Markedsføringsstrategi og annonsering",
-          "Løpende støtte, analyse og optimalisering"
-        ],
-        "costHint": "<p>Fra <strong>14 999 kr</strong> for komplett bedriftspakke.</p><p>Inkluderer nettside, filming og reklame – alt under ett tak.</p>"
-      }
-    },
-    "dialogs": {
-      "kickstart": {
-        "title": "Skreddersydd: Fortell oss hva du trenger",
-        "desc": "Beskriv hva du er ute etter, så lager vi et tilbud tilpasset deg."
+      "inhouse": {
+        "value": "~400K",
+        "label": "av disse fra video laget 100% av oss"
       },
-      "growth": {
-        "title": "Kickstart: Kom i gang",
-        "desc": "Fortell oss om prosjektet ditt, så kommer vi tilbake med et forslag."
-      },
-      "scale": {
-        "title": "Bedriftspakka: La oss ta en prat",
-        "desc": "Fortell oss om bedriften og målene deres, så skreddersyr vi en komplett løsning."
-      }
-    },
-    "forms": {
-      "labels": {
-        "project": "Prosjekt / mål",
-        "email": "E-post"
-      },
-      "placeholders": {
-        "project": "Beskriv prosjektet ditt og hva du trenger.",
-        "custom": "Hva trenger du? Nettside, reklame, filming – eller en kombinasjon?",
-        "kickstart": "Fortell kort om bedriften din og hva nettsiden skal inneholde.",
-        "business": "Fortell om bedriften, målgruppen og hva dere ønsker å oppnå."
-      },
-      "summary": {
-        "title": "Hva som er inkludert",
-        "howWeMeasure": "Vi gir deg et detaljert forslag med tidslinje og leveranser basert på dine krav.",
-        "custom": "Du velger selv hva du trenger. Vi gir deg et skreddersydd tilbud basert på ønskene dine.",
-        "kickstart": "Enkel nettside med responsivt design, kontaktskjema og SEO-optimalisering. Rask levering.",
-        "business": "Komplett pakke med nettside, reklamefilm og markedsføring. Alt du trenger for å lykkes digitalt."
-      },
-      "actions": {
-        "submit": "Send forespørsel",
-        "sending": "Sender…"
+      "projects": {
+        "value": "20",
+        "label": "prosjekter levert hittil i 2026"
       }
     }
   },
@@ -369,6 +354,47 @@
     "subtitle": "Book et uforpliktende møte eller send oss en melding.",
     "bookCta": "Book et møte",
     "messageCta": "Send en melding"
+  },
+  "Meta": {
+    "home": {
+      "title": "Syntax Studio – nettsider, video og markedsføring",
+      "description": "Vi tar oss av nettside, kampanjer og videoproduksjon for små og mellomstore bedrifter. Én partner, hele leveransen."
+    },
+    "services": {
+      "title": "Tjenester",
+      "description": "Nettsider, videoproduksjon, foto, kampanjer og grafisk design – samlet hos ett team."
+    },
+    "about": {
+      "title": "Om oss",
+      "description": "Et lite team som bygger nettsider, lager video og driver markedsføring for bedrifter som vil bli sett."
+    },
+    "workJonk": {
+      "title": "Jønk – komplett kampanje",
+      "description": "Komplett visuell kampanje for Jønk: 4K-reklamefilmer, over 50 produktbilder og innhold til sosiale medier."
+    },
+    "workFcr": {
+      "title": "FCR – fighter-promo",
+      "description": "Promo-video for MMA-fighter Tamerlan Akhmadov under FCR – Full Contact Rumble i Sverige."
+    },
+    "workSnatched": {
+      "title": "Snatched – promo med 3D",
+      "description": "Promo-video med skreddersydd infografikk og 3D-modellering for shapewear-merket Snatched."
+    }
+  },
+  "BookPage": {
+    "metaTitle": "Book et møte | Syntax Studio",
+    "metaDescription": "Book en uforpliktende videosamtale med Syntax Studio. Vi hjelper deg med nettsider, video og markedsføring som gir resultater.",
+    "title": "Book et møte",
+    "subtitle": "Velg en tid som passer deg. 30 minutter på video, vi blir kjent og finner ut hva du trenger.",
+    "bookCta": "Velg tidspunkt",
+    "emailCta": "Send en e-post",
+    "expect": {
+      "title": "Hva du kan forvente",
+      "duration": "30 minutter, helt uforpliktende",
+      "format": "Videosamtale via Google Meet",
+      "outcome": "En tydelig plan og estimat, eller bare en god prat",
+      "noCommitment": "Ingen salgspress, ingen forpliktelser"
+    }
   },
   "ServicesPage": {
     "process": {

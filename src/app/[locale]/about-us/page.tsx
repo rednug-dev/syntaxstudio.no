@@ -1,8 +1,32 @@
+import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import TeamSection from "@/components/team-section";
 import AboutSection from "@/components/about-section";
 import { Member } from "@/components/team/types";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Meta.about" });
+  return {
+    title: t("title"),
+    description: t("description"),
+    alternates: {
+      canonical: `/${locale}/about-us`,
+      languages: { en: "/en/about-us", no: "/no/about-us", "x-default": "/en/about-us" },
+    },
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      url: `/${locale}/about-us`,
+    },
+  };
+}
 
 export default function AboutUsPage() {
   const teamMembers: Member[] = [
@@ -52,7 +76,7 @@ export default function AboutUsPage() {
   return (
     <>
       <Header />
-      <main className="flex flex-col">
+      <main id="main-content" className="flex flex-col">
         <AboutSection />
         <TeamSection list={teamMembers} />
       </main>

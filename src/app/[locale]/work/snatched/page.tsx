@@ -1,18 +1,51 @@
+import type { Metadata } from "next";
+import Script from "next/script";
 import { getTranslations } from "next-intl/server";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Badge } from "@/components/ui/badge";
-import { Video, ArrowLeft, Box, BarChart3, TrendingUp } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Video, ArrowLeft, ArrowRight, Box, BarChart3, TrendingUp, Quote, Lightbulb } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
+import { buildWorkJsonLd } from "@/lib/work-jsonld";
 import Image from "next/image";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-export default async function SnatchedWorkPage() {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Meta.workSnatched" });
+  return {
+    title: t("title"),
+    description: t("description"),
+    alternates: {
+      canonical: `/${locale}/work/snatched`,
+      languages: { en: "/en/work/snatched", no: "/no/work/snatched", "x-default": "/en/work/snatched" },
+    },
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      url: `/${locale}/work/snatched`,
+      type: "article",
+    },
+  };
+}
+
+export default async function SnatchedWorkPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
   const t = await getTranslations("About.WorkIntro.projects.snatched.page");
+  const metaT = await getTranslations({ locale, namespace: "Meta.workSnatched" });
 
   const stats = t.raw("stats") as {
     revenue: string;
@@ -20,10 +53,28 @@ export default async function SnatchedWorkPage() {
     trustpilot: string;
   };
 
+  const { breadcrumb, article } = buildWorkJsonLd({
+    slug: "snatched",
+    title: metaT("title"),
+    description: metaT("description"),
+    image: "/showcase/bigpic.webp",
+    locale,
+  });
+
   return (
     <div className="flex flex-col min-h-dvh bg-background text-foreground">
+      <Script
+        id="ld-snatched-breadcrumb"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
+      <Script
+        id="ld-snatched-article"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}
+      />
       <Header />
-      <main className="flex-1 pb-24">
+      <main id="main-content" className="flex-1 pb-24">
         {/* Top Navigation */}
         <div className="container mx-auto px-4 pt-12">
           <Link
@@ -71,15 +122,30 @@ export default async function SnatchedWorkPage() {
                 <BarChart3 className="h-4 w-4" /> Infografikk
               </div>
               <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-primary/80">
-                <Video className="h-4 w-4" /> Promo
+                <Video className="h-4 w-4" /> Pitch
               </div>
             </div>
           </div>
         </section>
 
-        {/* Stats Banner */}
+        {/* Background Section */}
+        <section className="container mx-auto px-4 pb-16">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-xs font-bold uppercase tracking-[0.4em] text-primary mb-4">
+              {t("backgroundTitle")}
+            </h2>
+            <p className="text-xl text-foreground/90 leading-relaxed">
+              {t("backgroundBody")}
+            </p>
+          </div>
+        </section>
+
+        {/* Client Stats Banner */}
         <section className="border-y border-white/5 bg-muted/20">
           <div className="container mx-auto px-4">
+            <p className="text-center text-xs font-bold uppercase tracking-[0.3em] text-muted-foreground pt-10">
+              {t("clientStatsTitle")}
+            </p>
             <div className="grid grid-cols-3 divide-x divide-white/5">
               {[
                 { icon: TrendingUp, value: stats.revenue },
@@ -91,6 +157,28 @@ export default async function SnatchedWorkPage() {
                   <p className="text-lg font-bold tracking-tight">{value}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Approach / Creative Idea Section */}
+        <section className="container mx-auto px-4 py-24">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold tracking-tighter mb-8 italic uppercase">
+              {t("approachTitle")}
+            </h2>
+            <div className="rounded-[2rem] bg-card/40 border border-white/5 p-10 shadow-xl">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Lightbulb className="h-5 w-5 text-primary" />
+                </div>
+                <h3 className="text-xs font-bold uppercase tracking-[0.4em] text-primary">
+                  {t("approachTitle")}
+                </h3>
+              </div>
+              <p className="text-lg text-foreground/90 leading-relaxed">
+                {t("approachBody")}
+              </p>
             </div>
           </div>
         </section>
@@ -168,6 +256,56 @@ export default async function SnatchedWorkPage() {
                   {t("deliverablesDesc")}
                 </p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Results Section */}
+        <section className="py-24 bg-muted/30 border-y border-white/5">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-xs font-bold uppercase tracking-[0.4em] text-primary mb-4">
+                {t("resultsTitle")}
+              </h2>
+              <p className="text-2xl lg:text-3xl text-foreground leading-relaxed font-medium">
+                {t("resultsBody")}
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Quote Section */}
+        <section className="container mx-auto px-4 py-24">
+          <figure className="max-w-3xl mx-auto text-center">
+            <Quote className="h-10 w-10 text-primary/40 mx-auto mb-6" />
+            <blockquote className="text-2xl lg:text-3xl font-medium text-foreground/90 leading-relaxed italic">
+              {t("quoteText")}
+            </blockquote>
+            <figcaption className="mt-6 text-sm uppercase tracking-[0.2em] text-muted-foreground">
+              {t("quoteAuthor")}
+            </figcaption>
+          </figure>
+        </section>
+
+        {/* Final CTA */}
+        <section className="container mx-auto px-4 pb-12">
+          <div className="max-w-3xl mx-auto rounded-[2rem] border border-white/10 bg-card/30 p-12 text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
+              {t("ctaTitle")}
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8 max-w-xl mx-auto">
+              {t("ctaBody")}
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-3">
+              <Button size="lg" asChild>
+                <Link href="/book">
+                  {t("ctaBookLink")}
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" asChild>
+                <Link href="/services/video">{t("ctaServiceLink")}</Link>
+              </Button>
             </div>
           </div>
         </section>

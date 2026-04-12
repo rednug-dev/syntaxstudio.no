@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Calendar, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 
 export default function CtaBridgeSection() {
@@ -25,10 +26,10 @@ export default function CtaBridgeSection() {
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4 pt-2">
           <Button size="lg" className="gap-2" asChild>
-            <a href="https://cal.com/syntaxstudio" target="_blank" rel="noopener noreferrer">
+            <Link href="/book">
               <Calendar className="h-4 w-4" />
               {t("bookCta")}
-            </a>
+            </Link>
           </Button>
           <Button size="lg" variant="outline" className="gap-2" asChild>
             <a href="#proposal">

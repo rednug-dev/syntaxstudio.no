@@ -10,9 +10,9 @@ export default async function AboutSection() {
       <div className="relative grid gap-10 py-16 md:grid-cols-2 md:gap-14 md:py-24">
         {/* Left: Mission */}
         <div>
-          <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
             {t("missionTitle")}
-          </h2>
+          </h1>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
             {t("missionP1")}
           </p>

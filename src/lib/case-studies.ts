@@ -25,20 +25,11 @@ export const caseStudies = [
     },
 ];
 
-export const partners = [
-    { name: "Jønk", logo: "/logos/Jønksvg.svg" },
-    { name: "FCR", logo: "/logos/FCRNM.svg" },
-    { name: "Snatched", logo: "/logos/Snatched.svg" },
-    { name: "RiseUp", logo: "/logos/riseuplogo.svg" },
-    { name: "Renovera", logo: "/logos/renoveras.svg" },
-    { name: "Hammerblad", logo: "/logos/Hammerblad.svg" },
-];
-
 export const services = [
     {
         title: "Webutvikling & Design",
         description: "Vi bygger skreddersydde, responsive nettsider som gir resultater. Fra A til Å sørger vi for at siden din ser bra ut og funker sømløst på alle enheter.",
-        features: ["Responsive design", "Vedlikehold", "SEO", "E-handel"]
+        features: ["Responsive design", "Vedlikehold", "SEO", "Nettbutikk"]
     },
     {
         title: "Merkevarebygging & Identitet",

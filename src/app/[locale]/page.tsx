@@ -1,40 +1,49 @@
-"use client";
-
-import dynamic from "next/dynamic";
+import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import Header from "@/components/header";
 import HeroVideoSection from "@/components/hero-video-section";
-import PartnersCarousel from "@/components/partners-carousel";
-import { Skeleton } from "@/components/ui/skeleton";
+import StatsStrip from "@/components/stats-strip";
 import Footer from "@/components/footer";
+import FeaturedWorkSection from "@/components/featured-work-section";
+import TestimonialsSection from "@/components/testimonials-section";
+import ServicesIntroSection from "@/components/services-intro-section";
+import CtaBridgeSection from "@/components/cta-bridge-section";
+import ProposalSection from "@/components/proposal-section";
 
-const FeaturedWorkSection = dynamic(
-  () => import("@/components/featured-work-section"),
-  { loading: () => <Skeleton className="w-full h-[400px]" /> }
-);
-const TestimonialsSection = dynamic(
-  () => import("@/components/testimonials-section"),
-  { loading: () => <Skeleton className="w-full h-[300px]" /> }
-);
-const ServicesIntroSection = dynamic(
-  () => import("@/components/services-intro-section"),
-  { loading: () => <Skeleton className="w-full h-[400px]" /> }
-);
-const CtaBridgeSection = dynamic(
-  () => import("@/components/cta-bridge-section"),
-  { loading: () => <Skeleton className="w-full h-[200px]" /> }
-);
-const ProposalSection = dynamic(
-  () => import("@/components/proposal-section"),
-  { loading: () => <Skeleton className="w-full h-[400px]" /> }
-);
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Meta.home" });
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    alternates: {
+      canonical: `/${locale}`,
+      languages: {
+        en: "/en",
+        no: "/no",
+        "x-default": "/en",
+      },
+    },
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      url: `/${locale}`,
+    },
+  };
+}
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-dvh bg-background text-foreground">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <HeroVideoSection />
-        <PartnersCarousel />
+        <StatsStrip />
         <FeaturedWorkSection />
         <TestimonialsSection />
         <ServicesIntroSection />
