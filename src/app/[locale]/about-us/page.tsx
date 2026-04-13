@@ -39,7 +39,7 @@ export default function AboutUsPage() {
       avatarPosition: "center 30%",
       skills: ["React", "Next.js", "Node.js", "Strategy"],
       email: "gunder@syntaxstudio.no",
-      phone: "+47 9444 3355",
+      phone: "+47 94 44 33 55",
       socials: undefined,
       discordId: "795681296658989056"
     },
@@ -53,7 +53,7 @@ export default function AboutUsPage() {
       avatarTransform: "scale(1.15) translate(6%, 2%)",
       skills: ["Python", "AI", "Systems Architecture", "Database"],
       email: "rasul@syntaxstudio.no",
-      phone: "+47 4639 6797",
+      phone: "+47 46 39 67 97",
       socials: undefined,
       discordId: "414385859845160970"
     },
@@ -67,7 +67,7 @@ export default function AboutUsPage() {
       avatarTransform: "scale(1.10) translate(-5%, 3%)",
       skills: ["Filming", "Editing", "Marketing", "Content Creation"],
       email: "khamzat@syntaxstudio.no",
-      phone: "+47 4626 4815",
+      phone: "+47 46 26 48 15",
       socials: undefined,
       discordId: "925851067235848192"
     }

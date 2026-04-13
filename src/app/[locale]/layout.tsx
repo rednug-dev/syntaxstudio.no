@@ -53,7 +53,7 @@ const organizationJsonLd = {
   logo: `${SITE_URL}/logos/syntax-i.webp`,
   description: 'Markedsføringspartner for nettsider, video og kampanjer.',
   email: 'gunder@syntaxstudio.no',
-  telephone: '+47 9444 3355',
+  telephone: '+47 94 44 33 55',
   areaServed: 'NO',
   founder: {
     '@type': 'Person',
@@ -69,7 +69,7 @@ const organizationJsonLd = {
       '@type': 'ContactPoint',
       contactType: 'sales',
       email: 'gunder@syntaxstudio.no',
-      telephone: '+47 9444 3355',
+      telephone: '+47 94 44 33 55',
       areaServed: 'NO',
       availableLanguage: ['Norwegian', 'English'],
     },
@@ -85,7 +85,7 @@ const localBusinessJsonLd = {
   image: `${SITE_URL}/logos/syntax-i.webp`,
   description: 'Nettsider, videoproduksjon, markedsføring, foto og grafisk design.',
   email: 'gunder@syntaxstudio.no',
-  telephone: '+47 9444 3355',
+  telephone: '+47 94 44 33 55',
   priceRange: '$$',
   address: {
     '@type': 'PostalAddress',

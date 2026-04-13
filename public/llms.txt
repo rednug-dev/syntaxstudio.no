@@ -35,7 +35,7 @@ Clients work with one team for the entire pipeline rather than coordinating sepa
 ## Contact
 
 - Email: gunder@syntaxstudio.no
-- Phone: +47 9444 3355
+- Phone: +47 94 44 33 55
 - Booking: https://cal.com/syntaxstudio
 - Founder: Gunder Rollufson
 - Address: Heimdalsgata 34B, 0561 Oslo, Norway
