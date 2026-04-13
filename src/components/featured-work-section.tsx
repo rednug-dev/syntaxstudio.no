@@ -42,14 +42,14 @@ export default function FeaturedWorkSection() {
           <Link href="/work/jonk" className="block relative rounded-[2rem] overflow-hidden border border-white/5 shadow-xl aspect-[2/1]">
             <Image
               src="/webmat/oskarburgercrop.webp"
-              alt="Jønk burger"
+              alt={t("alt.jonkBurger")}
               fill
               sizes="75vw"
               priority
               className="object-cover group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-black/60 via-transparent to-transparent">
-              <Image src="/logos/Jønksvg.svg" alt="Jønk" width={80} height={40} className="h-8 w-auto brightness-0 invert mb-1" />
+              <Image src="/logos/Jønksvg.svg" alt={t("alt.jonkLogo")} width={80} height={40} className="h-8 w-auto brightness-0 invert mb-1" />
               <p className="text-white/70 text-sm">{projects("jonk.heading")}</p>
             </div>
           </Link>
@@ -68,7 +68,7 @@ export default function FeaturedWorkSection() {
           </Link>
         </motion.div>
 
-        {/* Row 2: jonkfries + p3.1 + gatebok (3 cells under hero, beside vertical video) */}
+        {/* Row 2: jonkfries + p3.1 + gatebukk (3 cells under hero, beside vertical video) */}
         <motion.div variants={item} className="relative group">
           <Link href="/work/jonk" className="block relative rounded-[2rem] overflow-hidden border border-white/5 bg-black shadow-xl aspect-square">
             <VideoCard
@@ -83,13 +83,13 @@ export default function FeaturedWorkSection() {
 
         <motion.div variants={item} className="relative group">
           <Link href="/work/jonk" className="block relative rounded-[2rem] overflow-hidden border border-white/5 shadow-xl aspect-square">
-            <Image src="/webmat/p3_1.webp" alt="Jønk chicken wings reklameplakat" fill sizes="25vw" className="object-cover object-[center_25%] group-hover:scale-105 transition-transform duration-700" />
+            <Image src="/webmat/p3_1.webp" alt={t("alt.jonkWings")} fill sizes="25vw" className="object-cover object-[center_25%] group-hover:scale-105 transition-transform duration-700" />
           </Link>
         </motion.div>
 
         <motion.div variants={item} className="relative group">
           <Link href="/work/jonk" className="block relative rounded-[2rem] overflow-hidden border border-white/5 shadow-xl aspect-square">
-            <Image src="/webmat/gatebok_cf.webp" alt="Gatebok" fill sizes="25vw" className="object-cover object-top group-hover:scale-105 transition-transform duration-700" />
+            <Image src="/webmat/gatebok_cf.webp" alt={t("alt.gatebukk")} fill sizes="25vw" className="object-cover object-top group-hover:scale-105 transition-transform duration-700" />
           </Link>
         </motion.div>
 
@@ -97,7 +97,7 @@ export default function FeaturedWorkSection() {
         <motion.div variants={item} className="col-span-2 relative group">
           <Link href="/work/fcr" className="block relative rounded-[2rem] overflow-hidden border border-white/5 bg-black shadow-xl aspect-[2/1]">
             <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 to-black flex flex-col items-center justify-center gap-2 group-hover:scale-105 transition-transform duration-700">
-              <Image src="/logos/FCRNM.svg" alt="FCR" width={60} height={60} className="h-16 w-auto brightness-0 invert opacity-80 group-hover:opacity-100 transition-opacity" />
+              <Image src="/logos/FCRNM.svg" alt={t("alt.fcrLogo")} width={60} height={60} className="h-16 w-auto brightness-0 invert opacity-80 group-hover:opacity-100 transition-opacity" />
               <p className="text-white/50 text-sm font-medium">{projects("fcr.heading")}</p>
             </div>
           </Link>
@@ -106,7 +106,7 @@ export default function FeaturedWorkSection() {
         <motion.div variants={item} className="col-span-2 relative group">
           <Link href="/work/snatched" className="block relative rounded-[2rem] overflow-hidden border border-white/5 bg-black shadow-xl aspect-[2/1]">
             <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 to-black flex flex-col items-center justify-center gap-2 group-hover:scale-105 transition-transform duration-700">
-              <Image src="/logos/Snatched.svg" alt="Snatched" width={120} height={30} className="h-8 w-auto brightness-0 invert opacity-80 group-hover:opacity-100 transition-opacity" />
+              <Image src="/logos/Snatched.svg" alt={t("alt.snatchedLogo")} width={120} height={30} className="h-8 w-auto brightness-0 invert opacity-80 group-hover:opacity-100 transition-opacity" />
               <p className="text-white/50 text-sm font-medium">{projects("snatched.heading")}</p>
             </div>
           </Link>
@@ -126,14 +126,14 @@ export default function FeaturedWorkSection() {
           <Link href="/work/jonk" className="block relative rounded-2xl overflow-hidden border border-white/5 shadow-xl aspect-[2/1]">
             <Image
               src="/webmat/oskarburgercrop.webp"
-              alt="Jønk burger"
+              alt={t("alt.jonkBurger")}
               fill
               sizes="100vw"
               priority
               className="object-cover group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-black/60 via-transparent to-transparent">
-              <Image src="/logos/Jønksvg.svg" alt="Jønk" width={80} height={40} className="h-6 w-auto brightness-0 invert mb-1" />
+              <Image src="/logos/Jønksvg.svg" alt={t("alt.jonkLogo")} width={80} height={40} className="h-6 w-auto brightness-0 invert mb-1" />
               <p className="text-white/70 text-xs">{projects("jonk.heading")}</p>
             </div>
           </Link>
@@ -167,7 +167,7 @@ export default function FeaturedWorkSection() {
         <motion.div variants={item} className="relative group">
           <Link href="/work/fcr" className="block relative rounded-2xl overflow-hidden border border-white/5 bg-black shadow-xl aspect-square">
             <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 to-black flex flex-col items-center justify-center gap-2 group-hover:scale-105 transition-transform duration-700">
-              <Image src="/logos/FCRNM.svg" alt="FCR" width={60} height={60} className="h-10 w-auto brightness-0 invert opacity-80 group-hover:opacity-100 transition-opacity" />
+              <Image src="/logos/FCRNM.svg" alt={t("alt.fcrLogo")} width={60} height={60} className="h-10 w-auto brightness-0 invert opacity-80 group-hover:opacity-100 transition-opacity" />
               <p className="text-white/50 text-[11px] font-medium">{projects("fcr.heading")}</p>
             </div>
           </Link>
@@ -176,7 +176,7 @@ export default function FeaturedWorkSection() {
         <motion.div variants={item} className="relative group">
           <Link href="/work/snatched" className="block relative rounded-2xl overflow-hidden border border-white/5 bg-black shadow-xl aspect-square">
             <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 to-black flex flex-col items-center justify-center gap-2 group-hover:scale-105 transition-transform duration-700">
-              <Image src="/logos/Snatched.svg" alt="Snatched" width={100} height={30} className="h-6 w-auto brightness-0 invert opacity-80 group-hover:opacity-100 transition-opacity" />
+              <Image src="/logos/Snatched.svg" alt={t("alt.snatchedLogo")} width={100} height={30} className="h-6 w-auto brightness-0 invert opacity-80 group-hover:opacity-100 transition-opacity" />
               <p className="text-white/50 text-[11px] font-medium">{projects("snatched.heading")}</p>
             </div>
           </Link>

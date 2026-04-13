@@ -28,9 +28,12 @@ export const metadata: Metadata = {
   },
   description: 'Vi tar oss av nettside, kampanjer og videoproduksjon for små og mellomstore bedrifter. Én partner, hele leveransen.',
   icons: {
-    icon: '/logos/syntax-i.webp?v=2',
-    shortcut: '/logos/syntax-i.webp?v=2',
-    apple: '/logos/syntax-i.webp?v=2',
+    icon: [
+      { url: '/favicon.ico', sizes: '16x16 32x32', type: 'image/x-icon' },
+      { url: '/logos/syntax-i-32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/logos/syntax-i-180.png',
   },
   openGraph: {
     siteName: 'Syntax Studio',

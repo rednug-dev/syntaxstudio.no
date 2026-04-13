@@ -28,18 +28,18 @@ const ROUTES = [
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
-  return ROUTES.map(({ path, priority, changeFrequency }) => {
+  return ROUTES.flatMap(({ path, priority, changeFrequency }) => {
     const languages: Record<string, string> = Object.fromEntries(
       routing.locales.map((locale) => [locale, `${SITE_URL}/${locale}${path}`])
     );
     languages["x-default"] = `${SITE_URL}/${routing.defaultLocale}${path}`;
 
-    return {
-      url: `${SITE_URL}/${routing.defaultLocale}${path}`,
+    return routing.locales.map((locale) => ({
+      url: `${SITE_URL}/${locale}${path}`,
       lastModified,
       changeFrequency,
       priority,
       alternates: { languages },
-    };
+    }));
   });
 }

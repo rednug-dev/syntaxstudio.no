@@ -344,7 +344,15 @@
   "FeaturedWork": {
     "title": "Utvalgte prosjekter",
     "seeProject": "Se prosjekt",
-    "seeAll": "Se alle prosjekter"
+    "seeAll": "Se alle prosjekter",
+    "alt": {
+      "jonkBurger": "Jønk-burger servert på restaurant — matfotografi og markedsføringskampanje av Syntax Studio",
+      "jonkLogo": "Jønk restaurant-logo",
+      "jonkWings": "Jønk chicken wings reklameplakat — grafisk design av Syntax Studio",
+      "gatebukk": "Gatebukk street food menydesign — merkevarebygging og trykk av Syntax Studio",
+      "fcrLogo": "FCR merkevare-logo — nettside og markedsføringsprosjekt av Syntax Studio",
+      "snatchedLogo": "Snatched merkevare-logo — sosiale medier og innholdsproduksjon av Syntax Studio"
+    }
   },
   "Testimonials": {
     "title": "Hva kundene sier"
