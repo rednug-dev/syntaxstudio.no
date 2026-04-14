@@ -5,11 +5,12 @@ import { Button } from "./ui/button";
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import Image from 'next/image';
-import { Briefcase, Users, Menu, X, Calendar, Mail, ChevronDown } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { Briefcase, Users, Menu, X, Calendar, Mail, ChevronDown, Newspaper } from 'lucide-react';
+import { useLocale, useTranslations } from 'next-intl';
 
 export default function Header() {
   const t = useTranslations('Nav');
+  const locale = useLocale();
   const [isHidden, setIsHidden] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -51,6 +52,9 @@ export default function Header() {
   const navLinks = [
     { href: '/services',   label: t('showcase'), icon: <Briefcase className="w-5 h-5" /> },
     { href: '/about-us',   label: t('about'),    icon: <Users className="w-5 h-5" /> },
+    ...(locale === 'no'
+      ? [{ href: '/blog', label: 'Blogg', icon: <Newspaper className="w-5 h-5" /> }]
+      : []),
   ];
 
   return (

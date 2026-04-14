@@ -2,10 +2,11 @@
 import { Instagram, Linkedin, MapPin } from "lucide-react";
 import {Link} from '@/i18n/navigation';
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 export default function Footer() {
   const t = useTranslations('Footer');
+  const locale = useLocale();
 
   return (
     <footer id="contact" className="bg-muted/50 border-t">
@@ -33,6 +34,9 @@ export default function Footer() {
               <ul className="space-y-2 text-base">
                 <li><Link href="/services#case-studies" className="text-muted-foreground hover:text-primary">{t('examples')}</Link></li>
                 <li><Link href="/about-us" className="text-muted-foreground hover:text-primary">{t('about')}</Link></li>
+                {locale === 'no' && (
+                  <li><Link href="/blog" className="text-muted-foreground hover:text-primary">Blogg</Link></li>
+                )}
                 <li><Link href="/book" className="text-muted-foreground hover:text-primary">{t('contact')}</Link></li>
               </ul>
             </div>
