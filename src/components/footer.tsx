@@ -47,7 +47,7 @@ export default function Footer() {
                 <a href="mailto:info@syntaxstudio.no" className="hover:text-primary">info@syntaxstudio.no</a>
               </p>
               <p className="text-base text-muted-foreground mt-1">
-                <a href="tel:+4794443355" className="hover:text-primary">+47 944 43 355</a>
+                <a href="tel:+4794443355" className="hover:text-primary">+47 94 44 33 55</a>
               </p>
               <div className="flex justify-center sm:justify-start mt-4 gap-4">
                 <a href="https://www.tiktok.com/@syntaxstudio.no" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="text-muted-foreground hover:text-primary">

@@ -126,7 +126,7 @@ export default function ProjectCarousel({ projects, seeLive }: { projects: Proje
         <Carousel
           setApi={setApi}
           opts={{
-            align: "start",
+            align: "center",
             loop: true,
           }}
           className="w-full"
