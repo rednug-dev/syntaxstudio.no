@@ -14,7 +14,7 @@ export default function HeroVideoSection() {
       <link
         rel="preload"
         as="image"
-        href="/webmat/heromobile2.png"
+        href="/webmat/heromobile3.png"
         media="(max-width: 639px)"
       />
       <link
@@ -25,7 +25,7 @@ export default function HeroVideoSection() {
       />
       {/* Background Image */}
       <picture className="absolute inset-x-0 -top-20 sm:top-0 h-[80%] w-full">
-        <source media="(max-width: 639px)" srcSet="/webmat/heromobile2.png" />
+        <source media="(max-width: 639px)" srcSet="/webmat/heromobile3.png" />
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/webmat/hero4.png"
