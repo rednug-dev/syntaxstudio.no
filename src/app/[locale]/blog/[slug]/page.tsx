@@ -50,6 +50,61 @@ function renderBlock(block: Block, idx: number) {
           {block.text}
         </p>
       );
+    case "pRich":
+      return (
+        <p key={idx} className="text-lg text-foreground/90 leading-relaxed mb-5">
+          {block.segments.map((seg, i) =>
+            typeof seg === "string" ? (
+              <span key={i}>{seg}</span>
+            ) : (
+              <a
+                key={i}
+                href={seg.href}
+                {...(seg.external
+                  ? { target: "_blank", rel: "noreferrer noopener" }
+                  : {})}
+                className="text-primary underline underline-offset-4 hover:opacity-80"
+              >
+                {seg.text}
+              </a>
+            )
+          )}
+        </p>
+      );
+    case "image": {
+      const wrapperStyle = block.aspectRatio
+        ? { aspectRatio: block.aspectRatio }
+        : undefined;
+      const imgStyle = block.objectPosition
+        ? { objectPosition: block.objectPosition }
+        : undefined;
+      return (
+        <figure key={idx} className="my-10">
+          <div
+            className="relative rounded-2xl overflow-hidden border border-white/10 bg-card/30"
+            style={wrapperStyle}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={block.src}
+              alt={block.alt}
+              className={
+                block.aspectRatio
+                  ? "w-full h-full object-cover"
+                  : "w-full h-auto object-cover"
+              }
+              style={imgStyle}
+              loading="lazy"
+            />
+          </div>
+          {block.caption && (
+            <figcaption className="mt-3 text-sm text-muted-foreground text-center">
+              {block.caption}
+            </figcaption>
+          )}
+        </figure>
+      );
+    }
     case "h2":
       return (
         <h2
