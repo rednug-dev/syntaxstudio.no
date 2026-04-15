@@ -98,7 +98,7 @@ export const POSTS: Post[] = [
     blocks: [
       {
         type: "image",
-        src: "/blogg/Øhallen.JPG",
+        src: "/blogg/Øhallen.webp",
         alt: "Østbanehallen i Oslo, hvor arrangementet holdes",
         caption: "Østbanehallen, Oslo S",
         aspectRatio: "4/3",
@@ -235,7 +235,7 @@ export const POSTS: Post[] = [
     blocks: [
       {
         type: "image",
-        src: "/blogg/JØNK.JPG",
+        src: "/blogg/JØNK.webp",
         alt: "Jønk, visuelt innhold fra samarbeidet",
       },
       { type: "h2", text: "Om samarbeidet" },
