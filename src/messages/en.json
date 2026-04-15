@@ -11,7 +11,7 @@
     "sendEmail": "Send email"
   },
   "Hero": {
-    "title": "Norway's most complete marketing studio",
+    "title": "Norway's most <mark>complete</mark> marketing studio",
     "subtitle": "Strategy, video, photo, websites and daily publishing. All under one roof, so you don't have to coordinate multiple agencies.",
     "primaryCta": "Book a free intro call",
     "secondaryCta": "See what we do",

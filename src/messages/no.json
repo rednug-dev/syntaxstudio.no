@@ -11,7 +11,7 @@
     "sendEmail": "Send e-post"
   },
   "Hero": {
-    "title": "Norges mest komplette markedsføringsstudio",
+    "title": "Norges mest <mark>komplette</mark> markedsføringsstudio",
     "subtitle": "Strategi, video, foto, nettsider og daglig publisering. Alt under ett tak, så du slipper å koordinere flere byråer.",
     "primaryCta": "Book en uforpliktende prat",
     "secondaryCta": "Se hva vi gjør",

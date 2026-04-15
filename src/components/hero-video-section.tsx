@@ -10,22 +10,16 @@ export default function HeroVideoSection() {
   const t = useTranslations("Hero");
   return (
     <section className="relative min-h-dvh flex items-end justify-center overflow-hidden bg-background">
-      {/* Preload LCP poster image */}
-      <link rel="preload" as="image" href="/jønk/burgers_vertical_poster.webp" />
-      {/* Background Video */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-        poster="/jønk/burgers_vertical_poster.webp"
-        // @ts-expect-error fetchPriority not in React video types yet
+      {/* Preload LCP hero image */}
+      <link rel="preload" as="image" href="/webmat/hero4.png" />
+      {/* Background Image */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/webmat/hero4.png"
+        alt=""
         fetchPriority="high"
         className="absolute inset-0 h-full w-full object-cover object-[center_80%]"
-      >
-        <source src="/jønk/burgers_vertical.mp4" type="video/mp4" />
-      </video>
+      />
 
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
@@ -38,7 +32,13 @@ export default function HeroVideoSection() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-4xl sm:text-5xl md:text-7xl font-bold font-headline tracking-tighter"
         >
-          {t("title")}
+          {t.rich("title", {
+            mark: (chunks) => (
+              <mark className="bg-black/80 text-white rounded-lg px-2 pb-0.5">
+                {chunks}
+              </mark>
+            ),
+          })}
         </motion.h1>
 
         <motion.p
