@@ -10,16 +10,30 @@ export default function HeroVideoSection() {
   const t = useTranslations("Hero");
   return (
     <section className="relative min-h-dvh flex items-end justify-center overflow-hidden bg-background">
-      {/* Preload LCP hero image */}
-      <link rel="preload" as="image" href="/webmat/hero4.png" />
-      {/* Background Image */}
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src="/webmat/hero4.png"
-        alt=""
-        fetchPriority="high"
-        className="absolute inset-0 h-full w-full object-cover object-[center_80%]"
+      {/* Preload LCP hero image (responsive) */}
+      <link
+        rel="preload"
+        as="image"
+        href="/webmat/hero4mobileshort.png"
+        media="(max-width: 639px)"
       />
+      <link
+        rel="preload"
+        as="image"
+        href="/webmat/hero4.png"
+        media="(min-width: 640px)"
+      />
+      {/* Background Image */}
+      <picture className="absolute inset-x-0 top-0 h-[80%] w-full">
+        <source media="(max-width: 639px)" srcSet="/webmat/hero4mobileshort.png" />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/webmat/hero4.png"
+          alt=""
+          fetchPriority="high"
+          className="absolute inset-0 h-full w-full object-cover object-[center_50%]"
+        />
+      </picture>
 
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
