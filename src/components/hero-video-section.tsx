@@ -14,7 +14,7 @@ export default function HeroVideoSection() {
       <link
         rel="preload"
         as="image"
-        href="/webmat/hero4mobileshort.png"
+        href="/webmat/heromobile2.png"
         media="(max-width: 639px)"
       />
       <link
@@ -24,14 +24,14 @@ export default function HeroVideoSection() {
         media="(min-width: 640px)"
       />
       {/* Background Image */}
-      <picture className="absolute inset-x-0 top-0 h-[80%] w-full">
-        <source media="(max-width: 639px)" srcSet="/webmat/hero4mobileshort.png" />
+      <picture className="absolute inset-x-0 -top-20 sm:top-0 h-[80%] w-full">
+        <source media="(max-width: 639px)" srcSet="/webmat/heromobile2.png" />
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/webmat/hero4.png"
           alt=""
           fetchPriority="high"
-          className="absolute inset-0 h-full w-full object-cover object-[center_50%]"
+          className="absolute inset-0 h-full w-full object-cover object-[center_top]"
         />
       </picture>
 
