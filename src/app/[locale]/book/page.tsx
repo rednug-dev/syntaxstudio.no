@@ -16,23 +16,24 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "BookPage" });
 
+  const path = locale === "no" ? "/book" : "/en/book";
   return {
     metadataBase: new URL(SITE_URL),
     title: t("metaTitle"),
     description: t("metaDescription"),
     alternates: {
-      canonical: `/${locale}/book`,
+      canonical: path,
       languages: {
+        no: "/book",
         en: "/en/book",
-        no: "/no/book",
-        "x-default": "/en/book",
+        "x-default": "/book",
       },
     },
     openGraph: {
       title: t("metaTitle"),
       description: t("metaDescription"),
       type: "website",
-      url: `${SITE_URL}/${locale}/book`,
+      url: `${SITE_URL}${path}`,
       siteName: "Syntax Studio",
     },
     twitter: {

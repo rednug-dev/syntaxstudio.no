@@ -18,7 +18,8 @@ export function buildWorkJsonLd({
   locale,
   datePublished = "2025-01-01",
 }: WorkSchemaInput) {
-  const url = `${SITE_URL}/${locale}/work/${slug}`;
+  const prefix = locale === "no" ? "" : `/${locale}`;
+  const url = `${SITE_URL}${prefix}/work/${slug}`;
   const imageUrl = image.startsWith("http") ? image : `${SITE_URL}${image}`;
 
   const breadcrumb = {
@@ -29,13 +30,13 @@ export function buildWorkJsonLd({
         "@type": "ListItem",
         position: 1,
         name: locale === "no" ? "Hjem" : "Home",
-        item: `${SITE_URL}/${locale}`,
+        item: `${SITE_URL}${prefix}/`,
       },
       {
         "@type": "ListItem",
         position: 2,
         name: locale === "no" ? "Tjenester" : "Services",
-        item: `${SITE_URL}/${locale}/services`,
+        item: `${SITE_URL}${prefix}/services`,
       },
       {
         "@type": "ListItem",

@@ -32,21 +32,22 @@ export async function generateMetadata({
   if (!guide) return {};
 
   const meta = guide.meta[locale as Locale] ?? guide.meta.en;
+  const path = locale === "no" ? `/guides/${slug}` : `/en/guides/${slug}`;
   return {
     title: meta.title,
     description: meta.description,
     alternates: {
-      canonical: `/${locale}/guides/${slug}`,
+      canonical: path,
       languages: {
+        no: `/guides/${slug}`,
         en: `/en/guides/${slug}`,
-        no: `/no/guides/${slug}`,
-        "x-default": `/en/guides/${slug}`,
+        "x-default": `/guides/${slug}`,
       },
     },
     openGraph: {
       title: meta.title,
       description: meta.description,
-      url: `/${locale}/guides/${slug}`,
+      url: path,
       type: "article",
       publishedTime: guide.publishedAt,
       modifiedTime: guide.updatedAt,

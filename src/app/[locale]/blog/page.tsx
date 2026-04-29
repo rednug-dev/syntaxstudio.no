@@ -23,14 +23,14 @@ export async function generateMetadata({
     description:
       "Tanker om webdesign, utvikling og det å drive byrå i Norge, fra teamet i Syntax Studio.",
     alternates: {
-      canonical: `/no/blog`,
-      languages: { no: `/no/blog`, "x-default": `/no/blog` },
+      canonical: `/blog`,
+      languages: { no: `/blog`, "x-default": `/blog` },
     },
     openGraph: {
       title: "Blogg — Syntax Studio",
       description:
         "Tanker om webdesign, utvikling og det å drive byrå i Norge.",
-      url: `${SITE_URL}/no/blog`,
+      url: `${SITE_URL}/blog`,
       type: "website",
     },
   };

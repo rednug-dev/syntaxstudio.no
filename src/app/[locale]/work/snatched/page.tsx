@@ -22,17 +22,18 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Meta.workSnatched" });
+  const path = locale === "no" ? "/work/snatched" : "/en/work/snatched";
   return {
     title: t("title"),
     description: t("description"),
     alternates: {
-      canonical: `/${locale}/work/snatched`,
-      languages: { en: "/en/work/snatched", no: "/no/work/snatched", "x-default": "/en/work/snatched" },
+      canonical: path,
+      languages: { no: "/work/snatched", en: "/en/work/snatched", "x-default": "/work/snatched" },
     },
     openGraph: {
       title: t("title"),
       description: t("description"),
-      url: `/${locale}/work/snatched`,
+      url: path,
       type: "article",
     },
   };

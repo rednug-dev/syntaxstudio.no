@@ -39,21 +39,22 @@ export async function generateMetadata({
   if (!service) return {};
 
   const meta = service.meta[locale as Locale] ?? service.meta.en;
+  const path = locale === "no" ? `/services/${slug}` : `/en/services/${slug}`;
   return {
     title: meta.title,
     description: meta.description,
     alternates: {
-      canonical: `/${locale}/services/${slug}`,
+      canonical: path,
       languages: {
+        no: `/services/${slug}`,
         en: `/en/services/${slug}`,
-        no: `/no/services/${slug}`,
-        "x-default": `/en/services/${slug}`,
+        "x-default": `/services/${slug}`,
       },
     },
     openGraph: {
       title: meta.title,
       description: meta.description,
-      url: `/${locale}/services/${slug}`,
+      url: path,
       type: "website",
     },
   };

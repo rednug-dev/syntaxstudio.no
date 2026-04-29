@@ -41,6 +41,9 @@ const ROUTES: Route[] = [
   { path: "/work/snatched", priority: 0.6, changeFrequency: "monthly" },
 ];
 
+const localePrefix = (locale: string) =>
+  locale === routing.defaultLocale ? "" : `/${locale}`;
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
@@ -48,15 +51,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const activeLocales = locales ?? routing.locales;
 
     const languages: Record<string, string> = Object.fromEntries(
-      activeLocales.map((locale) => [locale, `${SITE_URL}/${locale}${path}`])
+      activeLocales.map((locale) => [
+        locale,
+        `${SITE_URL}${localePrefix(locale)}${path}`,
+      ])
     );
     const defaultLocale = activeLocales.includes(routing.defaultLocale)
       ? routing.defaultLocale
       : activeLocales[0];
-    languages["x-default"] = `${SITE_URL}/${defaultLocale}${path}`;
+    languages["x-default"] = `${SITE_URL}${localePrefix(defaultLocale)}${path}`;
 
     return activeLocales.map((locale) => ({
-      url: `${SITE_URL}/${locale}${path}`,
+      url: `${SITE_URL}${localePrefix(locale)}${path}`,
       lastModified,
       changeFrequency,
       priority,

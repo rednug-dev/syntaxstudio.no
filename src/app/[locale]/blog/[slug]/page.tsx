@@ -28,13 +28,13 @@ export async function generateMetadata({
     title: `${post.title} — Syntax Studio`,
     description: post.excerpt,
     alternates: {
-      canonical: `/no/blog/${slug}`,
-      languages: { no: `/no/blog/${slug}`, "x-default": `/no/blog/${slug}` },
+      canonical: `/blog/${slug}`,
+      languages: { no: `/blog/${slug}`, "x-default": `/blog/${slug}` },
     },
     openGraph: {
       title: post.title,
       description: post.excerpt,
-      url: `${SITE_URL}/no/blog/${slug}`,
+      url: `${SITE_URL}/blog/${slug}`,
       type: "article",
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt,
@@ -217,7 +217,7 @@ export default async function BlogPostPage({
     "@type": "BlogPosting",
     headline: post.title,
     description: post.excerpt,
-    url: `${SITE_URL}/no/blog/${slug}`,
+    url: `${SITE_URL}/blog/${slug}`,
     inLanguage: "no",
     datePublished: post.publishedAt,
     dateModified: post.updatedAt,
@@ -237,7 +237,7 @@ export default async function BlogPostPage({
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `${SITE_URL}/no/blog/${slug}`,
+      "@id": `${SITE_URL}/blog/${slug}`,
     },
   };
 
@@ -255,13 +255,13 @@ export default async function BlogPostPage({
         "@type": "ListItem",
         position: 2,
         name: "Blogg",
-        item: `${SITE_URL}/no/blog`,
+        item: `${SITE_URL}/blog`,
       },
       {
         "@type": "ListItem",
         position: 3,
         name: post.title,
-        item: `${SITE_URL}/no/blog/${slug}`,
+        item: `${SITE_URL}/blog/${slug}`,
       },
     ],
   };

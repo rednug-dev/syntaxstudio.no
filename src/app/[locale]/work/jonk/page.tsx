@@ -24,17 +24,18 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Meta.workJonk" });
+  const path = locale === "no" ? "/work/jonk" : "/en/work/jonk";
   return {
     title: t("title"),
     description: t("description"),
     alternates: {
-      canonical: `/${locale}/work/jonk`,
-      languages: { en: "/en/work/jonk", no: "/no/work/jonk", "x-default": "/en/work/jonk" },
+      canonical: path,
+      languages: { no: "/work/jonk", en: "/en/work/jonk", "x-default": "/work/jonk" },
     },
     openGraph: {
       title: t("title"),
       description: t("description"),
-      url: `/${locale}/work/jonk`,
+      url: path,
       type: "article",
     },
   };

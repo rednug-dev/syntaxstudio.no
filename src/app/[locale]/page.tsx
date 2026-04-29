@@ -18,21 +18,22 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Meta.home" });
 
+  const path = locale === "no" ? "/" : "/en";
   return {
     title: t("title"),
     description: t("description"),
     alternates: {
-      canonical: `/${locale}`,
+      canonical: path,
       languages: {
+        no: "/",
         en: "/en",
-        no: "/no",
-        "x-default": "/en",
+        "x-default": "/",
       },
     },
     openGraph: {
       title: t("title"),
       description: t("description"),
-      url: `/${locale}`,
+      url: path,
     },
   };
 }

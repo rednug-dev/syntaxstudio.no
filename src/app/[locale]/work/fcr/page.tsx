@@ -22,17 +22,18 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Meta.workFcr" });
+  const path = locale === "no" ? "/work/fcr" : "/en/work/fcr";
   return {
     title: t("title"),
     description: t("description"),
     alternates: {
-      canonical: `/${locale}/work/fcr`,
-      languages: { en: "/en/work/fcr", no: "/no/work/fcr", "x-default": "/en/work/fcr" },
+      canonical: path,
+      languages: { no: "/work/fcr", en: "/en/work/fcr", "x-default": "/work/fcr" },
     },
     openGraph: {
       title: t("title"),
       description: t("description"),
-      url: `/${locale}/work/fcr`,
+      url: path,
       type: "article",
     },
   };
