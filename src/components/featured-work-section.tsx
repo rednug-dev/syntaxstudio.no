@@ -41,17 +41,13 @@ export default function FeaturedWorkSection() {
         <motion.div variants={item} className="col-span-3 relative group">
           <Link href="/work/jonk" className="block relative rounded-[2rem] overflow-hidden border border-white/5 shadow-xl aspect-[2/1]">
             <Image
-              src="/webmat/oskarburgercrop.webp"
+              src="/jønk/jønkvm.webp"
               alt={t("alt.jonkBurger")}
               fill
               sizes="75vw"
               priority
               className="object-cover group-hover:scale-105 transition-transform duration-700"
             />
-            <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-black/60 via-transparent to-transparent">
-              <Image src="/logos/Jønksvg.svg" alt={t("alt.jonkLogo")} width={80} height={40} className="h-8 w-auto brightness-0 invert mb-1" />
-              <p className="text-white/70 text-sm">{projects("jonk.heading")}</p>
-            </div>
           </Link>
         </motion.div>
 
@@ -125,17 +121,13 @@ export default function FeaturedWorkSection() {
         <motion.div variants={item} className="col-span-2 relative group">
           <Link href="/work/jonk" className="block relative rounded-2xl overflow-hidden border border-white/5 shadow-xl aspect-[2/1]">
             <Image
-              src="/webmat/oskarburgercrop.webp"
+              src="/jønk/jønkvm.webp"
               alt={t("alt.jonkBurger")}
               fill
               sizes="100vw"
               priority
               className="object-cover group-hover:scale-105 transition-transform duration-700"
             />
-            <div className="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-black/60 via-transparent to-transparent">
-              <Image src="/logos/Jønksvg.svg" alt={t("alt.jonkLogo")} width={80} height={40} className="h-6 w-auto brightness-0 invert mb-1" />
-              <p className="text-white/70 text-xs">{projects("jonk.heading")}</p>
-            </div>
           </Link>
         </motion.div>
 
