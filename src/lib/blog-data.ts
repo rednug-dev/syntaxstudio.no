@@ -87,14 +87,14 @@ export const POSTS: Post[] = [
   // MILEPÆL: Østbanehallen-event 11–18 april
   // ============================================================
   {
-    slug: "ostbanehallen-westerlin-bjorndalen",
-    title: "Vi dekker Oskar Westerlin og Mathea Bjørndalen på Østbanehallen",
+    slug: "eventproduksjon-ostbanehallen",
+    title: "Eventproduksjon på Østbanehallen",
     excerpt:
-      "Fra 11. til 18. april 2026 dekker vi Oskar Westerlin og Mathea Bjørndalen sitt arrangement på Østbanehallen, med foto, video og innhold for sosiale medier.",
+      "Fra 11. til 18. april 2026 produserte vi foto- og videoinnhold under et pop-up-arrangement på Østbanehallen, som del av et eksternt kundeoppdrag.",
     publishedAt: "2026-04-10",
     updatedAt: "2026-04-10",
     lead:
-      "Fra 11. til 18. april 2026 er vi på plass på Østbanehallen for å dekke arrangementet til Oskar Westerlin og Mathea Bjørndalen. En uke med foto, video og live innhold.",
+      "Fra 11. til 18. april 2026 var vi til stede under pop-up-arrangementet med Oskar Westerlin og Mathea Bjørndalen på Østbanehallen. Her produserte vi foto- og videoinnhold som del av et eksternt kundeoppdrag.",
     blocks: [
       {
         type: "image",
@@ -107,7 +107,7 @@ export const POSTS: Post[] = [
       { type: "h2", text: "Hva vi gjør" },
       {
         type: "p",
-        text: "Et arrangement over en hel uke gir helt andre muligheter enn et tradisjonelt eventopptak. Vi følger oppsettet fra rigging til siste dag, og leverer innhold underveis, ikke bare en pakke etter at alt er over.",
+        text: "Et arrangement over en hel uke gir helt andre muligheter enn et tradisjonelt eventopptak. Vi fulgte oppsettet fra rigging til siste dag, og leverte innhold underveis, ikke bare en pakke etter at alt var over.",
       },
       {
         type: "ul",
@@ -127,13 +127,13 @@ export const POSTS: Post[] = [
       {
         type: "pRich",
         segments: [
-          "Vi legger ut bilder og klipp underveis på Instagram (",
+          "Vi la ut bilder og klipp underveis på Instagram (",
           {
             text: "@syntaxstudio.no",
             href: "https://www.instagram.com/syntaxstudio.no/",
             external: true,
           },
-          "). Hvis du skal innom Østbanehallen i løpet av uka, kom og si hei.",
+          "), og der finner du fortsatt høydepunktene fra uka.",
         ],
       },
     ],

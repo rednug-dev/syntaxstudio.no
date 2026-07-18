@@ -34,6 +34,11 @@ const nextConfig: NextConfig = {
     return [
       { source: '/pricing', destination: '/services', permanent: true },
       { source: '/en/pricing', destination: '/en/services', permanent: true },
+      {
+        source: '/blog/ostbanehallen-westerlin-bjorndalen',
+        destination: '/blog/eventproduksjon-ostbanehallen',
+        permanent: true,
+      },
       { source: '/no', destination: '/', permanent: true },
       { source: '/no/:path*', destination: '/:path*', permanent: true },
     ];
