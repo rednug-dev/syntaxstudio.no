@@ -239,7 +239,7 @@ export const SERVICES: Service[] = [
           "Nettbutikker som trenger ekte produktbilder",
         ],
         cta: "Fortell oss hva som skal fotograferes, så får du et tilbud",
-        caseLink: { href: "/work/jonk", label: "Se hvordan vi gjorde det for Jønk" },
+        caseLink: { href: "/work/burger", label: "Se hvordan vi gjorde det for et burgermerke" },
         faq: [
           {
             q: "Har dere eget studio?",
@@ -294,7 +294,7 @@ export const SERVICES: Service[] = [
           "Online stores that need real product images, not stock",
         ],
         cta: "Tell us what needs shooting and you'll get a quote",
-        caseLink: { href: "/work/jonk", label: "See how we did it for Jønk" },
+        caseLink: { href: "/work/burger", label: "See how we did it for a burger brand" },
         faq: [
           {
             q: "Do you have your own studio?",
@@ -375,7 +375,7 @@ export const SERVICES: Service[] = [
           "Brands som vil ha noe som faktisk skiller seg ut i feeden",
         ],
         cta: "Beskriv prosjektet, så lager vi et tilbud",
-        caseLink: { href: "/work/jonk", label: "Se reklamefilmene vi lagde for Jønk" },
+        caseLink: { href: "/work/burger", label: "Se reklamefilmene vi lagde for et burgermerke" },
         faq: [
           {
             q: "Hva slags utstyr filmer dere på?",
@@ -430,7 +430,7 @@ export const SERVICES: Service[] = [
           "Brands that want something that actually stands out in the feed",
         ],
         cta: "Describe the project and we'll send you a quote",
-        caseLink: { href: "/work/jonk", label: "See the commercials we made for Jønk" },
+        caseLink: { href: "/work/burger", label: "See the commercials we made for a burger brand" },
         faq: [
           {
             q: "What gear do you shoot on?",

@@ -132,30 +132,30 @@
         "SEO, analyse & løpende optimalisering"
       ],
       "projects": {
-        "jonk": {
-          "heading": "Komplett kampanje for Jønk",
+        "burger": {
+          "heading": "Visuell kampanjeproduksjon for et burgermerke",
           "stack": ["Videoproduksjon", "Foto", "Markedsføring", "Grafisk design"],
           "flairs": ["4K Reklamefilm", "Produktfoto", "Sosiale medier"],
           "paragraphs": [
-            "For Jønk leverer vi en komplett visuell kampanje, fra cinematiske 4K-reklamefilmer til et stort bibliotek med high-end produktbilder.",
-            "Alt designet for å fange den rå energien og urbane identiteten som definerer Jønk som merkevare."
+            "For et norsk burgermerke produserte vi film, foto og grafisk materiell til en visuell kampanje – fra cinematiske 4K-filmer til et bredt bibliotek med produktbilder.",
+            "Alt designet for å fange den rå energien og det urbane uttrykket i konseptet."
           ],
           "page": {
             "back": "Tilbake til tjenester",
-            "badge": "Sementert markedsføringspartner",
+            "badge": "Kampanjeproduksjon",
             "title": "Leveranse av en rå kampanje",
-            "description": "En sementert del av Jønks markedsføringsteam siden lanseringen av Burgerkrigen.",
+            "description": "Film, foto og grafisk materiell for et norsk burgermerke. Kunden er anonymisert, og materiellet du ser her er vår egen produksjon.",
             "backgroundTitle": "Bakgrunnen",
-            "backgroundBody": "Vi kom inn som en ekstern enhet i Jønks markedsføringsteam under en av Norges største markedsføringskampanjer. Oppdraget var avgrenset til å starte med. I dag er vi en sementert del av teamet og jobber på alt det visuelle og strategiske som faktisk når kunden.",
-            "campaignTitle": "Burgerkrigen",
-            "campaignBody": "Burgerkrigen er en head-to-head konkurranse mellom Oskar Westerlin og Mathea Bjørndalen, hvor publikum kårer vinneren. Vi leverer alt det visuelle, alt det fysiske og all sporingen som gjør det mulig å måle hva som faktisk fungerer.",
+            "backgroundBody": "Vi ble hentet inn som ekstern produksjonspartner på det visuelle. Oppdraget startet med film og foto, og vokste til å omfatte mer av materiellet som ble brukt i kampanjene.",
+            "campaignTitle": "Oppdraget",
+            "campaignBody": "Målet var å bygge trafikk i en periode med høyt trykk. Vi konsentrerte oss om det visuelle: film, foto og grafisk materiell som kunne brukes på tvers av sosiale medier, trykk og digitale flater.",
             "commercial": "Sosial Kampanje",
-            "spiritTitle": "Jønk-stilen",
+            "spiritTitle": "Uttrykket",
             "spiritDesc": "Raske, fengende klipp vi produserte for å fange den rå energien på kjøkkenet og crunchen i den perfekte smash-burgeren.",
             "photoTitle": "Visuelt i toppklasse",
-            "photoDesc": "Vi leverer et stort bibliotek med edgy produktbilder og postere designet for sosiale medier, trykk og digitale menyer, alt med den urbane Jønk-identiteten i fokus.",
-            "scopeTitle": "Vi leverer på alle fronter",
-            "scopeIntro": "Det du har sett over er én del av leveransen. Som sementert del av Jønks markedsføringsteam jobber vi på alt det visuelle, det fysiske og det målbare:",
+            "photoDesc": "Vi produserte produktbilder og postere for sosiale medier, trykk og digitale flater, alt med et rått og urbant uttrykk i fokus.",
+            "scopeTitle": "Vi leverte på alle fronter",
+            "scopeIntro": "Det du ser over er en del av materiellet. Arbeidet omfattet blant annet:",
             "scopeItems": [
               "Gatebukker, rollups, flyers og pressevegger",
               "Produktvideo og produktfoto i full produksjon",
@@ -165,7 +165,7 @@
               "Grafisk design og digitalt materiell"
             ],
             "strategy": "Strategien",
-            "strategyDesc": "Fokus på råvarer, varme og teksturer. Vi løfter frem crunch og rene smaker, og kommuniserer kvalitet gjennom en energisk leveranse som matcher merkets edgy uttrykk.",
+            "strategyDesc": "Fokus på råvarer, varme og teksturer. Vi løftet frem crunch og rene smaker, og kommuniserte kvalitet gjennom en energisk leveranse som matchet et edgy uttrykk.",
             "work": "Arbeidet",
             "workItems": [
               "Reklamefilmer for sosiale medier (4K)",
@@ -176,12 +176,11 @@
             "deliverables": "Leveranser",
             "deliverablesDesc": "Et kraftfullt bibliotek med cinematiske 4K-annonser og høyoppløselige bilder skreddersydd for maksimalt engasjement på Reels og TikTok.",
             "resultsTitle": "Resultatene",
-            "resultsBody": "Bare i april 2026 har de sosiale kanalene vi forvalter for Jønk generert over 400 000 visninger på TikTok og Instagram. Like viktig: Jønk er fortsatt aktiv kunde og det er ingen planer om at det skal endre seg.",
+            "resultsBody": "Innhold vi produserte passerte 400 000 visninger på TikTok og Instagram i april 2026, målt i plattformenes egen statistikk.",
             "resultsStatNumber": "400 000+",
-            "resultsStatLabel": "visninger på TikTok og Instagram, april 2026",
-            "quoteText": "De skjønte stilen vår fra dag én. Vi kan sende en idé på morgenen og ha noe ferdig vi faktisk vil poste samme kveld. Den farten og forståelsen er sjelden vare.",
-            "quoteAuthor": "Jønk",
-            "ctaTitle": "Vil du ha samme dybde i din markedsføring?",
+            "resultsStatLabel": "visninger på innhold vi produserte, april 2026",
+            "disclaimer": "Kunden er anonymisert, og navn, logo og varemerker er utelatt. Materiellet på denne siden er produsert av Syntax Studio og vises som arbeidsprøve.",
+          "ctaTitle": "Vil du ha samme dybde i din markedsføring?",
             "ctaBody": "Vi tar kunder gjennom hele løpet, fra strategi og kampanje til produksjon og daglig publisering. Beskriv hvor du står, så finner vi ut hvordan vi kan hjelpe.",
             "ctaServiceLink": "Se markedsføringstjenesten vår",
             "ctaBookLink": "Book et møte",
@@ -189,10 +188,10 @@
             "cinematicTextures": "Smash-kvalitet",
             "socialAdsCount": "Reklamefilm",
             "productPhotosCount": "Produktfoto",
-            "professionalGrade": "Sementert partner",
+            "professionalGrade": "Full produksjon",
             "socialCampaign1": "Smash & Crunch",
             "socialCampaign2": "Ren Kvalitet",
-            "socialCampaign3": "Jønk Energi",
+            "socialCampaign3": "Rå Energi",
             "optimizedForReels": "Optimalisert for Reels"
           }
         },
@@ -346,10 +345,9 @@
     "seeProject": "Se prosjekt",
     "seeAll": "Se alle prosjekter",
     "alt": {
-      "jonkBurger": "Jønk-burger servert på restaurant — matfotografi og markedsføringskampanje av Syntax Studio",
-      "jonkLogo": "Jønk restaurant-logo",
-      "jonkWings": "Jønk chicken wings reklameplakat — grafisk design av Syntax Studio",
-      "gatebukk": "Gatebukk street food menydesign — merkevarebygging og trykk av Syntax Studio",
+      "burgerHero": "Smash-burger fra produktfotografering — matfoto og kampanjemateriell av Syntax Studio",
+      "burgerWings": "Chicken wings reklameplakat — grafisk design av Syntax Studio",
+      "burgerProduct": "Produktfoto av signaturburger — matfoto av Syntax Studio",
       "fcrLogo": "FCR merkevare-logo — nettside og markedsføringsprosjekt av Syntax Studio",
       "snatchedLogo": "Snatched merkevare-logo — sosiale medier og innholdsproduksjon av Syntax Studio"
     }
@@ -376,9 +374,9 @@
       "title": "Om Syntax Studio, markedsføringsbyrå i Oslo",
       "description": "Vi er et lite team som bygger nettsider, lager video og driver markedsføring for bedrifter som vil bli sett. Basert i Oslo, jobber nasjonalt og internasjonalt."
     },
-    "workJonk": {
-      "title": "Jønk, komplett kampanje for Oslos burgerscene",
-      "description": "Sementert som en del av Jønks markedsføringsteam leverer vi alt fra 4K-reklamefilmer og produktfoto til daglig innhold, tracking og kampanjestrategi."
+    "workBurger": {
+      "title": "Kampanjeproduksjon for et burgermerke",
+      "description": "Film, foto og grafisk materiell for et anonymisert burgermerke: 4K-film, produktfoto og kampanjemateriell produsert av Syntax Studio."
     },
     "workFcr": {
       "title": "FCR, fighter-promo for Tamerlan Akhmadov",

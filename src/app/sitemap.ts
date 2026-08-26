@@ -36,7 +36,7 @@ const ROUTES: Route[] = [
   })),
   { path: "/book", priority: 0.9, changeFrequency: "monthly" },
   { path: "/about-us", priority: 0.7, changeFrequency: "monthly" },
-  { path: "/work/jonk", priority: 0.6, changeFrequency: "monthly" },
+  { path: "/work/burger", priority: 0.6, changeFrequency: "monthly" },
   { path: "/work/fcr", priority: 0.6, changeFrequency: "monthly" },
   { path: "/work/snatched", priority: 0.6, changeFrequency: "monthly" },
 ];

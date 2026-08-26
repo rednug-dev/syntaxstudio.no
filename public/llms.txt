@@ -28,7 +28,7 @@ Clients work with one team for the entire pipeline rather than coordinating sepa
 
 ## Selected work
 
-- [Jønk](https://syntaxstudio.no/en/work/jonk): Full visual campaign for Oslo burger chain. 4K commercials, 50+ high-end product photos and ongoing social content
+- [Burger campaign](https://syntaxstudio.no/en/work/burger): Visual campaign for an anonymised burger brand. 4K film, product photography and campaign material
 - [FCR](https://syntaxstudio.no/en/work/fcr): Promo video for MMA fighter Tamerlan Akhmadov competing under Full Contact Rumble in Sweden
 - [Snatched](https://syntaxstudio.no/en/work/snatched): Promo video with custom 3D modeling and infographics for Norway's fastest-growing shapewear brand
 

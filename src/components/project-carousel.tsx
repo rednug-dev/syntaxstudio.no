@@ -5,6 +5,7 @@ import { ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
+import { BurgerMark } from "@/components/work/burger-mark";
 import { cn } from "@/lib/utils";
 import {
   Carousel,
@@ -36,8 +37,10 @@ function CaseCard({ c, seeLiveLabel }: { c: ProjectCase; seeLiveLabel: string })
       {/* Centered Logo at Top */}
       <div className="flex flex-col items-center mb-8">
         <div className="h-24 w-40 flex items-center justify-center mb-4">
-          {isImagePath ? (
-            <img src={c.logo} alt={c.heading} className={cn("max-h-full max-w-full object-contain brightness-0 invert opacity-80 group-hover:opacity-100 transition-opacity", c.logo.includes("Jønk") && "max-h-[70%]")} />
+          {!c.logo ? (
+            <BurgerMark className="h-[72px] w-auto text-foreground opacity-80 group-hover:opacity-100 transition-opacity" />
+          ) : isImagePath ? (
+            <img src={c.logo} alt={c.heading} className="max-h-full max-w-full object-contain brightness-0 invert opacity-80 group-hover:opacity-100 transition-opacity" />
           ) : (
             <span className="text-3xl font-bold tracking-tighter text-foreground/90">
               {c.logo}

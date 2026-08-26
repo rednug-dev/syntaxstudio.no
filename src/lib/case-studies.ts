@@ -1,10 +1,10 @@
 export const caseStudies = [
     {
-        slug: "jonk",
-        customer: "Jønk",
+        slug: "burger",
+        customer: "Anonymisert burgermerke",
         title: "Kampanjeproduksjon",
-        intro: "Komplett visuell kampanje med 4K-reklamefilmer og high-end produktfoto for et urbant burgermerke.",
-        logo: "/logos/Jønksvg.svg",
+        intro: "Visuell kampanje med 4K-film og produktfoto for et urbant burgermerke.",
+        logo: "Burger",
         services: ["Videoproduksjon", "Foto", "Grafisk design"],
     },
     {

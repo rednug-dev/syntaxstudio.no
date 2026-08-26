@@ -94,7 +94,7 @@ export const POSTS: Post[] = [
     publishedAt: "2026-04-10",
     updatedAt: "2026-04-10",
     lead:
-      "Fra 11. til 18. april 2026 var vi til stede under pop-up-arrangementet med Oskar Westerlin og Mathea Bjørndalen på Østbanehallen. Her produserte vi foto- og videoinnhold som del av et eksternt kundeoppdrag.",
+      "Fra 11. til 18. april 2026 var vi til stede under et pop-up-arrangement på Østbanehallen. Her produserte vi foto- og videoinnhold som del av et eksternt kundeoppdrag.",
     blocks: [
       {
         type: "image",
@@ -220,48 +220,6 @@ export const POSTS: Post[] = [
     ],
   },
 
-  // ============================================================
-  // JØNK (mars 2026)
-  // ============================================================
-  {
-    slug: "samarbeid-med-jonk",
-    title: "Vi har startet samarbeid med Jønk",
-    excerpt:
-      "Fra 24. mars 2026 har vi tatt over hele markedsføringen til Jønk, fra pressekontakt til innhold på sosiale medier, med fokus på synlighet, konvertering og rapportering.",
-    publishedAt: "2026-03-24",
-    updatedAt: "2026-03-24",
-    lead:
-      "Vi har offisielt startet samarbeidet med Jønk. En total markedsføringsavtale hvor vi tar ansvar for alt fra pressekontakt til daglig drift av sosiale medier, med synlighet og konvertering som målbare mål.",
-    blocks: [
-      {
-        type: "image",
-        src: "/blogg/JØNK.webp",
-        alt: "Jønk, visuelt innhold fra samarbeidet",
-      },
-      { type: "h2", text: "Om samarbeidet" },
-      {
-        type: "p",
-        text: "Jønk har en tydelig identitet og et klart bilde av hvor de vil. Det vi tilfører er en målrettet markedsføringsplan som omsetter den identiteten til faktisk synlighet og flere konverteringer, ikke bare flere likes.",
-      },
-      { type: "h2", text: "Hva vi leverer" },
-      {
-        type: "ul",
-        items: [
-          "Markedsføringsstrategi: konkrete mål for synlighet og konvertering",
-          "Pressekontakt og PR: pitch til relevante medier og oppfølging",
-          "Sosiale medier: full daglig drift som SoMe managers",
-          "Foto og video som matcher den visuelle retningen",
-          "Annonsering og kampanjer på tvers av kanaler",
-          "Tett oppfølging og månedlig rapportering på tallene som faktisk betyr noe",
-        ],
-      },
-      { type: "h2", text: "Hvorfor det funker" },
-      {
-        type: "p",
-        text: "De beste samarbeidene er de der begge sider vet hva de er gode på. Jønk vet hva merkevaren deres skal være; vi vet hvordan vi gjør den synlig og målbar. Når én leverandør håndterer hele markedsføringen, slipper kunden å koordinere mellom fire forskjellige aktører som drar i hver sin retning.",
-      },
-    ],
-  },
 
   // ============================================================
   // 5 TEGN PÅ NY NETTSIDE

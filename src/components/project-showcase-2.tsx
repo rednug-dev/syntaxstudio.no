@@ -43,10 +43,11 @@ const STACK_LOGO: Record<string, string> = {
 
 /* Prosjekt-meta: bilder/urls/stack (språk-uavhengig) */
 const CASE_META = {
-  jonk: {
+  burger: {
     heroImage: "/showcase/bigpic.webp",
-    logo: "/logos/Jønksvg.svg",
-    url: "/work/jonk",
+    // De-identified case: the card draws <BurgerMark /> instead of a wordmark.
+    logo: "",
+    url: "/work/burger",
     isExternal: false,
   },
   fcr: {
@@ -99,7 +100,7 @@ export default async function WorkIntroSection(props: WorkIntroProps) {
   const seeLive = t("seeLive");
 
   // Prosjektene
-  const projOrder = ["jonk", "fcr", "snatched"] as const;
+  const projOrder = ["burger", "fcr", "snatched"] as const;
   const projectsIntl = projOrder.map<ProjectCase>((key) => {
     const heading = t(`projects.${key}.heading`) || "";
     const rawParagraphs = t.raw(`projects.${key}.paragraphs`);

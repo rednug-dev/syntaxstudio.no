@@ -39,10 +39,10 @@ export default function FeaturedWorkSection() {
       >
         {/* Row 1: Wide burger (3 col) + vertical video (1 col, 2 rows) */}
         <motion.div variants={item} className="col-span-3 relative group">
-          <Link href="/work/jonk" className="block relative rounded-[2rem] overflow-hidden border border-white/5 shadow-xl aspect-[2/1]">
+          <Link href="/work/burger" className="block relative rounded-[2rem] overflow-hidden border border-white/5 shadow-xl aspect-[2/1]">
             <Image
-              src="/jønk/jønkvm.webp"
-              alt={t("alt.jonkBurger")}
+              src="/webmat/burgercrop.webp"
+              alt={t("alt.burgerHero")}
               fill
               sizes="75vw"
               priority
@@ -52,10 +52,10 @@ export default function FeaturedWorkSection() {
         </motion.div>
 
         <motion.div variants={item} className="row-span-2 relative group">
-          <Link href="/work/jonk" className="block h-full">
+          <Link href="/work/burger" className="block h-full">
             <VideoCard
-              src="/webmat/oskarburger.mp4"
-              poster="/webmat/oskarburger-poster.webp"
+              src="/webmat/burger-vertical.mp4"
+              poster="/webmat/burger-vertical-poster.webp"
               aspectRatio="vertical"
               objectPosition="center"
               alwaysPlay
@@ -64,11 +64,11 @@ export default function FeaturedWorkSection() {
           </Link>
         </motion.div>
 
-        {/* Row 2: jonkfries + p3.1 + gatebukk (3 cells under hero, beside vertical video) */}
+        {/* Row 2: fries film + wings poster + product shot (3 cells under hero, beside vertical film) */}
         <motion.div variants={item} className="relative group">
-          <Link href="/work/jonk" className="block relative rounded-[2rem] overflow-hidden border border-white/5 bg-black shadow-xl aspect-square">
+          <Link href="/work/burger" className="block relative rounded-[2rem] overflow-hidden border border-white/5 bg-black shadow-xl aspect-square">
             <VideoCard
-              src="/jønk/jonkfries_square.mp4"
+              src="/burger/fries-loaded.mp4"
               aspectRatio="square"
               objectPosition="center"
               alwaysPlay
@@ -78,14 +78,14 @@ export default function FeaturedWorkSection() {
         </motion.div>
 
         <motion.div variants={item} className="relative group">
-          <Link href="/work/jonk" className="block relative rounded-[2rem] overflow-hidden border border-white/5 shadow-xl aspect-square">
-            <Image src="/webmat/p3_1.webp" alt={t("alt.jonkWings")} fill sizes="25vw" className="object-cover object-[center_25%] group-hover:scale-105 transition-transform duration-700" />
+          <Link href="/work/burger" className="block relative rounded-[2rem] overflow-hidden border border-white/5 shadow-xl aspect-square">
+            <Image src="/webmat/p3_1.webp" alt={t("alt.burgerWings")} fill sizes="25vw" className="object-cover object-[center_25%] group-hover:scale-105 transition-transform duration-700" />
           </Link>
         </motion.div>
 
         <motion.div variants={item} className="relative group">
-          <Link href="/work/jonk" className="block relative rounded-[2rem] overflow-hidden border border-white/5 shadow-xl aspect-square">
-            <Image src="/webmat/gatebok_cf.webp" alt={t("alt.gatebukk")} fill sizes="25vw" className="object-cover object-top group-hover:scale-105 transition-transform duration-700" />
+          <Link href="/work/burger" className="block relative rounded-[2rem] overflow-hidden border border-white/5 shadow-xl aspect-square">
+            <Image src="/webmat/prophoto_sq.webp" alt={t("alt.burgerProduct")} fill sizes="25vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
           </Link>
         </motion.div>
 
@@ -119,10 +119,10 @@ export default function FeaturedWorkSection() {
       >
         {/* Wide burger hero */}
         <motion.div variants={item} className="col-span-2 relative group">
-          <Link href="/work/jonk" className="block relative rounded-2xl overflow-hidden border border-white/5 shadow-xl aspect-[2/1]">
+          <Link href="/work/burger" className="block relative rounded-2xl overflow-hidden border border-white/5 shadow-xl aspect-[2/1]">
             <Image
-              src="/jønk/jønkvm.webp"
-              alt={t("alt.jonkBurger")}
+              src="/webmat/burgercrop.webp"
+              alt={t("alt.burgerHero")}
               fill
               sizes="100vw"
               priority
@@ -133,9 +133,9 @@ export default function FeaturedWorkSection() {
 
         {/* Two vertical videos side by side */}
         <motion.div variants={item} className="relative group">
-          <Link href="/work/jonk">
+          <Link href="/work/burger">
             <VideoCard
-              src="/jønk/burgers_vertical.mp4"
+              src="/burger/hero-build.mp4"
               aspectRatio="vertical"
               objectPosition="center"
               className="w-full !rounded-2xl"
@@ -144,10 +144,10 @@ export default function FeaturedWorkSection() {
         </motion.div>
 
         <motion.div variants={item} className="relative group">
-          <Link href="/work/jonk">
+          <Link href="/work/burger">
             <VideoCard
-              src="/webmat/oskarburger.mp4"
-              poster="/webmat/oskarburger-poster.webp"
+              src="/webmat/burger-vertical.mp4"
+              poster="/webmat/burger-vertical-poster.webp"
               aspectRatio="vertical"
               objectPosition="center"
               className="w-full !rounded-2xl"
