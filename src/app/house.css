@@ -98,8 +98,8 @@ body{background:var(--house-paper);font-family:var(--font-house),sans-serif}
 .practice-supplied-mark{padding:4px 0 0 15%}
 .practice-supplied-mark img{width:80px;height:auto;filter:brightness(0)}
 .practice-line:last-child .practice-supplied-mark img{width:130px}
-.practice-supplied-mark--35mm{display:block;width:min(100%,200px);padding:18px;background:var(--house-timber);align-self:start}
-.practice-supplied-mark--35mm img{width:100%;height:auto;filter:none}
+.practice-supplied-mark--35mm{display:block;width:min(100%,200px);padding:18px;align-self:start}
+.practice-supplied-mark--35mm img{width:100%;height:auto;filter:brightness(0)}
 .practice-detail p{font-size:17px;max-width:45ch}
 .practice-detail .practice-lead{margin-top:25px;font-size:14px}
 .practice-lead span{display:block;margin-top:4px;font-size:12px}

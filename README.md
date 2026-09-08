@@ -48,7 +48,7 @@ Open [localhost:3017](http://localhost:3017). The helper serves `docs/rebrand/st
 
 ## Selected direction
 
-The user selected **In relation** on 8 September 2026. Continue the brown/beige homepage on `codex/in-relation-preview`. The alternative animated exploration has been removed. The supplied 35mm Productions logo lives at `public/brand/35mm.svg` and is displayed unchanged on a brown background. Preview deployments remain separate from production.
+The user selected **In relation** on 8 September 2026. Continue the brown/beige homepage on `codex/in-relation-preview`. The alternative animated exploration has been removed. The supplied 35mm Productions logo lives at `public/brand/35mm.svg` and is displayed as a dark mark with no background panel. Preview deployments remain separate from production.
 
 ## Environment
 
