@@ -39,7 +39,15 @@ next-env.d.ts
 
 .genkit/*
 .env*
+!.env.example
 
 # firebase
 firebase-debug.log
 firestore-debug.log
+# local, non-published source material
+/_archive/
+
+/.next-production/
+/.next-option-c/
+/.playwright-mcp/
+/.impeccable/review/

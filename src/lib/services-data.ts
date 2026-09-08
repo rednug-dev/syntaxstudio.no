@@ -191,21 +191,21 @@ export const SERVICES: Service[] = [
       en: {
         title: "Professional product and food photography",
         description:
-          "Product, food and corporate photography shot on Sony A7V. Specialized in food photography for restaurants and food brands, with full editing and delivery included.",
+          "Product, food and corporate photography shot on Sony A7V and FX3. Specialized in food photography for restaurants and food brands, with full editing and delivery included.",
       },
       no: {
         title: "Profesjonell produkt- og matfotografering",
         description:
-          "Produktfoto, matfoto og bedriftsfoto tatt på Sony A7V. Spesialiserte på matfoto for restauranter og matmerker, med full etterbehandling og levering inkludert.",
+          "Produktfoto, matfoto og bedriftsfoto tatt på Sony A7V og FX3. Spesialiserte på matfoto for restauranter og matmerker, med full etterbehandling og levering inkludert.",
       },
     },
     content: {
       no: {
         title: "Fotografering med utstyr og erfaring som synes",
         tagline:
-          "Sony A7V, lang erfaring og en spesialitet på matfoto. Bilder som faktisk får produktene dine til å selge.",
+          "Sony A7V og FX3, lang erfaring og en spesialitet på matfoto. Bilder som faktisk får produktene dine til å selge.",
         intro:
-          "Vi fotograferer på Sony A7V, et kamera fra proffsegmentet, og har bygget oss opp en spesialitet innenfor matfotografi. Det betyr at om du er en restaurant, et matmerke, eller selger noe som skal se appetittvekkende ut, vet vi nøyaktig hvordan vi skal sette det opp.",
+          "Vi fotograferer på Sony A7V og FX3, kameraer fra proffsegmentet, og har spesialisert oss på matfotografi. Det betyr at om du er en restaurant, et matmerke, eller selger noe som skal se appetittvekkende ut, vet vi nøyaktig hvordan vi skal sette det opp.",
         whatWeDo: [
           "Produktfotografi (white background eller styled scene)",
           "Matfoto for menyer, sosiale medier og emballasje",
@@ -216,7 +216,7 @@ export const SERVICES: Service[] = [
         edge: {
           heading: "Hvorfor utstyret betyr noe",
           body:
-            "Sony A7V er ikke bare 'et bra kamera'. Det er det proff-fotografer bruker for kommersielt arbeid. Kombinert med riktige objektiver og styrt belysning gir det bilder med detaljnivå og dynamikk du ikke får fra et standard speilreflekskamera. På matbilder ser du forskjellen umiddelbart.",
+            "Sony A7V og FX3 er ikke bare 'bra kameraer'. Det er utstyret proff-fotografer bruker for kommersielt arbeid. Kombinert med riktige objektiver og styrt belysning gir de bilder med detaljnivå og dynamikk du ikke får fra et standard speilreflekskamera. På matbilder ser du forskjellen umiddelbart.",
         },
         process: [
           {
@@ -233,13 +233,13 @@ export const SERVICES: Service[] = [
           },
         ],
         whoFor: [
-          "Restauranter som trenger menyer og sosiale medier-innhold",
+          "Restauranter som trenger innhold til meny og sosiale medier",
           "Matmerker og emballasje som skal selge fra hyllen",
           "Bedrifter som trenger ekte ansattbilder, ikke stockfotos",
           "Nettbutikker som trenger ekte produktbilder",
         ],
         cta: "Fortell oss hva som skal fotograferes, så får du et tilbud",
-        caseLink: { href: "/work/jonk", label: "Se hvordan vi gjorde det for Jønk" },
+        caseLink: { href: "/work/burger", label: "Se hvordan vi gjorde det for et burgermerke" },
         faq: [
           {
             q: "Har dere eget studio?",
@@ -258,9 +258,9 @@ export const SERVICES: Service[] = [
       en: {
         title: "Photography with the gear and experience that shows",
         tagline:
-          "Sony A7V, deep experience, and a specialty in food photography. Images that actually sell your product.",
+          "Sony A7V and FX3, deep experience, and a specialty in food photography. Images that actually sell your product.",
         intro:
-          "We shoot on the Sony A7V, a pro-segment camera, and have built a specialty in food photography. So if you're a restaurant, food brand, or selling anything that needs to look appetizing, we know exactly how to set it up.",
+          "We shoot on the Sony A7V and FX3, pro-segment cameras, and have built a specialty in food photography. So if you're a restaurant, food brand, or selling anything that needs to look appetizing, we know exactly how to set it up.",
         whatWeDo: [
           "Product photography (white background or styled scene)",
           "Food photography for menus, social media and packaging",
@@ -271,7 +271,7 @@ export const SERVICES: Service[] = [
         edge: {
           heading: "Why the gear matters",
           body:
-            "The Sony A7V isn't just 'a good camera'. It's what pro photographers use for commercial work. Combined with the right lenses and controlled lighting it produces detail and dynamic range you don't get from a standard DSLR. On food photography you see the difference immediately.",
+            "The Sony A7V and FX3 aren't just 'good cameras'. They're what pro photographers use for commercial work. Combined with the right lenses and controlled lighting they produce detail and dynamic range you don't get from a standard DSLR. On food photography you see the difference immediately.",
         },
         process: [
           {
@@ -294,7 +294,7 @@ export const SERVICES: Service[] = [
           "Online stores that need real product images, not stock",
         ],
         cta: "Tell us what needs shooting and you'll get a quote",
-        caseLink: { href: "/work/jonk", label: "See how we did it for Jønk" },
+        caseLink: { href: "/work/burger", label: "See how we did it for a burger brand" },
         faq: [
           {
             q: "Do you have your own studio?",
@@ -323,12 +323,12 @@ export const SERVICES: Service[] = [
       en: {
         title: "Video production and 4K commercials in Oslo",
         description:
-          "4K commercials, social ads and product video shot on Sony FX30. Led by a videographer with a background in the Norwegian music video scene.",
+          "4K commercials, social ads and product video shot on Sony FX3. Led by a videographer with a background in the Norwegian music video scene.",
       },
       no: {
         title: "Videoproduksjon og 4K-reklamefilmer i Oslo",
         description:
-          "4K-reklamefilmer, sosiale annonser og produktvideo filmet på Sony FX30. Ledet av en videograf med bakgrunn fra det norske musikkvideo-miljøet.",
+          "4K-reklamefilmer, sosiale annonser og produktvideo filmet på Sony FX3. Ledet av en videograf med bakgrunn fra det norske musikkvideo-miljøet.",
       },
     },
     content: {
@@ -337,7 +337,7 @@ export const SERVICES: Service[] = [
         tagline:
           "Reklamefilm, sosiale annonser og produktvideo levert av en videograf med bakgrunn fra norsk musikkvideo.",
         intro:
-          "Vår partner og markedssjef Khamzat har lang fartstid fra norsk musikkvideo og var i en periode blant de mest ettertraktede i bransjen. Den erfaringen legger vi inn i alt vi lager, fra 4K-reklamefilmer til 15-sekunders sosiale annonser. Vi filmer på Sony FX30, et kamera bygget for kommersiell videoproduksjon, og resultatet er video som folk faktisk stopper for å se på.",
+          "Vår partner og markedssjef Khamzat har lang fartstid fra norsk musikkvideo og var i en periode blant de mest ettertraktede i bransjen. Den erfaringen legger vi inn i alt vi lager, fra 4K-reklamefilmer til 15-sekunders sosiale annonser. Vi filmer på Sony FX3, et kamera bygget for kommersiell videoproduksjon, og resultatet er video som folk faktisk stopper for å se på.",
         whatWeDo: [
           "Reklamefilm i 4K til TV, kino og web",
           "Sosiale annonser og kortform til Instagram, TikTok og Reels",
@@ -375,11 +375,11 @@ export const SERVICES: Service[] = [
           "Brands som vil ha noe som faktisk skiller seg ut i feeden",
         ],
         cta: "Beskriv prosjektet, så lager vi et tilbud",
-        caseLink: { href: "/work/jonk", label: "Se reklamefilmene vi lagde for Jønk" },
+        caseLink: { href: "/work/burger", label: "Se reklamefilmene vi lagde for et burgermerke i Oslo" },
         faq: [
           {
             q: "Hva slags utstyr filmer dere på?",
-            a: "Sony FX30 er hovedkameraet vårt, sammen med riktig lyssetting og lydutstyr. Vi velger hva vi tar med ut fra hva prosjektet faktisk trenger. Ikke alt krever det største oppsettet.",
+            a: "Sony FX3 er hovedkameraet vårt, sammen med riktig lyssetting og lydutstyr. Vi velger hva vi tar med ut fra hva prosjektet faktisk trenger. Ikke alt krever det største oppsettet.",
           },
           {
             q: "Hvor lang tid tar en reklamefilm?",
@@ -392,7 +392,7 @@ export const SERVICES: Service[] = [
         tagline:
           "Commercials, social ads and product video delivered by a videographer with a background in Norwegian music video.",
         intro:
-          "Our partner and marketing director Khamzat has years in Norwegian music video, where he was among the most sought-after in the scene. We carry that experience into everything we make, from 4K commercials to 15-second social ads. We shoot on the Sony FX30, a camera built for commercial video, and the result is footage people actually stop to watch.",
+          "Our partner and marketing director Khamzat has years in Norwegian music video, where he was among the most sought-after in the scene. We carry that experience into everything we make, from 4K commercials to 15-second social ads. We shoot on the Sony FX3, a camera built for commercial video, and the result is footage people actually stop to watch.",
         whatWeDo: [
           "4K commercials for TV, cinema and web",
           "Social ads and short-form for Instagram, TikTok and Reels",
@@ -430,11 +430,11 @@ export const SERVICES: Service[] = [
           "Brands that want something that actually stands out in the feed",
         ],
         cta: "Describe the project and we'll send you a quote",
-        caseLink: { href: "/work/jonk", label: "See the commercials we made for Jønk" },
+        caseLink: { href: "/work/burger", label: "See the commercials we made for an Oslo burger brand" },
         faq: [
           {
             q: "What gear do you shoot on?",
-            a: "The Sony FX30 is our main camera, paired with proper lighting and audio. We pick what to bring based on what the project actually needs. Not everything requires the biggest setup.",
+            a: "The Sony FX3 is our main camera, paired with proper lighting and audio. We pick what to bring based on what the project actually needs. Not everything requires the biggest setup.",
           },
           {
             q: "How long does a commercial take?",
@@ -657,7 +657,7 @@ export const SERVICES: Service[] = [
           "Merker som vil bygge en faktisk følgerbase, ikke kjøpe likes",
           "De som er lei av byråer med vage rapporter",
         ],
-        cta: "30-dagers garanti, ingen risiko for å prøve oss",
+        cta: "30-dagers garanti, ingen risiko ved å prøve oss",
         faq: [
           {
             q: "Hvordan fungerer 30-dagers garantien praktisk?",
@@ -719,7 +719,7 @@ export const SERVICES: Service[] = [
           "Brands that want a real follower base, not bought likes",
           "Companies tired of agencies with vague reports",
         ],
-        cta: "30-day guarantee, no risk to try us",
+        cta: "30-day guarantee, no risk in trying us",
         faq: [
           {
             q: "How does the 30-day guarantee work?",

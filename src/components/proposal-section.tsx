@@ -1,11 +1,13 @@
 'use client';
 
-import { useActionState, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
+import { useFormState } from 'react-dom';
 import { useFormStatus } from 'react-dom';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { MessageSquare, Loader2, CheckCircle } from 'lucide-react';
+import { MessageSquare, Loader2, CheckCircle, Calendar } from 'lucide-react';
+import { Link } from '@/i18n/navigation';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
@@ -43,7 +45,7 @@ export default function ProposalSection() {
   const formRef = useRef<HTMLFormElement>(null);
 
   const initialState: FormState = { message: '', errors: null, success: false };
-  const [state, formAction] = useActionState(handleContactInquiry, initialState);
+  const [state, formAction] = useFormState(handleContactInquiry, initialState);
 
   const form = useForm<z.infer<typeof ContactInquirySchema>>({
     resolver: zodResolver(ContactInquirySchema),
@@ -79,6 +81,15 @@ export default function ProposalSection() {
             <CheckCircle className="w-16 h-16 mx-auto text-green-500" />
             <h3 className="text-2xl font-bold font-headline mt-4">{t('thanksTitle')}</h3>
             <p className="mt-2 text-muted-foreground">{state.message}</p>
+            <div className="mt-6 flex flex-col items-center gap-2">
+              <p className="text-sm text-muted-foreground">{t('bookInstead')}</p>
+              <Button asChild variant="outline" size="lg">
+                <Link href="/book">
+                  <Calendar className="mr-2 h-4 w-4" />
+                  {t('bookCta')}
+                </Link>
+              </Button>
+            </div>
           </Card>
         ) : (
           <Card className="p-6 md:p-8 animate-fade-in-up">
@@ -124,8 +135,9 @@ export default function ProposalSection() {
                     </FormItem>
                   )}
                 />
-                <div className="flex justify-center">
+                <div className="flex flex-col items-center gap-3">
                   <SubmitButton />
+                  <p className="text-sm text-muted-foreground">{t('reassurance')}</p>
                 </div>
               </form>
             </Form>

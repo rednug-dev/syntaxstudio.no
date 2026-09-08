@@ -63,7 +63,10 @@
     "send": "Send melding",
     "sending": "Sender...",
     "thanksTitle": "Takk for meldingen!",
-    "errorTitle": "Feil"
+    "errorTitle": "Feil",
+    "reassurance": "Vi svarer vanligvis innen 24 timer på hverdager.",
+    "bookInstead": "Vil du snakke før det?",
+    "bookCta": "Book et møte"
   },
   "Footer": {
     "tagline": "Din markedsføringspartner for nettsider, video og reklame",
@@ -76,7 +79,7 @@
   "About": {
     "missionTitle": "Din markedsføringspartner",
     "missionP1": "Syntax Studio er partneren som tar seg av hele bildet. Fra kampanjer og videoproduksjon til nettsider og design. Du får ett team som forstår målet ditt og leverer alt som trengs for å nå det.",
-    "missionP2": "Vi kombinerer kreativt innhold med teknisk kompetanse. Resultatet er merkevarer som skiller seg ut og løsninger som faktisk konverterer.",
+    "missionP2": "Vi kombinerer kreativt innhold med teknisk kompetanse. Resultatet er merkevarer som skiller seg ut og løsninger som konverterer.",
     "metrics": {
       "lighthouseValue": "Under 24 t",
       "lighthouseSubtitle": "Typisk svartid på hverdager. Vi er tilgjengelige når du trenger oss.",
@@ -119,8 +122,8 @@
       "overviewTitle": "Oversikt",
       "workflowTitle": "Arbeidsflyt",
       "seeLive": "Se mer",
-      "defaultOverview": "Vi er din eksterne markedsavdeling. Fra strategi og Google Ads til profesjonell videoproduksjon og webutvikling – vi tar det fulle ansvaret for din digitale vekst.",
-      "defaultBackground": "Vi ser ofte bedrifter med gode produkter, men som mangler en rød tråd i markedsføringen. Vi samler alle tråder – design, innhold, annonsering og teknologi – i én helhetlig strategi som faktisk konverterer.",
+      "defaultOverview": "Vi er din eksterne markedsavdeling. Fra strategi og Google Ads til profesjonell videoproduksjon og webutvikling – vi tar ansvaret for hele den digitale veksten din.",
+      "defaultBackground": "Vi ser ofte bedrifter med gode produkter, men som mangler en rød tråd i markedsføringen. Vi samler alle tråder – design, innhold, annonsering og teknologi – i én strategi som faktisk konverterer.",
       "checklist": [
         "Totalansvar for markedsføring & strategi",
         "Målrettede kampanjer (Google, Meta, LinkedIn)",
@@ -132,30 +135,30 @@
         "SEO, analyse & løpende optimalisering"
       ],
       "projects": {
-        "jonk": {
-          "heading": "Komplett kampanje for Jønk",
+        "burger": {
+          "heading": "Visuell kampanjeproduksjon for et burgermerke",
           "stack": ["Videoproduksjon", "Foto", "Markedsføring", "Grafisk design"],
           "flairs": ["4K Reklamefilm", "Produktfoto", "Sosiale medier"],
           "paragraphs": [
-            "For Jønk leverer vi en komplett visuell kampanje, fra cinematiske 4K-reklamefilmer til et stort bibliotek med high-end produktbilder.",
-            "Alt designet for å fange den rå energien og urbane identiteten som definerer Jønk som merkevare."
+            "For et norsk burgermerke produserte vi film, foto og grafisk materiell til en visuell kampanje – fra cinematiske 4K-filmer til et bredt bibliotek med produktbilder.",
+            "Alt designet for å fange den rå energien og det urbane uttrykket i konseptet."
           ],
           "page": {
             "back": "Tilbake til tjenester",
-            "badge": "Sementert markedsføringspartner",
+            "badge": "Kampanjeproduksjon",
             "title": "Leveranse av en rå kampanje",
-            "description": "En sementert del av Jønks markedsføringsteam siden lanseringen av Burgerkrigen.",
+            "description": "Film, foto og grafisk materiell for et norsk burgermerke. Kunden er anonymisert, og materiellet du ser her er vår egen produksjon.",
             "backgroundTitle": "Bakgrunnen",
-            "backgroundBody": "Vi kom inn som en ekstern enhet i Jønks markedsføringsteam under en av Norges største markedsføringskampanjer. Oppdraget var avgrenset til å starte med. I dag er vi en sementert del av teamet og jobber på alt det visuelle og strategiske som faktisk når kunden.",
-            "campaignTitle": "Burgerkrigen",
-            "campaignBody": "Burgerkrigen er en head-to-head konkurranse mellom Oskar Westerlin og Mathea Bjørndalen, hvor publikum kårer vinneren. Vi leverer alt det visuelle, alt det fysiske og all sporingen som gjør det mulig å måle hva som faktisk fungerer.",
+            "backgroundBody": "Vi ble hentet inn som ekstern produksjonspartner på det visuelle. Oppdraget startet med film og foto, og vokste til å omfatte mer av materiellet som ble brukt i kampanjene.",
+            "campaignTitle": "Oppdraget",
+            "campaignBody": "Målet var å bygge trafikk i en periode med høyt trykk. Vi konsentrerte oss om det visuelle: film, foto og grafisk materiell som kunne brukes på tvers av sosiale medier, trykk og digitale flater.",
             "commercial": "Sosial Kampanje",
-            "spiritTitle": "Jønk-stilen",
+            "spiritTitle": "Uttrykket",
             "spiritDesc": "Raske, fengende klipp vi produserte for å fange den rå energien på kjøkkenet og crunchen i den perfekte smash-burgeren.",
             "photoTitle": "Visuelt i toppklasse",
-            "photoDesc": "Vi leverer et stort bibliotek med edgy produktbilder og postere designet for sosiale medier, trykk og digitale menyer, alt med den urbane Jønk-identiteten i fokus.",
-            "scopeTitle": "Vi leverer på alle fronter",
-            "scopeIntro": "Det du har sett over er én del av leveransen. Som sementert del av Jønks markedsføringsteam jobber vi på alt det visuelle, det fysiske og det målbare:",
+            "photoDesc": "Vi produserte produktbilder og postere for sosiale medier, trykk og digitale flater, alt med et rått og urbant uttrykk i fokus.",
+            "scopeTitle": "Vi leverte på alle fronter",
+            "scopeIntro": "Det du ser over er en del av materiellet. Arbeidet omfattet blant annet:",
             "scopeItems": [
               "Gatebukker, rollups, flyers og pressevegger",
               "Produktvideo og produktfoto i full produksjon",
@@ -165,7 +168,7 @@
               "Grafisk design og digitalt materiell"
             ],
             "strategy": "Strategien",
-            "strategyDesc": "Fokus på råvarer, varme og teksturer. Vi løfter frem crunch og rene smaker, og kommuniserer kvalitet gjennom en energisk leveranse som matcher merkets edgy uttrykk.",
+            "strategyDesc": "Fokus på råvarer, varme og teksturer. Vi løftet frem crunch og rene smaker, og kommuniserte kvalitet gjennom en energisk leveranse som matchet et edgy uttrykk.",
             "work": "Arbeidet",
             "workItems": [
               "Reklamefilmer for sosiale medier (4K)",
@@ -176,12 +179,11 @@
             "deliverables": "Leveranser",
             "deliverablesDesc": "Et kraftfullt bibliotek med cinematiske 4K-annonser og høyoppløselige bilder skreddersydd for maksimalt engasjement på Reels og TikTok.",
             "resultsTitle": "Resultatene",
-            "resultsBody": "Bare i april 2026 har de sosiale kanalene vi forvalter for Jønk generert over 400 000 visninger på TikTok og Instagram. Like viktig: Jønk er fortsatt aktiv kunde og det er ingen planer om at det skal endre seg.",
+            "resultsBody": "Innhold vi produserte passerte 400 000 visninger på TikTok og Instagram i april 2026, målt i plattformenes egen statistikk.",
             "resultsStatNumber": "400 000+",
-            "resultsStatLabel": "visninger på TikTok og Instagram, april 2026",
-            "quoteText": "De skjønte stilen vår fra dag én. Vi kan sende en idé på morgenen og ha noe ferdig vi faktisk vil poste samme kveld. Den farten og forståelsen er sjelden vare.",
-            "quoteAuthor": "Jønk",
-            "ctaTitle": "Vil du ha samme dybde i din markedsføring?",
+            "resultsStatLabel": "visninger på innhold vi produserte, april 2026",
+            "disclaimer": "Kunden er anonymisert, og navn, logo og varemerker er utelatt. Materiellet på denne siden er produsert av Syntax Studio og vises som arbeidsprøve.",
+          "ctaTitle": "Vil du ha samme dybde i din markedsføring?",
             "ctaBody": "Vi tar kunder gjennom hele løpet, fra strategi og kampanje til produksjon og daglig publisering. Beskriv hvor du står, så finner vi ut hvordan vi kan hjelpe.",
             "ctaServiceLink": "Se markedsføringstjenesten vår",
             "ctaBookLink": "Book et møte",
@@ -189,53 +191,11 @@
             "cinematicTextures": "Smash-kvalitet",
             "socialAdsCount": "Reklamefilm",
             "productPhotosCount": "Produktfoto",
-            "professionalGrade": "Sementert partner",
+            "professionalGrade": "Full produksjon",
             "socialCampaign1": "Smash & Crunch",
             "socialCampaign2": "Ren Kvalitet",
-            "socialCampaign3": "Jønk Energi",
+            "socialCampaign3": "Rå Energi",
             "optimizedForReels": "Optimalisert for Reels"
-          }
-        },
-        "fcr": {
-          "heading": "Fighter-promo for FCR",
-          "stack": ["Videoproduksjon", "Redigering", "Motion Graphics", "Fargegradering"],
-          "flairs": ["MMA", "Promo-video", "Sverige"],
-          "paragraphs": [
-            "Vi produserte en intens promo-video for MMA-fighter Tamerlan Akhmadov under FCR – Full Contact Rumble, en underenhet av UFC i Sverige.",
-            "Filmen fanger råskapen og intensiteten i sporten, og ble designet for å bygge hype rundt fighteren og eventet."
-          ],
-          "page": {
-            "back": "Tilbake til tjenester",
-            "badge": "Promo-produksjon",
-            "title": "Rå promo for MMA",
-            "description": "Vi fikk oppdraget med å lage introduksjonsvideoen til Tamerlan Akhmadov, en ung MMA-fighter på vei opp foran sin kamp under FCR (Full Contact Rumble) i Sverige.",
-            "backgroundTitle": "Bakgrunnen",
-            "backgroundBody": "Tamerlan Akhmadov er en ung MMA-fighter på vei opp i internasjonal sammenheng. Han tok kontakt med oss fordi han ville bli sett på som en seriøs aktør foran neste kamp. Han trengte ikke et standard fighter-portrett. Han trengte en profesjonell introduksjonsvideo som matchet ambisjonene hans.",
-            "videoTitle": "Promo-filmen",
-            "videoDesc": "En stille men intens introduksjon som lar treningen og fighteren tale for seg selv. Klipping, lyssetting og lyddesign er bygget rundt Tamerlans eget ønske om en helt musikkfri produksjon.",
-            "approachTitle": "Slik jobbet vi",
-            "approachIntro": "Vi tok et helhetlig grep om produksjonen. Vi skrev manuset, filmet i hans eget treningssted og på utendørs lokasjoner, og redigerte det hele selv.",
-            "approachKeyTitle": "Det viktigste kreative valget",
-            "approachKeyBody": "Tamerlan ville ikke ha musikk i videoen. Ikke en gang som bakgrunn. De fleste byråer ville prøvd å snakke han fra det, fordi musikk er det enkleste verktøyet for å bygge stemning. Vi gjorde det motsatte. Vi tok ideen hans og bygde produksjonen rundt det. Lyden av pust, fottrinn på matten, hansker som treffer pads. Resultatet ble en video som føles ekte fordi den ikke gjemmer seg bak et lydspor.",
-            "strategy": "Strategien",
-            "strategyDesc": "Vi formidlet Tamerlans dedikasjon og fokus uten å ty til klisjéene. Vi lot lyden av treningen, pusten og bevegelsen bære filmen. Det føles ekte fordi det er ekte.",
-            "work": "Arbeidet",
-            "workItems": [
-              "Manus og konseptutvikling",
-              "Filming i gym og utendørs",
-              "Redigering og fargegradering",
-              "Lyddesign uten bakgrunnsmusikk"
-            ],
-            "deliverables": "Leveranser",
-            "deliverablesDesc": "En ferdig introduksjonsvideo klar for sosiale medier og event-markedsføring, levert i alle nødvendige formater.",
-            "resultsTitle": "Resultatet",
-            "resultsBody": "Da kortet ble annonsert ble Tamerlans kamp en av de mest etterlengtede på hele eventet. Han gikk inn som storfavoritt og vant med stil. Like viktig: han har allerede tatt kontakt for å fortsette samarbeidet med flere videoer og fotoshoots foran kommende kamper.",
-            "quoteText": "[Sitat fra Tamerlan kommer]",
-            "quoteAuthor": "Tamerlan Akhmadov",
-            "ctaTitle": "Trenger du noe i samme stil?",
-            "ctaBody": "Vi tar imot prosjekter for sport, brand og personer som vil ha noe som ikke ser ut som alt annet. Beskriv ideen din, så hører du fra oss.",
-            "ctaServiceLink": "Se våre videotjenester",
-            "ctaBookLink": "Book et møte"
           }
         },
         "snatched": {
@@ -252,9 +212,9 @@
             "title": "Visuell storytelling med 3D",
             "description": "Snatched ba oss lage en pitch-video til neste investeringsrunde. Målet var å vise størrelsen på selskapet visuelt, uten å bare slenge tall på skjermen.",
             "backgroundTitle": "Bakgrunnen",
-            "backgroundBody": "Snatched er et raskt voksende norsk shapewear-brand som forbereder neste runde med investering. De kom til oss fordi de ville ha en video i topp kvalitet som kunne sikre størst mulig oppmerksomhet og kapital i pitch-prosessen. De ønsket 3D, infografikk og motion graphics på et nivå som matchet ambisjonene deres.",
+            "backgroundBody": "Snatched er et raskt voksende norsk shapewear-brand som forbereder neste runde med investering. De kom til oss fordi de ville ha en video i topp kvalitet som kunne skaffe mest mulig oppmerksomhet og kapital i pitchen. De ønsket 3D, infografikk og motion graphics på et nivå som matchet ambisjonene deres.",
             "approachTitle": "Den kreative ideen",
-            "approachBody": "Vi kunne lett slått store tall opp på skjermen og kalt det en dag. I stedet bygde vi salgstallene som et fysisk lager. 3D-modellerte pappesker, paller og pakker som fyller skjermen i takt med omsetningen Snatched faktisk har levert. Det visualiserer skala på en måte som tall alene aldri klarer, og det blir hengende igjen i hodet på en investor.",
+            "approachBody": "Vi kunne lett slått store tall opp på skjermen og latt det være med det. I stedet bygde vi salgstallene som et fysisk lager. 3D-modellerte pappesker, paller og pakker som fyller skjermen i takt med omsetningen Snatched faktisk har levert. Det visualiserer skala på en måte som tall alene aldri klarer, og det blir hengende igjen i hodet på en investor.",
             "clientStatsTitle": "Snatched i tall",
             "videoTitle": "Pitch-filmen",
             "videoDesc": "En high-end pitch-video som kombinerer live-action, 3D-modellerte lagervisninger og animert infografikk for å kommunisere størrelsen og momentumet i Snatched.",
@@ -270,7 +230,7 @@
             "deliverables": "Leveranser",
             "deliverablesDesc": "En ferdig pitch-video skreddersydd for investor-presentasjoner og digital distribusjon, levert i alle nødvendige formater.",
             "resultsTitle": "Resultatet så langt",
-            "resultsBody": "Snatched ble veldig godt fornøyd med leveransen etter en grundig revisjonsprosess hvor vi finjusterte hver scene sammen med teamet deres. Videoen er nå i hendene på Snatched og brukes i den pågående investeringsrunden. Vi avventer å se hvordan den lander hos investorene.",
+            "resultsBody": "Snatched ble veldig godt fornøyd med leveransen etter en grundig revisjonsprosess hvor vi finjusterte hver scene sammen med teamet deres. Videoen er nå i hendene på Snatched og brukes aktivt i den pågående investeringsrunden.",
             "quoteText": "[Sitat fra Snatched kommer]",
             "quoteAuthor": "Snatched",
             "ctaTitle": "Trenger du en video som faktisk overbeviser?",
@@ -282,6 +242,63 @@
               "followers": "5 000+ følgere",
               "trustpilot": "4,3 Trustpilot"
             }
+          }
+        },
+        "tokyo": {
+          "heading": "Første stopp: Tokyo",
+          "stack": ["Videoproduksjon", "Foto", "Reisefilm", "Internasjonalt"],
+          "flairs": ["Kapittel 01", "Tokyo", "Egen produksjon"],
+          "paragraphs": [
+            "Kapittel 01 i en serie internasjonale oppdrag. Vi pakket kamera, reiste ut, og fanget film og foto der og da — i vårt eget uttrykk.",
+            "Vi tror de beste idéene henter energi utenfra. Tokyo ble det første kapittelet, og en test på hvordan vi jobber når omgivelsene er nye og alt må fanges der og da."
+          ],
+          "card": {
+            "title": "Første stopp: Tokyo",
+            "body": "Kapittel 01 i en serie internasjonale oppdrag. Vi pakket kamera, reiste ut, og fanget film og foto der og da — i vårt eget uttrykk.",
+            "tags": ["Videoproduksjon", "Foto", "Reisefilm", "Internasjonalt"],
+            "new": "Ny",
+            "cta": "Se mer"
+          },
+          "page": {
+            "back": "Tilbake",
+            "chapter": "東京 · 01",
+            "heroBadge": "Internasjonalt oppdrag",
+            "heroTitle": "TOKYO",
+            "heroKanji": "東京",
+            "heroLead": "Kapittel 01. Vi pakket kamera og reiste ut — første stopp i en serie internasjonale oppdrag. Bildene og filmene under er hentet derfra.",
+            "metaFilm": "Film",
+            "metaPhoto": "Foto",
+            "metaOwn": "Egen produksjon",
+            "heroCardEyebrow": "Signatur",
+            "heroCardTitle": "Byen i bevegelse",
+            "heroCardPlaceholder": "Hovedbilde / vertikal film",
+            "routeFrom": "Oslo",
+            "routeFromLat": "59.9°N",
+            "routeToLat": "35.7°N",
+            "routeTo": "Tokyo 東京",
+            "routeDistance": "≈ 8 200 km",
+            "statementEyebrow": "Bakgrunn",
+            "statementBody": "Vi tror de beste idéene henter energi utenfra. Tokyo ble det første kapittelet — en test på hvordan vi jobber når omgivelsene er nye, tempoet et annet og alt må fanges der og da. Det blir flere.",
+            "reelsEyebrow": "Reels",
+            "reelsTitleLine1": "Vertikalt",
+            "reelsTitleLine2": "fra gaten",
+            "reelsNote": "Optimalisert for Reels",
+            "reelCaptions": ["Gate-tempo", "Neon & natt", "Stillhet"],
+            "reelPlaceholder": "Reel {n} — vertikal",
+            "filmEyebrow": "Hovedfilm",
+            "filmTitle": "TOKYO — 01",
+            "filmPlaceholder": "Hovedfilm (16:9)",
+            "photoTitle": "Stillbilder",
+            "photoBody": "Et utvalg fra rullen. Stillbildene fra turen legges inn her etter hvert som de er ferdig gradert.",
+            "photoPlaceholder": "Foto",
+            "quoteText": "Vi dro for å se om stilen vår holder på fremmed grunn. Den gjorde det — og vi bestilte allerede neste billett.",
+            "quoteCaption": "Syntax Studio · Tokyo",
+            "ctaKanji": "次は？",
+            "ctaTitle": "Neste stopp?",
+            "ctaBody": "Vi tar med kameraet ut igjen. Har du et sted — eller en idé — som fortjener samme behandling?",
+            "ctaBookLink": "Book en prat",
+            "ctaServiceLink": "Se alle prosjekter",
+            "footerNote": "Internasjonale oppdrag · 01 Tokyo"
           }
         }
       }
@@ -346,12 +363,11 @@
     "seeProject": "Se prosjekt",
     "seeAll": "Se alle prosjekter",
     "alt": {
-      "jonkBurger": "Jønk-burger servert på restaurant — matfotografi og markedsføringskampanje av Syntax Studio",
-      "jonkLogo": "Jønk restaurant-logo",
-      "jonkWings": "Jønk chicken wings reklameplakat — grafisk design av Syntax Studio",
-      "gatebukk": "Gatebukk street food menydesign — merkevarebygging og trykk av Syntax Studio",
-      "fcrLogo": "FCR merkevare-logo — nettside og markedsføringsprosjekt av Syntax Studio",
-      "snatchedLogo": "Snatched merkevare-logo — sosiale medier og innholdsproduksjon av Syntax Studio"
+      "burgerHero": "Smash-burger fra produktfotografering — matfoto og kampanjemateriell av Syntax Studio",
+      "burgerWings": "Chicken wings reklameplakat — grafisk design av Syntax Studio",
+      "burgerProduct": "Produktfoto av signaturburger — matfoto av Syntax Studio",
+      "snatchedLogo": "Snatched merkevare-logo — sosiale medier og innholdsproduksjon av Syntax Studio",
+      "tokyo": "Syntax × Tokyo — første stopp i en serie internasjonale oppdrag, film og foto av Syntax Studio"
     }
   },
   "Testimonials": {
@@ -376,17 +392,17 @@
       "title": "Om Syntax Studio, markedsføringsbyrå i Oslo",
       "description": "Vi er et lite team som bygger nettsider, lager video og driver markedsføring for bedrifter som vil bli sett. Basert i Oslo, jobber nasjonalt og internasjonalt."
     },
-    "workJonk": {
-      "title": "Jønk, komplett kampanje for Oslos burgerscene",
-      "description": "Sementert som en del av Jønks markedsføringsteam leverer vi alt fra 4K-reklamefilmer og produktfoto til daglig innhold, tracking og kampanjestrategi."
-    },
-    "workFcr": {
-      "title": "FCR, fighter-promo for Tamerlan Akhmadov",
-      "description": "Vi skrev manuset, filmet og redigerte introduksjonsvideoen til MMA-fighter Tamerlan Akhmadov foran hans kamp under FCR i Sverige. Helt uten musikk."
+    "workBurger": {
+      "title": "Kampanjeproduksjon for et burgermerke",
+      "description": "Film, foto og grafisk materiell for et anonymisert burgermerke: 4K-film, produktfoto og kampanjemateriell produsert av Syntax Studio."
     },
     "workSnatched": {
       "title": "Snatched, pitch-video med 3D og infografikk",
       "description": "Pitch-video med 3D-modellerte pappesker, paller og pakker som visualiserer Snatched sine salgstall for investorer. Levert etter tett samarbeid og mange revisjoner."
+    },
+    "workTokyo": {
+      "title": "Syntax × Tokyo, første stopp i en serie internasjonale oppdrag",
+      "description": "Kapittel 01. Vi pakket kamera og reiste til Tokyo — film, reels og stillbilder fanget der og da, i Syntax Studio sitt eget uttrykk."
     }
   },
   "BookPage": {
@@ -396,6 +412,7 @@
     "subtitle": "Velg en tid som passer deg. 30 minutter på video, vi blir kjent og finner ut hva du trenger.",
     "bookCta": "Velg tidspunkt",
     "emailCta": "Send en e-post",
+    "callCta": "Ring oss",
     "expect": {
       "title": "Hva du kan forvente",
       "duration": "30 minutter, helt uforpliktende",

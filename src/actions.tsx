@@ -1,104 +1,111 @@
 'use server';
 
 import nodemailer from 'nodemailer';
-import { ContactInquirySchema } from '@/lib/schemas';
+import { createContactInquirySchema } from '@/lib/schemas';
 import { headers } from 'next/headers';
 
-/** Shared form-state type for server actions */
 export type FormState = {
   message: string;
   errors: Record<string, string[]> | null;
   success: boolean;
 };
 
-/* ---------- SMTP transport (Zoho) ---------- */
-function createTransport() {
-  return nodemailer.createTransport({
-    host: 'smtp.zoho.eu',
-    port: 465,
-    secure: true,
-    auth: {
-      user: process.env.ZOHO_EMAIL,        // e.g. noreply@syntaxstudio.no
-      pass: process.env.ZOHO_APP_PASSWORD, // App password
-    },
-  });
-}
-
-/* ---------- Locale helper (async: headers() must be awaited) ---------- */
 async function detectLocale(): Promise<'no' | 'en'> {
   try {
-    const h = await headers();
-    const al = h.get('accept-language') || '';
-    if (/^(no|nb|nn)/i.test(al)) return 'no';
-    return 'en';
+    const requestHeaders = await headers();
+    return /^(no|nb|nn)/i.test(requestHeaders.get('accept-language') || '') ? 'no' : 'en';
   } catch {
     return 'no';
   }
 }
 
-/* =========================================================
-   1) Contact form (unchanged validation)
-   ========================================================= */
-export async function handleContactInquiry(
-  prevState: FormState,
-  formData: FormData
-): Promise<FormState> {
-  const localeInput = String(formData.get('locale') || '');
-  const locale = (localeInput === 'no' || localeInput === 'en' ? localeInput : await detectLocale()) as 'no' | 'en';
+function escapeHtml(value: string) {
+  return value.replace(/[&<>"']/g, (character) => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
+  }[character]!));
+}
 
-  const validated = ContactInquirySchema.safeParse({
+export async function handleContactInquiry(
+  _prevState: FormState,
+  formData: FormData,
+): Promise<FormState> {
+  const localeInput = formData.get('locale');
+  const locale = localeInput === 'no' || localeInput === 'en' ? localeInput : await detectLocale();
+  const no = locale === 'no';
+  const deliveryError: FormState = {
+    message: no
+      ? 'Meldingen ble ikke sendt. Prøv igjen, eller skriv til info@syntaxstudio.no.'
+      : 'Your message was not sent. Try again, or email info@syntaxstudio.no.',
+    errors: null,
+    success: false,
+  };
+
+  // This field is hidden from visitors and must remain empty.
+  if (formData.get('website')) return deliveryError;
+
+  const validated = createContactInquirySchema(locale).safeParse({
     name: formData.get('name'),
     email: formData.get('email'),
     message: formData.get('message'),
+    practice: formData.get('practice') ?? undefined,
   });
 
   if (!validated.success) {
-    const errs = validated.error.flatten().fieldErrors as Record<string, string[]>;
     return {
-      errors: errs,
-      message: locale === 'no' 
-        ? 'Validering feilet. Vennligst sjekk det du har skrevet inn.' 
-        : 'Validation failed. Please check your input.',
+      errors: validated.error.flatten().fieldErrors as Record<string, string[]>,
+      message: no ? 'Se over de markerte feltene.' : 'Check the highlighted fields.',
       success: false,
     };
   }
 
-  const { name, email, message } = validated.data;
-  const transporter = createTransport();
-  const zohoEmail = process.env.ZOHO_EMAIL || '';
+  const zohoEmail = process.env.ZOHO_EMAIL;
+  const zohoPassword = process.env.ZOHO_APP_PASSWORD;
+  if (!zohoEmail || !zohoPassword) {
+    return {
+      ...deliveryError,
+      message: no
+        ? 'Kontaktskjemaet er ikke tilgjengelig akkurat nå. Send meldingen til info@syntaxstudio.no.'
+        : 'The contact form is unavailable right now. Send your message to info@syntaxstudio.no.',
+    };
+  }
+
+  const {name, email, message, practice} = validated.data;
+  const practiceName = practice ? {iso400: 'ISO400', '35mm': '35mm', nyfane: 'Nyfane'}[practice] : 'Syntax';
+  const transporter = nodemailer.createTransport({
+    host: 'smtp.zoho.eu',
+    port: 465,
+    secure: true,
+    connectionTimeout: 10000,
+    greetingTimeout: 10000,
+    socketTimeout: 20000,
+    auth: {user: zohoEmail, pass: zohoPassword},
+  });
 
   try {
     await transporter.sendMail({
-      // Viktig: FROM må være den autentiserte Zoho-kontoen
-      from: `"${process.env.MAIL_FROM_NAME || 'Syntax Studio'}" <${zohoEmail}>`,
-      replyTo: email,
-      to: process.env.SALES_INBOX || zohoEmail || 'sales@syntaxstudio.no',
-      subject: `Ny henvendelse fra ${name} via nettsiden`,
-      html: `<p>Du har mottatt en ny henvendelse fra:</p>
-             <p><b>Navn:</b> ${name}</p>
-             <p><b>E-post:</b> ${email}</p>
-             <p><b>Språk:</b> ${locale}</p>
-             <hr>
-             <p><b>Melding:</b></p>
-             <p>${String(message).replace(/\n/g, '<br>')}</p>`,
+      from: {name: process.env.MAIL_FROM_NAME || 'Syntax', address: zohoEmail},
+      replyTo: {name, address: email},
+      to: process.env.SALES_INBOX || 'info@syntaxstudio.no',
+      subject: `${practiceName}: Ny henvendelse fra ${name}`,
+      text: `Navn: ${name}\nE-post: ${email}\nSpråk: ${locale}\nFagretning: ${practiceName}\n\n${message}`,
+      html: `<p><b>Navn:</b> ${escapeHtml(name)}</p>
+        <p><b>E-post:</b> ${escapeHtml(email)}</p>
+        <p><b>Språk:</b> ${locale}</p>
+        <p><b>Fagretning:</b> ${practiceName}</p>
+        <hr><p>${escapeHtml(message).replace(/\r?\n/g, '<br>')}</p>`,
     });
-
     return {
-      message: locale === 'no'
-        ? 'Takk for din henvendelse! Vi kommer tilbake til deg snart.'
-        : 'Thanks for your inquiry! We will get back to you soon.',
+      message: no
+        ? 'Takk. Meldingen din er sendt, og vi tar kontakt på e-post.'
+        : 'Thank you. Your message has been sent. We will reply by email.',
       errors: null,
       success: true,
     };
-  } catch (error) {
-    console.error('Email sending error (contact):', error);
-    return {
-      message: locale === 'no'
-        ? 'En feil oppstod under sending av e-post. Vennligst prøv igjen senere.'
-        : 'An error occurred while sending the email. Please try again later.',
-      errors: null,
-      success: false,
-    };
+  } catch {
+    // Do not log customer messages or SMTP credentials with transport errors.
+    console.error('Contact inquiry delivery failed.');
+    return deliveryError;
+  } finally {
+    transporter.close();
   }
 }
-

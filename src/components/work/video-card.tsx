@@ -96,7 +96,7 @@ export function VideoCard({
       loadObserver.disconnect();
       playObserver.disconnect();
     };
-  }, [alwaysPlay, src, markAssetLoaded]);
+  }, [alwaysPlay, src, markAssetLoaded, preload]);
 
   // Desktop: Play on hover
   const handleMouseEnter = () => {

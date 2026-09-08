@@ -27,32 +27,23 @@ export type WorkIntroProps = {
   projects?: ProjectCase[];
 };
 
-/* ===================== Logos ===================== */
-const STACK_LOGO: Record<string, string> = {
-  React: "/logos/reactlogo.webp",
-  "Next.js": "/logos/nextjs.webp",
-  Node: "/logos/nodejslogo.webp",
-  Tailwind: "/logos/tailwindlogo.webp",
-  Prisma: "/logos/prismalogo.webp",
-  PostgreSQL: "/logos/postgresql.webp",
-  Vercel: "/logos/vercellogo.png",
-  Stripe: "/logos/stripelogo.webp",
-  Auth: "/logos/nextauthjslogo.webp",
-  "NextAuth.js": "/logos/nextauthjslogo.webp",
+type WorkTranslator = ((key: string) => string) & {
+  raw: (key: string) => unknown;
 };
+
+function stringList(value: unknown): string[] {
+  return Array.isArray(value)
+    ? value.filter((item): item is string => typeof item === "string")
+    : [];
+}
 
 /* Prosjekt-meta: bilder/urls/stack (språk-uavhengig) */
 const CASE_META = {
-  jonk: {
+  burger: {
     heroImage: "/showcase/bigpic.webp",
-    logo: "/logos/Jønksvg.svg",
-    url: "/work/jonk",
-    isExternal: false,
-  },
-  fcr: {
-    heroImage: "/showcase/bigpic.webp",
-    logo: "/logos/FCRNM.svg",
-    url: "/work/fcr",
+    // De-identified case: the card draws <BurgerMark /> instead of a wordmark.
+    logo: "",
+    url: "/work/burger",
     isExternal: false,
   },
   snatched: {
@@ -61,20 +52,26 @@ const CASE_META = {
     url: "/work/snatched",
     isExternal: false,
   },
+  tokyo: {
+    heroImage: "/showcase/bigpic.webp",
+    logo: "東京",
+    url: "/work/tokyo",
+    isExternal: false,
+  },
 } as const;
 
 /* ===================== Intro + projects (intl) ===================== */
 export default async function WorkIntroSection(props: WorkIntroProps) {
   // Prøv å hente oversettelser
-  let t: any;
-  let processT: any;
+  let t: WorkTranslator;
+  let processT: (key: string) => string;
   try {
     t = await getTranslations("About.WorkIntro");
     processT = await getTranslations("ServicesPage.process");
   } catch {
     // Fallback hvis WorkIntro mangler
-    t = (key: string) => {
-      const FALLBACKS: Record<string, any> = {
+    const fallbackTranslator = (key: string) => {
+      const FALLBACKS: Record<string, string> = {
         title: props.title ?? "How we work",
         heroAlt: props.heroAlt ?? "Syntax Studio workflow",
         overviewTitle: "Overview",
@@ -85,13 +82,9 @@ export default async function WorkIntroSection(props: WorkIntroProps) {
       };
       return FALLBACKS[key] ?? "";
     };
-    t.raw = (key: string) => {
-      if (key === "checklist") return Array.isArray(props.checklist) ? props.checklist : [];
-      if (key.startsWith("projects.")) return [];
-      return [];
-    };
-    t.logo = (key: string) => "";
-    t.flairs = (key: string) => [];
+    t = Object.assign(fallbackTranslator, {
+      raw: (key: string): string[] => key === "checklist" ? props.checklist ?? [] : [],
+    });
     processT = (key: string) => key;
   }
 
@@ -99,36 +92,40 @@ export default async function WorkIntroSection(props: WorkIntroProps) {
   const seeLive = t("seeLive");
 
   // Prosjektene
-  const projOrder = ["jonk", "fcr", "snatched"] as const;
+  const projOrder = ["burger", "snatched", "tokyo"] as const;
   const projectsIntl = projOrder.map<ProjectCase>((key) => {
     const heading = t(`projects.${key}.heading`) || "";
     const rawParagraphs = t.raw(`projects.${key}.paragraphs`);
-    const paragraphs = Array.isArray(rawParagraphs) ? rawParagraphs : [];
+    const paragraphs = stringList(rawParagraphs);
     
     const rawStack = t.raw(`projects.${key}.stack`);
-    const stack = Array.isArray(rawStack) ? rawStack : [];
+    const stack = stringList(rawStack);
 
     const rawFlairs = t.raw(`projects.${key}.flairs`);
-    const flairs = Array.isArray(rawFlairs) ? rawFlairs : [];
+    const flairs = stringList(rawFlairs);
 
     const meta = CASE_META[key];
+    // Tokyo's card copy is authored separately from its case-study intro.
+    const isTokyo = key === "tokyo";
     return {
-      heading,
+      heading: isTokyo ? t(`projects.${key}.card.title`) : heading,
       logo: meta.logo,
       heroImage: meta.heroImage,
       heroAlt: heading,
       url: meta.url,
       isExternal: meta.isExternal,
-      paragraphs,
-      stack,
+      paragraphs: isTokyo ? [t(`projects.${key}.card.body`)] : paragraphs,
+      stack: isTokyo ? stringList(t.raw(`projects.${key}.card.tags`)) : stack,
       flairs,
+      slug: key,
+      badge: isTokyo ? t(`projects.${key}.card.new`) : undefined,
     };
   });
 
   const projects = Array.isArray(props.projects) ? props.projects : projectsIntl;
 
   return (
-    <section className="container mx-auto max-w-6xl px-4 py-16">
+    <section id="case-studies" className="container mx-auto max-w-6xl px-4 py-16 scroll-mt-24">
       {/* Title */}
       <div className="text-center">
         <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">{title}</h2>
@@ -138,11 +135,11 @@ export default async function WorkIntroSection(props: WorkIntroProps) {
       <div className="mx-auto mt-12 max-w-4xl">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            { num: 1, icon: MessageSquare, titleKey: "chat" },
-            { num: 2, icon: FileText, titleKey: "proposal" },
-            { num: 3, icon: Code2, titleKey: "build" },
-            { num: 4, icon: Rocket, titleKey: "launch" },
-          ].map(({ num, icon: Icon, titleKey }) => (
+            { icon: MessageSquare, titleKey: "chat" },
+            { icon: FileText, titleKey: "proposal" },
+            { icon: Code2, titleKey: "build" },
+            { icon: Rocket, titleKey: "launch" },
+          ].map(({ icon: Icon, titleKey }) => (
             <div key={titleKey} className="flex items-center gap-3 lg:flex-col lg:text-center">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-primary/20 bg-primary/5 text-primary">
                 <Icon className="h-5 w-5" />

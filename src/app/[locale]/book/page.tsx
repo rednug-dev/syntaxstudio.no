@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { Calendar, Mail, Clock, Check } from "lucide-react";
+import { Calendar, Mail, Clock, Check, Phone } from "lucide-react";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
@@ -82,6 +82,12 @@ export default async function BookPage({
               <a href="mailto:gunder@syntaxstudio.no">
                 <Mail className="h-4 w-4" />
                 {t("emailCta")}
+              </a>
+            </Button>
+            <Button size="lg" variant="outline" className="gap-2" asChild>
+              <a href="tel:+4794443355">
+                <Phone className="h-4 w-4" />
+                {t("callCta")}
               </a>
             </Button>
           </div>

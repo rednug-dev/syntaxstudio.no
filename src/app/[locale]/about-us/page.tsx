@@ -4,6 +4,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import TeamSection from "@/components/team-section";
 import AboutSection from "@/components/about-section";
+import CtaBridgeSection from "@/components/cta-bridge-section";
 import { Member } from "@/components/team/types";
 
 export async function generateMetadata({
@@ -80,6 +81,7 @@ export default function AboutUsPage() {
       <main id="main-content" className="flex flex-col">
         <AboutSection />
         <TeamSection list={teamMembers} />
+        <CtaBridgeSection />
       </main>
       <Footer />
     </>

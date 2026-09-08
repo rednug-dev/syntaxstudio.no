@@ -3,6 +3,7 @@ import { routing } from "@/i18n/routing";
 import { SERVICES } from "@/lib/services-data";
 import { GUIDES } from "@/lib/guides-data";
 import { POSTS } from "@/lib/blog-data";
+import { projects } from "@/lib/house-content";
 
 const SITE_URL = "https://syntaxstudio.no";
 
@@ -16,7 +17,6 @@ type Route = {
 
 const ROUTES: Route[] = [
   { path: "", priority: 1.0, changeFrequency: "weekly" },
-  { path: "/services", priority: 0.9, changeFrequency: "monthly" },
   ...SERVICES.map((s): Route => ({
     path: `/services/${s.slug}`,
     priority: 0.85,
@@ -34,18 +34,20 @@ const ROUTES: Route[] = [
     changeFrequency: "monthly",
     locales: ["no"],
   })),
-  { path: "/book", priority: 0.9, changeFrequency: "monthly" },
-  { path: "/about-us", priority: 0.7, changeFrequency: "monthly" },
-  { path: "/work/jonk", priority: 0.6, changeFrequency: "monthly" },
-  { path: "/work/fcr", priority: 0.6, changeFrequency: "monthly" },
-  { path: "/work/snatched", priority: 0.6, changeFrequency: "monthly" },
+  { path: "/work", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/contact", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/studio", priority: 0.8, changeFrequency: "monthly" },
+  ...projects.map((project): Route => ({
+    path: `/work/${project.slug}`,
+    priority: 0.6,
+    changeFrequency: "monthly",
+  })),
 ];
 
 const localePrefix = (locale: string) =>
   locale === routing.defaultLocale ? "" : `/${locale}`;
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
 
   return ROUTES.flatMap(({ path, priority, changeFrequency, locales }) => {
     const activeLocales = locales ?? routing.locales;
@@ -63,7 +65,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     return activeLocales.map((locale) => ({
       url: `${SITE_URL}${localePrefix(locale)}${path}`,
-      lastModified,
       changeFrequency,
       priority,
       alternates: { languages },

@@ -68,7 +68,7 @@ export function buildWorkJsonLd({
       url: SITE_URL,
       logo: {
         "@type": "ImageObject",
-        url: `${SITE_URL}/logos/syntax-i.webp`,
+        url: `${SITE_URL}/logos/syntax-icon-512.png`,
       },
     },
     mainEntityOfPage: {

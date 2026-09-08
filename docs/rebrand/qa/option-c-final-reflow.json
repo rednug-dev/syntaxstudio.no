@@ -1,0 +1,266 @@
+[
+  {
+    "locale": "en",
+    "width": 375,
+    "height": 812,
+    "client": 355,
+    "filmParentWidth": 205.69444274902344,
+    "filmWidth": 205.69444274902344,
+    "formatTextOverflow": false,
+    "lang": "en",
+    "outside": [],
+    "overflow": 0,
+    "viewport": [
+      375,
+      812
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "height": 844,
+    "client": 370,
+    "filmParentWidth": 214.4583282470703,
+    "filmWidth": 214.4583282470703,
+    "formatTextOverflow": false,
+    "lang": "en",
+    "outside": [],
+    "overflow": 0,
+    "viewport": [
+      390,
+      844
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 430,
+    "height": 932,
+    "client": 410,
+    "filmParentWidth": 237.6666717529297,
+    "filmWidth": 237.6666717529297,
+    "formatTextOverflow": false,
+    "lang": "en",
+    "outside": [],
+    "overflow": 0,
+    "viewport": [
+      430,
+      932
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 768,
+    "height": 1024,
+    "client": 748,
+    "filmParentWidth": 182.09332275390625,
+    "filmWidth": 182.09332275390625,
+    "formatTextOverflow": false,
+    "lang": "en",
+    "outside": [],
+    "overflow": 0,
+    "viewport": [
+      768,
+      1024
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 1024,
+    "height": 768,
+    "client": 1004,
+    "filmParentWidth": 244.4633331298828,
+    "filmWidth": 244.4633331298828,
+    "formatTextOverflow": false,
+    "lang": "en",
+    "outside": [],
+    "overflow": 0,
+    "viewport": [
+      1024,
+      768
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "height": 960,
+    "client": 1420,
+    "filmParentWidth": 345.7999572753906,
+    "filmWidth": 345.7999572753906,
+    "formatTextOverflow": false,
+    "lang": "en",
+    "outside": [],
+    "overflow": 0,
+    "viewport": [
+      1440,
+      960
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 2560,
+    "height": 1100,
+    "client": 2540,
+    "filmParentWidth": 618.625,
+    "filmWidth": 618.625,
+    "formatTextOverflow": false,
+    "lang": "en",
+    "outside": [],
+    "overflow": 0,
+    "viewport": [
+      2560,
+      1100
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 844,
+    "height": 390,
+    "client": 824,
+    "filmParentWidth": 238.9583282470703,
+    "filmWidth": 238.9583282470703,
+    "formatTextOverflow": false,
+    "lang": "en",
+    "outside": [],
+    "overflow": 0,
+    "viewport": [
+      844,
+      390
+    ]
+  },
+  {
+    "locale": "no",
+    "width": 375,
+    "height": 812,
+    "client": 360,
+    "filmParentWidth": 208.7916717529297,
+    "filmWidth": 208.7916717529297,
+    "formatTextOverflow": false,
+    "lang": "no",
+    "outside": [],
+    "overflow": 0,
+    "title": "Bilde, film og teknologi. Et uavhengig kreativt hus i Oslo.",
+    "viewport": [
+      375,
+      812
+    ]
+  },
+  {
+    "locale": "no",
+    "width": 390,
+    "height": 844,
+    "client": 375,
+    "filmParentWidth": 217.30209350585935,
+    "filmWidth": 217.30209350585935,
+    "formatTextOverflow": false,
+    "lang": "no",
+    "outside": [],
+    "overflow": 0,
+    "title": "Bilde, film og teknologi. Et uavhengig kreativt hus i Oslo.",
+    "viewport": [
+      390,
+      844
+    ]
+  },
+  {
+    "locale": "no",
+    "width": 430,
+    "height": 932,
+    "client": 415,
+    "filmParentWidth": 240.5,
+    "filmWidth": 240.5,
+    "formatTextOverflow": false,
+    "lang": "no",
+    "outside": [],
+    "overflow": 0,
+    "title": "Bilde, film og teknologi. Et uavhengig kreativt hus i Oslo.",
+    "viewport": [
+      430,
+      932
+    ]
+  },
+  {
+    "locale": "no",
+    "width": 768,
+    "height": 1024,
+    "client": 753,
+    "filmParentWidth": 183.34750366210935,
+    "filmWidth": 183.34750366210935,
+    "formatTextOverflow": false,
+    "lang": "no",
+    "outside": [],
+    "overflow": 0,
+    "title": "Bilde, film og teknologi. Et uavhengig kreativt hus i Oslo.",
+    "viewport": [
+      768,
+      1024
+    ]
+  },
+  {
+    "locale": "no",
+    "width": 1024,
+    "height": 768,
+    "client": 1009,
+    "filmParentWidth": 245.70870971679688,
+    "filmWidth": 245.70870971679688,
+    "formatTextOverflow": false,
+    "lang": "no",
+    "outside": [],
+    "overflow": 0,
+    "title": "Bilde, film og teknologi. Et uavhengig kreativt hus i Oslo.",
+    "viewport": [
+      1024,
+      768
+    ]
+  },
+  {
+    "locale": "no",
+    "width": 1440,
+    "height": 960,
+    "client": 1425,
+    "filmParentWidth": 347.04248046875,
+    "filmWidth": 347.04248046875,
+    "formatTextOverflow": false,
+    "lang": "no",
+    "outside": [],
+    "overflow": 0,
+    "title": "Bilde, film og teknologi. Et uavhengig kreativt hus i Oslo.",
+    "viewport": [
+      1440,
+      960
+    ]
+  },
+  {
+    "locale": "no",
+    "width": 2560,
+    "height": 1100,
+    "client": 2545,
+    "filmParentWidth": 619.8763427734375,
+    "filmWidth": 619.8763427734375,
+    "formatTextOverflow": false,
+    "lang": "no",
+    "outside": [],
+    "overflow": 0,
+    "title": "Bilde, film og teknologi. Et uavhengig kreativt hus i Oslo.",
+    "viewport": [
+      2560,
+      1100
+    ]
+  },
+  {
+    "locale": "no",
+    "width": 844,
+    "height": 390,
+    "client": 829,
+    "filmParentWidth": 240.3125,
+    "filmWidth": 240.3125,
+    "formatTextOverflow": false,
+    "lang": "no",
+    "outside": [],
+    "overflow": 0,
+    "title": "Bilde, film og teknologi. Et uavhengig kreativt hus i Oslo.",
+    "viewport": [
+      844,
+      390
+    ]
+  }
+]

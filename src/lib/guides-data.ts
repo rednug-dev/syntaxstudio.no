@@ -226,13 +226,13 @@ export const GUIDES: Guide[] = [
             type: "callout",
             title: "Maler er bra hvis",
             body:
-              "Du er en liten bedrift med begrenset budsjett, du har ikke sterke meninger om design, innholdet er relativt enkelt, og du er komfortabel med at siden ligner andre sider.",
+              "Du er en liten bedrift med begrenset budsjett, du har ikke sterke meninger om design, innholdet er relativt enkelt, og du synes det er greit at siden ligner andre sider.",
           },
           {
             type: "callout",
             title: "Skreddersøm er bra hvis",
             body:
-              "Du har en sterk visuell identitet du vil reflektere, du trenger funksjonalitet som ikke finnes i ferdige maler, siden er en sentral del av salgsprosessen din, eller du tenker langsiktig og vil bygge noe som skalerer.",
+              "Du har en sterk visuell identitet du vil få frem, du trenger funksjonalitet som ikke finnes i ferdige maler, siden er en sentral del av salgsprosessen din, eller du tenker langsiktig og vil bygge noe som skalerer.",
           },
           {
             type: "p",
@@ -300,7 +300,7 @@ export const GUIDES: Guide[] = [
         faq: [
           {
             q: "Hva er minimum jeg kan betale for en seriøs nettside?",
-            a: "Realistisk sett, rundt 10 000 kr for noe som ikke er en gratis Wix-side. Under det er du på maler eller en frilanser uten erfaring. Det kan gå bra, men risikoen er høyere.",
+            a: "Realistisk sett, rundt 10 000 kr for noe som ikke er en gratis Wix-side. Under det får du maler eller en frilanser uten erfaring. Det kan gå bra, men risikoen er høyere.",
           },
           {
             q: "Trenger jeg å oppdatere siden ofte?",
@@ -325,7 +325,7 @@ export const GUIDES: Guide[] = [
         ],
         cta: {
           title: "Vil du ha en konkret pris på din nettside?",
-          body: "Vi gir deg et detaljert tilbud med fast pris og tidslinje innen 48 timer etter en samtale. Ingen forpliktelser, ingen overraskelser.",
+          body: "Vi gir deg et detaljert tilbud med fast pris og tidsplan innen 48 timer etter en samtale. Ingen forpliktelser, ingen overraskelser.",
           primary: "Book et møte",
           secondary: "Se webdesign-tjenesten",
         },

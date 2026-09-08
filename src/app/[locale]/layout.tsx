@@ -1,22 +1,23 @@
-import type {Metadata} from 'next';
-import {Inter, Space_Grotesk} from 'next/font/google';
-import Script from 'next/script';
+import type {Metadata, Viewport} from 'next';
+import {DM_Sans, Inter, Space_Grotesk} from 'next/font/google';
 import {Toaster} from '@/components/ui/toaster';
 import {cn} from '@/lib/utils';
-import FloatingLocaleSwitch from '@/components/floating-locale-switch';
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
-import { PreloaderProvider } from '@/components/ui/asset-preloader';
-import 'flag-icons/css/flag-icons.min.css';
 
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages, setRequestLocale} from 'next-intl/server';
 import type {Locale} from 'next-intl';
 
 import '../globals.css';
+import '../house.css';
+import {hasLocale} from 'next-intl';
+import {notFound} from 'next/navigation';
+import {routing} from '@/i18n/routing';
 
-const inter = Inter({subsets: ['latin'], variable: '--font-inter', display: 'swap'});
-const spaceGrotesk = Space_Grotesk({subsets: ['latin'], variable: '--font-space-grotesk', display: 'swap'});
+const houseFont = DM_Sans({subsets: ['latin'], variable: '--font-house', display: 'swap'});
+const inter = Inter({subsets: ['latin'], variable: '--font-inter', display: 'swap', preload: false});
+const spaceGrotesk = Space_Grotesk({subsets: ['latin'], variable: '--font-space-grotesk', display: 'swap', preload: false});
 
 const SITE_URL = 'https://syntaxstudio.no';
 
@@ -24,16 +25,16 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     template: '%s | Syntax Studio',
-    default: 'Syntax Studio – nettsider, video og markedsføring',
+    default: 'Syntax Studio – et uavhengig kreativt hus',
   },
-  description: 'Vi tar oss av nettside, kampanjer og videoproduksjon for små og mellomstore bedrifter. Én partner, hele leveransen.',
+  description: 'Tre spesialister. Ett kreativt hus i Oslo. ISO400 for bilde og design, 35mm for film og VFX, Nyfane for teknologi.',
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: '16x16 32x32', type: 'image/x-icon' },
-      { url: '/logos/syntax-i-32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/logos/syntax-icon-32.png', sizes: '32x32', type: 'image/png' },
     ],
     shortcut: '/favicon.ico',
-    apple: '/logos/syntax-i-180.png',
+    apple: '/logos/syntax-icon-180.png',
   },
   openGraph: {
     siteName: 'Syntax Studio',
@@ -50,15 +51,12 @@ const organizationJsonLd = {
   '@type': 'Organization',
   name: 'Syntax Studio',
   url: SITE_URL,
-  logo: `${SITE_URL}/logos/syntax-i.webp`,
-  description: 'Markedsføringspartner for nettsider, video og kampanjer.',
+  logo: `${SITE_URL}/logos/syntax-icon-512.png`,
+  description: 'Et uavhengig kreativt hus for bilde, film og teknologi.',
   email: 'gunder@syntaxstudio.no',
   telephone: '+47 94 44 33 55',
   areaServed: 'NO',
-  founder: {
-    '@type': 'Person',
-    name: 'Gunder Rollufson',
-  },
+  founder: ['Gunder Rollufson', 'Khamzat Dudaev', 'Rasul Uzdijev'].map(name => ({'@type': 'Person', name})),
   sameAs: [
     'https://www.instagram.com/syntaxstudio.no/',
     'https://www.tiktok.com/@syntaxstudio.no',
@@ -82,11 +80,10 @@ const localBusinessJsonLd = {
   '@id': `${SITE_URL}#business`,
   name: 'Syntax Studio',
   url: SITE_URL,
-  image: `${SITE_URL}/logos/syntax-i.webp`,
-  description: 'Nettsider, videoproduksjon, markedsføring, foto og grafisk design.',
+  image: `${SITE_URL}/logos/syntax-icon-512.png`,
+  description: 'Bilde og design, film og VFX, teknologi. Tre selvstendige praksiser, ett kreativt hus.',
   email: 'gunder@syntaxstudio.no',
   telephone: '+47 94 44 33 55',
-  priceRange: '$$',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Heimdalsgata 34B',
@@ -114,37 +111,30 @@ export default async function RootLayout({
   params: Promise<{locale: Locale}>;
 }) {
   const {locale} = await params;
+  if (!hasLocale(routing.locales, locale)) notFound();
 
   // (next-intl) gjør locale tilgjengelig for server components
   setRequestLocale(locale);
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className="scroll-smooth dark">
+    <html lang={locale} className="dark">
       <head>
-        {/* GTM/Iubenda-scripts */}
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-17330083087" />
-        <Script id="google-analytics">{`/* ... */`}</Script>
-        <Script id="iubenda-cs-config" type="text/javascript">{`/* ... */`}</Script>
-        <Script type="text/javascript" src="https://cs.iubenda.com/autoblocking/4151649.js" />
-        <Script type="text/javascript" src="//cdn.iubenda.com/cs/gpp/stub.js" />
-        <Script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charSet="UTF-8" async />
-        <Script
+        <script
           id="ld-organization"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
-        <Script
+        <script
           id="ld-localbusiness"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
         />
       </head>
-      <body className={cn('font-body antialiased', inter.variable, spaceGrotesk.variable)}>
+      <body className={cn('antialiased', houseFont.variable, inter.variable, spaceGrotesk.variable)}>
         <NextIntlClientProvider messages={messages} locale={locale}>
           {children}
           <Toaster />
-          <FloatingLocaleSwitch />
           <Analytics />
           <SpeedInsights />
         </NextIntlClientProvider>
@@ -152,3 +142,5 @@ export default async function RootLayout({
     </html>
   );
 }
+
+export const viewport: Viewport = {themeColor: '#e9e7e2', width: 'device-width', initialScale: 1};

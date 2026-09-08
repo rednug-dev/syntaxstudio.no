@@ -1,19 +1,11 @@
 export const caseStudies = [
     {
-        slug: "jonk",
-        customer: "Jønk",
+        slug: "burger",
+        customer: "Anonymisert burgermerke",
         title: "Kampanjeproduksjon",
-        intro: "Komplett visuell kampanje med 4K-reklamefilmer og high-end produktfoto for et urbant burgermerke.",
-        logo: "/logos/Jønksvg.svg",
+        intro: "Visuell kampanje med 4K-film og produktfoto for et urbant burgermerke.",
+        logo: "Burger",
         services: ["Videoproduksjon", "Foto", "Grafisk design"],
-    },
-    {
-        slug: "fcr",
-        customer: "FCR (Full Contact Rumble)",
-        title: "Promo for MMA",
-        intro: "Promo-video for MMA-fighter Tamerlan Akhmadov under UFC-underenheten FCR i Sverige.",
-        logo: "/logos/FCRNM.svg",
-        services: ["Videoproduksjon", "Redigering", "Motion Graphics"],
     },
     {
         slug: "snatched",
@@ -22,6 +14,14 @@ export const caseStudies = [
         intro: "Promo-video med skreddersydd infografikk og 3D-modellering for Norges raskest voksende shapewear-brand.",
         logo: "/logos/Snatched.svg",
         services: ["Videoproduksjon", "3D-modellering", "Infografikk"],
+    },
+    {
+        slug: "tokyo",
+        customer: "Syntax × Tokyo",
+        title: "Første stopp: Tokyo",
+        intro: "Kapittel 01 i en serie internasjonale oppdrag. Vi pakket kamera, reiste ut, og fanget film og foto der og da – i vårt eget uttrykk.",
+        logo: "東京",
+        services: ["Videoproduksjon", "Foto", "Reisefilm", "Internasjonalt"],
     },
 ];
 
@@ -48,12 +48,12 @@ export const testimonials = [
         name: "Abdulrahman Al Tamimi",
         title: "Daglig Leder, Bites",
         avatar: "/avatars/placeholder.svg",
-        testimonial: "Samarbeidet var en game-changer. Deres skills i webutvikling tok oss til neste nivå."
+        testimonial: "Samarbeidet var en game-changer. De kan webutvikling, og det gjorde en enorm forskjell for oss."
     },
     {
         name: "Rahma Mohamed",
         title: "Styreleder, RiseUp AS",
         avatar: "/avatars/placeholder.svg",
-        testimonial: "Fantastisk jobb med vårt nye brand. De nailet visjonen vår og leverte et resultat som overgikk alle forventninger."
+        testimonial: "Fantastisk jobb med vårt nye brand. De nailet visjonen vår, og resultatet ble bedre enn vi turte å håpe på."
     }
 ];

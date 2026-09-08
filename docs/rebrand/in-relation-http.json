@@ -1,0 +1,3838 @@
+{
+  "checkedAt": "2026-09-07T00:38:39.948Z",
+  "baseUrl": "http://localhost:3018/",
+  "method": "Node native fetch against initial HTML and HTTP resources; no browser or real email submission",
+  "counts": {
+    "coreRoutes": 16,
+    "sitemapRoutes": 39,
+    "redirects": 20,
+    "internalLinks": 33,
+    "assets": 64,
+    "passed": 586,
+    "failed": 0,
+    "total": 586
+  },
+  "groups": {
+    "core": {
+      "passed": 48,
+      "total": 48
+    },
+    "seo": {
+      "passed": 240,
+      "total": 240
+    },
+    "media": {
+      "passed": 48,
+      "total": 48
+    },
+    "scripts": {
+      "passed": 16,
+      "total": 16
+    },
+    "content trust": {
+      "passed": 18,
+      "total": 18
+    },
+    "redirects": {
+      "passed": 60,
+      "total": 60
+    },
+    "fallback": {
+      "passed": 6,
+      "total": 6
+    },
+    "discovery": {
+      "passed": 6,
+      "total": 6
+    },
+    "sitemap routes": {
+      "passed": 39,
+      "total": 39
+    },
+    "core internal links": {
+      "passed": 33,
+      "total": 33
+    },
+    "assets": {
+      "passed": 64,
+      "total": 64
+    },
+    "social image bodies": {
+      "passed": 8,
+      "total": 8
+    }
+  },
+  "failures": [],
+  "checks": [
+    {
+      "group": "core",
+      "subject": "/work",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core",
+      "subject": "/work",
+      "test": "exactly one H1",
+      "pass": true
+    },
+    {
+      "group": "core",
+      "subject": "/work",
+      "test": "one main landmark with skip-link target",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work",
+      "test": "document language",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work",
+      "test": "title and description",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work",
+      "test": "self canonical",
+      "pass": true,
+      "detail": "https://syntaxstudio.no/work"
+    },
+    {
+      "group": "seo",
+      "subject": "/work",
+      "test": "hreflang no",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work",
+      "test": "hreflang en",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work",
+      "test": "hreflang x-default",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work",
+      "test": "og:title",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work",
+      "test": "og:description",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work",
+      "test": "og:url",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work",
+      "test": "og:image",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work",
+      "test": "large Twitter card",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work",
+      "test": "valid initial JSON-LD",
+      "pass": true,
+      "detail": "2 schema objects"
+    },
+    {
+      "group": "seo",
+      "subject": "/work",
+      "test": "Organization in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work",
+      "test": "ProfessionalService in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/work",
+      "test": "no video/source elements before play",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/work",
+      "test": "no video preload before play",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/work",
+      "test": "all initial images have alt attributes",
+      "pass": true
+    },
+    {
+      "group": "scripts",
+      "subject": "/work",
+      "test": "removed placeholder integrations absent",
+      "pass": true
+    },
+    {
+      "group": "core",
+      "subject": "/en/work",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core",
+      "subject": "/en/work",
+      "test": "exactly one H1",
+      "pass": true
+    },
+    {
+      "group": "core",
+      "subject": "/en/work",
+      "test": "one main landmark with skip-link target",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work",
+      "test": "document language",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work",
+      "test": "title and description",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work",
+      "test": "self canonical",
+      "pass": true,
+      "detail": "https://syntaxstudio.no/en/work"
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work",
+      "test": "hreflang no",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work",
+      "test": "hreflang en",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work",
+      "test": "hreflang x-default",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work",
+      "test": "og:title",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work",
+      "test": "og:description",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work",
+      "test": "og:url",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work",
+      "test": "og:image",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work",
+      "test": "large Twitter card",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work",
+      "test": "valid initial JSON-LD",
+      "pass": true,
+      "detail": "2 schema objects"
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work",
+      "test": "Organization in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work",
+      "test": "ProfessionalService in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/en/work",
+      "test": "no video/source elements before play",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/en/work",
+      "test": "no video preload before play",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/en/work",
+      "test": "all initial images have alt attributes",
+      "pass": true
+    },
+    {
+      "group": "scripts",
+      "subject": "/en/work",
+      "test": "removed placeholder integrations absent",
+      "pass": true
+    },
+    {
+      "group": "core",
+      "subject": "/studio",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core",
+      "subject": "/studio",
+      "test": "exactly one H1",
+      "pass": true
+    },
+    {
+      "group": "core",
+      "subject": "/studio",
+      "test": "one main landmark with skip-link target",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/studio",
+      "test": "document language",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/studio",
+      "test": "title and description",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/studio",
+      "test": "self canonical",
+      "pass": true,
+      "detail": "https://syntaxstudio.no/studio"
+    },
+    {
+      "group": "seo",
+      "subject": "/studio",
+      "test": "hreflang no",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/studio",
+      "test": "hreflang en",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/studio",
+      "test": "hreflang x-default",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/studio",
+      "test": "og:title",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/studio",
+      "test": "og:description",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/studio",
+      "test": "og:url",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/studio",
+      "test": "og:image",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/studio",
+      "test": "large Twitter card",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/studio",
+      "test": "valid initial JSON-LD",
+      "pass": true,
+      "detail": "2 schema objects"
+    },
+    {
+      "group": "seo",
+      "subject": "/studio",
+      "test": "Organization in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/studio",
+      "test": "ProfessionalService in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/studio",
+      "test": "no video/source elements before play",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/studio",
+      "test": "no video preload before play",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/studio",
+      "test": "all initial images have alt attributes",
+      "pass": true
+    },
+    {
+      "group": "scripts",
+      "subject": "/studio",
+      "test": "removed placeholder integrations absent",
+      "pass": true
+    },
+    {
+      "group": "core",
+      "subject": "/en/studio",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core",
+      "subject": "/en/studio",
+      "test": "exactly one H1",
+      "pass": true
+    },
+    {
+      "group": "core",
+      "subject": "/en/studio",
+      "test": "one main landmark with skip-link target",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/studio",
+      "test": "document language",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/studio",
+      "test": "title and description",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/studio",
+      "test": "self canonical",
+      "pass": true,
+      "detail": "https://syntaxstudio.no/en/studio"
+    },
+    {
+      "group": "seo",
+      "subject": "/en/studio",
+      "test": "hreflang no",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/studio",
+      "test": "hreflang en",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/studio",
+      "test": "hreflang x-default",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/studio",
+      "test": "og:title",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/studio",
+      "test": "og:description",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/studio",
+      "test": "og:url",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/studio",
+      "test": "og:image",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/studio",
+      "test": "large Twitter card",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/studio",
+      "test": "valid initial JSON-LD",
+      "pass": true,
+      "detail": "2 schema objects"
+    },
+    {
+      "group": "seo",
+      "subject": "/en/studio",
+      "test": "Organization in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/studio",
+      "test": "ProfessionalService in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/en/studio",
+      "test": "no video/source elements before play",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/en/studio",
+      "test": "no video preload before play",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/en/studio",
+      "test": "all initial images have alt attributes",
+      "pass": true
+    },
+    {
+      "group": "scripts",
+      "subject": "/en/studio",
+      "test": "removed placeholder integrations absent",
+      "pass": true
+    },
+    {
+      "group": "core",
+      "subject": "/en",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core",
+      "subject": "/en",
+      "test": "exactly one H1",
+      "pass": true
+    },
+    {
+      "group": "core",
+      "subject": "/en",
+      "test": "one main landmark with skip-link target",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en",
+      "test": "document language",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en",
+      "test": "title and description",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en",
+      "test": "self canonical",
+      "pass": true,
+      "detail": "https://syntaxstudio.no/en"
+    },
+    {
+      "group": "seo",
+      "subject": "/en",
+      "test": "hreflang no",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en",
+      "test": "hreflang en",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en",
+      "test": "hreflang x-default",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en",
+      "test": "og:title",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en",
+      "test": "og:description",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en",
+      "test": "og:url",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en",
+      "test": "og:image",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en",
+      "test": "large Twitter card",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en",
+      "test": "valid initial JSON-LD",
+      "pass": true,
+      "detail": "2 schema objects"
+    },
+    {
+      "group": "seo",
+      "subject": "/en",
+      "test": "Organization in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en",
+      "test": "ProfessionalService in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/en",
+      "test": "no video/source elements before play",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/en",
+      "test": "no video preload before play",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/en",
+      "test": "all initial images have alt attributes",
+      "pass": true
+    },
+    {
+      "group": "scripts",
+      "subject": "/en",
+      "test": "removed placeholder integrations absent",
+      "pass": true
+    },
+    {
+      "group": "core",
+      "subject": "/",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core",
+      "subject": "/",
+      "test": "exactly one H1",
+      "pass": true
+    },
+    {
+      "group": "core",
+      "subject": "/",
+      "test": "one main landmark with skip-link target",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/",
+      "test": "document language",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/",
+      "test": "title and description",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/",
+      "test": "self canonical",
+      "pass": true,
+      "detail": "https://syntaxstudio.no"
+    },
+    {
+      "group": "seo",
+      "subject": "/",
+      "test": "hreflang no",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/",
+      "test": "hreflang en",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/",
+      "test": "hreflang x-default",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/",
+      "test": "og:title",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/",
+      "test": "og:description",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/",
+      "test": "og:url",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/",
+      "test": "og:image",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/",
+      "test": "large Twitter card",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/",
+      "test": "valid initial JSON-LD",
+      "pass": true,
+      "detail": "2 schema objects"
+    },
+    {
+      "group": "seo",
+      "subject": "/",
+      "test": "Organization in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/",
+      "test": "ProfessionalService in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/",
+      "test": "no video/source elements before play",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/",
+      "test": "no video preload before play",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/",
+      "test": "all initial images have alt attributes",
+      "pass": true
+    },
+    {
+      "group": "scripts",
+      "subject": "/",
+      "test": "removed placeholder integrations absent",
+      "pass": true
+    },
+    {
+      "group": "core",
+      "subject": "/en/work/snatched",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core",
+      "subject": "/en/work/snatched",
+      "test": "exactly one H1",
+      "pass": true
+    },
+    {
+      "group": "core",
+      "subject": "/en/work/snatched",
+      "test": "one main landmark with skip-link target",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/snatched",
+      "test": "document language",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/snatched",
+      "test": "title and description",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/snatched",
+      "test": "self canonical",
+      "pass": true,
+      "detail": "https://syntaxstudio.no/en/work/snatched"
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/snatched",
+      "test": "hreflang no",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/snatched",
+      "test": "hreflang en",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/snatched",
+      "test": "hreflang x-default",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/snatched",
+      "test": "og:title",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/snatched",
+      "test": "og:description",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/snatched",
+      "test": "og:url",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/snatched",
+      "test": "og:image",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/snatched",
+      "test": "large Twitter card",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/snatched",
+      "test": "valid initial JSON-LD",
+      "pass": true,
+      "detail": "5 schema objects"
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/snatched",
+      "test": "Organization in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/snatched",
+      "test": "ProfessionalService in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/snatched",
+      "test": "CreativeWork in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/snatched",
+      "test": "BreadcrumbList in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "content trust",
+      "subject": "/en/work/snatched",
+      "test": "actual creator attribution",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/en/work/snatched",
+      "test": "no video/source elements before play",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/en/work/snatched",
+      "test": "no video preload before play",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/en/work/snatched",
+      "test": "all initial images have alt attributes",
+      "pass": true
+    },
+    {
+      "group": "scripts",
+      "subject": "/en/work/snatched",
+      "test": "removed placeholder integrations absent",
+      "pass": true
+    },
+    {
+      "group": "core",
+      "subject": "/work/snatched",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core",
+      "subject": "/work/snatched",
+      "test": "exactly one H1",
+      "pass": true
+    },
+    {
+      "group": "core",
+      "subject": "/work/snatched",
+      "test": "one main landmark with skip-link target",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/snatched",
+      "test": "document language",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/snatched",
+      "test": "title and description",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/snatched",
+      "test": "self canonical",
+      "pass": true,
+      "detail": "https://syntaxstudio.no/work/snatched"
+    },
+    {
+      "group": "seo",
+      "subject": "/work/snatched",
+      "test": "hreflang no",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/snatched",
+      "test": "hreflang en",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/snatched",
+      "test": "hreflang x-default",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/snatched",
+      "test": "og:title",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/snatched",
+      "test": "og:description",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/snatched",
+      "test": "og:url",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/snatched",
+      "test": "og:image",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/snatched",
+      "test": "large Twitter card",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/snatched",
+      "test": "valid initial JSON-LD",
+      "pass": true,
+      "detail": "5 schema objects"
+    },
+    {
+      "group": "seo",
+      "subject": "/work/snatched",
+      "test": "Organization in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/snatched",
+      "test": "ProfessionalService in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/snatched",
+      "test": "CreativeWork in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/snatched",
+      "test": "BreadcrumbList in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "content trust",
+      "subject": "/work/snatched",
+      "test": "actual creator attribution",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/work/snatched",
+      "test": "no video/source elements before play",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/work/snatched",
+      "test": "no video preload before play",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/work/snatched",
+      "test": "all initial images have alt attributes",
+      "pass": true
+    },
+    {
+      "group": "scripts",
+      "subject": "/work/snatched",
+      "test": "removed placeholder integrations absent",
+      "pass": true
+    },
+    {
+      "group": "core",
+      "subject": "/work/burger",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core",
+      "subject": "/work/burger",
+      "test": "exactly one H1",
+      "pass": true
+    },
+    {
+      "group": "core",
+      "subject": "/work/burger",
+      "test": "one main landmark with skip-link target",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/burger",
+      "test": "document language",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/burger",
+      "test": "title and description",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/burger",
+      "test": "self canonical",
+      "pass": true,
+      "detail": "https://syntaxstudio.no/work/burger"
+    },
+    {
+      "group": "seo",
+      "subject": "/work/burger",
+      "test": "hreflang no",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/burger",
+      "test": "hreflang en",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/burger",
+      "test": "hreflang x-default",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/burger",
+      "test": "og:title",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/burger",
+      "test": "og:description",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/burger",
+      "test": "og:url",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/burger",
+      "test": "og:image",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/burger",
+      "test": "large Twitter card",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/burger",
+      "test": "valid initial JSON-LD",
+      "pass": true,
+      "detail": "5 schema objects"
+    },
+    {
+      "group": "seo",
+      "subject": "/work/burger",
+      "test": "Organization in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/burger",
+      "test": "ProfessionalService in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/burger",
+      "test": "CreativeWork in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/burger",
+      "test": "BreadcrumbList in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "content trust",
+      "subject": "/work/burger",
+      "test": "actual creator attribution",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/work/burger",
+      "test": "no video/source elements before play",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/work/burger",
+      "test": "no video preload before play",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/work/burger",
+      "test": "all initial images have alt attributes",
+      "pass": true
+    },
+    {
+      "group": "scripts",
+      "subject": "/work/burger",
+      "test": "removed placeholder integrations absent",
+      "pass": true
+    },
+    {
+      "group": "core",
+      "subject": "/en/work/burger",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core",
+      "subject": "/en/work/burger",
+      "test": "exactly one H1",
+      "pass": true
+    },
+    {
+      "group": "core",
+      "subject": "/en/work/burger",
+      "test": "one main landmark with skip-link target",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/burger",
+      "test": "document language",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/burger",
+      "test": "title and description",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/burger",
+      "test": "self canonical",
+      "pass": true,
+      "detail": "https://syntaxstudio.no/en/work/burger"
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/burger",
+      "test": "hreflang no",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/burger",
+      "test": "hreflang en",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/burger",
+      "test": "hreflang x-default",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/burger",
+      "test": "og:title",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/burger",
+      "test": "og:description",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/burger",
+      "test": "og:url",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/burger",
+      "test": "og:image",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/burger",
+      "test": "large Twitter card",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/burger",
+      "test": "valid initial JSON-LD",
+      "pass": true,
+      "detail": "5 schema objects"
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/burger",
+      "test": "Organization in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/burger",
+      "test": "ProfessionalService in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/burger",
+      "test": "CreativeWork in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/burger",
+      "test": "BreadcrumbList in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "content trust",
+      "subject": "/en/work/burger",
+      "test": "actual creator attribution",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/en/work/burger",
+      "test": "no video/source elements before play",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/en/work/burger",
+      "test": "no video preload before play",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/en/work/burger",
+      "test": "all initial images have alt attributes",
+      "pass": true
+    },
+    {
+      "group": "scripts",
+      "subject": "/en/work/burger",
+      "test": "removed placeholder integrations absent",
+      "pass": true
+    },
+    {
+      "group": "core",
+      "subject": "/contact",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core",
+      "subject": "/contact",
+      "test": "exactly one H1",
+      "pass": true
+    },
+    {
+      "group": "core",
+      "subject": "/contact",
+      "test": "one main landmark with skip-link target",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/contact",
+      "test": "document language",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/contact",
+      "test": "title and description",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/contact",
+      "test": "self canonical",
+      "pass": true,
+      "detail": "https://syntaxstudio.no/contact"
+    },
+    {
+      "group": "seo",
+      "subject": "/contact",
+      "test": "hreflang no",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/contact",
+      "test": "hreflang en",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/contact",
+      "test": "hreflang x-default",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/contact",
+      "test": "og:title",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/contact",
+      "test": "og:description",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/contact",
+      "test": "og:url",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/contact",
+      "test": "og:image",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/contact",
+      "test": "large Twitter card",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/contact",
+      "test": "valid initial JSON-LD",
+      "pass": true,
+      "detail": "2 schema objects"
+    },
+    {
+      "group": "seo",
+      "subject": "/contact",
+      "test": "Organization in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/contact",
+      "test": "ProfessionalService in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/contact",
+      "test": "no video/source elements before play",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/contact",
+      "test": "no video preload before play",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/contact",
+      "test": "all initial images have alt attributes",
+      "pass": true
+    },
+    {
+      "group": "scripts",
+      "subject": "/contact",
+      "test": "removed placeholder integrations absent",
+      "pass": true
+    },
+    {
+      "group": "core",
+      "subject": "/en/contact",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core",
+      "subject": "/en/contact",
+      "test": "exactly one H1",
+      "pass": true
+    },
+    {
+      "group": "core",
+      "subject": "/en/contact",
+      "test": "one main landmark with skip-link target",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/contact",
+      "test": "document language",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/contact",
+      "test": "title and description",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/contact",
+      "test": "self canonical",
+      "pass": true,
+      "detail": "https://syntaxstudio.no/en/contact"
+    },
+    {
+      "group": "seo",
+      "subject": "/en/contact",
+      "test": "hreflang no",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/contact",
+      "test": "hreflang en",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/contact",
+      "test": "hreflang x-default",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/contact",
+      "test": "og:title",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/contact",
+      "test": "og:description",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/contact",
+      "test": "og:url",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/contact",
+      "test": "og:image",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/contact",
+      "test": "large Twitter card",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/contact",
+      "test": "valid initial JSON-LD",
+      "pass": true,
+      "detail": "2 schema objects"
+    },
+    {
+      "group": "seo",
+      "subject": "/en/contact",
+      "test": "Organization in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/contact",
+      "test": "ProfessionalService in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/en/contact",
+      "test": "no video/source elements before play",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/en/contact",
+      "test": "no video preload before play",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/en/contact",
+      "test": "all initial images have alt attributes",
+      "pass": true
+    },
+    {
+      "group": "scripts",
+      "subject": "/en/contact",
+      "test": "removed placeholder integrations absent",
+      "pass": true
+    },
+    {
+      "group": "core",
+      "subject": "/work/iso400-street-portraits",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core",
+      "subject": "/work/iso400-street-portraits",
+      "test": "exactly one H1",
+      "pass": true
+    },
+    {
+      "group": "core",
+      "subject": "/work/iso400-street-portraits",
+      "test": "one main landmark with skip-link target",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/iso400-street-portraits",
+      "test": "document language",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/iso400-street-portraits",
+      "test": "title and description",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/iso400-street-portraits",
+      "test": "self canonical",
+      "pass": true,
+      "detail": "https://syntaxstudio.no/work/iso400-street-portraits"
+    },
+    {
+      "group": "seo",
+      "subject": "/work/iso400-street-portraits",
+      "test": "hreflang no",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/iso400-street-portraits",
+      "test": "hreflang en",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/iso400-street-portraits",
+      "test": "hreflang x-default",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/iso400-street-portraits",
+      "test": "og:title",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/iso400-street-portraits",
+      "test": "og:description",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/iso400-street-portraits",
+      "test": "og:url",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/iso400-street-portraits",
+      "test": "og:image",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/iso400-street-portraits",
+      "test": "large Twitter card",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/iso400-street-portraits",
+      "test": "valid initial JSON-LD",
+      "pass": true,
+      "detail": "5 schema objects"
+    },
+    {
+      "group": "seo",
+      "subject": "/work/iso400-street-portraits",
+      "test": "Organization in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/iso400-street-portraits",
+      "test": "ProfessionalService in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/iso400-street-portraits",
+      "test": "CreativeWork in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/iso400-street-portraits",
+      "test": "BreadcrumbList in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "content trust",
+      "subject": "/work/iso400-street-portraits",
+      "test": "actual creator attribution",
+      "pass": true
+    },
+    {
+      "group": "content trust",
+      "subject": "/work/iso400-street-portraits",
+      "test": "no invented publication date or copyright year",
+      "pass": true
+    },
+    {
+      "group": "content trust",
+      "subject": "/work/iso400-street-portraits",
+      "test": "study distinction in structured data",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/work/iso400-street-portraits",
+      "test": "no video/source elements before play",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/work/iso400-street-portraits",
+      "test": "no video preload before play",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/work/iso400-street-portraits",
+      "test": "all initial images have alt attributes",
+      "pass": true
+    },
+    {
+      "group": "scripts",
+      "subject": "/work/iso400-street-portraits",
+      "test": "removed placeholder integrations absent",
+      "pass": true
+    },
+    {
+      "group": "core",
+      "subject": "/en/work/nyfane-website-study",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core",
+      "subject": "/en/work/nyfane-website-study",
+      "test": "exactly one H1",
+      "pass": true
+    },
+    {
+      "group": "core",
+      "subject": "/en/work/nyfane-website-study",
+      "test": "one main landmark with skip-link target",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/nyfane-website-study",
+      "test": "document language",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/nyfane-website-study",
+      "test": "title and description",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/nyfane-website-study",
+      "test": "self canonical",
+      "pass": true,
+      "detail": "https://syntaxstudio.no/en/work/nyfane-website-study"
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/nyfane-website-study",
+      "test": "hreflang no",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/nyfane-website-study",
+      "test": "hreflang en",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/nyfane-website-study",
+      "test": "hreflang x-default",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/nyfane-website-study",
+      "test": "og:title",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/nyfane-website-study",
+      "test": "og:description",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/nyfane-website-study",
+      "test": "og:url",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/nyfane-website-study",
+      "test": "og:image",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/nyfane-website-study",
+      "test": "large Twitter card",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/nyfane-website-study",
+      "test": "valid initial JSON-LD",
+      "pass": true,
+      "detail": "5 schema objects"
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/nyfane-website-study",
+      "test": "Organization in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/nyfane-website-study",
+      "test": "ProfessionalService in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/nyfane-website-study",
+      "test": "CreativeWork in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/nyfane-website-study",
+      "test": "BreadcrumbList in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "content trust",
+      "subject": "/en/work/nyfane-website-study",
+      "test": "actual creator attribution",
+      "pass": true
+    },
+    {
+      "group": "content trust",
+      "subject": "/en/work/nyfane-website-study",
+      "test": "no invented publication date or copyright year",
+      "pass": true
+    },
+    {
+      "group": "content trust",
+      "subject": "/en/work/nyfane-website-study",
+      "test": "study distinction in structured data",
+      "pass": true
+    },
+    {
+      "group": "content trust",
+      "subject": "/en/work/nyfane-website-study",
+      "test": "website remains in development",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/en/work/nyfane-website-study",
+      "test": "no video/source elements before play",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/en/work/nyfane-website-study",
+      "test": "no video preload before play",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/en/work/nyfane-website-study",
+      "test": "all initial images have alt attributes",
+      "pass": true
+    },
+    {
+      "group": "scripts",
+      "subject": "/en/work/nyfane-website-study",
+      "test": "removed placeholder integrations absent",
+      "pass": true
+    },
+    {
+      "group": "core",
+      "subject": "/en/work/iso400-street-portraits",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core",
+      "subject": "/en/work/iso400-street-portraits",
+      "test": "exactly one H1",
+      "pass": true
+    },
+    {
+      "group": "core",
+      "subject": "/en/work/iso400-street-portraits",
+      "test": "one main landmark with skip-link target",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/iso400-street-portraits",
+      "test": "document language",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/iso400-street-portraits",
+      "test": "title and description",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/iso400-street-portraits",
+      "test": "self canonical",
+      "pass": true,
+      "detail": "https://syntaxstudio.no/en/work/iso400-street-portraits"
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/iso400-street-portraits",
+      "test": "hreflang no",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/iso400-street-portraits",
+      "test": "hreflang en",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/iso400-street-portraits",
+      "test": "hreflang x-default",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/iso400-street-portraits",
+      "test": "og:title",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/iso400-street-portraits",
+      "test": "og:description",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/iso400-street-portraits",
+      "test": "og:url",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/iso400-street-portraits",
+      "test": "og:image",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/iso400-street-portraits",
+      "test": "large Twitter card",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/iso400-street-portraits",
+      "test": "valid initial JSON-LD",
+      "pass": true,
+      "detail": "5 schema objects"
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/iso400-street-portraits",
+      "test": "Organization in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/iso400-street-portraits",
+      "test": "ProfessionalService in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/iso400-street-portraits",
+      "test": "CreativeWork in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/en/work/iso400-street-portraits",
+      "test": "BreadcrumbList in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "content trust",
+      "subject": "/en/work/iso400-street-portraits",
+      "test": "actual creator attribution",
+      "pass": true
+    },
+    {
+      "group": "content trust",
+      "subject": "/en/work/iso400-street-portraits",
+      "test": "no invented publication date or copyright year",
+      "pass": true
+    },
+    {
+      "group": "content trust",
+      "subject": "/en/work/iso400-street-portraits",
+      "test": "study distinction in structured data",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/en/work/iso400-street-portraits",
+      "test": "no video/source elements before play",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/en/work/iso400-street-portraits",
+      "test": "no video preload before play",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/en/work/iso400-street-portraits",
+      "test": "all initial images have alt attributes",
+      "pass": true
+    },
+    {
+      "group": "scripts",
+      "subject": "/en/work/iso400-street-portraits",
+      "test": "removed placeholder integrations absent",
+      "pass": true
+    },
+    {
+      "group": "core",
+      "subject": "/work/nyfane-website-study",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core",
+      "subject": "/work/nyfane-website-study",
+      "test": "exactly one H1",
+      "pass": true
+    },
+    {
+      "group": "core",
+      "subject": "/work/nyfane-website-study",
+      "test": "one main landmark with skip-link target",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/nyfane-website-study",
+      "test": "document language",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/nyfane-website-study",
+      "test": "title and description",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/nyfane-website-study",
+      "test": "self canonical",
+      "pass": true,
+      "detail": "https://syntaxstudio.no/work/nyfane-website-study"
+    },
+    {
+      "group": "seo",
+      "subject": "/work/nyfane-website-study",
+      "test": "hreflang no",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/nyfane-website-study",
+      "test": "hreflang en",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/nyfane-website-study",
+      "test": "hreflang x-default",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/nyfane-website-study",
+      "test": "og:title",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/nyfane-website-study",
+      "test": "og:description",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/nyfane-website-study",
+      "test": "og:url",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/nyfane-website-study",
+      "test": "og:image",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/nyfane-website-study",
+      "test": "large Twitter card",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/nyfane-website-study",
+      "test": "valid initial JSON-LD",
+      "pass": true,
+      "detail": "5 schema objects"
+    },
+    {
+      "group": "seo",
+      "subject": "/work/nyfane-website-study",
+      "test": "Organization in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/nyfane-website-study",
+      "test": "ProfessionalService in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/nyfane-website-study",
+      "test": "CreativeWork in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "seo",
+      "subject": "/work/nyfane-website-study",
+      "test": "BreadcrumbList in initial HTML",
+      "pass": true
+    },
+    {
+      "group": "content trust",
+      "subject": "/work/nyfane-website-study",
+      "test": "actual creator attribution",
+      "pass": true
+    },
+    {
+      "group": "content trust",
+      "subject": "/work/nyfane-website-study",
+      "test": "no invented publication date or copyright year",
+      "pass": true
+    },
+    {
+      "group": "content trust",
+      "subject": "/work/nyfane-website-study",
+      "test": "study distinction in structured data",
+      "pass": true
+    },
+    {
+      "group": "content trust",
+      "subject": "/work/nyfane-website-study",
+      "test": "website remains in development",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/work/nyfane-website-study",
+      "test": "no video/source elements before play",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/work/nyfane-website-study",
+      "test": "no video preload before play",
+      "pass": true
+    },
+    {
+      "group": "media",
+      "subject": "/work/nyfane-website-study",
+      "test": "all initial images have alt attributes",
+      "pass": true
+    },
+    {
+      "group": "scripts",
+      "subject": "/work/nyfane-website-study",
+      "test": "removed placeholder integrations absent",
+      "pass": true
+    },
+    {
+      "group": "redirects",
+      "subject": "/about-us",
+      "test": "permanent redirect",
+      "pass": true,
+      "detail": "HTTP 308"
+    },
+    {
+      "group": "redirects",
+      "subject": "/about-us",
+      "test": "expected destination",
+      "pass": true,
+      "detail": "/studio"
+    },
+    {
+      "group": "redirects",
+      "subject": "/en/about-us",
+      "test": "permanent redirect",
+      "pass": true,
+      "detail": "HTTP 308"
+    },
+    {
+      "group": "redirects",
+      "subject": "/en/about-us",
+      "test": "expected destination",
+      "pass": true,
+      "detail": "/en/studio"
+    },
+    {
+      "group": "redirects",
+      "subject": "/book",
+      "test": "permanent redirect",
+      "pass": true,
+      "detail": "HTTP 308"
+    },
+    {
+      "group": "redirects",
+      "subject": "/book",
+      "test": "expected destination",
+      "pass": true,
+      "detail": "/contact"
+    },
+    {
+      "group": "redirects",
+      "subject": "/en/book",
+      "test": "permanent redirect",
+      "pass": true,
+      "detail": "HTTP 308"
+    },
+    {
+      "group": "redirects",
+      "subject": "/en/book",
+      "test": "expected destination",
+      "pass": true,
+      "detail": "/en/contact"
+    },
+    {
+      "group": "redirects",
+      "subject": "/services",
+      "test": "permanent redirect",
+      "pass": true,
+      "detail": "HTTP 308"
+    },
+    {
+      "group": "redirects",
+      "subject": "/services",
+      "test": "expected destination",
+      "pass": true,
+      "detail": "/work"
+    },
+    {
+      "group": "redirects",
+      "subject": "/en/services",
+      "test": "permanent redirect",
+      "pass": true,
+      "detail": "HTTP 308"
+    },
+    {
+      "group": "redirects",
+      "subject": "/en/services",
+      "test": "expected destination",
+      "pass": true,
+      "detail": "/en/work"
+    },
+    {
+      "group": "redirects",
+      "subject": "/services",
+      "test": "destination resolves to HTTP 200",
+      "pass": true,
+      "detail": "http://localhost:3018/work"
+    },
+    {
+      "group": "redirects",
+      "subject": "/en/services",
+      "test": "destination resolves to HTTP 200",
+      "pass": true,
+      "detail": "http://localhost:3018/en/work"
+    },
+    {
+      "group": "redirects",
+      "subject": "/en/book",
+      "test": "destination resolves to HTTP 200",
+      "pass": true,
+      "detail": "http://localhost:3018/en/contact"
+    },
+    {
+      "group": "redirects",
+      "subject": "/book",
+      "test": "destination resolves to HTTP 200",
+      "pass": true,
+      "detail": "http://localhost:3018/contact"
+    },
+    {
+      "group": "redirects",
+      "subject": "/en/about-us",
+      "test": "destination resolves to HTTP 200",
+      "pass": true,
+      "detail": "http://localhost:3018/en/studio"
+    },
+    {
+      "group": "redirects",
+      "subject": "/pricing",
+      "test": "permanent redirect",
+      "pass": true,
+      "detail": "HTTP 308"
+    },
+    {
+      "group": "redirects",
+      "subject": "/pricing",
+      "test": "expected destination",
+      "pass": true,
+      "detail": "/contact"
+    },
+    {
+      "group": "redirects",
+      "subject": "/about-us",
+      "test": "destination resolves to HTTP 200",
+      "pass": true,
+      "detail": "http://localhost:3018/studio"
+    },
+    {
+      "group": "redirects",
+      "subject": "/en/pricing",
+      "test": "permanent redirect",
+      "pass": true,
+      "detail": "HTTP 308"
+    },
+    {
+      "group": "redirects",
+      "subject": "/en/pricing",
+      "test": "expected destination",
+      "pass": true,
+      "detail": "/en/contact"
+    },
+    {
+      "group": "redirects",
+      "subject": "/work/fcr",
+      "test": "permanent redirect",
+      "pass": true,
+      "detail": "HTTP 308"
+    },
+    {
+      "group": "redirects",
+      "subject": "/work/fcr",
+      "test": "expected destination",
+      "pass": true,
+      "detail": "/work"
+    },
+    {
+      "group": "redirects",
+      "subject": "/en/work/fcr",
+      "test": "permanent redirect",
+      "pass": true,
+      "detail": "HTTP 308"
+    },
+    {
+      "group": "redirects",
+      "subject": "/en/work/fcr",
+      "test": "expected destination",
+      "pass": true,
+      "detail": "/en/work"
+    },
+    {
+      "group": "redirects",
+      "subject": "/work/jonk",
+      "test": "permanent redirect",
+      "pass": true,
+      "detail": "HTTP 308"
+    },
+    {
+      "group": "redirects",
+      "subject": "/work/jonk",
+      "test": "expected destination",
+      "pass": true,
+      "detail": "/work/burger"
+    },
+    {
+      "group": "redirects",
+      "subject": "/en/work/jonk",
+      "test": "permanent redirect",
+      "pass": true,
+      "detail": "HTTP 308"
+    },
+    {
+      "group": "redirects",
+      "subject": "/en/work/jonk",
+      "test": "expected destination",
+      "pass": true,
+      "detail": "/en/work/burger"
+    },
+    {
+      "group": "redirects",
+      "subject": "/work/jonk",
+      "test": "destination resolves to HTTP 200",
+      "pass": true,
+      "detail": "http://localhost:3018/work/burger"
+    },
+    {
+      "group": "redirects",
+      "subject": "/en/work/jonk",
+      "test": "destination resolves to HTTP 200",
+      "pass": true,
+      "detail": "http://localhost:3018/en/work/burger"
+    },
+    {
+      "group": "redirects",
+      "subject": "/en/blog",
+      "test": "permanent redirect",
+      "pass": true,
+      "detail": "HTTP 308"
+    },
+    {
+      "group": "redirects",
+      "subject": "/en/blog",
+      "test": "expected destination",
+      "pass": true,
+      "detail": "/blog"
+    },
+    {
+      "group": "redirects",
+      "subject": "/en/blog/seo-grunnleggende-2026",
+      "test": "permanent redirect",
+      "pass": true,
+      "detail": "HTTP 308"
+    },
+    {
+      "group": "redirects",
+      "subject": "/en/blog/seo-grunnleggende-2026",
+      "test": "expected destination",
+      "pass": true,
+      "detail": "/blog/seo-grunnleggende-2026"
+    },
+    {
+      "group": "redirects",
+      "subject": "/work/fcr",
+      "test": "destination resolves to HTTP 200",
+      "pass": true,
+      "detail": "http://localhost:3018/work"
+    },
+    {
+      "group": "redirects",
+      "subject": "/en/work/fcr",
+      "test": "destination resolves to HTTP 200",
+      "pass": true,
+      "detail": "http://localhost:3018/en/work"
+    },
+    {
+      "group": "redirects",
+      "subject": "/en/pricing",
+      "test": "destination resolves to HTTP 200",
+      "pass": true,
+      "detail": "http://localhost:3018/en/contact"
+    },
+    {
+      "group": "redirects",
+      "subject": "/pricing",
+      "test": "destination resolves to HTTP 200",
+      "pass": true,
+      "detail": "http://localhost:3018/contact"
+    },
+    {
+      "group": "redirects",
+      "subject": "/blog/ostbanehallen-westerlin-bjorndalen",
+      "test": "permanent redirect",
+      "pass": true,
+      "detail": "HTTP 308"
+    },
+    {
+      "group": "redirects",
+      "subject": "/blog/ostbanehallen-westerlin-bjorndalen",
+      "test": "expected destination",
+      "pass": true,
+      "detail": "/blog/eventproduksjon-ostbanehallen"
+    },
+    {
+      "group": "redirects",
+      "subject": "/blog/samarbeid-med-jonk",
+      "test": "permanent redirect",
+      "pass": true,
+      "detail": "HTTP 308"
+    },
+    {
+      "group": "redirects",
+      "subject": "/blog/samarbeid-med-jonk",
+      "test": "expected destination",
+      "pass": true,
+      "detail": "/blog"
+    },
+    {
+      "group": "redirects",
+      "subject": "/en/blog/samarbeid-med-jonk",
+      "test": "permanent redirect",
+      "pass": true,
+      "detail": "HTTP 308"
+    },
+    {
+      "group": "redirects",
+      "subject": "/en/blog/samarbeid-med-jonk",
+      "test": "expected destination",
+      "pass": true,
+      "detail": "/blog/samarbeid-med-jonk"
+    },
+    {
+      "group": "redirects",
+      "subject": "/no",
+      "test": "permanent redirect",
+      "pass": true,
+      "detail": "HTTP 308"
+    },
+    {
+      "group": "redirects",
+      "subject": "/no",
+      "test": "expected destination",
+      "pass": true,
+      "detail": "/"
+    },
+    {
+      "group": "redirects",
+      "subject": "/en/blog",
+      "test": "destination resolves to HTTP 200",
+      "pass": true,
+      "detail": "http://localhost:3018/blog"
+    },
+    {
+      "group": "redirects",
+      "subject": "/en/blog/seo-grunnleggende-2026",
+      "test": "destination resolves to HTTP 200",
+      "pass": true,
+      "detail": "http://localhost:3018/blog/seo-grunnleggende-2026"
+    },
+    {
+      "group": "redirects",
+      "subject": "/no/work",
+      "test": "permanent redirect",
+      "pass": true,
+      "detail": "HTTP 308"
+    },
+    {
+      "group": "redirects",
+      "subject": "/no/work",
+      "test": "expected destination",
+      "pass": true,
+      "detail": "/work"
+    },
+    {
+      "group": "redirects",
+      "subject": "/about-us?from=http-qa",
+      "test": "permanent redirect",
+      "pass": true,
+      "detail": "HTTP 308"
+    },
+    {
+      "group": "redirects",
+      "subject": "/about-us?from=http-qa",
+      "test": "expected destination",
+      "pass": true,
+      "detail": "/studio?from=http-qa"
+    },
+    {
+      "group": "redirects",
+      "subject": "/blog/samarbeid-med-jonk",
+      "test": "destination resolves to HTTP 200",
+      "pass": true,
+      "detail": "http://localhost:3018/blog"
+    },
+    {
+      "group": "redirects",
+      "subject": "/en/blog/samarbeid-med-jonk",
+      "test": "destination resolves to HTTP 200",
+      "pass": true,
+      "detail": "http://localhost:3018/blog"
+    },
+    {
+      "group": "redirects",
+      "subject": "/blog/ostbanehallen-westerlin-bjorndalen",
+      "test": "destination resolves to HTTP 200",
+      "pass": true,
+      "detail": "http://localhost:3018/blog/eventproduksjon-ostbanehallen"
+    },
+    {
+      "group": "redirects",
+      "subject": "/no/work",
+      "test": "destination resolves to HTTP 200",
+      "pass": true,
+      "detail": "http://localhost:3018/work"
+    },
+    {
+      "group": "redirects",
+      "subject": "/no",
+      "test": "destination resolves to HTTP 200",
+      "pass": true,
+      "detail": "http://localhost:3018/"
+    },
+    {
+      "group": "redirects",
+      "subject": "/about-us?from=http-qa",
+      "test": "destination resolves to HTTP 200",
+      "pass": true,
+      "detail": "http://localhost:3018/studio?from=http-qa"
+    },
+    {
+      "group": "fallback",
+      "subject": "/http-qa-deliberately-unknown-route",
+      "test": "HTTP 404",
+      "pass": true,
+      "detail": "HTTP 404"
+    },
+    {
+      "group": "fallback",
+      "subject": "/en/http-qa-deliberately-unknown-route",
+      "test": "HTTP 404",
+      "pass": true,
+      "detail": "HTTP 404"
+    },
+    {
+      "group": "fallback",
+      "subject": "/work/tokyo",
+      "test": "holding page HTTP 200",
+      "pass": true
+    },
+    {
+      "group": "fallback",
+      "subject": "/work/tokyo",
+      "test": "noindex metadata",
+      "pass": true
+    },
+    {
+      "group": "fallback",
+      "subject": "/en/work/tokyo",
+      "test": "holding page HTTP 200",
+      "pass": true
+    },
+    {
+      "group": "fallback",
+      "subject": "/en/work/tokyo",
+      "test": "noindex metadata",
+      "pass": true
+    },
+    {
+      "group": "discovery",
+      "subject": "/sitemap.xml",
+      "test": "HTTP 200 XML",
+      "pass": true
+    },
+    {
+      "group": "discovery",
+      "subject": "/sitemap.xml",
+      "test": "core routes included",
+      "pass": true
+    },
+    {
+      "group": "discovery",
+      "subject": "/sitemap.xml",
+      "test": "Tokyo and obsolete top-level URLs excluded",
+      "pass": true
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/en",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/en/services/photo",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/services/photo",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/en/services/marketing",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/services/video",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/en/services/video",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/services/marketing",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/services/web",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/en/services/web",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/services/social-media",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/guides/hva-koster-nettside-norge",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/en/services/social-media",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/en/guides/hva-koster-nettside-norge",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/blog",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/blog/eventproduksjon-ostbanehallen",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/blog/seo-grunnleggende-2026",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/blog/velkommen-til-bloggen",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/blog/naar-trenger-du-ny-nettside",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/blog/syntax-studio-as-stiftet",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/work",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/en/work",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/contact",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/en/contact",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/studio",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/en/studio",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/work/burger",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/en/work/burger",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/work/snatched",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/en/work/snatched",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/work/iso400-street-portraits",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/en/work/iso400-street-portraits",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/work/nyfane-website-study",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/en/work/nyfane-website-study",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/blog/vipps-eller-stripe",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/blog/tiktok-for-norske-bedrifter",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/blog/produktfoto-som-selger",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/blog/syntax-studio-stiftet",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "sitemap routes",
+      "subject": "/blog/hva-koster-en-reklamefilm",
+      "test": "HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "discovery",
+      "subject": "/robots.txt",
+      "test": "HTTP 200",
+      "pass": true
+    },
+    {
+      "group": "discovery",
+      "subject": "/robots.txt",
+      "test": "production sitemap declared",
+      "pass": true
+    },
+    {
+      "group": "discovery",
+      "subject": "/robots.txt",
+      "test": "API excluded for general crawler",
+      "pass": true
+    },
+    {
+      "group": "core internal links",
+      "subject": "/",
+      "test": "resolves to HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core internal links",
+      "subject": "/work",
+      "test": "resolves to HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core internal links",
+      "subject": "/studio",
+      "test": "resolves to HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core internal links",
+      "subject": "/no/work",
+      "test": "resolves to HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core internal links",
+      "subject": "/en/work",
+      "test": "resolves to HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core internal links",
+      "subject": "/contact",
+      "test": "resolves to HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core internal links",
+      "subject": "/work/iso400-street-portraits",
+      "test": "resolves to HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core internal links",
+      "subject": "/work/burger",
+      "test": "resolves to HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core internal links",
+      "subject": "/work/nyfane-website-study",
+      "test": "resolves to HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core internal links",
+      "subject": "/work/snatched",
+      "test": "resolves to HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core internal links",
+      "subject": "/en",
+      "test": "resolves to HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core internal links",
+      "subject": "/en/studio",
+      "test": "resolves to HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core internal links",
+      "subject": "/en/contact",
+      "test": "resolves to HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core internal links",
+      "subject": "/en/work/iso400-street-portraits",
+      "test": "resolves to HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core internal links",
+      "subject": "/en/work/burger",
+      "test": "resolves to HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core internal links",
+      "subject": "/en/work/nyfane-website-study",
+      "test": "resolves to HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core internal links",
+      "subject": "/en/work/snatched",
+      "test": "resolves to HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core internal links",
+      "subject": "/contact?practice=nyfane",
+      "test": "resolves to HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core internal links",
+      "subject": "/contact?practice=iso400",
+      "test": "resolves to HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core internal links",
+      "subject": "/contact?practice=35mm",
+      "test": "resolves to HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core internal links",
+      "subject": "/no",
+      "test": "resolves to HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core internal links",
+      "subject": "/en/contact?practice=iso400",
+      "test": "resolves to HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core internal links",
+      "subject": "/en/contact?practice=35mm",
+      "test": "resolves to HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core internal links",
+      "subject": "/en/contact?practice=nyfane",
+      "test": "resolves to HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core internal links",
+      "subject": "/no/work/snatched",
+      "test": "resolves to HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core internal links",
+      "subject": "/no/contact?practice=nyfane",
+      "test": "resolves to HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core internal links",
+      "subject": "/no/contact",
+      "test": "resolves to HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core internal links",
+      "subject": "/no/contact?practice=35mm",
+      "test": "resolves to HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core internal links",
+      "subject": "/no/studio",
+      "test": "resolves to HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core internal links",
+      "subject": "/no/contact?practice=iso400",
+      "test": "resolves to HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core internal links",
+      "subject": "/no/work/burger",
+      "test": "resolves to HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core internal links",
+      "subject": "/no/work/iso400-street-portraits",
+      "test": "resolves to HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "core internal links",
+      "subject": "/no/work/nyfane-website-study",
+      "test": "resolves to HTTP 200",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "group": "assets",
+      "subject": "/burger/hero-build.mp4",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; video/mp4"
+    },
+    {
+      "group": "assets",
+      "subject": "/burger/kitchen-film.mp4",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; video/mp4"
+    },
+    {
+      "group": "assets",
+      "subject": "/logos/syntaxnylogoutenundertekst.svg",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/svg+xml"
+    },
+    {
+      "group": "assets",
+      "subject": "/work/iso400/street-portrait-01.webp",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/webp"
+    },
+    {
+      "group": "assets",
+      "subject": "/webmat/burgercrop.webp",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/webp"
+    },
+    {
+      "group": "assets",
+      "subject": "/work/nyfane/website-study.webp",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/webp"
+    },
+    {
+      "group": "assets",
+      "subject": "/_next/image?url=%2Fwebmat%2Fburgercrop.webp&w=3840&q=75",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/webp"
+    },
+    {
+      "group": "assets",
+      "subject": "/_next/image?url=%2Fwork%2Fiso400%2Fstreet-portrait-01.webp&w=3840&q=75",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/webp"
+    },
+    {
+      "group": "assets",
+      "subject": "/_next/image?url=%2Fwork%2Fnyfane%2Fwebsite-study.webp&w=3840&q=75",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/webp"
+    },
+    {
+      "group": "assets",
+      "subject": "/logos/Snatched.svg",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/svg+xml"
+    },
+    {
+      "group": "assets",
+      "subject": "/_next/static/chunks/4bd1b696-adf583ec16a900a4.js",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; application/javascript; charset=UTF-8"
+    },
+    {
+      "group": "assets",
+      "subject": "/_next/static/chunks/684-9ef7263d5f3d3b75.js",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; application/javascript; charset=UTF-8"
+    },
+    {
+      "group": "assets",
+      "subject": "/_next/static/chunks/main-app-6ae77fbc8909940f.js",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; application/javascript; charset=UTF-8"
+    },
+    {
+      "group": "assets",
+      "subject": "/_next/static/chunks/984-16c326e57a0c01cf.js",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; application/javascript; charset=UTF-8"
+    },
+    {
+      "group": "assets",
+      "subject": "/_next/static/chunks/140-2d4d15033e8ee10f.js",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; application/javascript; charset=UTF-8"
+    },
+    {
+      "group": "assets",
+      "subject": "/_next/static/chunks/783-b3d031533c619a91.js",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; application/javascript; charset=UTF-8"
+    },
+    {
+      "group": "assets",
+      "subject": "/_next/static/chunks/app/%5Blocale%5D/work/page-a471af4e4b6443e1.js",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; application/javascript; charset=UTF-8"
+    },
+    {
+      "group": "assets",
+      "subject": "/_next/static/chunks/377-cbe7bbf1d075d862.js",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; application/javascript; charset=UTF-8"
+    },
+    {
+      "group": "assets",
+      "subject": "/_next/static/chunks/61-6507b424e4506247.js",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; application/javascript; charset=UTF-8"
+    },
+    {
+      "group": "assets",
+      "subject": "/_next/static/chunks/app/%5Blocale%5D/layout-88b040d2d952b19e.js",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; application/javascript; charset=UTF-8"
+    },
+    {
+      "group": "assets",
+      "subject": "/_next/static/chunks/831-aac3cb2cfbd4fb94.js",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; application/javascript; charset=UTF-8"
+    },
+    {
+      "group": "assets",
+      "subject": "/_next/static/chunks/app/%5Blocale%5D/page-0457a813b99e50cc.js",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; application/javascript; charset=UTF-8"
+    },
+    {
+      "group": "assets",
+      "subject": "/_next/static/chunks/polyfills-42372ed130431b0a.js",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; application/javascript; charset=UTF-8"
+    },
+    {
+      "group": "assets",
+      "subject": "/_next/static/chunks/webpack-033549a5cd045f67.js",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; application/javascript; charset=UTF-8"
+    },
+    {
+      "group": "assets",
+      "subject": "/_next/static/css/438d8c074fde3f88.css",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; text/css; charset=UTF-8"
+    },
+    {
+      "group": "assets",
+      "subject": "/_next/static/css/6235a1b847dff1b3.css",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; text/css; charset=UTF-8"
+    },
+    {
+      "group": "assets",
+      "subject": "/_next/static/css/757640e931c8ea29.css",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; text/css; charset=UTF-8"
+    },
+    {
+      "group": "assets",
+      "subject": "/favicon.ico",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/x-icon"
+    },
+    {
+      "group": "assets",
+      "subject": "/logos/syntax-icon-32.png",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/png"
+    },
+    {
+      "group": "assets",
+      "subject": "/logos/syntax-icon-180.png",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/png"
+    },
+    {
+      "group": "assets",
+      "subject": "/portraits/gunder.webp",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/webp"
+    },
+    {
+      "group": "assets",
+      "subject": "/portraits/khamzat-v2.webp",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/webp"
+    },
+    {
+      "group": "assets",
+      "subject": "/portraits/rasul.webp",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/webp"
+    },
+    {
+      "group": "assets",
+      "subject": "/_next/image?url=%2Fportraits%2Fgunder.webp&w=3840&q=75",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/webp"
+    },
+    {
+      "group": "assets",
+      "subject": "/_next/image?url=%2Fportraits%2Fkhamzat-v2.webp&w=3840&q=75",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/webp"
+    },
+    {
+      "group": "assets",
+      "subject": "/_next/image?url=%2Fportraits%2Frasul.webp&w=3840&q=75",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/webp"
+    },
+    {
+      "group": "assets",
+      "subject": "/_next/static/chunks/app/%5Blocale%5D/studio/page-7b7ac0ce1a798cd1.js",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; application/javascript; charset=UTF-8"
+    },
+    {
+      "group": "assets",
+      "subject": "/_next/static/css/b00bc421015530dc.css",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; text/css; charset=UTF-8"
+    },
+    {
+      "group": "assets",
+      "subject": "/burger/hero-build-poster.webp",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/webp"
+    },
+    {
+      "group": "assets",
+      "subject": "/brand/iso400.svg",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/svg+xml"
+    },
+    {
+      "group": "assets",
+      "subject": "/en/opengraph-image",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/png"
+    },
+    {
+      "group": "social image bodies",
+      "subject": "/en/opengraph-image",
+      "test": "complete PNG response",
+      "pass": true,
+      "detail": "43275 bytes"
+    },
+    {
+      "group": "social image bodies",
+      "subject": "/en/opengraph-image",
+      "test": "1200x630 dimensions",
+      "pass": true,
+      "detail": "1200x630"
+    },
+    {
+      "group": "assets",
+      "subject": "/opengraph-image",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/png"
+    },
+    {
+      "group": "social image bodies",
+      "subject": "/opengraph-image",
+      "test": "complete PNG response",
+      "pass": true,
+      "detail": "38942 bytes"
+    },
+    {
+      "group": "social image bodies",
+      "subject": "/opengraph-image",
+      "test": "1200x630 dimensions",
+      "pass": true,
+      "detail": "1200x630"
+    },
+    {
+      "group": "assets",
+      "subject": "/_next/image?url=%2Fwork%2Fiso400%2Fstreet-portrait-01.webp&w=3840&q=85",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/webp"
+    },
+    {
+      "group": "assets",
+      "subject": "/_next/image?url=%2Fburger%2Fhero-build-poster.webp&w=3840&q=75",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/webp"
+    },
+    {
+      "group": "assets",
+      "subject": "/brand/nyfane-wordmark.svg",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/svg+xml"
+    },
+    {
+      "group": "assets",
+      "subject": "/burger/kitchen-film-poster.webp",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/webp"
+    },
+    {
+      "group": "assets",
+      "subject": "/burger/p1_5.webp",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/webp"
+    },
+    {
+      "group": "assets",
+      "subject": "/work/iso400/street-portrait-02.webp",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/webp"
+    },
+    {
+      "group": "assets",
+      "subject": "/_next/image?url=%2Fburger%2Fkitchen-film-poster.webp&w=3840&q=75",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/webp"
+    },
+    {
+      "group": "assets",
+      "subject": "/_next/image?url=%2Fburger%2Fp1_5.webp&w=3840&q=75",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/webp"
+    },
+    {
+      "group": "assets",
+      "subject": "/_next/static/chunks/app/%5Blocale%5D/work/snatched/page-b29d398ff81d8603.js",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; application/javascript; charset=UTF-8"
+    },
+    {
+      "group": "assets",
+      "subject": "/logos/syntax-studio-logo.png",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/png"
+    },
+    {
+      "group": "assets",
+      "subject": "/en/opengraph-image?46d3966c5805b613",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/png"
+    },
+    {
+      "group": "social image bodies",
+      "subject": "/en/opengraph-image?46d3966c5805b613",
+      "test": "complete PNG response",
+      "pass": true,
+      "detail": "43275 bytes"
+    },
+    {
+      "group": "social image bodies",
+      "subject": "/en/opengraph-image?46d3966c5805b613",
+      "test": "1200x630 dimensions",
+      "pass": true,
+      "detail": "1200x630"
+    },
+    {
+      "group": "assets",
+      "subject": "/_next/image?url=%2Fwork%2Fiso400%2Fstreet-portrait-02.webp&w=3840&q=75",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/webp"
+    },
+    {
+      "group": "assets",
+      "subject": "/burger/prophoto_vertical.webp",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/webp"
+    },
+    {
+      "group": "assets",
+      "subject": "/burger/p3_1.webp",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/webp"
+    },
+    {
+      "group": "assets",
+      "subject": "/no/opengraph-image?46d3966c5805b613",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/png"
+    },
+    {
+      "group": "social image bodies",
+      "subject": "/no/opengraph-image?46d3966c5805b613",
+      "test": "complete PNG response",
+      "pass": true,
+      "detail": "38942 bytes"
+    },
+    {
+      "group": "social image bodies",
+      "subject": "/no/opengraph-image?46d3966c5805b613",
+      "test": "1200x630 dimensions",
+      "pass": true,
+      "detail": "1200x630"
+    },
+    {
+      "group": "assets",
+      "subject": "/burger/chicken-fries.webp",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/webp"
+    },
+    {
+      "group": "assets",
+      "subject": "/_next/static/chunks/app/%5Blocale%5D/work/burger/page-ff06f47f41fd77a5.js",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; application/javascript; charset=UTF-8"
+    },
+    {
+      "group": "assets",
+      "subject": "/_next/image?url=%2Fburger%2Fp3_1.webp&w=3840&q=75",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/webp"
+    },
+    {
+      "group": "assets",
+      "subject": "/_next/image?url=%2Fburger%2Fprophoto_vertical.webp&w=3840&q=75",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/webp"
+    },
+    {
+      "group": "assets",
+      "subject": "/_next/static/chunks/app/%5Blocale%5D/contact/page-905da96c7e8df250.js",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; application/javascript; charset=UTF-8"
+    },
+    {
+      "group": "assets",
+      "subject": "/_next/image?url=%2Fburger%2Fchicken-fries.webp&w=3840&q=75",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; image/webp"
+    },
+    {
+      "group": "assets",
+      "subject": "/_next/static/chunks/app/%5Blocale%5D/work/%5Bslug%5D/page-803b04638cff93a1.js",
+      "test": "HTTP 200 asset",
+      "pass": true,
+      "detail": "HTTP 200; application/javascript; charset=UTF-8"
+    }
+  ]
+}

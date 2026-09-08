@@ -11,7 +11,7 @@ export default function HeroVideoSection() {
   return (
     <section className="relative min-h-dvh flex items-end justify-center overflow-hidden bg-background">
       {/* Preload LCP poster image */}
-      <link rel="preload" as="image" href="/jønk/burgers_vertical_poster.webp" />
+      <link rel="preload" as="image" href="/burger/hero-build-poster.webp" />
       {/* Background Video */}
       <video
         autoPlay
@@ -19,13 +19,12 @@ export default function HeroVideoSection() {
         loop
         playsInline
         preload="auto"
-        poster="/jønk/burgers_vertical_poster.webp"
+        poster="/burger/hero-build-poster.webp"
         // @ts-expect-error fetchPriority not in React video types yet
         fetchPriority="high"
         className="absolute inset-0 h-full w-full object-cover object-[center_80%]"
       >
-        <source src="/jønk/burgers.webm" type="video/webm" />
-        <source src="/jønk/burgers_vertical.mp4" type="video/mp4" />
+        <source src="/burger/hero-build.mp4" type="video/mp4" />
       </video>
 
       {/* Gradient Overlay */}

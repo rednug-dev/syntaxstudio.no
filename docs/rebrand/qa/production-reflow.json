@@ -1,0 +1,182 @@
+[
+  {
+    "page": "/studio",
+    "height": 812,
+    "client": 355,
+    "lang": "no",
+    "overflow": [],
+    "scroll": 355,
+    "url": "http://localhost:3018/studio",
+    "viewport": 375
+  },
+  {
+    "page": "/work",
+    "height": 812,
+    "client": 355,
+    "lang": "no",
+    "overflow": [],
+    "scroll": 355,
+    "url": "http://localhost:3018/work",
+    "viewport": 375
+  },
+  {
+    "page": "/work/nyfane-website-study",
+    "height": 812,
+    "client": 355,
+    "lang": "no",
+    "overflow": [],
+    "scroll": 355,
+    "url": "http://localhost:3018/work/nyfane-website-study",
+    "viewport": 375
+  },
+  {
+    "page": "/en",
+    "height": 844,
+    "client": 355,
+    "lang": "en",
+    "overflow": [],
+    "scroll": 355,
+    "url": "http://localhost:3018/en",
+    "viewport": 375
+  },
+  {
+    "page": "/en",
+    "height": 844,
+    "client": 370,
+    "lang": "en",
+    "overflow": [],
+    "scroll": 370,
+    "url": "http://localhost:3018/en",
+    "viewport": 390
+  },
+  {
+    "page": "/en",
+    "height": 844,
+    "client": 410,
+    "lang": "en",
+    "overflow": [],
+    "scroll": 410,
+    "url": "http://localhost:3018/en",
+    "viewport": 430
+  },
+  {
+    "page": "/en",
+    "height": 844,
+    "client": 748,
+    "lang": "en",
+    "overflow": [],
+    "scroll": 748,
+    "url": "http://localhost:3018/en",
+    "viewport": 768
+  },
+  {
+    "page": "/en",
+    "height": 844,
+    "client": 1004,
+    "lang": "en",
+    "overflow": [],
+    "scroll": 1004,
+    "url": "http://localhost:3018/en",
+    "viewport": 1024
+  },
+  {
+    "page": "/en",
+    "height": 844,
+    "client": 1420,
+    "lang": "en",
+    "overflow": [],
+    "scroll": 1420,
+    "url": "http://localhost:3018/en",
+    "viewport": 1440
+  },
+  {
+    "page": "/en",
+    "height": 844,
+    "client": 2540,
+    "lang": "en",
+    "overflow": [],
+    "scroll": 2540,
+    "url": "http://localhost:3018/en",
+    "viewport": 2560
+  },
+  {
+    "page": "/en",
+    "height": 390,
+    "client": 824,
+    "lang": "en",
+    "overflow": [],
+    "scroll": 824,
+    "url": "http://localhost:3018/en",
+    "viewport": 844
+  },
+  {
+    "page": "/en/work",
+    "height": 960,
+    "client": 1420,
+    "lang": "en",
+    "overflow": [],
+    "scroll": 1420,
+    "url": "http://localhost:3018/en/work",
+    "viewport": 1440
+  },
+  {
+    "page": "/en/studio",
+    "height": 960,
+    "client": 1420,
+    "lang": "en",
+    "overflow": [],
+    "scroll": 1420,
+    "url": "http://localhost:3018/en/studio",
+    "viewport": 1440
+  },
+  {
+    "page": "/en/contact",
+    "height": 960,
+    "client": 1420,
+    "lang": "en",
+    "overflow": [],
+    "scroll": 1420,
+    "url": "http://localhost:3018/en/contact",
+    "viewport": 1440
+  },
+  {
+    "page": "/en/work/burger",
+    "height": 960,
+    "client": 1420,
+    "lang": "en",
+    "overflow": [],
+    "scroll": 1420,
+    "url": "http://localhost:3018/en/work/burger",
+    "viewport": 1440
+  },
+  {
+    "page": "/en/work/iso400-street-portraits",
+    "height": 960,
+    "client": 1420,
+    "lang": "en",
+    "overflow": [],
+    "scroll": 1420,
+    "url": "http://localhost:3018/en/work/iso400-street-portraits",
+    "viewport": 1440
+  },
+  {
+    "page": "/en/work/nyfane-website-study",
+    "height": 960,
+    "client": 1420,
+    "lang": "en",
+    "overflow": [],
+    "scroll": 1420,
+    "url": "http://localhost:3018/en/work/nyfane-website-study",
+    "viewport": 1440
+  },
+  {
+    "page": "/en/work/snatched",
+    "height": 960,
+    "client": 1420,
+    "lang": "en",
+    "overflow": [],
+    "scroll": 1420,
+    "url": "http://localhost:3018/en/work/snatched",
+    "viewport": 1440
+  }
+]

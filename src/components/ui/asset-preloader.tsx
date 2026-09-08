@@ -4,6 +4,7 @@ import React, { createContext, useContext, useState, useEffect, useCallback, use
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 interface PreloaderContextType {
   registerAsset: (id: string) => void;
@@ -30,18 +31,11 @@ export function usePreloader() {
 export function PreloaderProvider({ children }: { children: React.ReactNode }) {
   const [assets, setAssets] = useState<Record<string, boolean>>({});
   const [isLoading, setIsLoading] = useState(true);
-  const [isExiting, setIsExiting] = useState(false);
   const [displayedProgress, setDisplayedProgress] = useState(0);
   const registrationStarted = useRef(false);
   const forceFinish = useRef(false);
 
-  // Safely get translations
-  let t;
-  try {
-    t = useTranslations("Preloader");
-  } catch (e) {
-    t = (key: string) => key === "title" ? "Loading..." : "";
-  }
+  const t = useTranslations("Preloader");
 
   const registerAsset = useCallback((id: string) => {
     registrationStarted.current = true;
@@ -124,7 +118,7 @@ export function PreloaderProvider({ children }: { children: React.ReactNode }) {
               >
                 <div className="flex items-center justify-center gap-3 mb-12">
                    <div className="h-10 w-10 rounded-xl bg-white/5 border border-white/10 p-2 flex items-center justify-center">
-                      <img src="/logos/syntax-i.webp" alt="Syntax Studio" className="h-full w-auto" />
+                      <Image src="/logos/syntaxnyikon.svg" alt="Syntax Studio" width={20} height={20} className="h-full w-auto brightness-0 invert" />
                    </div>
                    <h2 className="text-xl font-bold tracking-tighter uppercase italic">Syntax Studio</h2>
                 </div>

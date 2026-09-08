@@ -1,0 +1,106 @@
+[
+  {
+    "size": {
+      "w": 375,
+      "h": 812
+    },
+    "measure": {
+      "client": 355,
+      "h1": "An independent creative house in Oslo",
+      "overflow": [],
+      "viewport": 375,
+      "width": 355
+    }
+  },
+  {
+    "size": {
+      "w": 390,
+      "h": 844
+    },
+    "measure": {
+      "client": 370,
+      "h1": "An independent creative house in Oslo",
+      "overflow": [],
+      "viewport": 390,
+      "width": 370
+    }
+  },
+  {
+    "size": {
+      "w": 430,
+      "h": 932
+    },
+    "measure": {
+      "client": 410,
+      "h1": "An independent creative house in Oslo",
+      "overflow": [],
+      "viewport": 430,
+      "width": 410
+    }
+  },
+  {
+    "size": {
+      "w": 768,
+      "h": 1024
+    },
+    "measure": {
+      "client": 748,
+      "h1": "An independent creative house in Oslo",
+      "overflow": [],
+      "viewport": 768,
+      "width": 748
+    }
+  },
+  {
+    "size": {
+      "w": 1024,
+      "h": 900
+    },
+    "measure": {
+      "client": 1004,
+      "h1": "An independent creative house in Oslo",
+      "overflow": [],
+      "viewport": 1024,
+      "width": 1004
+    }
+  },
+  {
+    "size": {
+      "w": 1440,
+      "h": 1000
+    },
+    "measure": {
+      "client": 1420,
+      "h1": "An independent creative house in Oslo",
+      "overflow": [],
+      "viewport": 1440,
+      "width": 1420
+    }
+  },
+  {
+    "size": {
+      "w": 2560,
+      "h": 1100
+    },
+    "measure": {
+      "client": 2540,
+      "h1": "An independent creative house in Oslo",
+      "overflow": [],
+      "viewport": 2560,
+      "width": 2540
+    }
+  },
+  {
+    "size": {
+      "w": 844,
+      "h": 390
+    },
+    "measure": {
+      "client": 824,
+      "h1": "An independent creative house in Oslo",
+      "overflow": [],
+      "viewport": 844,
+      "width": 824
+    }
+  }
+]

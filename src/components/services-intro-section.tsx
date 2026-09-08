@@ -5,9 +5,9 @@ import { motion, Variants } from "framer-motion";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Megaphone, Globe, BarChart3, TrendingUp, Mail, PenTool } from "lucide-react";
+import { Megaphone, Globe, BarChart3, TrendingUp, Mail, PenTool, ArrowRight } from "lucide-react";
 import { Link } from '@/i18n/navigation';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
 // id -> icon map
 const ICONS: Record<string, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {
@@ -20,6 +20,17 @@ const ICONS: Record<string, React.ComponentType<React.SVGProps<SVGSVGElement>>> 
 };
 
 type Feature = { id: keyof typeof ICONS; badgeKey?: string; href?: string };
+
+// Where each card routes — to the matching service detail page (or /services for
+// the two that have no dedicated page). Previously the cards were inert.
+const CARD_HREF: Record<keyof typeof ICONS, string> = {
+  ai: '/services/marketing',
+  fast: '/services/video',
+  security: '/services/photo',
+  scale: '/services/web',
+  cloud: '/services',
+  dev: '/services',
+};
 
 const FEATURES: Feature[] = [
   { id: 'ai',       badgeKey: 'new', href: '#marketing' },
@@ -48,29 +59,36 @@ const item: Variants = {
 
 function FeatureCard({ id, badgeKey }: Feature) {
   const t = useTranslations('Services');
+  const locale = useLocale();
   const Icon = ICONS[id];
   return (
-    <motion.div variants={item} whileHover={{ y: -4 }}>
-      <Card className="relative h-full rounded-2xl border bg-card/80 shadow-sm transition-shadow hover:shadow-md">
-        <CardHeader className="flex-row items-start justify-between gap-4">
-          <div className="grid h-10 w-10 place-items-center rounded-lg bg-muted">
-            <Icon className="h-5 w-5" />
-          </div>
-          {badgeKey && (
-            <Badge className="rounded-full px-2.5 py-0.5 text-[11px]">
-              {t(`badges.${badgeKey}`)}
-            </Badge>
-          )}
-        </CardHeader>
-        <CardContent className="pt-0">
-          <CardTitle className="text-xl">
-            {t(`features.${id}.title`)}
-          </CardTitle>
-          <CardDescription className="mt-2 text-base">
-            {t(`features.${id}.desc`)}
-          </CardDescription>
-        </CardContent>
-      </Card>
+    <motion.div variants={item} whileHover={{ y: -4 }} className="h-full">
+      <Link href={CARD_HREF[id]} className="block h-full">
+        <Card className="group relative h-full rounded-2xl border bg-card/80 shadow-sm transition-all hover:shadow-md hover:border-primary/40">
+          <CardHeader className="flex-row items-start justify-between gap-4">
+            <div className="grid h-10 w-10 place-items-center rounded-lg bg-muted">
+              <Icon className="h-5 w-5" />
+            </div>
+            {badgeKey && (
+              <Badge className="rounded-full px-2.5 py-0.5 text-[11px]">
+                {t(`badges.${badgeKey}`)}
+              </Badge>
+            )}
+          </CardHeader>
+          <CardContent className="pt-0">
+            <CardTitle className="text-xl">
+              {t(`features.${id}.title`)}
+            </CardTitle>
+            <CardDescription className="mt-2 text-base">
+              {t(`features.${id}.desc`)}
+            </CardDescription>
+            <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-primary group-hover:gap-2.5 transition-all">
+              {locale === 'no' ? 'Les mer' : 'Read more'}
+              <ArrowRight className="h-4 w-4" />
+            </span>
+          </CardContent>
+        </Card>
+      </Link>
     </motion.div>
   );
 }

@@ -1,57 +1,27 @@
-import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
-import Header from "@/components/header";
-import HeroVideoSection from "@/components/hero-video-section";
-import StatsStrip from "@/components/stats-strip";
-import Footer from "@/components/footer";
-import FeaturedWorkSection from "@/components/featured-work-section";
-import TestimonialsSection from "@/components/testimonials-section";
-import ServicesIntroSection from "@/components/services-intro-section";
-import CtaBridgeSection from "@/components/cta-bridge-section";
-import ProposalSection from "@/components/proposal-section";
+import type {Metadata} from 'next';
+import Image from 'next/image';
+import {ArrowUpRight} from 'lucide-react';
+import Header from '@/components/header';
+import Footer from '@/components/footer';
+import {Link} from '@/i18n/navigation';
+import {SyntaxComposition, PracticeRelationships} from '@/components/house/composition';
+import {Founders} from '@/components/house/founders';
+import Film from '@/components/house/film';
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "Meta.home" });
-
-  const path = locale === "no" ? "/" : "/en";
-  return {
-    title: t("title"),
-    description: t("description"),
-    alternates: {
-      canonical: path,
-      languages: {
-        no: "/",
-        en: "/en",
-        "x-default": "/",
-      },
-    },
-    openGraph: {
-      title: t("title"),
-      description: t("description"),
-      url: path,
-    },
-  };
+export async function generateMetadata({params}: {params: Promise<{locale: string}>}): Promise<Metadata> {
+  const {locale} = await params, no = locale === 'no';
+  const title = no ? 'Et uavhengig kreativt hus i Oslo' : 'An independent creative house in Oslo';
+  const description = no ? 'Tre spesialister. Ett kreativt hus. ISO400 for bilde og design, 35mm for film og VFX, Nyfane for teknologi. Hver for seg, og sammen.' : 'Three specialists. One creative house. ISO400 for image and design, 35mm for film and VFX, Nyfane for technology. Independently and together.';
+  return {title, description, alternates: {canonical: no ? '/' : '/en', languages: {no: '/', en: '/en', 'x-default': '/'}}, openGraph: {title, description, url: no ? '/' : '/en'}};
 }
-
-export default function Home() {
-  return (
-    <div className="flex flex-col min-h-dvh bg-background text-foreground">
-      <Header />
-      <main id="main-content" className="flex-1">
-        <HeroVideoSection />
-        <StatsStrip />
-        <FeaturedWorkSection />
-        <TestimonialsSection />
-        <ServicesIntroSection />
-        <CtaBridgeSection />
-        <ProposalSection />
-      </main>
-      <Footer />
-    </div>
-  );
+export default async function Home({params}: {params: Promise<{locale: string}>}) {
+  const {locale} = await params, no = locale === 'no';
+  return <div className="house-page syntax-home"><Header/><main id="main-content">
+    <section className="syntax-arrival house-wrap" aria-labelledby="syntax-title"><h1 id="syntax-title" className="syntax-masthead"><Image src="/logos/syntaxnylogoutenundertekst.svg" alt="Syntax Studio" width={663} height={138} priority/><span className="sr-only">{no ? 'Et uavhengig kreativt hus i Oslo' : 'An independent creative house in Oslo'}</span></h1><div className="syntax-opening-note"><p>{no ? <>Bilde. Bevegelse. Teknologi.<br/>Hver for seg, og sammen.</> : <>Image. Motion. Technology.<br/>Independently, and together.</>}</p><p>{no ? <>Tre spesialister. Ett kreativt hus.<br/>Oslo, Norge.</> : <>Three specialists. One creative house.<br/>Oslo, Norway.</>}</p></div><SyntaxComposition locale={locale}/><div className="syntax-practice-key" aria-label={no ? 'De tre praksisene' : 'The three practices'}><a href="#practices">ISO400 <span>{no ? 'Bilde & design' : 'Image & Design'}</span></a><a href="#practices">35mm <span>Film & VFX</span></a><a href="#practices">Nyfane <span>{no ? 'Teknologi' : 'Technology'}</span></a></div></section>
+    <section className="syntax-thought house-wrap"><h2>{no ? <><span>Ideen forandrer seg</span><span>når vi møtes.</span></> : <><span>The idea changes</span><span>between us.</span></>}</h2><div className="syntax-thought-note"><p>{no ? 'Et fotografi kan bli utgangspunktet for en film. En bevegelse kan endre hvordan en nettside oppfører seg. Vi gir fagene rom til å påvirke hverandre.' : 'A photograph can become the starting point for a film. A movement can change how a website behaves. We give disciplines room to influence one another.'}</p><Link href="/studio" className="house-text-link">{no ? 'Bli kjent med Syntax' : 'Meet Syntax'}<ArrowUpRight size={18} aria-hidden="true"/></Link></div></section>
+    <PracticeRelationships locale={locale}/>
+    <section className="syntax-campaign" aria-labelledby="campaign-title"><div className="house-wrap"><div className="campaign-heading"><h2 id="campaign-title">{no ? <>Samme appetitt.<br/>Flere uttrykk.</> : <>One appetite.<br/>Many expressions.</>}</h2><p>{no ? 'Fotografi, film og grafisk design. En felles retning, fra kjøkkenet til kampanjen.' : 'Photography, film and graphic design. A shared direction, from the kitchen to the campaign.'}</p></div><div className="campaign-composition"><Link href="/work/burger" className="campaign-still"><Image src="/webmat/burgercrop.webp" alt={no ? 'Detaljert produktfoto av en cheeseburger, fra Syntax Studios kampanjeproduksjon.' : 'A detailed cheeseburger photograph from Syntax Studio’s campaign production.'} width={2528} height={1271} sizes="(max-width: 760px) 90vw, 70vw"/></Link><div className="campaign-screen"><Film src="/burger/kitchen-film.mp4" poster="/burger/kitchen-film-poster.webp" label={no ? 'Se filmen fra kjøkkenet' : 'Watch the kitchen film'}/></div><Link href="/work/burger" className="campaign-print"><Image src="/burger/p1_5.webp" alt={no ? 'Grønn lunsjplakat fra den samme kampanjen.' : 'Green lunch poster from the same campaign.'} width={4128} height={6192} sizes="(max-width: 760px) 42vw, 23vw"/></Link></div><div className="campaign-caption"><div><span>{no ? 'Et norsk burgermerke' : 'A Norwegian burger brand'}</span><p>{no ? 'Produksjon: Syntax Studio' : 'Production: Syntax Studio'}</p></div><Link href="/work/burger" className="house-text-link">{no ? 'Se hele prosjektet' : 'Explore the project'}<ArrowUpRight size={18} aria-hidden="true"/></Link></div></div></section>
+    <section className="syntax-work-stream house-wrap" id="selected-work"><div className="stream-heading"><h2>{no ? 'Flere perspektiver.' : 'Other perspectives.'}</h2><Link href="/work" className="house-text-link">{no ? 'Alle arbeider' : 'All work'}<ArrowUpRight size={18} aria-hidden="true"/></Link></div><div className="stream-layout"><Link href="/work/iso400-street-portraits" className="stream-portrait"><div><Image src="/work/iso400/street-portrait-02.webp" alt={no ? 'Et annet portrett fra ISO400s fotografiske serie Street portraits.' : 'Another portrait from ISO400’s photographic series Street portraits.'} width={1600} height={2400} sizes="(max-width: 760px) 70vw, 40vw"/></div><h3>Street portraits <ArrowUpRight aria-hidden="true"/></h3><p>ISO400 / {no ? 'Portrettutvalg' : 'Portrait selection'}</p></Link><div className="stream-right"><Link href="/work/nyfane-website-study" className="stream-digital"><div><Image src="/work/nyfane/website-study.webp" alt={no ? 'Den plommefargede forsiden på Nyfanes egen nettside.' : 'The plum-coloured homepage of Nyfane’s own website.'} width={1666} height={734} sizes="(max-width: 760px) 90vw, 47vw"/></div><h3>{no ? 'En ny digital flate.' : 'A new digital surface.'}<ArrowUpRight aria-hidden="true"/></h3><p>Nyfane / {no ? 'Egen nettside, under utvikling' : 'Own website, in development'}</p></Link><Link href="/work/snatched" className="stream-text-project"><div><h3>Snatched</h3><p>{no ? '3D, motion design & pitchfilm' : '3D, motion design & pitch film'}</p></div><ArrowUpRight size={28} strokeWidth={1.4} aria-hidden="true"/></Link></div></div></section>
+    <section className="syntax-people house-wrap" id="people"><div className="people-heading"><h2>{no ? <>Du møter oss.<br/>Vi lager arbeidet.</> : <>You meet us.<br/>We make the work.</>}</h2><div><p>{no ? 'Gunder, Khamzat og Rasul. Tre medgründere som leder hvert sitt fag, og samarbeider gjennom Syntax.' : 'Gunder, Khamzat and Rasul. Three co-founders who lead their own disciplines and work together through Syntax.'}</p><Link href="/studio" className="house-text-link">{no ? 'Mer om studioet' : 'More about the studio'}<ArrowUpRight size={18} aria-hidden="true"/></Link></div></div><Founders locale={locale} compact/></section>
+  </main><Footer/></div>;
 }

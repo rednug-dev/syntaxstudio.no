@@ -1,0 +1,190 @@
+{
+  "checkedAt": "2026-09-07T01:12:34.930Z",
+  "base": "http://localhost:3020",
+  "method": "Native HTTP only; no mail or browser input",
+  "passed": 45,
+  "total": 45,
+  "failures": [],
+  "checks": [
+    {
+      "name": "/explore/frame-to-frame responds",
+      "pass": true
+    },
+    {
+      "name": "/explore/frame-to-frame locale",
+      "pass": true
+    },
+    {
+      "name": "/explore/frame-to-frame single heading",
+      "pass": true
+    },
+    {
+      "name": "/explore/frame-to-frame preview is noindex",
+      "pass": true
+    },
+    {
+      "name": "/explore/frame-to-frame canonical retains public home",
+      "pass": true
+    },
+    {
+      "name": "/explore/frame-to-frame no initial film element",
+      "pass": true
+    },
+    {
+      "name": "/explore/frame-to-frame complete static fallback",
+      "pass": true
+    },
+    {
+      "name": "/explore/frame-to-frame hero work present",
+      "pass": true
+    },
+    {
+      "name": "/explore/frame-to-frame original whole mark",
+      "pass": true
+    },
+    {
+      "name": "/explore/frame-to-frame study disclosure",
+      "pass": true
+    },
+    {
+      "name": "/explore/frame-to-frame actual film credit",
+      "pass": true
+    },
+    {
+      "name": "/explore/frame-to-frame own work navigation",
+      "pass": true
+    },
+    {
+      "name": "/explore/frame-to-frame own practices navigation",
+      "pass": true
+    },
+    {
+      "name": "/explore/frame-to-frame native format controls",
+      "pass": true
+    },
+    {
+      "name": "/explore/frame-to-frame composition is explicitly a study",
+      "pass": true
+    },
+    {
+      "name": "/en/explore/frame-to-frame responds",
+      "pass": true
+    },
+    {
+      "name": "/en/explore/frame-to-frame locale",
+      "pass": true
+    },
+    {
+      "name": "/en/explore/frame-to-frame single heading",
+      "pass": true
+    },
+    {
+      "name": "/en/explore/frame-to-frame preview is noindex",
+      "pass": true
+    },
+    {
+      "name": "/en/explore/frame-to-frame canonical retains public home",
+      "pass": true
+    },
+    {
+      "name": "/en/explore/frame-to-frame no initial film element",
+      "pass": true
+    },
+    {
+      "name": "/en/explore/frame-to-frame complete static fallback",
+      "pass": true
+    },
+    {
+      "name": "/en/explore/frame-to-frame hero work present",
+      "pass": true
+    },
+    {
+      "name": "/en/explore/frame-to-frame original whole mark",
+      "pass": true
+    },
+    {
+      "name": "/en/explore/frame-to-frame study disclosure",
+      "pass": true
+    },
+    {
+      "name": "/en/explore/frame-to-frame actual film credit",
+      "pass": true
+    },
+    {
+      "name": "/en/explore/frame-to-frame own work navigation",
+      "pass": true
+    },
+    {
+      "name": "/en/explore/frame-to-frame own practices navigation",
+      "pass": true
+    },
+    {
+      "name": "/en/explore/frame-to-frame native format controls",
+      "pass": true
+    },
+    {
+      "name": "/en/explore/frame-to-frame composition is explicitly a study",
+      "pass": true
+    },
+    {
+      "name": "image /logos/syntaxnylogoutenundertekst.svg",
+      "pass": true
+    },
+    {
+      "name": "image /_next/image?url=%2Fwebmat%2Fburgercrop.webp&w=3840&q=90",
+      "pass": true
+    },
+    {
+      "name": "image /_next/image?url=%2Fburger%2Fprophoto_vertical.webp&w=3840&q=75",
+      "pass": true
+    },
+    {
+      "name": "image /_next/image?url=%2Fburger%2Fhero-build-poster.webp&w=3840&q=75",
+      "pass": true
+    },
+    {
+      "name": "image /_next/image?url=%2Fburger%2Fp1_5.webp&w=3840&q=75",
+      "pass": true
+    },
+    {
+      "name": "image /_next/image?url=%2Fwork%2Fiso400%2Fstreet-portrait-01.webp&w=3840&q=75",
+      "pass": true
+    },
+    {
+      "name": "image /_next/image?url=%2Fwork%2Fiso400%2Fstreet-portrait-02.webp&w=3840&q=75",
+      "pass": true
+    },
+    {
+      "name": "image /_next/image?url=%2Fwork%2Fnyfane%2Fwebsite-study.webp&w=3840&q=75",
+      "pass": true
+    },
+    {
+      "name": "image /_next/image?url=%2Fportraits%2Fgunder.webp&w=3840&q=75",
+      "pass": true
+    },
+    {
+      "name": "image /_next/image?url=%2Fportraits%2Fkhamzat-v2.webp&w=3840&q=75",
+      "pass": true
+    },
+    {
+      "name": "image /_next/image?url=%2Fportraits%2Frasul.webp&w=3840&q=75",
+      "pass": true
+    },
+    {
+      "name": "C remains excluded from public sitemap",
+      "pass": true
+    },
+    {
+      "name": "A retains its composition",
+      "pass": true
+    },
+    {
+      "name": "A retains normal Work navigation",
+      "pass": true
+    },
+    {
+      "name": "A does not inherit C markup",
+      "pass": true
+    }
+  ]
+}

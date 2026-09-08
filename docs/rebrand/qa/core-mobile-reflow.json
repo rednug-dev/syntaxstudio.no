@@ -1,0 +1,74 @@
+[
+  {
+    "page": "/",
+    "client": 355,
+    "h1": "Et uavhengig kreativt hus i Oslo",
+    "overflow": [],
+    "scroll": 355,
+    "url": "http://localhost:3018/",
+    "viewport": 375
+  },
+  {
+    "page": "/en/studio",
+    "client": 370,
+    "h1": "The peoplemake the house.",
+    "overflow": [],
+    "scroll": 370,
+    "url": "http://localhost:3018/en/studio",
+    "viewport": 390
+  },
+  {
+    "page": "/studio",
+    "client": 355,
+    "h1": "The peoplemake the house.",
+    "overflow": [],
+    "scroll": 355,
+    "url": "http://localhost:3018/en/studio",
+    "viewport": 375
+  },
+  {
+    "page": "/en/work/burger",
+    "client": 370,
+    "h1": "High heat. Full flavour.",
+    "overflow": [],
+    "scroll": 370,
+    "url": "http://localhost:3018/en/work/burger",
+    "viewport": 390
+  },
+  {
+    "page": "/en/work/iso400-street-portraits",
+    "client": 355,
+    "h1": "Street portraits",
+    "overflow": [],
+    "scroll": 355,
+    "url": "http://localhost:3018/en/work/iso400-street-portraits",
+    "viewport": 375
+  },
+  {
+    "page": "/en/work/nyfane-website-study",
+    "client": 370,
+    "h1": "Nyfane — website study",
+    "overflow": [],
+    "scroll": 370,
+    "url": "http://localhost:3018/en/work/nyfane-website-study",
+    "viewport": 390
+  },
+  {
+    "page": "/en/work/snatched",
+    "client": 355,
+    "h1": "Making scale visible.",
+    "overflow": [],
+    "scroll": 355,
+    "url": "http://localhost:3018/en/work/snatched",
+    "viewport": 375
+  },
+  {
+    "page": "/contact?practice=35mm",
+    "client": 355,
+    "h1": "There’s roomfor your idea.",
+    "overflow": [],
+    "scroll": 355,
+    "url": "http://localhost:3018/en/contact?practice=35mm",
+    "viewport": 375
+  }
+]

@@ -88,6 +88,46 @@ body {
       transform: translateX(100%);
     }
   }
+
+  /* Syntax × Tokyo hinomaru "breathing".
+     The translateX(-50%) MUST be repeated in every keyframe: an animated
+     transform replaces the element's static one, so omitting it shunts the
+     sun off-centre by half its width. */
+  @keyframes sunbreath {
+    0%,
+    100% {
+      transform: translateX(-50%) scale(1);
+      opacity: 0.94;
+    }
+    50% {
+      transform: translateX(-50%) scale(1.06);
+      opacity: 1;
+    }
+  }
+  .animate-sunbreath {
+    animation: sunbreath 6s ease-in-out infinite;
+  }
+
+  /* CTA glow variant — scale only, so the element's own low opacity survives. */
+  @keyframes sunbreath-glow {
+    0%,
+    100% {
+      transform: translateX(-50%) scale(1);
+    }
+    50% {
+      transform: translateX(-50%) scale(1.06);
+    }
+  }
+  .animate-sunbreath-glow {
+    animation: sunbreath-glow 7s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-sunbreath,
+    .animate-sunbreath-glow {
+      animation: none;
+    }
+  }
 }
 
 @layer base {
