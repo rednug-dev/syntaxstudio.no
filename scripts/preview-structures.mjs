@@ -11,7 +11,7 @@ http.createServer(async(req,res)=>{
       const width=Math.min(2560,Math.max(320,Number(url.searchParams.get('width'))||390));
       const height=Math.min(1200,Math.max(390,Number(url.searchParams.get('height'))||844));
       const route=url.searchParams.get('page')||'/en';
-      const previewOrigin=url.searchParams.get('preview')==='c'?'http://localhost:3020':'http://localhost:3018';
+      const previewOrigin='http://localhost:3018';
       const src=new URL(route,previewOrigin);
       if(src.origin!==previewOrigin)throw new Error('Local preview only');
       res.writeHead(200,{'Content-Type':'text/html; charset=utf-8','Cache-Control':'no-store','X-Robots-Tag':'noindex'});

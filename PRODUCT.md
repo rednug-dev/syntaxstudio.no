@@ -1,5 +1,7 @@
 # Syntax Studio
 
+Current decision, 8 September 2026: the user selected In relation on `codex/in-relation-preview` and discarded the alternate animated exploration.
+
 <!-- impeccable:product-schema 1 -->
 
 ## Platform
@@ -16,7 +18,7 @@ An independent creative house in Oslo, Norway. Three founder-led specialist prac
 
 ## Constraints and commitments
 
-Retain Next.js App Router, next-intl, Norwegian root URLs and English /en. Preserve existing search destinations or provide explicit redirects. Use the supplied Syntax, ISO400 and Nyfane artwork without redrawing it. No final 35mm logo or confirmed practice domains supplied. Never revive the anonymized burger client's name. Never fabricate projects, clients, results, awards, testimonials or founder biographies.
+Retain Next.js App Router, next-intl, Norwegian root URLs and English /en. Preserve existing search destinations or provide explicit redirects. Use the supplied Syntax, ISO400 and Nyfane artwork without redrawing it. The user supplied the final 35mm Productions SVG on 8 September 2026. Practice domains remain unconfirmed. Never revive the anonymized burger client's name. Never fabricate projects, clients, results, awards, testimonials or founder biographies.
 
 ## Evidence
 

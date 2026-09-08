@@ -44,7 +44,7 @@ Use the supplied Syntax wordmark, full lockup and symbol as artwork. Preserve th
 
 Paper `#e9e7e2` is the shared environment; ink `#31291f` carries text. Timber `#382b23` creates a cinematic interval and contact depth. Sky `#b5cddd` belongs to a shared response field or a quiet typographic passage. Dark blue `#24485b` remains a supporting interaction color. Colors can cross practice boundaries; none permanently identifies a practice. Check contrast in every pairing, including captions over media.
 
-Keep the original colors inside photographs, artwork and website captures. ISO400's blackletter, print texture and serif world stay within its attributed work. Nyfane's plum/coral tabs remain inside its website artifact, not in the Syntax shell. No final 35mm logo is supplied: use its name in restrained type without inventing a finished identity.
+Keep the original colors inside photographs, artwork and website captures. ISO400's blackletter, print texture and serif world stay within its attributed work. Nyfane's plum/coral tabs remain inside its website artifact, not in the Syntax shell. Use the supplied 35mm Productions SVG at `/brand/35mm.svg` unchanged, with its white lettering and distressed texture on a brown background.
 
 ## First-viewport contract
 

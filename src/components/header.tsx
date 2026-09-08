@@ -16,7 +16,7 @@ function QueryLanguageLinks({pathname, no}: {pathname: string; no: boolean}) {
   return <LanguageLinks href={query ? `${pathname}?${query}` : pathname} no={no}/>;
 }
 
-export default function Header({homeHref = '/', workHref = '/work', practicesHref = '/#practices'}: {homeHref?: string; workHref?: string; practicesHref?: string} = {}) {
+export default function Header() {
   const locale = useLocale(), no = locale === 'no', pathname = usePathname();
   const [open, setOpen] = useState(false);
   const toggle = useRef<HTMLButtonElement>(null);
@@ -26,12 +26,12 @@ export default function Header({homeHref = '/', workHref = '/work', practicesHre
     window.addEventListener('keydown', escape);
     return () => window.removeEventListener('keydown', escape);
   }, [open]);
-  const links = [{href:workHref,label:no?'Arbeid':'Work'},{href:practicesHref,label:no?'Praksiser':'Practices'},{href:'/studio',label:'Studio'}];
+  const links = [{href:'/work',label:no?'Arbeid':'Work'},{href:'/#practices',label:no?'Praksiser':'Practices'},{href:'/studio',label:'Studio'}];
   return <>
     <a className="house-skip" href="#main-content">{no?'Hopp til innhold':'Skip to content'}</a>
     <header className="house-header" data-home={pathname === '/'}>
       <div className="house-wrap house-header-row">
-        <Link href={homeHref} aria-label="Syntax Studio" onClick={()=>setOpen(false)} className="house-logo"><Image src="/logos/syntaxnylogoutenundertekst.svg" alt="Syntax Studio" width={663} height={138} priority /><span className="house-home-description">{no ? <>Et uavhengig<br/>kreativt hus.</> : <>Independent<br/>creative house.</>}</span></Link>
+        <Link href="/" aria-label="Syntax Studio" onClick={()=>setOpen(false)} className="house-logo"><Image src="/logos/syntaxnylogoutenundertekst.svg" alt="Syntax Studio" width={663} height={138} priority /><span className="house-home-description">{no ? <>Et uavhengig<br/>kreativt hus.</> : <>Independent<br/>creative house.</>}</span></Link>
         <nav className="house-desktop-nav" aria-label={no?'Hovedmeny':'Main navigation'}>{links.map(link=><Link key={link.href} href={link.href} aria-current={pathname===link.href?'page':undefined}>{link.label}</Link>)}</nav>
         <div className="house-header-end">
           <div className="house-languages" aria-label={no?'Språk':'Language'}><Suspense fallback={<LanguageLinks href={pathname} no={no}/>}><QueryLanguageLinks pathname={pathname} no={no}/></Suspense></div>

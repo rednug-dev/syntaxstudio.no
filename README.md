@@ -38,27 +38,17 @@ node scripts/verify-rebrand.mjs --base-url http://localhost:3018 --report docs/r
 
 The verification script uses native HTTP requests. It checks core pages, metadata, initial JSON-LD, media loading markup, assets, internal links, redirects, sitemap routes and fallback behavior. Generated social images are downloaded and checked for a complete PNG with the expected dimensions. It never submits the contact form. The current production preview is [localhost:3018](http://localhost:3018); pass the URL explicitly because the script's retained default is port 3016. `VERIFY_BASE_URL` is also supported.
 
-To inspect the four structural prototypes, keep the development build available and run this in another terminal:
+To inspect the retained structural prototypes, keep the development build available and run this in another terminal:
 
 ```powershell
 node scripts/preview-structures.mjs
 ```
 
-Open [localhost:3017](http://localhost:3017). The helper serves `docs/rebrand/structures.html`, the comparison rationale, real public assets and DM Sans from the development build. It also provides a local responsive-review frame targeting the production preview on port 3018, or C on port 3020 with `preview=c`. These are local design studies, not public application routes.
+Open [localhost:3017](http://localhost:3017). The helper serves `docs/rebrand/structures.html`, the comparison rationale, real public assets and DM Sans from the development build. It also provides a local responsive-review frame targeting the production preview on port 3018. These are local design studies, not public application routes.
 
-## Additional option C exploration
+## Selected direction
 
-The requested **From frame to frame** alternative is available at `/en/explore/frame-to-frame` and `/explore/frame-to-frame`. It has a photographic registration entrance, a native-scroll campaign sequence and an interactive format composition study. The In relation homepage remains the primary surface. C is noindex and excluded from the public sitemap.
-
-To keep both production previews available, build and start C in its own terminal:
-
-```powershell
-$env:NEXT_DIST_DIR = '.next-option-c'
-npm run build
-npm run start -- --port 3020
-```
-
-Run `node scripts/verify-option-c.mjs` against that server. The structural comparison on port 3017 links to the working C page. Its local responsive harness accepts `preview=c` to inspect C on port 3020 while the default harness keeps pointing to A on port 3018. See [C's surface brief](docs/rebrand/option-c-surface-brief.md) and [verification](docs/rebrand/option-c-verification.md).
+The user selected **In relation** on 8 September 2026. Continue the brown/beige homepage on `codex/in-relation-preview`. The alternative animated exploration has been removed. The supplied 35mm Productions logo lives at `public/brand/35mm.svg` and is displayed unchanged on a brown background. Preview deployments remain separate from production.
 
 ## Environment
 
@@ -115,7 +105,7 @@ The registry currently contains four projects:
 | Street portraits (`iso400-street-portraits`) | Two actual ISO400 portfolio photographs, presented as an image study. Client and year are unestablished and omitted. |
 | Nyfane website study (`nyfane-website-study`) | Nyfane's own implemented website, explicitly a self-initiated studio project in development. The real local capture supplies digital design evidence, without claiming a public launch or external commission. |
 
-Practice relevance and credited creator are separate. New study records do not rewrite historical Syntax production credits or turn the burger campaign into an all-practice commission. Nyfane's fictional development clients, testimonials and performance claims were not imported. Tokyo remains a noindex holding page outside the registry and sitemap until its media and story are available. A final 35mm logo, verified practice domains and an externally commissioned Nyfane case remain outstanding.
+Practice relevance and credited creator are separate. New study records do not rewrite historical Syntax production credits or turn the burger campaign into an all-practice commission. Nyfane's fictional development clients, testimonials and performance claims were not imported. Tokyo remains a noindex holding page outside the registry and sitemap until its media and story are available. The supplied 35mm Productions logo is now in use. Verified practice domains and an externally commissioned Nyfane case remain outstanding.
 
 ## Routes and operations
 
