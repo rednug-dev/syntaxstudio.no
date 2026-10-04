@@ -38,6 +38,7 @@ export default function Footer() {
                   <li><Link href="/blog" className="text-muted-foreground hover:text-primary">Blogg</Link></li>
                 )}
                 <li><Link href="/book" className="text-muted-foreground hover:text-primary">{t('contact')}</Link></li>
+                <li><a href="https://nyfane.no" target="_blank" rel="noopener" className="text-muted-foreground hover:text-primary">{t('nyfane')} <span aria-hidden="true">↗</span></a></li>
               </ul>
             </div>
 
