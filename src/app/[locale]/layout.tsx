@@ -148,6 +148,7 @@ export default async function RootLayout({
           <Analytics />
           <SpeedInsights />
         </NextIntlClientProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
